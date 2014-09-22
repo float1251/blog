@@ -1,5 +1,7 @@
 vimscriptについて
 ===================
+:date: 2014-05-11
+
 vim pluginを開発したいと考えているが、まずはvimscriptについて知らないといけない。
 
 ということでちょっと調べてみた。
@@ -42,7 +44,7 @@ http://vim-jp.org/tips/start_vimscript.html
 
 コマンドラインから実行すると以下のようになる。
 
-.. code-block:: 
+.. code-block:: vim
 
     :call Foo()
     foo
@@ -134,13 +136,13 @@ vimscriptの組み込み関数
 -------------------------
 機能別に分類してあるヘルプは以下で見れる。
 
-.. code-block::
+.. code-block:: vim
 
     :help function-list
 
 アルファベット順は以下
 
-.. code-block::
+.. code-block:: vim
 
     :help functions
 

@@ -1,24 +1,25 @@
 ===========================================
 vimscriptを書いてて、詰まったところ
 ===========================================
+:date: 2014-05-11
 
 pyfileで引数を渡す方法
 ------------------------------
 pythonであれば
 
-.. code-block::
+.. code-block:: bash
     
     python sample.py test
 
 という形で実行するがvimではpyfileでpythonファイルを実行できるが、以下の様なやり方ではダメ。
 
-.. code-block::
+.. code-block:: bash
 
     pyfile sample.py test
 
 こうではなく、以下の様にして引数を渡す
 
-.. code-block::
+.. code-block:: vim
 
     :python import sys
     " pythonではsys.argvの0番目はスクリプトのファイル名

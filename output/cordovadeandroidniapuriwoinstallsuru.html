@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        <meta charset="utf-8" />
+        <title>Cordovaでandroidにアプリをinstallする</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">blog@float1251 </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="/category/articles.html">articles</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/cordovadeandroidniapuriwoinstallsuru.html" rel="bookmark"
+           title="Permalink to Cordovaでandroidにアプリをinstallする">Cordovaでandroidにアプリをinstallする</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-05-24T00:00:00">
+                Published: 土 24 5月 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/float1251.html">float1251</a>
+        </address>
+<p>In <a href="/category/articles.html">articles</a>. </p>
+
+</footer><!-- /.post-info -->      <div class="section" id="id1">
+<h2>環境設定</h2>
+<p>手順はhttps://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/README.mdにある。</p>
+<blockquote>
+<ul class="simple">
+<li>androidSDKをインストールする。</li>
+<li>.bash_profileにsdk/toolsとsdk/platform-toolsにpathを通す</li>
+<li>brew install antでantを入れる。入らなかったらbrew updateしてから再度行う</li>
+<li>npm install -g cca</li>
+<li>cca checkenvで怒られないことを確認</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="project">
+<h2>Projectの作成</h2>
+<p>以下のコマンドを実行する</p>
+<blockquote>
+cca create APP_NAME</blockquote>
+<!-- Error: Cannot find module 'cordova/platforms'
+と怒られたが、- -androidとつけてcreateして解決。
+iosの設定はやってないからなんか足りんかったんだろう。 -->
+</div>
+<div class="section" id="id2">
+<h2>実行</h2>
+<p>作成したプロジェクトディレクトリで以下を実行</p>
+<blockquote>
+cca run android</blockquote>
+<p>これでアプリがdeviceにインストールされる。</p>
+</div>
+<div class="section" id="id3">
+<h2>プロジェクトの構造</h2>
+<p>以下のような形になっている。</p>
+<pre class="literal-block">
+.
+├── config.xml
+├── hooks
+│&nbsp;&nbsp; ├── README.md
+│&nbsp;&nbsp; ├── after_prepare
+│&nbsp;&nbsp; └── before_prepare
+├── merges
+│&nbsp;&nbsp; └── android
+├── platforms
+│&nbsp;&nbsp; └── android
+├── plugins
+│&nbsp;&nbsp; ├── android.json
+│&nbsp;&nbsp; ├── org.apache.cordova.file
+│&nbsp;&nbsp; ├── org.apache.cordova.inappbrowser
+│&nbsp;&nbsp; ├── org.apache.cordova.keyboard
+│&nbsp;&nbsp; ├── org.apache.cordova.network-information
+│&nbsp;&nbsp; ├── org.apache.cordova.statusbar
+│&nbsp;&nbsp; ├── org.chromium.bootstrap
+│&nbsp;&nbsp; ├── org.chromium.common
+│&nbsp;&nbsp; ├── org.chromium.i18n
+│&nbsp;&nbsp; ├── org.chromium.navigation
+│&nbsp;&nbsp; ├── org.chromium.polyfill.CustomEvent
+│&nbsp;&nbsp; ├── org.chromium.polyfill.blob_constructor
+│&nbsp;&nbsp; ├── org.chromium.polyfill.xhr_features
+│&nbsp;&nbsp; ├── org.chromium.runtime
+│&nbsp;&nbsp; └── org.chromium.storage
+└── www
+    ├── assets
+    ├── background.js
+    ├── index.css
+    ├── index.html
+    ├── manifest.json
+    └── manifest.mobile.json
+</pre>
+<p>www以下がwebviewで使用されるファイル。</p>
+</div>
+
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
