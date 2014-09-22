@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>blog@float1251</title><link href="http://float1251.github.io/" rel="alternate"></link><link href="http://float1251.github.io/feeds/float1251.atom.xml" rel="self"></link><id>http://float1251.github.io/</id><updated>2014-05-24T00:00:00+09:00</updated><entry><title>Cordovaでandroidにアプリをinstallする</title><link href="http://float1251.github.io/cordovadeandroidniapuriwoinstallsuru.html" rel="alternate"></link><updated>2014-05-24T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-05-24:cordovadeandroidniapuriwoinstallsuru.html</id><summary type="html">&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;環境設定&lt;/h2&gt;
+&lt;p&gt;手順はhttps://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/README.mdにある。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;androidSDKをインストールする。&lt;/li&gt;
+&lt;li&gt;.bash_profileにsdk/toolsとsdk/platform-toolsにpathを通す&lt;/li&gt;
+&lt;li&gt;brew install antでantを入れる。入らなかったらbrew updateしてから再度行う&lt;/li&gt;
+&lt;li&gt;npm install -g cca&lt;/li&gt;
+&lt;li&gt;cca checkenvで怒られないことを確認&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;div class="section" id="project"&gt;
+&lt;h2&gt;Projectの作成&lt;/h2&gt;
+&lt;p&gt;以下のコマンドを実行する&lt;/p&gt;
+&lt;blockquote&gt;
+cca create APP_NAME&lt;/blockquote&gt;
+&lt;!-- Error: Cannot find module 'cordova/platforms'
+と怒られたが、- -androidとつけてcreateして解決。
+iosの設定はやってないからなんか足りんかったんだろう。 --&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;実行&lt;/h2&gt;
+&lt;p&gt;作成したプロジェクトディレクトリで以下を実行&lt;/p&gt;
+&lt;blockquote&gt;
+cca run android&lt;/blockquote&gt;
+&lt;p&gt;これでアプリがdeviceにインストールされる。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h2&gt;プロジェクトの構造&lt;/h2&gt;
+&lt;p&gt;以下のような形になっている。&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+.
+├── config.xml
+├── hooks
+│&amp;nbsp;&amp;nbsp; ├── README.md
+│&amp;nbsp;&amp;nbsp; ├── after_prepare
+│&amp;nbsp;&amp;nbsp; └── before_prepare
+├── merges
+│&amp;nbsp;&amp;nbsp; └── android
+├── platforms
+│&amp;nbsp;&amp;nbsp; └── android
+├── plugins
+│&amp;nbsp;&amp;nbsp; ├── android.json
+│&amp;nbsp;&amp;nbsp; ├── org.apache.cordova.file
+│&amp;nbsp;&amp;nbsp; ├── org.apache.cordova.inappbrowser
+│&amp;nbsp;&amp;nbsp; ├── org.apache.cordova.keyboard
+│&amp;nbsp;&amp;nbsp; ├── org.apache.cordova.network-information
+│&amp;nbsp;&amp;nbsp; ├── org.apache.cordova.statusbar
+│&amp;nbsp;&amp;nbsp; ├── org.chromium.bootstrap
+│&amp;nbsp;&amp;nbsp; ├── org.chromium.common
+│&amp;nbsp;&amp;nbsp; ├── org.chromium.i18n
+│&amp;nbsp;&amp;nbsp; ├── org.chromium.navigation
+│&amp;nbsp;&amp;nbsp; ├── org.chromium.polyfill.CustomEvent
+│&amp;nbsp;&amp;nbsp; ├── org.chromium.polyfill.blob_constructor
+│&amp;nbsp;&amp;nbsp; ├── org.chromium.polyfill.xhr_features
+│&amp;nbsp;&amp;nbsp; ├── org.chromium.runtime
+│&amp;nbsp;&amp;nbsp; └── org.chromium.storage
+└── www
+    ├── assets
+    ├── background.js
+    ├── index.css
+    ├── index.html
+    ├── manifest.json
+    └── manifest.mobile.json
+&lt;/pre&gt;
+&lt;p&gt;www以下がwebviewで使用されるファイル。&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>vimscriptについて</title><link href="http://float1251.github.io/vimscriptnitsuite.html" rel="alternate"></link><updated>2014-05-11T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-05-11:vimscriptnitsuite.html</id><summary type="html">&lt;p&gt;vim pluginを開発したいと考えているが、まずはvimscriptについて知らないといけない。&lt;/p&gt;
+&lt;p&gt;ということでちょっと調べてみた。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://mattn.kaoriya.net/software/vim/20111202085236.htm"&gt;http://mattn.kaoriya.net/software/vim/20111202085236.htm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;この記事が素晴らしすぎたので、こっちを読むとよいと思います。&lt;/p&gt;
+&lt;p&gt;あとこことか&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://vim-users.jp/2010/04/hack136/"&gt;http://vim-users.jp/2010/04/hack136/&lt;/a&gt;
+&lt;a class="reference external" href="http://vim-jp.org/tips/start_vimscript.html"&gt;http://vim-jp.org/tips/start_vimscript.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;とりあえず、備忘録的にやったことを残しておこうと思います。&lt;/p&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;変数宣言&lt;/h2&gt;
+&lt;p&gt;こんな感じ。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;&amp;quot; 数値&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; foo &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; 文字列&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; foo &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;bar&amp;quot;&lt;/span&gt;
+&lt;span class="c"&gt;&amp;quot; リスト&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; foo &lt;span class="p"&gt;=&lt;/span&gt; [&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;bar&amp;quot;&lt;/span&gt;]
+&lt;span class="c"&gt;&amp;quot; 辞書&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; foo &lt;span class="p"&gt;=&lt;/span&gt; {&lt;span class="s2"&gt;&amp;quot;bar&amp;quot;&lt;/span&gt;: &lt;span class="s2"&gt;&amp;quot;bar&amp;quot;&lt;/span&gt;}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;関数定義&lt;/h2&gt;
+&lt;p&gt;こんな感じ。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;function&lt;/span&gt; Foo&lt;span class="p"&gt;()&lt;/span&gt;
+    echo &lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;endfunction&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;コマンドラインから実行すると以下のようになる。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;call&lt;/span&gt; Foo&lt;span class="p"&gt;()&lt;/span&gt;
+foo
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;同じ関数名を定義するにはfunction!を指定する&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; Foo&lt;span class="p"&gt;()&lt;/span&gt;
+    echo &lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;endfunction&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h2&gt;スコープ&lt;/h2&gt;
+&lt;p&gt;関数内で有効なローカルスコープ l:、スクリプトファイル内で有効なスコープ s:、グローバルで有効なスコープ、
+がよく使う。&lt;/p&gt;
+&lt;p&gt;こんな感じ。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="k"&gt;s&lt;/span&gt;:Foo&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;l&lt;/span&gt;:foo &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;
+    echo foo
+&lt;span class="k"&gt;endfunction&lt;/span&gt;
+&lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="k"&gt;s&lt;/span&gt;:Foo&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="python"&gt;
+&lt;h2&gt;Pythonインターフェース&lt;/h2&gt;
+&lt;p&gt;vimscriptではPythonを使用することが出来ます。&lt;/p&gt;
+&lt;p&gt;まずは使用できるかどうかの確認。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;echo has&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;python&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="m"&gt;1&lt;/span&gt;
+
+echo has&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;python3&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;であればpython2もpython3も両方使えます。&lt;/p&gt;
+&lt;p&gt;ではvimscriptで実際にpythonを使用してみます。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="k"&gt;s&lt;/span&gt;:Foo&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;python3&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&amp;lt;&lt;/span&gt; EOM
+print&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+EOM
+&lt;span class="k"&gt;endfunction&lt;/span&gt;
+
+&lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="k"&gt;s&lt;/span&gt;:Foo&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;このような形で使用します。&lt;/p&gt;
+&lt;p&gt;外部ファイルを実行する際は:pyfileコマンドを使用します。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="map"&gt;
+&lt;h2&gt;map&lt;/h2&gt;
+&lt;p&gt;基本的なコマンドについては知っているので割愛。&lt;/p&gt;
+&lt;p&gt;インサートモードにおいて、関数の評価結果から入力文字列を挿入させるためには&amp;lt;expr&amp;gt;を使用する。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;inoremap&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;expr&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;c&lt;/span&gt;&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="k"&gt;x&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; Foo&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="command"&gt;
+&lt;h2&gt;command&lt;/h2&gt;
+&lt;p&gt;コマンドモードから実行できるコマンドを定義する。&lt;/p&gt;
+&lt;p&gt;名前の戦闘は大文字である必要がある。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;command&lt;span class="p"&gt;!&lt;/span&gt; Foo :&lt;span class="k"&gt;call&lt;/span&gt; Foo&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;詳しくは help :command-args を参照。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="autoloadautocmd"&gt;
+&lt;h2&gt;autoloadとautocmd&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://mattn.kaoriya.net/software/vim/20111202085236.htm"&gt;http://mattn.kaoriya.net/software/vim/20111202085236.htm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;ここ見たほうがよいです。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;vimscriptの組み込み関数&lt;/h2&gt;
+&lt;p&gt;機能別に分類してあるヘルプは以下で見れる。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;:&lt;/span&gt;help &lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;-&lt;/span&gt;&lt;span class="nb"&gt;list&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;アルファベット順は以下&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;:&lt;/span&gt;help functions
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;ということで最後の方はだいぶ適当になったけど、これで最低限vimscriptが読めるようになった気がします。&lt;/p&gt;
+&lt;p&gt;あとは色々見たり作ったりしながら覚えていこうかと思います。&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>vimscriptを書いてて、詰まったところ</title><link href="http://float1251.github.io/vimscriptwoshu-itete-jie-matsutatokoro.html" rel="alternate"></link><updated>2014-05-11T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-05-11:vimscriptwoshu-itete-jie-matsutatokoro.html</id><summary type="html">&lt;div class="section" id="pyfile"&gt;
+&lt;h2&gt;pyfileで引数を渡す方法&lt;/h2&gt;
+&lt;p&gt;pythonであれば&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;python sample.py &lt;span class="nb"&gt;test&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;という形で実行するがvimではpyfileでpythonファイルを実行できるが、以下の様なやり方ではダメ。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pyfile sample.py &lt;span class="nb"&gt;test&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;こうではなく、以下の様にして引数を渡す&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;:&lt;/span&gt;python import sys
+&lt;span class="c"&gt;&amp;quot; pythonではsys.argvの0番目はスクリプトのファイル名&lt;/span&gt;
+&lt;span class="p"&gt;:&lt;/span&gt;python sys.argv &lt;span class="p"&gt;=&lt;/span&gt; [&lt;span class="s2"&gt;&amp;quot;sample.py&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;test&amp;quot;&lt;/span&gt;]
+&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;pyfile&lt;/span&gt; sample.&lt;span class="k"&gt;py&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;こうすると想定どおりに引数がpython側で受け取れる。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pythonvim"&gt;
+&lt;h2&gt;python側でvimで定義した変数を受け取る&lt;/h2&gt;
+&lt;p&gt;vimscriptの変数をpython側で受け取るにはvim.evalを使用する。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;let&lt;/span&gt; tmp &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Test&amp;quot;&lt;/span&gt;
+python &lt;span class="p"&gt;&amp;lt;&amp;lt;&lt;/span&gt; EOM
+import &lt;span class="k"&gt;vim&lt;/span&gt;
+print&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;vim&lt;/span&gt;.eval&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;tmp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+EOM
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;こんな感じ&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="vim"&gt;
+&lt;h2&gt;vimでの文字列連結&lt;/h2&gt;
+&lt;p&gt;文字列連結でつい&amp;quot;sample&amp;quot;+&amp;quot;test&amp;quot;とか書きがちだが、.(ドット)でつなげる。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;a&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;sample&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;b&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;test&amp;quot;&lt;/span&gt;
+echo &lt;span class="k"&gt;a&lt;/span&gt;.&lt;span class="k"&gt;b&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="command"&gt;
+&lt;h2&gt;ユーザ定義commandの引数を関数に渡す&lt;/h2&gt;
+&lt;p&gt;&amp;lt;f-args&amp;gt;を使う。&lt;/p&gt;
+&lt;p&gt;詳細は:h &amp;lt;f-args&amp;gt;で。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="gvim"&gt;
+&lt;h2&gt;Gvimかどうかの判定&lt;/h2&gt;
+&lt;p&gt;has(&amp;quot;gui_running&amp;quot;)でできる&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;echo has&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;gui_running&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="m"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;こんな感じかな。
+vimpluginを書くときはまず、:h vim-scriptと:h write-pluginあたりを読むほうがその後が楽だなと思った。&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry></feed>

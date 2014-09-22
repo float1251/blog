@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        <meta charset="utf-8" />
+        <title>blog@float1251 - float1251</title>
+        <link rel="stylesheet" href="http://float1251.github.io/theme/css/main.css" />
+        <link href="http://float1251.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="blog@float1251 Atom Feed" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://float1251.github.io/">blog@float1251 </a></h1>
+                <nav><ul>
+                    <li><a href="http://float1251.github.io/category/articles.html">articles</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="http://float1251.github.io/cordovadeandroidniapuriwoinstallsuru.html">Cordovaでandroidにアプリをinstallする</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-05-24T00:00:00">
+                Published: 土 24 5月 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://float1251.github.io/author/float1251.html">float1251</a>
+        </address>
+<p>In <a href="http://float1251.github.io/category/articles.html">articles</a>. </p>
+
+</footer><!-- /.post-info --><div class="section" id="id1">
+<h2>環境設定</h2>
+<p>手順はhttps://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/README.mdにある。</p>
+<blockquote>
+<ul class="simple">
+<li>androidSDKをインストールする。</li>
+<li>.bash_profileにsdk/toolsとsdk/platform-toolsにpathを通す</li>
+<li>brew install antでantを入れる。入らなかったらbrew updateしてから再度行う</li>
+<li>npm install -g cca</li>
+<li>cca checkenvで怒られないことを確認</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="project">
+<h2>Projectの作成</h2>
+<p>以下のコマンドを実行する</p>
+<blockquote>
+cca create APP_NAME</blockquote>
+<!-- Error: Cannot find module 'cordova/platforms'
+と怒られたが、- -androidとつけてcreateして解決。
+iosの設定はやってないからなんか足りんかったんだろう。 -->
+</div>
+<div class="section" id="id2">
+<h2>実行</h2>
+<p>作成したプロジェクトディレクトリで以下を実行</p>
+<blockquote>
+cca run android</blockquote>
+<p>これでアプリがdeviceにインストールされる。</p>
+</div>
+<div class="section" id="id3">
+<h2>プロジェクトの構造</h2>
+<p>以下のような形になっている。</p>
+<pre class="literal-block">
+.
+├── config.xml
+├── hooks
+│&nbsp;&nbsp; ├── README.md
+│&nbsp;&nbsp; ├── after_prepare
+│&nbsp;&nbsp; └── before_prepare
+├── merges
+│&nbsp;&nbsp; └── android
+├── platforms
+│&nbsp;&nbsp; └── android
+├── plugins
+│&nbsp;&nbsp; ├── android.json
+│&nbsp;&nbsp; ├── org.apache.cordova.file
+│&nbsp;&nbsp; ├── org.apache.cordova.inappbrowser
+│&nbsp;&nbsp; ├── org.apache.cordova.keyboard
+│&nbsp;&nbsp; ├── org.apache.cordova.network-information
+│&nbsp;&nbsp; ├── org.apache.cordova.statusbar
+│&nbsp;&nbsp; ├── org.chromium.bootstrap
+│&nbsp;&nbsp; ├── org.chromium.common
+│&nbsp;&nbsp; ├── org.chromium.i18n
+│&nbsp;&nbsp; ├── org.chromium.navigation
+│&nbsp;&nbsp; ├── org.chromium.polyfill.CustomEvent
+│&nbsp;&nbsp; ├── org.chromium.polyfill.blob_constructor
+│&nbsp;&nbsp; ├── org.chromium.polyfill.xhr_features
+│&nbsp;&nbsp; ├── org.chromium.runtime
+│&nbsp;&nbsp; └── org.chromium.storage
+└── www
+    ├── assets
+    ├── background.js
+    ├── index.css
+    ├── index.html
+    ├── manifest.json
+    └── manifest.mobile.json
+</pre>
+<p>www以下がwebviewで使用されるファイル。</p>
+</div>
+                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://float1251.github.io/vimscriptnitsuite.html" rel="bookmark"
+                           title="Permalink to vimscriptについて">vimscriptについて</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-05-11T00:00:00">
+                Published: 日 11 5月 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://float1251.github.io/author/float1251.html">float1251</a>
+        </address>
+<p>In <a href="http://float1251.github.io/category/articles.html">articles</a>. </p>
+
+</footer><!-- /.post-info -->                <p>vim pluginを開発したいと考えているが、まずはvimscriptについて知らないといけない。</p>
+<p>ということでちょっと調べてみた。</p>
+<p><a class="reference external" href="http://mattn.kaoriya.net/software/vim/20111202085236.htm">http://mattn.kaoriya.net/software/vim/20111202085236.htm</a></p>
+<p>この記事が素晴らしすぎたので、こっちを読むとよいと思います。</p>
+<p>あとこことか</p>
+<p><a class="reference external" href="http://vim-users.jp/2010/04/hack136/">http://vim-users.jp/2010/04/hack136/</a>
+<a class="reference external" href="http://vim-jp.org/tips/start_vimscript.html">http://vim-jp.org/tips/start_vimscript.html</a></p>
+<p>とりあえず、備忘録的にやったことを残しておこうと思います。</p>
+<div class="section" id="id1">
+<h2>変数宣言</h2>
+<p>こんな感じ。</p>
+<div class="highlight"><pre><span class="c">&quot; 数値</span>
+<span class="k">let</span> foo <span class="p">=</span> <span class="m">1</span>
+<span class="c">&quot; 文字列</span>
+<span class="k">let</span> foo <span class="p">=</span> <span class="s2">&quot;bar&quot;</span>
+<span class="c">&quot; リスト</span>
+<span class="k">let</span> foo <span class="p">=</span> [<span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span>]
+<span class="c">&quot; 辞書</span>
+<span class="k">let</span> foo <span class="p">=</span> {<span class="s2">&quot;bar&quot;</span>: <span class="s2">&quot;bar&quot;</span>}
+</pre></div>
+</div>
+<div class="section" id="id2">
+<h2>関数定義 ...</h2></div>
+                <a class="readmore" href="http://float1251.github.io/vimscriptnitsuite.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://float1251.github.io/vimscriptwoshu-itete-jie-matsutatokoro.html" rel="bookmark"
+                           title="Permalink to vimscriptを書いてて、詰まったところ">vimscriptを書いてて、詰まったところ</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-05-11T00:00:00">
+                Published: 日 11 5月 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://float1251.github.io/author/float1251.html">float1251</a>
+        </address>
+<p>In <a href="http://float1251.github.io/category/articles.html">articles</a>. </p>
+
+</footer><!-- /.post-info -->                <div class="section" id="pyfile">
+<h2>pyfileで引数を渡す方法</h2>
+<p>pythonであれば</p>
+<div class="highlight"><pre>python sample.py <span class="nb">test</span>
+</pre></div>
+<p>という形で実行するがvimではpyfileでpythonファイルを実行できるが、以下の様なやり方ではダメ。</p>
+<div class="highlight"><pre>pyfile sample.py <span class="nb">test</span>
+</pre></div>
+<p>こうではなく、以下の様にして引数を渡す</p>
+<div class="highlight"><pre><span class="p">:</span>python import sys
+<span class="c">&quot; pythonではsys.argvの0番目はスクリプトのファイル名</span>
+<span class="p">:</span>python sys.argv <span class="p">=</span> [<span class="s2">&quot;sample.py&quot;</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span>]
+<span class="p">:</span><span class="k">pyfile</span> sample.<span class="k">py</span>
+</pre></div>
+<p>こうすると想定どおりに引数がpython側で受け取れる。</p>
+</div>
+<div class="section" id="pythonvim">
+<h2>python側でvimで定義した変数を受け取る</h2>
+<p>vimscriptの変数をpython側で受け取るにはvim.evalを使用する。</p>
+<div class="highlight"><pre><span class="k">let</span> tmp <span class="p">=</span> <span class="s2">&quot;Test&quot;</span>
+python <span class="p">&lt;&lt;</span> EOM
+import <span class="k">vim</span>
+print<span class="p">(</span><span class="k">vim</span>.eval<span class="p">(</span><span class="s2">&quot;tmp&quot;</span><span class="p">))</span>
+EOM
+</pre></div>
+<p>こんな感じ</p>
+</div>
+<div class="section" id="vim">
+<h2>vimでの文字列連結</h2>
+<p>文字列連結でつい&quot;sample&quot;+&quot;test&quot;とか書きがちだが ...</p></div>
+                <a class="readmore" href="http://float1251.github.io/vimscriptwoshu-itete-jie-matsutatokoro.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+<p class="paginator">
+    Page 1 / 1
+</p>
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://float1251.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

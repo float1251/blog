@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        <meta charset="utf-8" />
+        <title>vimscriptを書いてて、詰まったところ</title>
+        <link rel="stylesheet" href="http://float1251.github.io/theme/css/main.css" />
+        <link href="http://float1251.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="blog@float1251 Atom Feed" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="http://float1251.github.io/">blog@float1251 </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="http://float1251.github.io/category/articles.html">articles</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="http://float1251.github.io/vimscriptwoshu-itete-jie-matsutatokoro.html" rel="bookmark"
+           title="Permalink to vimscriptを書いてて、詰まったところ">vimscriptを書いてて、詰まったところ</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-05-11T00:00:00">
+                Published: 日 11 5月 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://float1251.github.io/author/float1251.html">float1251</a>
+        </address>
+<p>In <a href="http://float1251.github.io/category/articles.html">articles</a>. </p>
+
+</footer><!-- /.post-info -->      <div class="section" id="pyfile">
+<h2>pyfileで引数を渡す方法</h2>
+<p>pythonであれば</p>
+<div class="highlight"><pre>python sample.py <span class="nb">test</span>
+</pre></div>
+<p>という形で実行するがvimではpyfileでpythonファイルを実行できるが、以下の様なやり方ではダメ。</p>
+<div class="highlight"><pre>pyfile sample.py <span class="nb">test</span>
+</pre></div>
+<p>こうではなく、以下の様にして引数を渡す</p>
+<div class="highlight"><pre><span class="p">:</span>python import sys
+<span class="c">&quot; pythonではsys.argvの0番目はスクリプトのファイル名</span>
+<span class="p">:</span>python sys.argv <span class="p">=</span> [<span class="s2">&quot;sample.py&quot;</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span>]
+<span class="p">:</span><span class="k">pyfile</span> sample.<span class="k">py</span>
+</pre></div>
+<p>こうすると想定どおりに引数がpython側で受け取れる。</p>
+</div>
+<div class="section" id="pythonvim">
+<h2>python側でvimで定義した変数を受け取る</h2>
+<p>vimscriptの変数をpython側で受け取るにはvim.evalを使用する。</p>
+<div class="highlight"><pre><span class="k">let</span> tmp <span class="p">=</span> <span class="s2">&quot;Test&quot;</span>
+python <span class="p">&lt;&lt;</span> EOM
+import <span class="k">vim</span>
+print<span class="p">(</span><span class="k">vim</span>.eval<span class="p">(</span><span class="s2">&quot;tmp&quot;</span><span class="p">))</span>
+EOM
+</pre></div>
+<p>こんな感じ</p>
+</div>
+<div class="section" id="vim">
+<h2>vimでの文字列連結</h2>
+<p>文字列連結でつい&quot;sample&quot;+&quot;test&quot;とか書きがちだが、.(ドット)でつなげる。</p>
+<div class="highlight"><pre><span class="k">let</span> <span class="k">a</span> <span class="p">=</span> <span class="s2">&quot;sample&quot;</span>
+<span class="k">let</span> <span class="k">b</span> <span class="p">=</span> <span class="s2">&quot;test&quot;</span>
+echo <span class="k">a</span>.<span class="k">b</span>
+</pre></div>
+</div>
+<div class="section" id="command">
+<h2>ユーザ定義commandの引数を関数に渡す</h2>
+<p>&lt;f-args&gt;を使う。</p>
+<p>詳細は:h &lt;f-args&gt;で。</p>
+</div>
+<div class="section" id="gvim">
+<h2>Gvimかどうかの判定</h2>
+<p>has(&quot;gui_running&quot;)でできる</p>
+<div class="highlight"><pre>echo has<span class="p">(</span><span class="s2">&quot;gui_running&quot;</span><span class="p">)</span>
+<span class="m">1</span>
+</pre></div>
+<p>こんな感じかな。
+vimpluginを書くときはまず、:h vim-scriptと:h write-pluginあたりを読むほうがその後が楽だなと思った。</p>
+</div>
+
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="http://float1251.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
