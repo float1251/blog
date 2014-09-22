@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>blog@float1251</title><link>http://float1251.github.io/</link><description></description><atom:link href="http://float1251.github.io/feeds/float1251.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 24 May 2014 00:00:00 +0900</lastBuildDate><item><title>Cordovaでandroidにアプリをinstallする</title><link>http://float1251.github.io/cordovadeandroidniapuriwoinstallsuru.html</link><description>&lt;div class="section" id="id1"&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>blog@float1251</title><link>http://float1251.github.io/</link><description></description><atom:link href="http://float1251.github.io/feeds/float1251.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 24 May 2014 00:00:00 +0900</lastBuildDate><item><title>Cordovaでandroidにアプリをinstallする</title><link>http://float1251.github.io/cordova_anroid.html</link><description>&lt;div class="section" id="id1"&gt;
 &lt;h2&gt;環境設定&lt;/h2&gt;
 &lt;p&gt;手順はhttps://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/README.mdにある。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -68,7 +68,7 @@ cca run android&lt;/blockquote&gt;
 &lt;/pre&gt;
 &lt;p&gt;www以下がwebviewで使用されるファイル。&lt;/p&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Sat, 24 May 2014 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2014-05-24:cordovadeandroidniapuriwoinstallsuru.html</guid></item><item><title>vimscriptについて</title><link>http://float1251.github.io/vimscriptnitsuite.html</link><description>&lt;p&gt;vim pluginを開発したいと考えているが、まずはvimscriptについて知らないといけない。&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Sat, 24 May 2014 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2014-05-24:cordova_anroid.html</guid></item><item><title>vimscriptについて</title><link>http://float1251.github.io/vimscript.html</link><description>&lt;p&gt;vim pluginを開発したいと考えているが、まずはvimscriptについて知らないといけない。&lt;/p&gt;
 &lt;p&gt;ということでちょっと調べてみた。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://mattn.kaoriya.net/software/vim/20111202085236.htm"&gt;http://mattn.kaoriya.net/software/vim/20111202085236.htm&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;この記事が素晴らしすぎたので、こっちを読むとよいと思います。&lt;/p&gt;
@@ -172,7 +172,7 @@ EOM
 &lt;p&gt;ということで最後の方はだいぶ適当になったけど、これで最低限vimscriptが読めるようになった気がします。&lt;/p&gt;
 &lt;p&gt;あとは色々見たり作ったりしながら覚えていこうかと思います。&lt;/p&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Sun, 11 May 2014 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2014-05-11:vimscriptnitsuite.html</guid></item><item><title>vimscriptを書いてて、詰まったところ</title><link>http://float1251.github.io/vimscriptwoshu-itete-jie-matsutatokoro.html</link><description>&lt;div class="section" id="pyfile"&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Sun, 11 May 2014 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2014-05-11:vimscript.html</guid></item><item><title>vimscriptを書いてて、詰まったところ</title><link>http://float1251.github.io/vimscript_memo.html</link><description>&lt;div class="section" id="pyfile"&gt;
 &lt;h2&gt;pyfileで引数を渡す方法&lt;/h2&gt;
 &lt;p&gt;pythonであれば&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;python sample.py &lt;span class="nb"&gt;test&lt;/span&gt;
@@ -221,4 +221,4 @@ echo &lt;span class="k"&gt;a&lt;/span&gt;.&lt;span class="k"&gt;b&lt;/span&gt;
 &lt;p&gt;こんな感じかな。
 vimpluginを書くときはまず、:h vim-scriptと:h write-pluginあたりを読むほうがその後が楽だなと思った。&lt;/p&gt;
 &lt;/div&gt;
-</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Sun, 11 May 2014 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2014-05-11:vimscriptwoshu-itete-jie-matsutatokoro.html</guid></item></channel></rss>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Sun, 11 May 2014 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2014-05-11:vimscript_memo.html</guid></item></channel></rss>
