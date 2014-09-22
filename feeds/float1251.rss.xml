@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>blog@float1251</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/float1251.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 02 Jun 2014 00:00:00 +0900</lastBuildDate><item><title>Googleの画像検索APIを使ってみる</title><link>http://float1251.github.io/blog/articles/2014/06/google_image_search.html</link><description>&lt;p&gt;現在はCustom Search APIを使用する。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Be A Better Programmer</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/float1251.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 22 Sep 2014 00:00:00 +0900</lastBuildDate><item><title>blogをpelicanに移行しました</title><link>http://float1251.github.io/blog/articles/2014/09/move_to_pelican.html</link><description>&lt;p&gt;blogをpelicanに移行しました。&lt;/p&gt;
+&lt;p&gt;bloggerだとなんとなく書く気にならなかったので。&lt;/p&gt;
+&lt;p&gt;github pageを使ってます。&lt;/p&gt;
+&lt;p&gt;ドキュメントはひたすらに読みました。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://docs.getpelican.com/en/3.4.0/"&gt;http://docs.getpelican.com/en/3.4.0/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;あとここは参考にしました。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/"&gt;http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Mon, 22 Sep 2014 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2014-09-22:blog/articles/2014/09/move_to_pelican.html</guid><category>python</category></item><item><title>Googleの画像検索APIを使ってみる</title><link>http://float1251.github.io/blog/articles/2014/06/google_image_search.html</link><description>&lt;p&gt;現在はCustom Search APIを使用する。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/overview?hl=ja"&gt;https://developers.google.com/custom-search/json-api/v1/overview?hl=ja&lt;/a&gt;&lt;/p&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;データ型&lt;/h2&gt;

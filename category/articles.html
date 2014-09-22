@@ -2,9 +2,9 @@
 <html lang="ja">
 <head>
         <meta charset="utf-8" />
-        <title>blog@float1251 - articles</title>
+        <title>Be A Better Programmer - articles</title>
         <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/main.css" />
-        <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="blog@float1251 Atom Feed" />
+        <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Be A Better Programmer Atom Feed" />
 
         <!--[if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -13,7 +13,7 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="http://float1251.github.io/blog/">blog@float1251 </a></h1>
+                <h1><a href="http://float1251.github.io/blog/">Be A Better Programmer </a></h1>
                 <nav><ul>
                     <li class="active"><a href="http://float1251.github.io/blog/category/articles.html">articles</a></li>
                 </ul></nav>
@@ -21,7 +21,38 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://float1251.github.io/blog/articles/2014/06/google_image_search.html">Googleの画像検索APIを使ってみる</a></h1>
+                    <h1 class="entry-title"><a href="http://float1251.github.io/blog/articles/2014/09/move_to_pelican.html">blogをpelicanに移行しました</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-09-22T00:00:00">
+                Published: 月 22 9月 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://float1251.github.io/blog/author/float1251.html">float1251</a>
+        </address>
+<p>In <a href="http://float1251.github.io/blog/category/articles.html">articles</a>. </p>
+<p>tags: <a href="http://float1251.github.io/blog/tag/python.html">python</a> </p>
+</footer><!-- /.post-info --><p>blogをpelicanに移行しました。</p>
+<p>bloggerだとなんとなく書く気にならなかったので。</p>
+<p>github pageを使ってます。</p>
+<p>ドキュメントはひたすらに読みました。</p>
+<p><a class="reference external" href="http://docs.getpelican.com/en/3.4.0/">http://docs.getpelican.com/en/3.4.0/</a></p>
+<p>あとここは参考にしました。</p>
+<p><a class="reference external" href="http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/">http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/</a></p>
+                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://float1251.github.io/blog/articles/2014/06/google_image_search.html" rel="bookmark"
+                           title="Permalink to Googleの画像検索APIを使ってみる">Googleの画像検索APIを使ってみる</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-06-02T00:00:00">
                 Published: 月 02 6月 2014
@@ -32,7 +63,7 @@
         </address>
 <p>In <a href="http://float1251.github.io/blog/category/articles.html">articles</a>. </p>
 
-</footer><!-- /.post-info --><p>現在はCustom Search APIを使用する。</p>
+</footer><!-- /.post-info -->                <p>現在はCustom Search APIを使用する。</p>
 <p><a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/overview?hl=ja">https://developers.google.com/custom-search/json-api/v1/overview?hl=ja</a></p>
 <div class="section" id="id1">
 <h2>データ型</h2>
@@ -62,65 +93,10 @@
 </div>
 <div class="section" id="api-key">
 <h2>API KEY</h2>
-<p>管理コンソールから取得してくる。</p>
-</div>
-<div class="section" id="custom-search-engine">
-<h2>Custom Search Engine</h2>
-<p>Custom Search Engine IDというものが必要らしい。</p>
-<p>最初に設定するとき、対象のURLを入力するとあって、
-全体を対象にするにはどうすればいいのかわからなかったが、</p>
-<p><a class="reference external" href="http://ryutamaki.hatenablog.com/entry/2014/01/18/171640">http://ryutamaki.hatenablog.com/entry/2014/01/18/171640</a></p>
-<p>これ見て設定したらうまくいった。</p>
-</div>
-<div class="section" id="custom-search-api">
-<h2>Custom Search apiの使い方</h2>
-<p>ここ見ればわかる。</p>
-<p><a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/using_rest?hl=ja">https://developers.google.com/custom-search/json-api/v1/using_rest?hl=ja</a></p>
-<p>URLフォーマットは以下:</p>
-<pre class="literal-block">
-https://www.googleapis.com/customsearch/v1?{parameters}
-</pre>
-<p>必須パラメータは以下3つ</p>
-<blockquote>
-<ul>
-<li><dl class="first docutils">
-<dt>API Key</dt>
-<dd><p class="first last">管理コンソールで取得したAPI Key</p>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Custom Search Engine ID</dt>
-<dd><p class="first last">Custom Search Engineで作成したEngine Id
-今回はcxで渡せば良い模様。</p>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Search Query</dt>
-<dd><p class="first last">検索ワードを渡せばおｋ．</p>
-</dd>
-</dl>
-</li>
-</ul>
-</blockquote>
-<p>その他のquery parameterはここ見ましょう。</p>
-<p><a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#request">https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#request</a>
-<a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/using_rest?hl=ja#api-specific_query_parameters">https://developers.google.com/custom-search/json-api/v1/using_rest?hl=ja#api-specific_query_parameters</a></p>
-<p>とりあえず今回は画像検索だからsearchTypeにimageを設定する必要があるらしい。</p>
-</div>
-<div class="section" id="response">
-<h2>response形式</h2>
-<p>以下を参照。</p>
-<p><a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#response">https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#response</a></p>
-<p>画像のリンクはitems.linkのURLを見ればいいらしい。</p>
-</div>
-                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<p>管理コンソールから取得してくる ...</p></div>
+                <a class="readmore" href="http://float1251.github.io/blog/articles/2014/06/google_image_search.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
