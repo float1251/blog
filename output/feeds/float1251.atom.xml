@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>blog@float1251</title><link href="/" rel="alternate"></link><link href="/feeds/float1251.atom.xml" rel="self"></link><id>/</id><updated>2014-05-24T00:00:00+09:00</updated><entry><title>Cordovaでandroidにアプリをinstallする</title><link href="/cordova_anroid.html" rel="alternate"></link><updated>2014-05-24T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:,2014-05-24:cordova_anroid.html</id><summary type="html">&lt;div class="section" id="id1"&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>blog@float1251</title><link href="/" rel="alternate"></link><link href="/feeds/float1251.atom.xml" rel="self"></link><id>/</id><updated>2014-05-24T00:00:00+09:00</updated><entry><title>Cordovaでandroidにアプリをinstallする</title><link href="/articles/2014/05/cordova_anroid.html" rel="alternate"></link><updated>2014-05-24T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:,2014-05-24:articles/2014/05/cordova_anroid.html</id><summary type="html">&lt;div class="section" id="id1"&gt;
 &lt;h2&gt;環境設定&lt;/h2&gt;
 &lt;p&gt;手順はhttps://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/README.mdにある。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -68,7 +68,7 @@ cca run android&lt;/blockquote&gt;
 &lt;/pre&gt;
 &lt;p&gt;www以下がwebviewで使用されるファイル。&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>vimscriptについて</title><link href="/vimscript.html" rel="alternate"></link><updated>2014-05-11T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:,2014-05-11:vimscript.html</id><summary type="html">&lt;p&gt;vim pluginを開発したいと考えているが、まずはvimscriptについて知らないといけない。&lt;/p&gt;
+</summary></entry><entry><title>vimscriptについて</title><link href="/articles/2014/05/vimscript.html" rel="alternate"></link><updated>2014-05-11T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:,2014-05-11:articles/2014/05/vimscript.html</id><summary type="html">&lt;p&gt;vim pluginを開発したいと考えているが、まずはvimscriptについて知らないといけない。&lt;/p&gt;
 &lt;p&gt;ということでちょっと調べてみた。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://mattn.kaoriya.net/software/vim/20111202085236.htm"&gt;http://mattn.kaoriya.net/software/vim/20111202085236.htm&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;この記事が素晴らしすぎたので、こっちを読むとよいと思います。&lt;/p&gt;
@@ -172,7 +172,7 @@ EOM
 &lt;p&gt;ということで最後の方はだいぶ適当になったけど、これで最低限vimscriptが読めるようになった気がします。&lt;/p&gt;
 &lt;p&gt;あとは色々見たり作ったりしながら覚えていこうかと思います。&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>vimscriptを書いてて、詰まったところ</title><link href="/vimscript_memo.html" rel="alternate"></link><updated>2014-05-11T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:,2014-05-11:vimscript_memo.html</id><summary type="html">&lt;div class="section" id="pyfile"&gt;
+</summary></entry><entry><title>vimscriptを書いてて、詰まったところ</title><link href="/articles/2014/05/vimscript_memo.html" rel="alternate"></link><updated>2014-05-11T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:,2014-05-11:articles/2014/05/vimscript_memo.html</id><summary type="html">&lt;div class="section" id="pyfile"&gt;
 &lt;h2&gt;pyfileで引数を渡す方法&lt;/h2&gt;
 &lt;p&gt;pythonであれば&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;python sample.py &lt;span class="nb"&gt;test&lt;/span&gt;
