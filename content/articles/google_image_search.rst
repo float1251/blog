@@ -1,6 +1,8 @@
 =================================
 Googleの画像検索APIを使ってみる
 =================================
+:date: 2014-06-02
+
 現在はCustom Search APIを使用する。
 
 https://developers.google.com/custom-search/json-api/v1/overview?hl=ja

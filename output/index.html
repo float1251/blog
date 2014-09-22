@@ -20,7 +20,114 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/articles/2014/05/cordova_anroid.html">Cordovaでandroidにアプリをinstallする</a></h1>
+                    <h1 class="entry-title"><a href="/articles/2014/06/google_image_search.html">Googleの画像検索APIを使ってみる</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2014-06-02T00:00:00">
+                Published: 月 02 6月 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/float1251.html">float1251</a>
+        </address>
+<p>In <a href="/category/articles.html">articles</a>. </p>
+
+</footer><!-- /.post-info --><p>現在はCustom Search APIを使用する。</p>
+<p><a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/overview?hl=ja">https://developers.google.com/custom-search/json-api/v1/overview?hl=ja</a></p>
+<div class="section" id="id1">
+<h2>データ型</h2>
+<p>JSONかAtomで返ってくる模様。</p>
+<p>Atomで取得する際はqueryにalt=atomとつける。</p>
+</div>
+<div class="section" id="id2">
+<h2>価格</h2>
+<p>Freeのやつと有料のやつがある。</p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt>Custom Search Engine</dt>
+<dd><p class="first last">100 requests/dayで無料。Cloud Consoleでbilingを有効化すれば、$5/1000 requestsで買える。制限は10kquery/dayらしい</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Google Site Search</dt>
+<dd><p class="first last">有料版。詳細はここで。
+<a class="reference external" href="http://www.google.com/enterprise/search/products/gss.html#pricing_content">http://www.google.com/enterprise/search/products/gss.html#pricing_content</a></p>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="api-key">
+<h2>API KEY</h2>
+<p>管理コンソールから取得してくる。</p>
+</div>
+<div class="section" id="custom-search-engine">
+<h2>Custom Search Engine</h2>
+<p>Custom Search Engine IDというものが必要らしい。</p>
+<p>最初に設定するとき、対象のURLを入力するとあって、
+全体を対象にするにはどうすればいいのかわからなかったが、</p>
+<p><a class="reference external" href="http://ryutamaki.hatenablog.com/entry/2014/01/18/171640">http://ryutamaki.hatenablog.com/entry/2014/01/18/171640</a></p>
+<p>これ見て設定したらうまくいった。</p>
+</div>
+<div class="section" id="custom-search-api">
+<h2>Custom Search apiの使い方</h2>
+<p>ここ見ればわかる。</p>
+<p><a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/using_rest?hl=ja">https://developers.google.com/custom-search/json-api/v1/using_rest?hl=ja</a></p>
+<p>URLフォーマットは以下:</p>
+<pre class="literal-block">
+https://www.googleapis.com/customsearch/v1?{parameters}
+</pre>
+<p>必須パラメータは以下3つ</p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt>API Key</dt>
+<dd><p class="first last">管理コンソールで取得したAPI Key</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Custom Search Engine ID</dt>
+<dd><p class="first last">Custom Search Engineで作成したEngine Id
+今回はcxで渡せば良い模様。</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Search Query</dt>
+<dd><p class="first last">検索ワードを渡せばおｋ．</p>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+<p>その他のquery parameterはここ見ましょう。</p>
+<p><a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#request">https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#request</a>
+<a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/using_rest?hl=ja#api-specific_query_parameters">https://developers.google.com/custom-search/json-api/v1/using_rest?hl=ja#api-specific_query_parameters</a></p>
+<p>とりあえず今回は画像検索だからsearchTypeにimageを設定する必要があるらしい。</p>
+</div>
+<div class="section" id="response">
+<h2>response形式</h2>
+<p>以下を参照。</p>
+<p><a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#response">https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#response</a></p>
+<p>画像のリンクはitems.linkのURLを見ればいいらしい。</p>
+</div>
+                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/articles/2014/05/cordova_anroid.html" rel="bookmark"
+                           title="Permalink to Cordovaでandroidにアプリをinstallする">Cordovaでandroidにアプリをinstallする</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-05-24T00:00:00">
                 Published: 土 24 5月 2014
@@ -31,7 +138,7 @@
         </address>
 <p>In <a href="/category/articles.html">articles</a>. </p>
 
-</footer><!-- /.post-info --><div class="section" id="id1">
+</footer><!-- /.post-info -->                <div class="section" id="id1">
 <h2>環境設定</h2>
 <p>手順はhttps://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/README.mdにある。</p>
 <blockquote>
@@ -66,46 +173,10 @@ cca run android</blockquote>
 <pre class="literal-block">
 .
 ├── config.xml
-├── hooks
-│&nbsp;&nbsp; ├── README.md
-│&nbsp;&nbsp; ├── after_prepare
-│&nbsp;&nbsp; └── before_prepare
-├── merges
-│&nbsp;&nbsp; └── android
-├── platforms
-│&nbsp;&nbsp; └── android
-├── plugins
-│&nbsp;&nbsp; ├── android.json
-│&nbsp;&nbsp; ├── org.apache.cordova.file
-│&nbsp;&nbsp; ├── org.apache.cordova.inappbrowser
-│&nbsp;&nbsp; ├── org.apache.cordova.keyboard
-│&nbsp;&nbsp; ├── org.apache.cordova.network-information
-│&nbsp;&nbsp; ├── org.apache.cordova.statusbar
-│&nbsp;&nbsp; ├── org.chromium.bootstrap
-│&nbsp;&nbsp; ├── org.chromium.common
-│&nbsp;&nbsp; ├── org.chromium.i18n
-│&nbsp;&nbsp; ├── org.chromium.navigation
-│&nbsp;&nbsp; ├── org.chromium.polyfill.CustomEvent
-│&nbsp;&nbsp; ├── org.chromium.polyfill.blob_constructor
-│&nbsp;&nbsp; ├── org.chromium.polyfill.xhr_features
-│&nbsp;&nbsp; ├── org.chromium.runtime
-│&nbsp;&nbsp; └── org.chromium.storage
-└── www
-    ├── assets
-    ├── background.js
-    ├── index.css
-    ├── index.html
-    ├── manifest.json
-    └── manifest.mobile.json
-</pre>
-<p>www以下がwebviewで使用されるファイル。</p>
-</div>
-                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+├── hooks ...</pre></div>
+                <a class="readmore" href="/articles/2014/05/cordova_anroid.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
