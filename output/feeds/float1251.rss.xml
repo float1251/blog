@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Be A Better Programmer</title><link>/</link><description></description><atom:link href="/feeds/float1251.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 22 Sep 2014 00:00:00 +0900</lastBuildDate><item><title>blogをpelicanに移行しました</title><link>/articles/2014/09/move_to_pelican.html</link><description>&lt;p&gt;blogをpelicanに移行しました。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Be A Better Programmer</title><link>/</link><description></description><atom:link href="/feeds/float1251.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 29 Sep 2014 00:00:00 +0900</lastBuildDate><item><title>TOEICを受けました</title><link>/articles/2014/09/toeic_0929.html</link><description>&lt;p&gt;会社でTOEICを受けたので感想を残しておこうと思う。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;リスニングが絶望的にできない。聞き取れないのもあるが単語がわからん。&lt;/li&gt;
+&lt;li&gt;文法問題が微妙。。。テクニック的なのも忘れてるし。&lt;/li&gt;
+&lt;li&gt;リーディングは結構解けた気がする。読むスピードはお察しだが。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;とりあえず、CD聞きながら単語帳やっていこうと思いました。&lt;/p&gt;
+&lt;p&gt;また3ヶ月後くらいに受けないとあかんらしいです。&lt;/p&gt;
+&lt;p&gt;点数わかったら追記しようと思います。&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Mon, 29 Sep 2014 00:00:00 +0900</pubDate><guid>tag:,2014-09-29:articles/2014/09/toeic_0929.html</guid></item><item><title>blogをpelicanに移行しました</title><link>/articles/2014/09/move_to_pelican.html</link><description>&lt;p&gt;blogをpelicanに移行しました。&lt;/p&gt;
 &lt;p&gt;bloggerだとなんとなく書く気にならなかったので。&lt;/p&gt;
 &lt;p&gt;github pageを使ってます。&lt;/p&gt;
 &lt;p&gt;ドキュメントはひたすらに読みました。&lt;/p&gt;
