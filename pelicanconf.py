@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'float1251'
 SITENAME = "float's memo"
-SITEURL = ''
+SITEURL = 'http://localhost:8000'
 
 PATH = 'content'
 
@@ -12,7 +12,7 @@ TIMEZONE = 'Asia/Tokyo'
 
 DEFAULT_LANG = 'ja'
 
-THEME = "dev-random"
+THEME = "monospace"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
