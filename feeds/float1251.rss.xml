@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Be A Better Programmer</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/float1251.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 29 Sep 2014 00:00:00 +0900</lastBuildDate><item><title>TOEICを受けました</title><link>http://float1251.github.io/blog/articles/2014/09/toeic_0929.html</link><description>&lt;p&gt;会社でTOEICを受けたので感想を残しておこうと思う。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/float1251.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 29 Sep 2014 00:00:00 +0900</lastBuildDate><item><title>TOEICを受けました</title><link>http://float1251.github.io/blog/articles/2014/09/toeic_0929.html</link><description>&lt;p&gt;会社でTOEICを受けたので感想を残しておこうと思う。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;リスニングが絶望的にできない。聞き取れないのもあるが単語がわからん。&lt;/li&gt;
@@ -212,11 +212,11 @@ foo
 &lt;p&gt;関数内で有効なローカルスコープ l:、スクリプトファイル内で有効なスコープ s:、グローバルで有効なスコープ、
 がよく使う。&lt;/p&gt;
 &lt;p&gt;こんな感じ。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="k"&gt;s&lt;/span&gt;:Foo&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; s:Foo&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;l&lt;/span&gt;:foo &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;
     echo foo
 &lt;span class="k"&gt;endfunction&lt;/span&gt;
-&lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="k"&gt;s&lt;/span&gt;:Foo&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;call&lt;/span&gt; s:Foo&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="python"&gt;
@@ -231,13 +231,13 @@ echo has&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;pyt
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;であればpython2もpython3も両方使えます。&lt;/p&gt;
 &lt;p&gt;ではvimscriptで実際にpythonを使用してみます。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="k"&gt;s&lt;/span&gt;:Foo&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; s:Foo&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="k"&gt;python3&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&amp;lt;&lt;/span&gt; EOM
 print&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 EOM
 &lt;span class="k"&gt;endfunction&lt;/span&gt;
 
-&lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="k"&gt;s&lt;/span&gt;:Foo&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;call&lt;/span&gt; s:Foo&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;このような形で使用します。&lt;/p&gt;
 &lt;p&gt;外部ファイルを実行する際は:pyfileコマンドを使用します。&lt;/p&gt;
@@ -282,9 +282,9 @@ EOM
 &lt;div class="highlight"&gt;&lt;pre&gt;pyfile sample.py &lt;span class="nb"&gt;test&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;こうではなく、以下の様にして引数を渡す&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;:&lt;/span&gt;python import sys
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;python&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
 &lt;span class="c"&gt;&amp;quot; pythonではsys.argvの0番目はスクリプトのファイル名&lt;/span&gt;
-&lt;span class="p"&gt;:&lt;/span&gt;python sys.argv &lt;span class="p"&gt;=&lt;/span&gt; [&lt;span class="s2"&gt;&amp;quot;sample.py&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;test&amp;quot;&lt;/span&gt;]
+&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;python&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;sample.py&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;test&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;pyfile&lt;/span&gt; sample.&lt;span class="k"&gt;py&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;こうすると想定どおりに引数がpython側で受け取れる。&lt;/p&gt;
@@ -293,9 +293,9 @@ EOM
 &lt;h2&gt;python側でvimで定義した変数を受け取る&lt;/h2&gt;
 &lt;p&gt;vimscriptの変数をpython側で受け取るにはvim.evalを使用する。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;let&lt;/span&gt; tmp &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Test&amp;quot;&lt;/span&gt;
-python &lt;span class="p"&gt;&amp;lt;&amp;lt;&lt;/span&gt; EOM
-import &lt;span class="k"&gt;vim&lt;/span&gt;
-print&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;vim&lt;/span&gt;.eval&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;tmp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="k"&gt;python&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; EOM
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;vim&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;eval&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;tmp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 EOM
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;こんな感じ&lt;/p&gt;

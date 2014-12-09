@@ -2,9 +2,9 @@
 <html lang="ja">
 <head>
         <meta charset="utf-8" />
-        <title>Be A Better Programmer - float1251</title>
+        <title>float's memo - float1251</title>
         <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/main.css" />
-        <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Be A Better Programmer Atom Feed" />
+        <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Atom Feed" />
 
         <!--[if IE]>
             <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -13,7 +13,7 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="http://float1251.github.io/blog/">Be A Better Programmer </a></h1>
+                <h1><a href="http://float1251.github.io/blog/">float's memo </a></h1>
                 <nav><ul>
                     <li><a href="http://float1251.github.io/blog/category/articles.html">articles</a></li>
                 </ul></nav>
@@ -23,7 +23,7 @@
                 <article>
                     <h1 class="entry-title"><a href="http://float1251.github.io/blog/articles/2014/09/toeic_0929.html">TOEICを受けました</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2014-09-29T00:00:00">
+        <abbr class="published" title="2014-09-29T00:00:00+09:00">
                 Published: 月 29 9月 2014
         </abbr>
 
@@ -58,7 +58,7 @@
 
                 <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2014-09-22T00:00:00">
+        <abbr class="published" title="2014-09-22T00:00:00+09:00">
                 Published: 月 22 9月 2014
         </abbr>
 
@@ -87,7 +87,7 @@
 
                 <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2014-06-02T00:00:00">
+        <abbr class="published" title="2014-06-02T00:00:00+09:00">
                 Published: 月 02 6月 2014
         </abbr>
 
@@ -139,7 +139,7 @@
 
                 <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2014-05-24T00:00:00">
+        <abbr class="published" title="2014-05-24T00:00:00+09:00">
                 Published: 土 24 5月 2014
         </abbr>
 
@@ -196,7 +196,7 @@ cca run android</blockquote>
 
                 <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2014-05-11T00:00:00">
+        <abbr class="published" title="2014-05-11T00:00:00+09:00">
                 Published: 日 11 5月 2014
         </abbr>
 
@@ -240,7 +240,7 @@ cca run android</blockquote>
 
                 <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2014-05-11T00:00:00">
+        <abbr class="published" title="2014-05-11T00:00:00+09:00">
                 Published: 日 11 5月 2014
         </abbr>
 
@@ -258,9 +258,9 @@ cca run android</blockquote>
 <div class="highlight"><pre>pyfile sample.py <span class="nb">test</span>
 </pre></div>
 <p>こうではなく、以下の様にして引数を渡す</p>
-<div class="highlight"><pre><span class="p">:</span>python import sys
+<div class="highlight"><pre><span class="p">:</span><span class="k">python</span> <span class="kn">import</span> <span class="nn">sys</span>
 <span class="c">&quot; pythonではsys.argvの0番目はスクリプトのファイル名</span>
-<span class="p">:</span>python sys.argv <span class="p">=</span> [<span class="s2">&quot;sample.py&quot;</span><span class="p">,</span> <span class="s2">&quot;test&quot;</span>]
+<span class="p">:</span><span class="k">python</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;sample.py&quot;</span><span class="p">,</span> <span class="s">&quot;test&quot;</span><span class="p">]</span>
 <span class="p">:</span><span class="k">pyfile</span> sample.<span class="k">py</span>
 </pre></div>
 <p>こうすると想定どおりに引数がpython側で受け取れる。</p>
@@ -269,9 +269,9 @@ cca run android</blockquote>
 <h2>python側でvimで定義した変数を受け取る</h2>
 <p>vimscriptの変数をpython側で受け取るにはvim.evalを使用する。</p>
 <div class="highlight"><pre><span class="k">let</span> tmp <span class="p">=</span> <span class="s2">&quot;Test&quot;</span>
-python <span class="p">&lt;&lt;</span> EOM
-import <span class="k">vim</span>
-print<span class="p">(</span><span class="k">vim</span>.eval<span class="p">(</span><span class="s2">&quot;tmp&quot;</span><span class="p">))</span>
+<span class="k">python</span> <span class="o">&lt;&lt;</span> EOM
+<span class="kn">import</span> <span class="nn">vim</span>
+<span class="k">print</span><span class="p">(</span><span class="n">vim</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="s">&quot;tmp&quot;</span><span class="p">))</span>
 EOM
 </pre></div>
 <p>こんな感じ</p>
@@ -288,15 +288,6 @@ EOM
 </p>
                 </section><!-- /#content -->
         <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
                 <div class="social">
                         <h2>social</h2>
                         <ul>
