@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>float's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/articles.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2014-09-29T00:00:00+09:00</updated><entry><title>TOEICを受けました</title><link href="http://float1251.github.io/blog/articles/2014/09/toeic_0929.html" rel="alternate"></link><updated>2014-09-29T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-09-29:blog/articles/2014/09/toeic_0929.html</id><summary type="html">&lt;p&gt;会社でTOEICを受けたので感想を残しておこうと思う。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>float's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/articles.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2014-12-09T00:00:00+09:00</updated><entry><title>pelicanのthemeについて</title><link href="http://float1251.github.io/blog/articles/2014/12/pelican_themes.html" rel="alternate"></link><updated>2014-12-09T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-12-09:blog/articles/2014/12/pelican_themes.html</id><summary type="html">&lt;p&gt;色々とthemeを変えてみて、いいのがないか探している。&lt;/p&gt;
+&lt;p&gt;ただなかなかいいのが見当たらない。。。&lt;/p&gt;
+&lt;p&gt;あと、previewとかがないのがあるから、どういった感じのthemeなのかわからないものが多い。&lt;/p&gt;
+&lt;p&gt;微妙に機能が足りてないのとかもあるから、自分でカスタムするしかないかも。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/getpelican/pelican-themes"&gt;https://github.com/getpelican/pelican-themes&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;とりあえずforkしてmonospaceあたりを自分なりにカスタマイズするのがよさげって思った。&lt;/p&gt;
+</summary></entry><entry><title>TOEICを受けました</title><link href="http://float1251.github.io/blog/articles/2014/09/toeic_0929.html" rel="alternate"></link><updated>2014-09-29T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-09-29:blog/articles/2014/09/toeic_0929.html</id><summary type="html">&lt;p&gt;会社でTOEICを受けたので感想を残しておこうと思う。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;リスニングが絶望的にできない。聞き取れないのもあるが単語がわからん。&lt;/li&gt;
