@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>blog@float1251</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/articles.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2014-06-02T00:00:00+09:00</updated><entry><title>Googleの画像検索APIを使ってみる</title><link href="http://float1251.github.io/blog/articles/2014/06/google_image_search.html" rel="alternate"></link><updated>2014-06-02T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-06-02:blog/articles/2014/06/google_image_search.html</id><summary type="html">&lt;p&gt;現在はCustom Search APIを使用する。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>float's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/articles.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2014-09-29T00:00:00+09:00</updated><entry><title>TOEICを受けました</title><link href="http://float1251.github.io/blog/articles/2014/09/toeic_0929.html" rel="alternate"></link><updated>2014-09-29T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-09-29:blog/articles/2014/09/toeic_0929.html</id><summary type="html">&lt;p&gt;会社でTOEICを受けたので感想を残しておこうと思う。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;リスニングが絶望的にできない。聞き取れないのもあるが単語がわからん。&lt;/li&gt;
+&lt;li&gt;文法問題が微妙。。。テクニック的なのも忘れてるし。&lt;/li&gt;
+&lt;li&gt;リーディングは結構解けた気がする。読むスピードはお察しだが。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;とりあえず、CD聞きながら単語帳やっていこうと思いました。&lt;/p&gt;
+&lt;p&gt;また3ヶ月後くらいに受けないとあかんらしいです。&lt;/p&gt;
+&lt;p&gt;点数わかったら追記しようと思います。&lt;/p&gt;
+</summary></entry><entry><title>blogをpelicanに移行しました</title><link href="http://float1251.github.io/blog/articles/2014/09/move_to_pelican.html" rel="alternate"></link><updated>2014-09-22T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-09-22:blog/articles/2014/09/move_to_pelican.html</id><summary type="html">&lt;p&gt;blogをpelicanに移行しました。&lt;/p&gt;
+&lt;p&gt;bloggerだとなんとなく書く気にならなかったので。&lt;/p&gt;
+&lt;p&gt;github pageを使ってます。&lt;/p&gt;
+&lt;p&gt;ドキュメントはひたすらに読みました。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://docs.getpelican.com/en/3.4.0/"&gt;http://docs.getpelican.com/en/3.4.0/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;あとここは参考にしました。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/"&gt;http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/&lt;/a&gt;&lt;/p&gt;
+</summary><category term="python"></category></entry><entry><title>Googleの画像検索APIを使ってみる</title><link href="http://float1251.github.io/blog/articles/2014/06/google_image_search.html" rel="alternate"></link><updated>2014-06-02T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-06-02:blog/articles/2014/06/google_image_search.html</id><summary type="html">&lt;p&gt;現在はCustom Search APIを使用する。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/overview?hl=ja"&gt;https://developers.google.com/custom-search/json-api/v1/overview?hl=ja&lt;/a&gt;&lt;/p&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;データ型&lt;/h2&gt;
@@ -194,11 +212,11 @@ foo
 &lt;p&gt;関数内で有効なローカルスコープ l:、スクリプトファイル内で有効なスコープ s:、グローバルで有効なスコープ、
 がよく使う。&lt;/p&gt;
 &lt;p&gt;こんな感じ。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="k"&gt;s&lt;/span&gt;:Foo&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; s:Foo&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;l&lt;/span&gt;:foo &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;
     echo foo
 &lt;span class="k"&gt;endfunction&lt;/span&gt;
-&lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="k"&gt;s&lt;/span&gt;:Foo&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;call&lt;/span&gt; s:Foo&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="python"&gt;
@@ -213,13 +231,13 @@ echo has&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;pyt
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;であればpython2もpython3も両方使えます。&lt;/p&gt;
 &lt;p&gt;ではvimscriptで実際にpythonを使用してみます。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="k"&gt;s&lt;/span&gt;:Foo&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; s:Foo&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="k"&gt;python3&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&amp;lt;&lt;/span&gt; EOM
 print&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 EOM
 &lt;span class="k"&gt;endfunction&lt;/span&gt;
 
-&lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="k"&gt;s&lt;/span&gt;:Foo&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;call&lt;/span&gt; s:Foo&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;このような形で使用します。&lt;/p&gt;
 &lt;p&gt;外部ファイルを実行する際は:pyfileコマンドを使用します。&lt;/p&gt;
@@ -264,9 +282,9 @@ EOM
 &lt;div class="highlight"&gt;&lt;pre&gt;pyfile sample.py &lt;span class="nb"&gt;test&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;こうではなく、以下の様にして引数を渡す&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;:&lt;/span&gt;python import sys
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;python&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
 &lt;span class="c"&gt;&amp;quot; pythonではsys.argvの0番目はスクリプトのファイル名&lt;/span&gt;
-&lt;span class="p"&gt;:&lt;/span&gt;python sys.argv &lt;span class="p"&gt;=&lt;/span&gt; [&lt;span class="s2"&gt;&amp;quot;sample.py&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;test&amp;quot;&lt;/span&gt;]
+&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;python&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;sample.py&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;test&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;pyfile&lt;/span&gt; sample.&lt;span class="k"&gt;py&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;こうすると想定どおりに引数がpython側で受け取れる。&lt;/p&gt;
@@ -275,9 +293,9 @@ EOM
 &lt;h2&gt;python側でvimで定義した変数を受け取る&lt;/h2&gt;
 &lt;p&gt;vimscriptの変数をpython側で受け取るにはvim.evalを使用する。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;let&lt;/span&gt; tmp &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Test&amp;quot;&lt;/span&gt;
-python &lt;span class="p"&gt;&amp;lt;&amp;lt;&lt;/span&gt; EOM
-import &lt;span class="k"&gt;vim&lt;/span&gt;
-print&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;vim&lt;/span&gt;.eval&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;tmp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="k"&gt;python&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; EOM
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;vim&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;eval&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;tmp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 EOM
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;こんな感じ&lt;/p&gt;
