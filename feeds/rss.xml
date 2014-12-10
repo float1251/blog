@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>float's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/float1251.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2014-12-09T00:00:00+09:00</updated><entry><title>pelicanのthemeについて</title><link href="http://float1251.github.io/blog/articles/2014/12/pelican_themes.html" rel="alternate"></link><updated>2014-12-09T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-12-09:blog/articles/2014/12/pelican_themes.html</id><summary type="html">&lt;p&gt;色々とthemeを変えてみて、いいのがないか探している。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 09 Dec 2014 00:00:00 +0900</lastBuildDate><item><title>pelicanのthemeについて</title><link>http://float1251.github.io/blog/articles/2014/12/pelican_themes.html</link><description>&lt;p&gt;色々とthemeを変えてみて、いいのがないか探している。&lt;/p&gt;
 &lt;p&gt;ただなかなかいいのが見当たらない。。。&lt;/p&gt;
 &lt;p&gt;あと、previewとかがないのがあるから、どういった感じのthemeなのかわからないものが多い。&lt;/p&gt;
 &lt;p&gt;微妙に機能が足りてないのとかもあるから、自分でカスタムするしかないかも。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/getpelican/pelican-themes"&gt;https://github.com/getpelican/pelican-themes&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;とりあえずforkしてmonospaceあたりを自分なりにカスタマイズするのがよさげって思った。&lt;/p&gt;
-</summary><category term="pelican"></category><category term="python"></category></entry><entry><title>TOEICを受けました</title><link href="http://float1251.github.io/blog/articles/2014/09/toeic_0929.html" rel="alternate"></link><updated>2014-09-29T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-09-29:blog/articles/2014/09/toeic_0929.html</id><summary type="html">&lt;p&gt;会社でTOEICを受けたので感想を残しておこうと思う。&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Tue, 09 Dec 2014 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2014-12-09:blog/articles/2014/12/pelican_themes.html</guid><category>pelican</category><category>python</category></item><item><title>TOEICを受けました</title><link>http://float1251.github.io/blog/articles/2014/09/toeic_0929.html</link><description>&lt;p&gt;会社でTOEICを受けたので感想を残しておこうと思う。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;リスニングが絶望的にできない。聞き取れないのもあるが単語がわからん。&lt;/li&gt;
@@ -16,14 +16,14 @@
 &lt;p&gt;とりあえず、CD聞きながら単語帳やっていこうと思いました。&lt;/p&gt;
 &lt;p&gt;また3ヶ月後くらいに受けないとあかんらしいです。&lt;/p&gt;
 &lt;p&gt;点数わかったら追記しようと思います。&lt;/p&gt;
-</summary></entry><entry><title>blogをpelicanに移行しました</title><link href="http://float1251.github.io/blog/articles/2014/09/move_to_pelican.html" rel="alternate"></link><updated>2014-09-22T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-09-22:blog/articles/2014/09/move_to_pelican.html</id><summary type="html">&lt;p&gt;blogをpelicanに移行しました。&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Mon, 29 Sep 2014 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2014-09-29:blog/articles/2014/09/toeic_0929.html</guid></item><item><title>blogをpelicanに移行しました</title><link>http://float1251.github.io/blog/articles/2014/09/move_to_pelican.html</link><description>&lt;p&gt;blogをpelicanに移行しました。&lt;/p&gt;
 &lt;p&gt;bloggerだとなんとなく書く気にならなかったので。&lt;/p&gt;
 &lt;p&gt;github pageを使ってます。&lt;/p&gt;
 &lt;p&gt;ドキュメントはひたすらに読みました。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://docs.getpelican.com/en/3.4.0/"&gt;http://docs.getpelican.com/en/3.4.0/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;あとここは参考にしました。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/"&gt;http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/&lt;/a&gt;&lt;/p&gt;
-</summary><category term="python"></category><category term="pelican"></category></entry><entry><title>Googleの画像検索APIを使ってみる</title><link href="http://float1251.github.io/blog/articles/2014/06/google_image_search.html" rel="alternate"></link><updated>2014-06-02T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-06-02:blog/articles/2014/06/google_image_search.html</id><summary type="html">&lt;p&gt;現在はCustom Search APIを使用する。&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Mon, 22 Sep 2014 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2014-09-22:blog/articles/2014/09/move_to_pelican.html</guid><category>python</category><category>pelican</category></item><item><title>Googleの画像検索APIを使ってみる</title><link>http://float1251.github.io/blog/articles/2014/06/google_image_search.html</link><description>&lt;p&gt;現在はCustom Search APIを使用する。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/overview?hl=ja"&gt;https://developers.google.com/custom-search/json-api/v1/overview?hl=ja&lt;/a&gt;&lt;/p&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;データ型&lt;/h2&gt;
@@ -106,7 +106,7 @@ https://www.googleapis.com/customsearch/v1?{parameters}
 &lt;p&gt;&lt;a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#response"&gt;https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#response&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;画像のリンクはitems.linkのURLを見ればいいらしい。&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Cordovaでandroidにアプリをinstallする</title><link href="http://float1251.github.io/blog/articles/2014/05/cordova_anroid.html" rel="alternate"></link><updated>2014-05-24T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-05-24:blog/articles/2014/05/cordova_anroid.html</id><summary type="html">&lt;div class="section" id="id1"&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Mon, 02 Jun 2014 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2014-06-02:blog/articles/2014/06/google_image_search.html</guid></item><item><title>Cordovaでandroidにアプリをinstallする</title><link>http://float1251.github.io/blog/articles/2014/05/cordova_anroid.html</link><description>&lt;div class="section" id="id1"&gt;
 &lt;h2&gt;環境設定&lt;/h2&gt;
 &lt;p&gt;手順はhttps://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/README.mdにある。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -175,7 +175,7 @@ cca run android&lt;/blockquote&gt;
 &lt;/pre&gt;
 &lt;p&gt;www以下がwebviewで使用されるファイル。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="chrome"></category><category term="android"></category><category term="cordova"></category></entry><entry><title>vimscriptについて</title><link href="http://float1251.github.io/blog/articles/2014/05/vimscript.html" rel="alternate"></link><updated>2014-05-11T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-05-11:blog/articles/2014/05/vimscript.html</id><summary type="html">&lt;p&gt;vim pluginを開発したいと考えているが、まずはvimscriptについて知らないといけない。&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Sat, 24 May 2014 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2014-05-24:blog/articles/2014/05/cordova_anroid.html</guid><category>chrome</category><category>android</category><category>cordova</category></item><item><title>vimscriptについて</title><link>http://float1251.github.io/blog/articles/2014/05/vimscript.html</link><description>&lt;p&gt;vim pluginを開発したいと考えているが、まずはvimscriptについて知らないといけない。&lt;/p&gt;
 &lt;p&gt;ということでちょっと調べてみた。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://mattn.kaoriya.net/software/vim/20111202085236.htm"&gt;http://mattn.kaoriya.net/software/vim/20111202085236.htm&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;この記事が素晴らしすぎたので、こっちを読むとよいと思います。&lt;/p&gt;
@@ -279,7 +279,7 @@ EOM
 &lt;p&gt;ということで最後の方はだいぶ適当になったけど、これで最低限vimscriptが読めるようになった気がします。&lt;/p&gt;
 &lt;p&gt;あとは色々見たり作ったりしながら覚えていこうかと思います。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="vim"></category></entry><entry><title>vimscriptを書いてて、詰まったところ</title><link href="http://float1251.github.io/blog/articles/2014/05/vimscript_memo.html" rel="alternate"></link><updated>2014-05-11T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-05-11:blog/articles/2014/05/vimscript_memo.html</id><summary type="html">&lt;div class="section" id="pyfile"&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Sun, 11 May 2014 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2014-05-11:blog/articles/2014/05/vimscript.html</guid><category>vim</category></item><item><title>vimscriptを書いてて、詰まったところ</title><link>http://float1251.github.io/blog/articles/2014/05/vimscript_memo.html</link><description>&lt;div class="section" id="pyfile"&gt;
 &lt;h2&gt;pyfileで引数を渡す方法&lt;/h2&gt;
 &lt;p&gt;pythonであれば&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;python sample.py &lt;span class="nb"&gt;test&lt;/span&gt;
@@ -328,4 +328,4 @@ echo &lt;span class="k"&gt;a&lt;/span&gt;.&lt;span class="k"&gt;b&lt;/span&gt;
 &lt;p&gt;こんな感じかな。
 vimpluginを書くときはまず、:h vim-scriptと:h write-pluginあたりを読むほうがその後が楽だなと思った。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="vim"></category></entry></feed>
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Sun, 11 May 2014 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2014-05-11:blog/articles/2014/05/vimscript_memo.html</guid><category>vim</category></item></channel></rss>

@@ -5,6 +5,7 @@
         <meta charset="utf-8" />
         <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/main.css" type="text/css" />
         <link href="http://float1251.github.io/blog/" type="application/atom+xml" rel="alternate" title="float's memo ATOM Feed" />
+        <link href="http://float1251.github.io/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="float's memo RSS Feed" />
 
         <!--[if IE]>
                 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
@@ -29,7 +30,7 @@
 
             <header>
             <h1><a href="http://float1251.github.io/blog" id="site-title">  </a>  <a href="http://float1251.github.io/blog/articles/2014/05/vimscript.html" id="page-title">vimscriptについて</a></h1>
-<time datetime="2014-05-11T00:00:00+09:00">2014年05月11日(日)</time>            </header>
+<time datetime="2014-05-11T00:00:00">2014年05月11日(日)</time>            </header>
 
             <article>
                 <p>vim pluginを開発したいと考えているが、まずはvimscriptについて知らないといけない。</p>
@@ -75,11 +76,11 @@ foo
 <p>関数内で有効なローカルスコープ l:、スクリプトファイル内で有効なスコープ s:、グローバルで有効なスコープ、
 がよく使う。</p>
 <p>こんな感じ。</p>
-<div class="highlight"><pre><span class="k">function</span><span class="p">!</span> s:Foo<span class="p">()</span>
+<div class="highlight"><pre><span class="k">function</span><span class="p">!</span> <span class="k">s</span>:Foo<span class="p">()</span>
     <span class="k">let</span> <span class="k">l</span>:foo <span class="p">=</span> <span class="s2">&quot;foo&quot;</span>
     echo foo
 <span class="k">endfunction</span>
-<span class="k">call</span> s:Foo<span class="p">()</span>
+<span class="k">call</span> <span class="k">s</span>:Foo<span class="p">()</span>
 </pre></div>
 </div>
 <div class="section" id="python">
@@ -94,13 +95,13 @@ echo has<span class="p">(</span><span class="s2">&quot;python3&quot;</span><span
 </pre></div>
 <p>であればpython2もpython3も両方使えます。</p>
 <p>ではvimscriptで実際にpythonを使用してみます。</p>
-<div class="highlight"><pre><span class="k">function</span><span class="p">!</span> s:Foo<span class="p">()</span>
+<div class="highlight"><pre><span class="k">function</span><span class="p">!</span> <span class="k">s</span>:Foo<span class="p">()</span>
     <span class="k">python3</span> <span class="p">&lt;&lt;</span> EOM
 print<span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
 EOM
 <span class="k">endfunction</span>
 
-<span class="k">call</span> s:Foo<span class="p">()</span>
+<span class="k">call</span> <span class="k">s</span>:Foo<span class="p">()</span>
 </pre></div>
 <p>このような形で使用します。</p>
 <p>外部ファイルを実行する際は:pyfileコマンドを使用します。</p>
@@ -154,6 +155,9 @@ EOM
             <h1><a href="http://float1251.github.io/blog " title="title">float's memo</a></h1>
             <span class="description"> </span>
             <!-- <span class="feed"><a href="">RSS</a> | <a href="">Atom</a></span> -->
+            <span><a href="https://twitter.com/float1251">twitter</a></span>
+            <span><a href="https://github.com/float1251">github</a></span>
+            <span><a href="feeds/rss.xml">RSS</a></span>
         </div>
 
         <div id="footer">
