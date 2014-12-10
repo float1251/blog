@@ -1,6 +1,7 @@
 vimscriptについて
 ===================
 :date: 2014-05-11
+:tags: vim
 
 vim pluginを開発したいと考えているが、まずはvimscriptについて知らないといけない。
 

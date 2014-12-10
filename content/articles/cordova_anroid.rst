@@ -2,6 +2,7 @@
 Cordovaでandroidにアプリをinstallする
 ==================================================
 :date: 2014-05-24
+:tags: chrome, android, cordova
 
 環境設定
 -------------

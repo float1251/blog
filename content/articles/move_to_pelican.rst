@@ -1,7 +1,7 @@
 blogをpelicanに移行しました
 ==============================
 :date: 2014-09-22
-:tags: python
+:tags: python, pelican
 
 blogをpelicanに移行しました。
 

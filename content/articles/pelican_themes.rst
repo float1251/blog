@@ -1,6 +1,7 @@
 pelicanのthemeについて
 ----------------------
 :date: 2014-12-09
+:tags: pelican, python
 
 色々とthemeを変えてみて、いいのがないか探している。
 
