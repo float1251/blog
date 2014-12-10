@@ -41,3 +41,7 @@ SLUGIFY_SOURCE="basename"
 
 ARTICLE_URL="{category}/{date:%Y}/{date:%m}/{slug}.html"
 ARTICLE_SAVE_AS="{category}/{date:%Y}/{date:%m}/{slug}.html"
+
+DATE_FORMATS = {
+    "ja": "%Y年%m月%d日(%a)"    
+}
