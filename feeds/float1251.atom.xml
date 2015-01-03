@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>float's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/float1251.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2014-12-15T00:00:00+09:00</updated><entry><title>pythonでsocketプログラミングをやってみる</title><link href="http://float1251.github.io/blog/articles/2014/12/python_socket_learning.html" rel="alternate"></link><updated>2014-12-15T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-12-15:blog/articles/2014/12/python_socket_learning.html</id><summary type="html">&lt;p&gt;pythonでsocketプログラミングをやってみる。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>float's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/float1251.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2015-01-03T00:00:00+09:00</updated><entry><title>codeforcesのテストコードを自動生成するツールつくった</title><link href="http://float1251.github.io/blog/articles/2015/01/codeforces_tools.html" rel="alternate"></link><updated>2015-01-03T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-01-03:blog/articles/2015/01/codeforces_tools.html</id><summary type="html">&lt;p&gt;ただし、まだ未公開。&lt;/p&gt;
+&lt;p&gt;今はテストがunittest.mockで確認してるんだけど、subprocessでstdoutを確認するほうがよさそう。&lt;/p&gt;
+&lt;p&gt;理由は&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;if __name__  で分岐しないとimport時に実行されてしまう。&lt;/li&gt;
+&lt;li&gt;mockでbuiltins.printを入れ替えてるが、実装中のデバッグプリントをsys.stderr.writeとか
+別なのでやんないと出力されなくなってしまう。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;あたりかな。&lt;/p&gt;
+&lt;p&gt;ただ、mockの使い方を学びたいからやってみたって面が多いので、とりあえずよしとしよう。&lt;/p&gt;
+&lt;p&gt;テストスクリプトの作成はJinja2をつかってやってます。&lt;/p&gt;
+&lt;p&gt;依存するのはそれくらいかな。&lt;/p&gt;
+&lt;p&gt;もうちょっと手直しをしたらgithubに上げる予定。&lt;/p&gt;
+</summary><category term="python"></category></entry><entry><title>pythonでsocketプログラミングをやってみる</title><link href="http://float1251.github.io/blog/articles/2014/12/python_socket_learning.html" rel="alternate"></link><updated>2014-12-15T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-12-15:blog/articles/2014/12/python_socket_learning.html</id><summary type="html">&lt;p&gt;pythonでsocketプログラミングをやってみる。&lt;/p&gt;
 &lt;p&gt;とりあえず簡単なTCPクライントとServerを作成する。&lt;/p&gt;
 &lt;p&gt;使用するのはpython3.3.5.&lt;/p&gt;
 &lt;p&gt;ここあたりはとりあえず読んでおく。&lt;/p&gt;

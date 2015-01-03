@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>float's memo</title>
+        <title>float's memo : codeforcesのテストコードを自動生成するツールつくった</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/main.css" type="text/css" />
         <link href="http://float1251.github.io/blog/" type="application/atom+xml" rel="alternate" title="float's memo ATOM Feed" />
@@ -25,30 +25,28 @@
 
 
             <div class="entry">
-<section id="content" class="body">
-<h1>Archives for float's memo</h1>
+        
+<header>
+<h1><a href="http://float1251.github.io/blog" id="site-title">  </a>         <a href="http://float1251.github.io/blog/articles/2015/01/codeforces_tools.html" id="page-title">codeforcesのテストコードを自動生成するツールつくった</a></h1>
+<time datetime="2015-01-03T00:00:00">2015年01月03日(土)</time></header>
+<article>
+    <p>ただし、まだ未公開。</p>
+<p>今はテストがunittest.mockで確認してるんだけど、subprocessでstdoutを確認するほうがよさそう。</p>
+<p>理由は</p>
+<blockquote>
+<ul class="simple">
+<li>if __name__  で分岐しないとimport時に実行されてしまう。</li>
+<li>mockでbuiltins.printを入れ替えてるが、実装中のデバッグプリントをsys.stderr.writeとか
+別なのでやんないと出力されなくなってしまう。</li>
+</ul>
+</blockquote>
+<p>あたりかな。</p>
+<p>ただ、mockの使い方を学びたいからやってみたって面が多いので、とりあえずよしとしよう。</p>
+<p>テストスクリプトの作成はJinja2をつかってやってます。</p>
+<p>依存するのはそれくらいかな。</p>
+<p>もうちょっと手直しをしたらgithubに上げる予定。</p>
 
-<dl>
-    <dt>2015年01月03日(土)</dt>
-    <dd><a href='http://float1251.github.io/blog/articles/2015/01/codeforces_tools.html'>codeforcesのテストコードを自動生成するツールつくった</a></dd>
-    <dt>2014年12月15日(月)</dt>
-    <dd><a href='http://float1251.github.io/blog/articles/2014/12/python_socket_learning.html'>pythonでsocketプログラミングをやってみる</a></dd>
-    <dt>2014年12月09日(火)</dt>
-    <dd><a href='http://float1251.github.io/blog/articles/2014/12/pelican_themes.html'>pelicanのthemeについて</a></dd>
-    <dt>2014年09月29日(月)</dt>
-    <dd><a href='http://float1251.github.io/blog/articles/2014/09/toeic_0929.html'>TOEICを受けました</a></dd>
-    <dt>2014年09月22日(月)</dt>
-    <dd><a href='http://float1251.github.io/blog/articles/2014/09/move_to_pelican.html'>blogをpelicanに移行しました</a></dd>
-    <dt>2014年06月02日(月)</dt>
-    <dd><a href='http://float1251.github.io/blog/articles/2014/06/google_image_search.html'>Googleの画像検索APIを使ってみる</a></dd>
-    <dt>2014年05月24日(土)</dt>
-    <dd><a href='http://float1251.github.io/blog/articles/2014/05/cordova_anroid.html'>Cordovaでandroidにアプリをinstallする</a></dd>
-    <dt>2014年05月11日(日)</dt>
-    <dd><a href='http://float1251.github.io/blog/articles/2014/05/vimscript.html'>vimscriptについて</a></dd>
-    <dt>2014年05月11日(日)</dt>
-    <dd><a href='http://float1251.github.io/blog/articles/2014/05/vimscript_memo.html'>vimscriptを書いてて、詰まったところ</a></dd>
-</dl>
-</section>
+</article>
             </div>
         </div>
 
