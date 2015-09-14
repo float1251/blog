@@ -12,7 +12,7 @@ TIMEZONE = 'Asia/Tokyo'
 
 DEFAULT_LANG = 'ja'
 
-THEME = "themes/monospace"
+THEME = "themes/blue-penguin"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
