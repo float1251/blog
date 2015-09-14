@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds%5Cfloat1251.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 14 Sep 2015 00:00:00 +0900</lastBuildDate><item><title>libgdxでuniversal tween engine使ってみた</title><link>http://float1251.github.io/blog/articles/2015/09/theme_change_2015.html</link><description>&lt;p&gt;更新をサボっていたが再開しようかと思ったので、&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds%5Cfloat1251.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 14 Sep 2015 00:00:00 +0900</lastBuildDate><item><title>新規移転、テーマを変えてみた</title><link>http://float1251.github.io/blog/articles/2015/09/theme_change_2015.html</link><description>&lt;p&gt;更新をサボっていたが再開しようかと思ったので、&lt;/p&gt;
 &lt;p&gt;心機一転、themeを変えてみた。&lt;/p&gt;
 &lt;p&gt;windowsだと&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;make serve
