@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/float1251.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 03 Jan 2015 00:00:00 +0900</lastBuildDate><item><title>codeforcesのテストコードを自動生成するツールつくった</title><link>http://float1251.github.io/blog/articles/2015/01/codeforces_tools.html</link><description>&lt;p&gt;ただし、まだ未公開。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds%5Cfloat1251.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 14 Sep 2015 00:00:00 +0900</lastBuildDate><item><title>libgdxでuniversal tween engine使ってみた</title><link>http://float1251.github.io/blog/articles/2015/09/theme_change_2015.html</link><description>&lt;p&gt;更新をサボっていたが再開しようかと思ったので、&lt;/p&gt;
+&lt;p&gt;心機一転、themeを変えてみた。&lt;/p&gt;
+&lt;p&gt;windowsだと&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;make serve
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;がErrorになる。なので、make htmlしてからoutputのディレクトリにcdして&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;python -m SimpleHTTPServer
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;でlocalserverを起動して確認した。&lt;/p&gt;
+&lt;p&gt;テーマは &lt;a class="reference external" href="https://github.com/jody-frankowski/blue-penguin"&gt;blue-penguine&lt;/a&gt; にした。&lt;/p&gt;
+&lt;p&gt;久しぶりにrstで書くと細かい記法を忘れてて戸惑いを隠せない。&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Mon, 14 Sep 2015 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2015-09-14:blog/articles/2015/09/theme_change_2015.html</guid><category>pelican</category></item><item><title>libgdxでuniversal tween engine使ってみた</title><link>http://float1251.github.io/blog/articles/2015/03/universal_tween_engine.html</link><description>&lt;p&gt;Tweenアニメーションの実装に、universal tween engineというライブラリを使ったみた。&lt;/p&gt;
+&lt;p&gt;導入はlibgdxのwikiにあった。urlは以下の通り。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;a class="reference external" href="https://github.com/libgdx/libgdx/wiki/Universal-Tween-Engine"&gt;https://github.com/libgdx/libgdx/wiki/Universal-Tween-Engine&lt;/a&gt;&lt;/blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;jarをtween engineの公式から落とす&lt;/li&gt;
+&lt;li&gt;projectのrootにlibsディレクトリを作成して、そこにjarを入れる&lt;/li&gt;
+&lt;li&gt;gradleの設定を変更する&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;実装は以下のような感じでやった。&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Accessorを定義する。&lt;/li&gt;
+&lt;li&gt;アニメーションを定義する&lt;/li&gt;
+&lt;li&gt;renderでmanagerをupdateする&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;サンプルはなくしちゃった。。。(´；ω；｀)&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Tue, 03 Mar 2015 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2015-03-03:blog/articles/2015/03/universal_tween_engine.html</guid><category>java</category><category>libgdx</category></item><item><title>codeforcesのテストコードを自動生成するツールつくった</title><link>http://float1251.github.io/blog/articles/2015/01/codeforces_tools.html</link><description>&lt;p&gt;ただし、まだ未公開。&lt;/p&gt;
 &lt;p&gt;今はテストがunittest.mockで確認してるんだけど、subprocessでstdoutを確認するほうがよさそう。&lt;/p&gt;
 &lt;p&gt;理由は&lt;/p&gt;
 &lt;blockquote&gt;
@@ -291,11 +318,11 @@ foo
 &lt;p&gt;関数内で有効なローカルスコープ l:、スクリプトファイル内で有効なスコープ s:、グローバルで有効なスコープ、
 がよく使う。&lt;/p&gt;
 &lt;p&gt;こんな感じ。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="k"&gt;s&lt;/span&gt;:Foo&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; s:Foo&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;l&lt;/span&gt;:foo &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;
     echo foo
 &lt;span class="k"&gt;endfunction&lt;/span&gt;
-&lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="k"&gt;s&lt;/span&gt;:Foo&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;call&lt;/span&gt; s:Foo&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="section" id="python"&gt;
@@ -310,13 +337,13 @@ echo has&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;pyt
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;であればpython2もpython3も両方使えます。&lt;/p&gt;
 &lt;p&gt;ではvimscriptで実際にpythonを使用してみます。&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; &lt;span class="k"&gt;s&lt;/span&gt;:Foo&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; s:Foo&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="k"&gt;python3&lt;/span&gt; &lt;span class="p"&gt;&amp;lt;&amp;lt;&lt;/span&gt; EOM
 print&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;foo&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 EOM
 &lt;span class="k"&gt;endfunction&lt;/span&gt;
 
-&lt;span class="k"&gt;call&lt;/span&gt; &lt;span class="k"&gt;s&lt;/span&gt;:Foo&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="k"&gt;call&lt;/span&gt; s:Foo&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;このような形で使用します。&lt;/p&gt;
 &lt;p&gt;外部ファイルを実行する際は:pyfileコマンドを使用します。&lt;/p&gt;
@@ -361,9 +388,9 @@ EOM
 &lt;div class="highlight"&gt;&lt;pre&gt;pyfile sample.py &lt;span class="nb"&gt;test&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;こうではなく、以下の様にして引数を渡す&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;:&lt;/span&gt;python import sys
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;python&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
 &lt;span class="c"&gt;&amp;quot; pythonではsys.argvの0番目はスクリプトのファイル名&lt;/span&gt;
-&lt;span class="p"&gt;:&lt;/span&gt;python sys.argv &lt;span class="p"&gt;=&lt;/span&gt; [&lt;span class="s2"&gt;&amp;quot;sample.py&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;test&amp;quot;&lt;/span&gt;]
+&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;python&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;sample.py&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;test&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="k"&gt;pyfile&lt;/span&gt; sample.&lt;span class="k"&gt;py&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;こうすると想定どおりに引数がpython側で受け取れる。&lt;/p&gt;
@@ -372,9 +399,9 @@ EOM
 &lt;h2&gt;python側でvimで定義した変数を受け取る&lt;/h2&gt;
 &lt;p&gt;vimscriptの変数をpython側で受け取るにはvim.evalを使用する。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;let&lt;/span&gt; tmp &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Test&amp;quot;&lt;/span&gt;
-python &lt;span class="p"&gt;&amp;lt;&amp;lt;&lt;/span&gt; EOM
-import &lt;span class="k"&gt;vim&lt;/span&gt;
-print&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;vim&lt;/span&gt;.eval&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;tmp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="k"&gt;python&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; EOM
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;vim&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vim&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;eval&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;tmp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 EOM
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;こんな感じ&lt;/p&gt;

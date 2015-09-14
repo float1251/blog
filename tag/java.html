@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-        <meta charset="utf-8" />
-    <title>float's memo | blogをpelicanに移行しました</title>
+    <meta charset="utf-8" />
+    <title>float's memo | articles tagged "java"</title>
     <link rel="shortcut icon" type="image/png" href="http://float1251.github.io/blog/favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="http://float1251.github.io/blog/favicon.ico">
     <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Full Atom Feed" />
     <link href="http://float1251.github.io/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="float's memo RSS Feed" />
-    <link href="http://float1251.github.io/blog/feeds/articles.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Categories Atom Feed" />
     <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/screen.css" type="text/css" />
     <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/pygments.css" type="text/css" />
     <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/print.css" type="text/css" media="print" />
     <meta name="generator" content="Pelican" />
-
-    <meta name="keywords" content="python,pelican" />
 </head>
 <body>
     <header>
         <nav>
             <ul>
+                <li class="ephemeral selected"><a href="http://float1251.github.io/blog/tag\java.html">java</a></li>
                 <li><a href="http://float1251.github.io/blog">Home</a></li>
             </ul>
         </nav>
@@ -27,31 +25,41 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">9 22, 2014</h4>
+        <div id="content">            <h4 class="date">3 03, 2015</h4>
 
             <article class="post">
                 <h2 class="title">
-                    <a href="http://float1251.github.io/blog/articles/2014/09/move_to_pelican.html" rel="bookmark" title="Permanent Link to &quot;blogをpelicanに移行しました&quot;">blogをpelicanに移行しました</a>
+                    <a href="http://float1251.github.io/blog/articles/2015/03/universal_tween_engine.html" rel="bookmark" title="Permanent Link to &quot;libgdxでuniversal tween engine使ってみた&quot;">libgdxでuniversal tween engine使ってみた</a>
                 </h2>
 
-                <p>blogをpelicanに移行しました。</p>
-<p>bloggerだとなんとなく書く気にならなかったので。</p>
-<p>github pageを使ってます。</p>
-<p>ドキュメントはひたすらに読みました。</p>
-<p><a class="reference external" href="http://docs.getpelican.com/en/3.4.0/">http://docs.getpelican.com/en/3.4.0/</a></p>
-<p>あとここは参考にしました。</p>
-<p><a class="reference external" href="http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/">http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/</a></p>
+                <p>Tweenアニメーションの実装に、universal tween engineというライブラリを使ったみた。</p>
+<p>導入はlibgdxのwikiにあった。urlは以下の通り。</p>
+<blockquote>
+<a class="reference external" href="https://github.com/libgdx/libgdx/wiki/Universal-Tween-Engine">https://github.com/libgdx/libgdx/wiki/Universal-Tween-Engine</a></blockquote>
+<ol class="arabic simple">
+<li>jarをtween engineの公式から落とす</li>
+<li>projectのrootにlibsディレクトリを作成して、そこにjarを入れる</li>
+<li>gradleの設定を変更する</li>
+</ol>
+<p>実装は以下のような感じでやった。</p>
+<ol class="arabic simple">
+<li>Accessorを定義する。</li>
+<li>アニメーションを定義する</li>
+<li>renderでmanagerをupdateする</li>
+</ol>
+<p>サンプルはなくしちゃった。。。(´；ω；｀)</p>
 
                 <div class="clear"></div>
 
                 <div class="info">
-                    <a href="http://float1251.github.io/blog/articles/2014/09/move_to_pelican.html">posted at 00:00</a>
+                    <a href="http://float1251.github.io/blog/articles/2015/03/universal_tween_engine.html">posted at 00:00</a>
                     &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
                     &nbsp;&middot;
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/python.html" class="tags">python</a>
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/pelican.html" class="tags">pelican</a>
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/java.html" class="tags selected">java</a>
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/libgdx.html" class="tags">libgdx</a>
                 </div>
             </article>
+
             <div class="clear"></div>
             <footer>
                 <p>

@@ -1,82 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-        <title>float's memo - pelican</title>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/main.css" type="text/css" />
-        <link href="http://float1251.github.io/blog/" type="application/atom+xml" rel="alternate" title="float's memo ATOM Feed" />
-        <link href="http://float1251.github.io/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="float's memo RSS Feed" />
-
-        <!--[if IE]>
-                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-        <!--[if lte IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="http://float1251.github.io/blog/css/ie.css"/>
-                <script src="http://float1251.github.io/blog/js/IE8.js" type="text/javascript"></script><![endif]-->
-
-        <!--[if lt IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="http://float1251.github.io/blog/css/ie6.css"/><![endif]-->
-
+    <meta charset="utf-8" />
+    <title>float's memo | articles tagged "pelican"</title>
+    <link rel="shortcut icon" type="image/png" href="http://float1251.github.io/blog/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="http://float1251.github.io/blog/favicon.ico">
+    <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Full Atom Feed" />
+    <link href="http://float1251.github.io/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="float's memo RSS Feed" />
+    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/screen.css" type="text/css" />
+    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/print.css" type="text/css" media="print" />
+    <meta name="generator" content="Pelican" />
 </head>
-
 <body>
-	<div id="wrap" style="width:850px">
-	    <div id="container" style="width:560px">
+    <header>
+        <nav>
+            <ul>
+                <li class="ephemeral selected"><a href="http://float1251.github.io/blog/tag\pelican.html">pelican</a></li>
+                <li><a href="http://float1251.github.io/blog">Home</a></li>
+            </ul>
+        </nav>
+        <div class="header_box">
+            <h1><a href="http://float1251.github.io/blog">float's memo</a></h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">            <h4 class="date">9 14, 2015</h4>
 
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/articles/2015/09/theme_change_2015.html" rel="bookmark" title="Permanent Link to &quot;libgdxでuniversal tween engine使ってみた&quot;">libgdxでuniversal tween engine使ってみた</a>
+                </h2>
 
-            <div class="entry">
-        
-        
+                <p>更新をサボっていたが再開しようかと思ったので、</p>
+<p>心機一転、themeを変えてみた。</p>
+<p>windowsだと</p>
+<div class="highlight"><pre>make serve
+</pre></div>
+<p>がErrorになる。なので、make htmlしてからoutputのディレクトリにcdして</p>
+<div class="highlight"><pre>python -m SimpleHTTPServer
+</pre></div>
+<p>でlocalserverを起動して確認した。</p>
+<p>テーマは <a class="reference external" href="https://github.com/jody-frankowski/blue-penguin">blue-penguine</a> にした。</p>
+<p>久しぶりにrstで書くと細かい記法を忘れてて戸惑いを隠せない。</p>
 
-            <header>
-            <h1><a href="http://float1251.github.io/blog" id="site-title">  </a>  <a href="http://float1251.github.io/blog/articles/2014/12/pelican_themes.html" id="page-title">pelicanのthemeについて</a></h1>
-<time datetime="2014-12-09T00:00:00">2014年12月09日(火)</time>            </header>
+                <div class="clear"></div>
 
-            <article>
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/articles/2015/09/theme_change_2015.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/pelican.html" class="tags selected">pelican</a>
+                </div>
+            </article>            <h4 class="date">12 09, 2014</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/articles/2014/12/pelican_themes.html" rel="bookmark" title="Permanent Link to &quot;pelicanのthemeについて&quot;">pelicanのthemeについて</a>
+                </h2>
+
                 <p>色々とthemeを変えてみて、いいのがないか探している。</p>
 <p>ただなかなかいいのが見当たらない。。。</p>
 <p>あと、previewとかがないのがあるから、どういった感じのthemeなのかわからないものが多い。</p>
 <p>微妙に機能が足りてないのとかもあるから、自分でカスタムするしかないかも。</p>
 <p><a class="reference external" href="https://github.com/getpelican/pelican-themes">https://github.com/getpelican/pelican-themes</a></p>
 <p>とりあえずforkしてmonospaceあたりを自分なりにカスタマイズするのがよさげって思った。</p>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/articles/2014/12/pelican_themes.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/pelican.html" class="tags selected">pelican</a>
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/python.html" class="tags">python</a>
+                </div>
+            </article>            <h4 class="date">9 22, 2014</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/articles/2014/09/move_to_pelican.html" rel="bookmark" title="Permanent Link to &quot;blogをpelicanに移行しました&quot;">blogをpelicanに移行しました</a>
+                </h2>
+
+                <p>blogをpelicanに移行しました。</p>
+<p>bloggerだとなんとなく書く気にならなかったので。</p>
+<p>github pageを使ってます。</p>
+<p>ドキュメントはひたすらに読みました。</p>
+<p><a class="reference external" href="http://docs.getpelican.com/en/3.4.0/">http://docs.getpelican.com/en/3.4.0/</a></p>
+<p>あとここは参考にしました。</p>
+<p><a class="reference external" href="http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/">http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/</a></p>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/articles/2014/09/move_to_pelican.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/python.html" class="tags">python</a>
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/pelican.html" class="tags selected">pelican</a>
+                </div>
             </article>
-                <section id="article-list">
-                    <h2>All posts</h2>
-                    <ol>
-        
 
- 
-            <li><a href="http://float1251.github.io/blog/articles/2014/09/move_to_pelican.html" rel="bookmark" title="Permalink to blogをpelicanに移行しました">blogをpelicanに移行しました</a></li>
-    </ol>
-    </section><!-- #article-list -->
-            </div>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+                &middot;
+                <a href="http://float1251.github.io/blog/feeds/all.atom.xml" rel="alternate">Atom Feed</a>
+            </footer>
         </div>
-
-
-        <div id="sidebar">
-            <h1><a href="http://float1251.github.io/blog " title="title">float's memo</a></h1>
-            <span class="description"> </span>
-            <!-- <span class="feed"><a href="">RSS</a> | <a href="">Atom</a></span> -->
-            <span><a href="https://twitter.com/float1251">twitter</a></span>
-            <span><a href="https://github.com/float1251">github</a></span>
-            <span><a href="feeds/rss.xml">RSS</a></span>
-        </div>
-
-        <div id="footer">
-            <nav>
-                <ul>
-                    <li>:: <a href="http://float1251.github.io/blog/tags.html">Tags</a></li>
-                </ul>
-            </nav>
-
-            <div id="credits">
-                <span>Adapted from <a href="http://wordpress.org/themes/monospace">Monospace</a> || Created with <a href="">Pelican</a></span>
-            </div>
-                
-        </div>
-
-
+        <div class="clear"></div>
     </div>
-
 </body>
 </html>

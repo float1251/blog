@@ -1,38 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-        <title>float's memo - float1251</title>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/main.css" type="text/css" />
-        <link href="http://float1251.github.io/blog/" type="application/atom+xml" rel="alternate" title="float's memo ATOM Feed" />
-        <link href="http://float1251.github.io/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="float's memo RSS Feed" />
-
-        <!--[if IE]>
-                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-        <!--[if lte IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="http://float1251.github.io/blog/css/ie.css"/>
-                <script src="http://float1251.github.io/blog/js/IE8.js" type="text/javascript"></script><![endif]-->
-
-        <!--[if lt IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="http://float1251.github.io/blog/css/ie6.css"/><![endif]-->
-
+    <meta charset="utf-8" />
+    <title>float's memo | Articles by float1251</title>
+    <link rel="shortcut icon" type="image/png" href="http://float1251.github.io/blog/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="http://float1251.github.io/blog/favicon.ico">
+    <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Full Atom Feed" />
+    <link href="http://float1251.github.io/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="float's memo RSS Feed" />
+    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/screen.css" type="text/css" />
+    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/print.css" type="text/css" media="print" />
+    <meta name="generator" content="Pelican" />
 </head>
-
 <body>
-	<div id="wrap" style="width:850px">
-	    <div id="container" style="width:560px">
+    <header>
+        <nav>
+            <ul>
 
+                <li class="ephemeral selected"><a href="http://float1251.github.io/blog/author\float1251.html">float1251</a></li>
+                <li><a href="http://float1251.github.io/blog">Home</a></li>
+            </ul>
+        </nav>
+        <div class="header_box">
+            <h1><a href="http://float1251.github.io/blog">float's memo</a></h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">            <h4 class="date">9 14, 2015</h4>
 
-            <div class="entry">
-        
-        
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/articles/2015/09/theme_change_2015.html" rel="bookmark" title="Permanent Link to &quot;libgdxでuniversal tween engine使ってみた&quot;">libgdxでuniversal tween engine使ってみた</a>
+                </h2>
 
-            <header>
-            <h1><a href="http://float1251.github.io/blog" id="site-title">  </a>  <a href="http://float1251.github.io/blog/articles/2015/01/codeforces_tools.html" id="page-title">codeforcesのテストコードを自動生成するツールつくった</a></h1>
-<time datetime="2015-01-03T00:00:00">2015年01月03日(土)</time>            </header>
+                <p>更新をサボっていたが再開しようかと思ったので、</p>
+<p>心機一転、themeを変えてみた。</p>
+<p>windowsだと</p>
+<div class="highlight"><pre>make serve
+</pre></div>
+<p>がErrorになる。なので、make htmlしてからoutputのディレクトリにcdして</p>
+<div class="highlight"><pre>python -m SimpleHTTPServer
+</pre></div>
+<p>でlocalserverを起動して確認した。</p>
+<p>テーマは <a class="reference external" href="https://github.com/jody-frankowski/blue-penguin">blue-penguine</a> にした。</p>
+<p>久しぶりにrstで書くと細かい記法を忘れてて戸惑いを隠せない。</p>
 
-            <article>
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/articles/2015/09/theme_change_2015.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/pelican.html" class="tags">pelican</a>
+                </div>
+            </article>            <h4 class="date">3 03, 2015</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/articles/2015/03/universal_tween_engine.html" rel="bookmark" title="Permanent Link to &quot;libgdxでuniversal tween engine使ってみた&quot;">libgdxでuniversal tween engine使ってみた</a>
+                </h2>
+
+                <p>Tweenアニメーションの実装に、universal tween engineというライブラリを使ったみた。</p>
+<p>導入はlibgdxのwikiにあった。urlは以下の通り。</p>
+<blockquote>
+<a class="reference external" href="https://github.com/libgdx/libgdx/wiki/Universal-Tween-Engine">https://github.com/libgdx/libgdx/wiki/Universal-Tween-Engine</a></blockquote>
+<ol class="arabic simple">
+<li>jarをtween engineの公式から落とす</li>
+<li>projectのrootにlibsディレクトリを作成して、そこにjarを入れる</li>
+<li>gradleの設定を変更する</li>
+</ol>
+<p>実装は以下のような感じでやった。</p>
+<ol class="arabic simple">
+<li>Accessorを定義する。</li>
+<li>アニメーションを定義する</li>
+<li>renderでmanagerをupdateする</li>
+</ol>
+<p>サンプルはなくしちゃった。。。(´；ω；｀)</p>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/articles/2015/03/universal_tween_engine.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/java.html" class="tags">java</a>
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/libgdx.html" class="tags">libgdx</a>
+                </div>
+            </article>            <h4 class="date">1 03, 2015</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/articles/2015/01/codeforces_tools.html" rel="bookmark" title="Permanent Link to &quot;codeforcesのテストコードを自動生成するツールつくった&quot;">codeforcesのテストコードを自動生成するツールつくった</a>
+                </h2>
+
                 <p>ただし、まだ未公開。</p>
 <p>今はテストがunittest.mockで確認してるんだけど、subprocessでstdoutを確認するほうがよさそう。</p>
 <p>理由は</p>
@@ -48,72 +108,485 @@
 <p>テストスクリプトの作成はJinja2をつかってやってます。</p>
 <p>依存するのはそれくらいかな。</p>
 <p>もうちょっと手直しをしたらgithubに上げる予定。</p>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/articles/2015/01/codeforces_tools.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/python.html" class="tags">python</a>
+                </div>
+            </article>            <h4 class="date">12 15, 2014</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/articles/2014/12/python_socket_learning.html" rel="bookmark" title="Permanent Link to &quot;pythonでsocketプログラミングをやってみる&quot;">pythonでsocketプログラミングをやってみる</a>
+                </h2>
+
+                <p>pythonでsocketプログラミングをやってみる。</p>
+<p>とりあえず簡単なTCPクライントとServerを作成する。</p>
+<p>使用するのはpython3.3.5.</p>
+<p>ここあたりはとりあえず読んでおく。</p>
+<p><a class="reference external" href="http://docs.python.jp/3.3/howto/sockets.html">http://docs.python.jp/3.3/howto/sockets.html</a></p>
+<p>client側コード</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="n">target_host</span> <span class="o">=</span> <span class="s">&quot;localhost&quot;</span>
+<span class="n">target_port</span> <span class="o">=</span> <span class="mi">9999</span>
+
+<span class="c"># create socket object</span>
+<span class="c"># AF_INET -&gt; ipv4を使います</span>
+<span class="c"># SOCK_STREAM -&gt; tcpを使います</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+
+<span class="n">client</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">target_host</span><span class="p">,</span> <span class="n">target_port</span><span class="p">))</span>
+
+<span class="c"># strではなくbyteを渡す</span>
+<span class="n">client</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">b</span><span class="s">&quot;Hello Server&quot;</span><span class="p">)</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">4096</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">decode</span><span class="p">())</span>
+
+<span class="n">client</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+<p>server側コード</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">socketserver</span>
+
+
+<span class="k">class</span> <span class="nc">MyTCPHandler</span><span class="p">(</span><span class="n">socketserver</span><span class="o">.</span><span class="n">BaseRequestHandler</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    socket server request handler</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">setup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;request Started&quot;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">handle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c"># self.rquest is TCP socket connected to the client</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;{} worte:&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">client_address</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="k">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="c"># just send back the same data, but upper-cased</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+
+    <span class="k">def</span> <span class="nf">finish</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;request finished&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span> <span class="o">=</span> <span class="s">&quot;localhost&quot;</span><span class="p">,</span> <span class="mi">9999</span>
+
+    <span class="n">server</span> <span class="o">=</span> <span class="n">socketserver</span><span class="o">.</span><span class="n">TCPServer</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">),</span> <span class="n">MyTCPHandler</span><span class="p">)</span>
+
+    <span class="n">server</span><span class="o">.</span><span class="n">serve_forever</span><span class="p">()</span>
+</pre></div>
+<p>これでサーバーを起動してからクライントを実行すればよい。</p>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/articles/2014/12/python_socket_learning.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/python.html" class="tags">python</a>
+                </div>
+            </article>            <h4 class="date">12 09, 2014</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/articles/2014/12/pelican_themes.html" rel="bookmark" title="Permanent Link to &quot;pelicanのthemeについて&quot;">pelicanのthemeについて</a>
+                </h2>
+
+                <p>色々とthemeを変えてみて、いいのがないか探している。</p>
+<p>ただなかなかいいのが見当たらない。。。</p>
+<p>あと、previewとかがないのがあるから、どういった感じのthemeなのかわからないものが多い。</p>
+<p>微妙に機能が足りてないのとかもあるから、自分でカスタムするしかないかも。</p>
+<p><a class="reference external" href="https://github.com/getpelican/pelican-themes">https://github.com/getpelican/pelican-themes</a></p>
+<p>とりあえずforkしてmonospaceあたりを自分なりにカスタマイズするのがよさげって思った。</p>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/articles/2014/12/pelican_themes.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/pelican.html" class="tags">pelican</a>
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/python.html" class="tags">python</a>
+                </div>
+            </article>            <h4 class="date">9 29, 2014</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/articles/2014/09/toeic_0929.html" rel="bookmark" title="Permanent Link to &quot;TOEICを受けました&quot;">TOEICを受けました</a>
+                </h2>
+
+                <p>会社でTOEICを受けたので感想を残しておこうと思う。</p>
+<blockquote>
+<ul class="simple">
+<li>リスニングが絶望的にできない。聞き取れないのもあるが単語がわからん。</li>
+<li>文法問題が微妙。。。テクニック的なのも忘れてるし。</li>
+<li>リーディングは結構解けた気がする。読むスピードはお察しだが。</li>
+</ul>
+</blockquote>
+<p>とりあえず、CD聞きながら単語帳やっていこうと思いました。</p>
+<p>また3ヶ月後くらいに受けないとあかんらしいです。</p>
+<p>点数わかったら追記しようと思います。</p>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/articles/2014/09/toeic_0929.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
+                </div>
+            </article>            <h4 class="date">9 22, 2014</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/articles/2014/09/move_to_pelican.html" rel="bookmark" title="Permanent Link to &quot;blogをpelicanに移行しました&quot;">blogをpelicanに移行しました</a>
+                </h2>
+
+                <p>blogをpelicanに移行しました。</p>
+<p>bloggerだとなんとなく書く気にならなかったので。</p>
+<p>github pageを使ってます。</p>
+<p>ドキュメントはひたすらに読みました。</p>
+<p><a class="reference external" href="http://docs.getpelican.com/en/3.4.0/">http://docs.getpelican.com/en/3.4.0/</a></p>
+<p>あとここは参考にしました。</p>
+<p><a class="reference external" href="http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/">http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/</a></p>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/articles/2014/09/move_to_pelican.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/python.html" class="tags">python</a>
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/pelican.html" class="tags">pelican</a>
+                </div>
+            </article>            <h4 class="date">6 02, 2014</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/articles/2014/06/google_image_search.html" rel="bookmark" title="Permanent Link to &quot;Googleの画像検索APIを使ってみる&quot;">Googleの画像検索APIを使ってみる</a>
+                </h2>
+
+                <p>現在はCustom Search APIを使用する。</p>
+<p><a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/overview?hl=ja">https://developers.google.com/custom-search/json-api/v1/overview?hl=ja</a></p>
+<div class="section" id="id1">
+<h2>データ型</h2>
+<p>JSONかAtomで返ってくる模様。</p>
+<p>Atomで取得する際はqueryにalt=atomとつける。</p>
+</div>
+<div class="section" id="id2">
+<h2>価格</h2>
+<p>Freeのやつと有料のやつがある。</p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt>Custom Search Engine</dt>
+<dd><p class="first last">100 requests/dayで無料。Cloud Consoleでbilingを有効化すれば、$5/1000 requestsで買える。制限は10kquery/dayらしい</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Google Site Search</dt>
+<dd><p class="first last">有料版。詳細はここで。
+<a class="reference external" href="http://www.google.com/enterprise/search/products/gss.html#pricing_content">http://www.google.com/enterprise/search/products/gss.html#pricing_content</a></p>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="api-key">
+<h2>API KEY</h2>
+<p>管理コンソールから取得してくる。</p>
+</div>
+<div class="section" id="custom-search-engine">
+<h2>Custom Search Engine</h2>
+<p>Custom Search Engine IDというものが必要らしい。</p>
+<p>最初に設定するとき、対象のURLを入力するとあって、
+全体を対象にするにはどうすればいいのかわからなかったが、</p>
+<p><a class="reference external" href="http://ryutamaki.hatenablog.com/entry/2014/01/18/171640">http://ryutamaki.hatenablog.com/entry/2014/01/18/171640</a></p>
+<p>これ見て設定したらうまくいった。</p>
+</div>
+<div class="section" id="custom-search-api">
+<h2>Custom Search apiの使い方</h2>
+<p>ここ見ればわかる。</p>
+<p><a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/using_rest?hl=ja">https://developers.google.com/custom-search/json-api/v1/using_rest?hl=ja</a></p>
+<p>URLフォーマットは以下:</p>
+<pre class="literal-block">
+https://www.googleapis.com/customsearch/v1?{parameters}
+</pre>
+<p>必須パラメータは以下3つ</p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt>API Key</dt>
+<dd><p class="first last">管理コンソールで取得したAPI Key</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Custom Search Engine ID</dt>
+<dd><p class="first last">Custom Search Engineで作成したEngine Id
+今回はcxで渡せば良い模様。</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Search Query</dt>
+<dd><p class="first last">検索ワードを渡せばおｋ．</p>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+<p>その他のquery parameterはここ見ましょう。</p>
+<p><a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#request">https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#request</a>
+<a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/using_rest?hl=ja#api-specific_query_parameters">https://developers.google.com/custom-search/json-api/v1/using_rest?hl=ja#api-specific_query_parameters</a></p>
+<p>とりあえず今回は画像検索だからsearchTypeにimageを設定する必要があるらしい。</p>
+</div>
+<div class="section" id="response">
+<h2>response形式</h2>
+<p>以下を参照。</p>
+<p><a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#response">https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#response</a></p>
+<p>画像のリンクはitems.linkのURLを見ればいいらしい。</p>
+</div>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/articles/2014/06/google_image_search.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
+                </div>
+            </article>            <h4 class="date">5 24, 2014</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/articles/2014/05/cordova_anroid.html" rel="bookmark" title="Permanent Link to &quot;Cordovaでandroidにアプリをinstallする&quot;">Cordovaでandroidにアプリをinstallする</a>
+                </h2>
+
+                <div class="section" id="id1">
+<h2>環境設定</h2>
+<p>手順はhttps://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/README.mdにある。</p>
+<blockquote>
+<ul class="simple">
+<li>androidSDKをインストールする。</li>
+<li>.bash_profileにsdk/toolsとsdk/platform-toolsにpathを通す</li>
+<li>brew install antでantを入れる。入らなかったらbrew updateしてから再度行う</li>
+<li>npm install -g cca</li>
+<li>cca checkenvで怒られないことを確認</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="project">
+<h2>Projectの作成</h2>
+<p>以下のコマンドを実行する</p>
+<blockquote>
+cca create APP_NAME</blockquote>
+<!-- Error: Cannot find module 'cordova/platforms'
+と怒られたが、- -androidとつけてcreateして解決。
+iosの設定はやってないからなんか足りんかったんだろう。 -->
+</div>
+<div class="section" id="id2">
+<h2>実行</h2>
+<p>作成したプロジェクトディレクトリで以下を実行</p>
+<blockquote>
+cca run android</blockquote>
+<p>これでアプリがdeviceにインストールされる。</p>
+</div>
+<div class="section" id="id3">
+<h2>プロジェクトの構造</h2>
+<p>以下のような形になっている。</p>
+<pre class="literal-block">
+.
+├── config.xml
+├── hooks
+│&nbsp;&nbsp; ├── README.md
+│&nbsp;&nbsp; ├── after_prepare
+│&nbsp;&nbsp; └── before_prepare
+├── merges
+│&nbsp;&nbsp; └── android
+├── platforms
+│&nbsp;&nbsp; └── android
+├── plugins
+│&nbsp;&nbsp; ├── android.json
+│&nbsp;&nbsp; ├── org.apache.cordova.file
+│&nbsp;&nbsp; ├── org.apache.cordova.inappbrowser
+│&nbsp;&nbsp; ├── org.apache.cordova.keyboard
+│&nbsp;&nbsp; ├── org.apache.cordova.network-information
+│&nbsp;&nbsp; ├── org.apache.cordova.statusbar
+│&nbsp;&nbsp; ├── org.chromium.bootstrap
+│&nbsp;&nbsp; ├── org.chromium.common
+│&nbsp;&nbsp; ├── org.chromium.i18n
+│&nbsp;&nbsp; ├── org.chromium.navigation
+│&nbsp;&nbsp; ├── org.chromium.polyfill.CustomEvent
+│&nbsp;&nbsp; ├── org.chromium.polyfill.blob_constructor
+│&nbsp;&nbsp; ├── org.chromium.polyfill.xhr_features
+│&nbsp;&nbsp; ├── org.chromium.runtime
+│&nbsp;&nbsp; └── org.chromium.storage
+└── www
+    ├── assets
+    ├── background.js
+    ├── index.css
+    ├── index.html
+    ├── manifest.json
+    └── manifest.mobile.json
+</pre>
+<p>www以下がwebviewで使用されるファイル。</p>
+</div>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/articles/2014/05/cordova_anroid.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/chrome.html" class="tags">chrome</a>
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/android.html" class="tags">android</a>
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/cordova.html" class="tags">cordova</a>
+                </div>
+            </article>            <h4 class="date">5 11, 2014</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/articles/2014/05/vimscript.html" rel="bookmark" title="Permanent Link to &quot;vimscriptについて&quot;">vimscriptについて</a>
+                </h2>
+
+                <p>vim pluginを開発したいと考えているが、まずはvimscriptについて知らないといけない。</p>
+<p>ということでちょっと調べてみた。</p>
+<p><a class="reference external" href="http://mattn.kaoriya.net/software/vim/20111202085236.htm">http://mattn.kaoriya.net/software/vim/20111202085236.htm</a></p>
+<p>この記事が素晴らしすぎたので、こっちを読むとよいと思います。</p>
+<p>あとこことか</p>
+<p><a class="reference external" href="http://vim-users.jp/2010/04/hack136/">http://vim-users.jp/2010/04/hack136/</a>
+<a class="reference external" href="http://vim-jp.org/tips/start_vimscript.html">http://vim-jp.org/tips/start_vimscript.html</a></p>
+<p>とりあえず、備忘録的にやったことを残しておこうと思います。</p>
+<div class="section" id="id1">
+<h2>変数宣言</h2>
+<p>こんな感じ。</p>
+<div class="highlight"><pre><span class="c">&quot; 数値</span>
+<span class="k">let</span> foo <span class="p">=</span> <span class="m">1</span>
+<span class="c">&quot; 文字列</span>
+<span class="k">let</span> foo <span class="p">=</span> <span class="s2">&quot;bar&quot;</span>
+<span class="c">&quot; リスト</span>
+<span class="k">let</span> foo <span class="p">=</span> [<span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span>]
+<span class="c">&quot; 辞書</span>
+<span class="k">let</span> foo <span class="p">=</span> {<span class="s2">&quot;bar&quot;</span>: <span class="s2">&quot;bar&quot;</span>}
+</pre></div>
+</div>
+<div class="section" id="id2">
+<h2>関数定義</h2>
+<p>こんな感じ。</p>
+<div class="highlight"><pre><span class="k">function</span> Foo<span class="p">()</span>
+    echo <span class="s2">&quot;foo&quot;</span>
+<span class="k">endfunction</span>
+</pre></div>
+<p>コマンドラインから実行すると以下のようになる。</p>
+<div class="highlight"><pre><span class="p">:</span><span class="k">call</span> Foo<span class="p">()</span>
+foo
+</pre></div>
+<p>同じ関数名を定義するにはfunction!を指定する</p>
+<div class="highlight"><pre><span class="k">function</span><span class="p">!</span> Foo<span class="p">()</span>
+    echo <span class="s2">&quot;foo&quot;</span>
+<span class="k">endfunction</span>
+</pre></div>
+</div>
+<div class="section" id="id3">
+<h2>スコープ</h2>
+<p>関数内で有効なローカルスコープ l:、スクリプトファイル内で有効なスコープ s:、グローバルで有効なスコープ、
+がよく使う。</p>
+<p>こんな感じ。</p>
+<div class="highlight"><pre><span class="k">function</span><span class="p">!</span> s:Foo<span class="p">()</span>
+    <span class="k">let</span> <span class="k">l</span>:foo <span class="p">=</span> <span class="s2">&quot;foo&quot;</span>
+    echo foo
+<span class="k">endfunction</span>
+<span class="k">call</span> s:Foo<span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="python">
+<h2>Pythonインターフェース</h2>
+<p>vimscriptではPythonを使用することが出来ます。</p>
+<p>まずは使用できるかどうかの確認。</p>
+<div class="highlight"><pre>echo has<span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">)</span>
+<span class="m">1</span>
+
+echo has<span class="p">(</span><span class="s2">&quot;python3&quot;</span><span class="p">)</span>
+<span class="m">1</span>
+</pre></div>
+<p>であればpython2もpython3も両方使えます。</p>
+<p>ではvimscriptで実際にpythonを使用してみます。</p>
+<div class="highlight"><pre><span class="k">function</span><span class="p">!</span> s:Foo<span class="p">()</span>
+    <span class="k">python3</span> <span class="p">&lt;&lt;</span> EOM
+print<span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
+EOM
+<span class="k">endfunction</span>
+
+<span class="k">call</span> s:Foo<span class="p">()</span>
+</pre></div>
+<p>このような形で使用します。</p>
+<p>外部ファイルを実行する際は:pyfileコマンドを使用します。</p>
+</div>
+<div class="section" id="map">
+<h2>map</h2>
+<p>基本的なコマンドについては知っているので割愛。</p>
+<p>インサートモードにおいて、関数の評価結果から入力文字列を挿入させるためには&lt;expr&gt;を使用する。</p>
+<div class="highlight"><pre><span class="nb">inoremap</span> <span class="p">&lt;</span>expr<span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">x</span><span class="p">&gt;</span> Foo<span class="p">()</span>
+</pre></div>
+</div>
+<div class="section" id="command">
+<h2>command</h2>
+<p>コマンドモードから実行できるコマンドを定義する。</p>
+<p>名前の戦闘は大文字である必要がある。</p>
+<div class="highlight"><pre>command<span class="p">!</span> Foo :<span class="k">call</span> Foo<span class="p">()</span>
+</pre></div>
+<p>詳しくは help :command-args を参照。</p>
+</div>
+<div class="section" id="autoloadautocmd">
+<h2>autoloadとautocmd</h2>
+<p><a class="reference external" href="http://mattn.kaoriya.net/software/vim/20111202085236.htm">http://mattn.kaoriya.net/software/vim/20111202085236.htm</a></p>
+<p>ここ見たほうがよいです。</p>
+</div>
+<div class="section" id="id4">
+<h2>vimscriptの組み込み関数</h2>
+<p>機能別に分類してあるヘルプは以下で見れる。</p>
+<div class="highlight"><pre><span class="p">:</span>help <span class="k">function</span><span class="p">-</span><span class="nb">list</span>
+</pre></div>
+<p>アルファベット順は以下</p>
+<div class="highlight"><pre><span class="p">:</span>help functions
+</pre></div>
+<p>ということで最後の方はだいぶ適当になったけど、これで最低限vimscriptが読めるようになった気がします。</p>
+<p>あとは色々見たり作ったりしながら覚えていこうかと思います。</p>
+</div>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/articles/2014/05/vimscript.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/vim.html" class="tags">vim</a>
+                </div>
             </article>
-                <section id="article-list">
-                    <h2>All posts</h2>
-                    <ol>
-        
 
- 
-            <li><a href="http://float1251.github.io/blog/articles/2014/12/python_socket_learning.html" rel="bookmark" title="Permalink to pythonでsocketプログラミングをやってみる">pythonでsocketプログラミングをやってみる</a></li>
-        
+                <div class="clear"></div>
+                <div class="pages">
 
- 
-            <li><a href="http://float1251.github.io/blog/articles/2014/12/pelican_themes.html" rel="bookmark" title="Permalink to pelicanのthemeについて">pelicanのthemeについて</a></li>
-        
+                    <a href="http://float1251.github.io/blog/page/2" class="next_page">Next&nbsp;&rarr;</a>
+                    <span>Page 1 of 2</span>
+                </div>
 
- 
-            <li><a href="http://float1251.github.io/blog/articles/2014/09/toeic_0929.html" rel="bookmark" title="Permalink to TOEICを受けました">TOEICを受けました</a></li>
-        
-
- 
-            <li><a href="http://float1251.github.io/blog/articles/2014/09/move_to_pelican.html" rel="bookmark" title="Permalink to blogをpelicanに移行しました">blogをpelicanに移行しました</a></li>
-        
-
- 
-            <li><a href="http://float1251.github.io/blog/articles/2014/06/google_image_search.html" rel="bookmark" title="Permalink to Googleの画像検索APIを使ってみる">Googleの画像検索APIを使ってみる</a></li>
-        
-
- 
-            <li><a href="http://float1251.github.io/blog/articles/2014/05/cordova_anroid.html" rel="bookmark" title="Permalink to Cordovaでandroidにアプリをinstallする">Cordovaでandroidにアプリをinstallする</a></li>
-        
-
- 
-            <li><a href="http://float1251.github.io/blog/articles/2014/05/vimscript.html" rel="bookmark" title="Permalink to vimscriptについて">vimscriptについて</a></li>
-        
-
- 
-            <li><a href="http://float1251.github.io/blog/articles/2014/05/vimscript_memo.html" rel="bookmark" title="Permalink to vimscriptを書いてて、詰まったところ">vimscriptを書いてて、詰まったところ</a></li>
-    </ol>
-    </section><!-- #article-list -->
-            </div>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+                &middot;
+                <a href="http://float1251.github.io/blog/feeds/all.atom.xml" rel="alternate">Atom Feed</a>
+            </footer>
         </div>
-
-
-        <div id="sidebar">
-            <h1><a href="http://float1251.github.io/blog " title="title">float's memo</a></h1>
-            <span class="description"> </span>
-            <!-- <span class="feed"><a href="">RSS</a> | <a href="">Atom</a></span> -->
-            <span><a href="https://twitter.com/float1251">twitter</a></span>
-            <span><a href="https://github.com/float1251">github</a></span>
-            <span><a href="feeds/rss.xml">RSS</a></span>
-        </div>
-
-        <div id="footer">
-            <nav>
-                <ul>
-                    <li>:: <a href="http://float1251.github.io/blog/tags.html">Tags</a></li>
-                </ul>
-            </nav>
-
-            <div id="credits">
-                <span>Adapted from <a href="http://wordpress.org/themes/monospace">Monospace</a> || Created with <a href="">Pelican</a></span>
-            </div>
-                
-        </div>
-
-
+        <div class="clear"></div>
     </div>
-
 </body>
 </html>
