@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 14 Sep 2015 00:00:00 +0900</lastBuildDate><item><title>新規移転、テーマを変えてみた</title><link>http://float1251.github.io/blog/articles/2015/09/theme_change_2015.html</link><description>&lt;p&gt;更新をサボっていたが再開しようかと思ったので、&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 15 Sep 2015 00:00:00 +0900</lastBuildDate><item><title>やっと7000超えた</title><link>http://float1251.github.io/blog/articles/2015/09/heroes_chages_1.html</link><description>&lt;p&gt;ヒロチャ、やっと7000突破した。&lt;/p&gt;
+&lt;img alt="" src="http://float1251.github.io/blog/images/Screenshot_2015-09-15-10-02-33.png" /&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;この記事書いてて詰まったとこ&lt;/h2&gt;
+&lt;p&gt;rstでのimageの書き方.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;..&lt;/span&gt; &lt;span class="ow"&gt;image&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; {filename}../images/aaa.png
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;上記のような書き方でないとimageのpathがうまい具合に解決してくれない。&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Tue, 15 Sep 2015 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2015-09-15:blog/articles/2015/09/heroes_chages_1.html</guid><category>Game</category><category>ヒロチャ</category></item><item><title>心機一転、テーマを変えてみた</title><link>http://float1251.github.io/blog/articles/2015/09/theme_change_2015.html</link><description>&lt;p&gt;更新をサボっていたが再開しようかと思ったので、&lt;/p&gt;
 &lt;p&gt;心機一転、themeを変えてみた。&lt;/p&gt;
 &lt;p&gt;windowsだと&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;make serve
