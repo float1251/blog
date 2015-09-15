@@ -31,7 +31,7 @@ SOCIAL = (
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 
 USE_FOLDER_AS_CATEGORY=True
 
@@ -45,3 +45,5 @@ ARTICLE_SAVE_AS="{category}/{date:%Y}/{date:%m}/{slug}.html"
 DATE_FORMATS = {
     "ja": "%Y年%m月%d日(%a)"    
 }
+
+STATIC_PATHS = ["images"]
