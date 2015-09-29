@@ -47,3 +47,15 @@ DATE_FORMATS = {
 }
 
 STATIC_PATHS = ["images"]
+
+#### 以下を入れないと、make htmlしたときにpagenationのファイルが作成できないErrorとなる  ##########
+CATEGORY_URL            = 'category/{slug}/'
+CATEGORY_SAVE_AS        = 'category/{slug}/index.html'
+TAG_URL                 = 'tag/{slug}/'
+TAG_SAVE_AS             = 'tag/{slug}/index.html'
+##############################
+
+PAGINATION_PATTERNS     = (
+    (1, '{base_name}/',               '{base_name}/index.html'),
+    (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
+)
