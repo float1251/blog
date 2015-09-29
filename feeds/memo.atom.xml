@@ -7,5 +7,13 @@
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;&lt;strong&gt;出口を決めてから実装を始める&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;これ大事。&lt;/p&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h3&gt;追記&lt;/h3&gt;
+&lt;p&gt;記事にコメント入れられるようにしようとしたらdisquis.htmlのtemplateがbluepenguinにない、pagenationの設定につまづく、&lt;/p&gt;
+&lt;p&gt;微妙にデザインが。。。という辺りを修正したい。自分でテーマを作るしかないのかな…&lt;/p&gt;
+&lt;p&gt;ちょっとdribbbleとか他のサイトをみて、イメージを固めたいところ。&lt;/p&gt;
+&lt;p&gt;あとrst用のtemplate作成スクリプトを作りたい。jinja2とpythonでやれればいいかな。&lt;/p&gt;
+&lt;p&gt;requirementsにはあるからそれで&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </summary><category term="memo"></category></entry></feed>
