@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 15 Sep 2015 00:00:00 +0900</lastBuildDate><item><title>やっと7000超えた</title><link>http://float1251.github.io/blog/articles/2015/09/heroes_chages_1.html</link><description>&lt;p&gt;ヒロチャ、やっと7000突破した。&lt;/p&gt;
-&lt;img alt="" src="http://float1251.github.io/blog/images/Screenshot_2015-09-15-10-02-33.png" /&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 28 Sep 2015 00:00:00 +0900</lastBuildDate><item><title>雑記 2015-09-28</title><link>http://float1251.github.io/blog/memo/2015/09/memo_2015_09_29.html</link><description>&lt;p&gt;なんとなくここ最近、もやもやしたものを抱えていて開発が滞っている。。。&lt;/p&gt;
+&lt;p&gt;結局この開発しているゲームの出口、終わりがちょっと不明瞭なのが原因な気がしている。&lt;/p&gt;
+&lt;p&gt;あとUnityで開発していると低レベルな部分が隠蔽されているから知識があまり身につかない、ただ実装しているだけって感じになっているのがよくないかも。&lt;/p&gt;
+&lt;p&gt;試作だから何がしかのEditorとかつくるって感じでもないし。。。&lt;/p&gt;
+&lt;p&gt;試作レベルで身につくUnityの知識はだいぶ身についたからちゃんとエフェクトとかUIとか作りこむ時間とお金が欲しいです。。。&lt;/p&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;&lt;strong&gt;出口を決めてから実装を始める&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;これ大事。&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Mon, 28 Sep 2015 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2015-09-28:blog/memo/2015/09/memo_2015_09_29.html</guid><category>memo</category></item><item><title>やっと7000超えた</title><link>http://float1251.github.io/blog/articles/2015/09/heroes_chages_1.html</link><description>&lt;p&gt;ヒロチャ、やっと7000突破した。&lt;/p&gt;
+&lt;img alt="screen shot" src="http://float1251.github.io/blog/images/Screenshot_2015-09-15-10-02-33.png" /&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;この記事書いてて詰まったとこ&lt;/h2&gt;
 &lt;p&gt;rstでのimageの書き方.&lt;/p&gt;

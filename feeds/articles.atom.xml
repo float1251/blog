@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>float's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/articles.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2015-09-15T00:00:00+09:00</updated><entry><title>やっと7000超えた</title><link href="http://float1251.github.io/blog/articles/2015/09/heroes_chages_1.html" rel="alternate"></link><updated>2015-09-15T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-09-15:blog/articles/2015/09/heroes_chages_1.html</id><summary type="html">&lt;p&gt;ヒロチャ、やっと7000突破した。&lt;/p&gt;
-&lt;img alt="" src="http://float1251.github.io/blog/images/Screenshot_2015-09-15-10-02-33.png" /&gt;
+&lt;img alt="screen shot" src="http://float1251.github.io/blog/images/Screenshot_2015-09-15-10-02-33.png" /&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;この記事書いてて詰まったとこ&lt;/h2&gt;
 &lt;p&gt;rstでのimageの書き方.&lt;/p&gt;

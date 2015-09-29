@@ -24,7 +24,32 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">9 15, 2015</h4>
+        <div id="content">            <h4 class="date">9 28, 2015</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/memo/2015/09/memo_2015_09_29.html" rel="bookmark" title="Permanent Link to &quot;雑記 2015-09-28&quot;">雑記 2015-09-28</a>
+                </h2>
+
+                <p>なんとなくここ最近、もやもやしたものを抱えていて開発が滞っている。。。</p>
+<p>結局この開発しているゲームの出口、終わりがちょっと不明瞭なのが原因な気がしている。</p>
+<p>あとUnityで開発していると低レベルな部分が隠蔽されているから知識があまり身につかない、ただ実装しているだけって感じになっているのがよくないかも。</p>
+<p>試作だから何がしかのEditorとかつくるって感じでもないし。。。</p>
+<p>試作レベルで身につくUnityの知識はだいぶ身についたからちゃんとエフェクトとかUIとか作りこむ時間とお金が欲しいです。。。</p>
+<div class="section" id="id2">
+<h2><strong>出口を決めてから実装を始める</strong></h2>
+<p>これ大事。</p>
+</div>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/memo/2015/09/memo_2015_09_29.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/memo.html" rel="tag">memo</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/memo.html" class="tags">memo</a>
+                </div>
+            </article>            <h4 class="date">9 15, 2015</h4>
 
             <article class="post">
                 <h2 class="title">
@@ -32,7 +57,7 @@
                 </h2>
 
                 <p>ヒロチャ、やっと7000突破した。</p>
-<img alt="" src="http://float1251.github.io/blog/images/Screenshot_2015-09-15-10-02-33.png" />
+<img alt="screen shot" src="http://float1251.github.io/blog/images/Screenshot_2015-09-15-10-02-33.png" />
 <div class="section" id="id2">
 <h2>この記事書いてて詰まったとこ</h2>
 <p>rstでのimageの書き方.</p>
@@ -383,93 +408,6 @@ https://www.googleapis.com/customsearch/v1?{parameters}
                 <div class="info">
                     <a href="http://float1251.github.io/blog/articles/2014/06/google_image_search.html">posted at 00:00</a>
                     &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
-                </div>
-            </article>            <h4 class="date">5 24, 2014</h4>
-
-            <article class="post">
-                <h2 class="title">
-                    <a href="http://float1251.github.io/blog/articles/2014/05/cordova_anroid.html" rel="bookmark" title="Permanent Link to &quot;Cordovaでandroidにアプリをinstallする&quot;">Cordovaでandroidにアプリをinstallする</a>
-                </h2>
-
-                <div class="section" id="id1">
-<h2>環境設定</h2>
-<p>手順はhttps://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/README.mdにある。</p>
-<blockquote>
-<ul class="simple">
-<li>androidSDKをインストールする。</li>
-<li>.bash_profileにsdk/toolsとsdk/platform-toolsにpathを通す</li>
-<li>brew install antでantを入れる。入らなかったらbrew updateしてから再度行う</li>
-<li>npm install -g cca</li>
-<li>cca checkenvで怒られないことを確認</li>
-</ul>
-</blockquote>
-</div>
-<div class="section" id="project">
-<h2>Projectの作成</h2>
-<p>以下のコマンドを実行する</p>
-<blockquote>
-cca create APP_NAME</blockquote>
-<!-- Error: Cannot find module 'cordova/platforms'
-と怒られたが、- -androidとつけてcreateして解決。
-iosの設定はやってないからなんか足りんかったんだろう。 -->
-</div>
-<div class="section" id="id2">
-<h2>実行</h2>
-<p>作成したプロジェクトディレクトリで以下を実行</p>
-<blockquote>
-cca run android</blockquote>
-<p>これでアプリがdeviceにインストールされる。</p>
-</div>
-<div class="section" id="id3">
-<h2>プロジェクトの構造</h2>
-<p>以下のような形になっている。</p>
-<pre class="literal-block">
-.
-├── config.xml
-├── hooks
-│&nbsp;&nbsp; ├── README.md
-│&nbsp;&nbsp; ├── after_prepare
-│&nbsp;&nbsp; └── before_prepare
-├── merges
-│&nbsp;&nbsp; └── android
-├── platforms
-│&nbsp;&nbsp; └── android
-├── plugins
-│&nbsp;&nbsp; ├── android.json
-│&nbsp;&nbsp; ├── org.apache.cordova.file
-│&nbsp;&nbsp; ├── org.apache.cordova.inappbrowser
-│&nbsp;&nbsp; ├── org.apache.cordova.keyboard
-│&nbsp;&nbsp; ├── org.apache.cordova.network-information
-│&nbsp;&nbsp; ├── org.apache.cordova.statusbar
-│&nbsp;&nbsp; ├── org.chromium.bootstrap
-│&nbsp;&nbsp; ├── org.chromium.common
-│&nbsp;&nbsp; ├── org.chromium.i18n
-│&nbsp;&nbsp; ├── org.chromium.navigation
-│&nbsp;&nbsp; ├── org.chromium.polyfill.CustomEvent
-│&nbsp;&nbsp; ├── org.chromium.polyfill.blob_constructor
-│&nbsp;&nbsp; ├── org.chromium.polyfill.xhr_features
-│&nbsp;&nbsp; ├── org.chromium.runtime
-│&nbsp;&nbsp; └── org.chromium.storage
-└── www
-    ├── assets
-    ├── background.js
-    ├── index.css
-    ├── index.html
-    ├── manifest.json
-    └── manifest.mobile.json
-</pre>
-<p>www以下がwebviewで使用されるファイル。</p>
-</div>
-
-                <div class="clear"></div>
-
-                <div class="info">
-                    <a href="http://float1251.github.io/blog/articles/2014/05/cordova_anroid.html">posted at 00:00</a>
-                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
-                    &nbsp;&middot;
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/chrome.html" class="tags">chrome</a>
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/android.html" class="tags">android</a>
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/cordova.html" class="tags">cordova</a>
                 </div>
             </article>
 

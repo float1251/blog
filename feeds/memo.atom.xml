@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>float's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/memo.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2015-09-28T00:00:00+09:00</updated><entry><title>雑記 2015-09-28</title><link href="http://float1251.github.io/blog/memo/2015/09/memo_2015_09_29.html" rel="alternate"></link><updated>2015-09-28T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-09-28:blog/memo/2015/09/memo_2015_09_29.html</id><summary type="html">&lt;p&gt;なんとなくここ最近、もやもやしたものを抱えていて開発が滞っている。。。&lt;/p&gt;
+&lt;p&gt;結局この開発しているゲームの出口、終わりがちょっと不明瞭なのが原因な気がしている。&lt;/p&gt;
+&lt;p&gt;あとUnityで開発していると低レベルな部分が隠蔽されているから知識があまり身につかない、ただ実装しているだけって感じになっているのがよくないかも。&lt;/p&gt;
+&lt;p&gt;試作だから何がしかのEditorとかつくるって感じでもないし。。。&lt;/p&gt;
+&lt;p&gt;試作レベルで身につくUnityの知識はだいぶ身についたからちゃんとエフェクトとかUIとか作りこむ時間とお金が欲しいです。。。&lt;/p&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;&lt;strong&gt;出口を決めてから実装を始める&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;これ大事。&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="memo"></category></entry></feed>
