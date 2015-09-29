@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
         <meta charset="utf-8" />
-    <title>float's memo | pelicanのthemeについて</title>
+    <title>float's memo | codeforcesのテストコードを自動生成するツールつくった</title>
     <link rel="shortcut icon" type="image/png" href="http://float1251.github.io/blog/favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="http://float1251.github.io/blog/favicon.ico">
     <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Full Atom Feed" />
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/print.css" type="text/css" media="print" />
     <meta name="generator" content="Pelican" />
 
-    <meta name="keywords" content="pelican,python" />
+    <meta name="keywords" content="python" />
 </head>
 <body>
     <header>
@@ -27,27 +27,35 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">12 09, 2014</h4>
+        <div id="content">            <h4 class="date">1 03, 2015</h4>
 
             <article class="post">
                 <h2 class="title">
-                    <a href="http://float1251.github.io/blog/articles/2014/12/pelican_themes.html" rel="bookmark" title="Permanent Link to &quot;pelicanのthemeについて&quot;">pelicanのthemeについて</a>
+                    <a href="http://float1251.github.io/blog/2015/01/03/codeforces_tools.html" rel="bookmark" title="Permanent Link to &quot;codeforcesのテストコードを自動生成するツールつくった&quot;">codeforcesのテストコードを自動生成するツールつくった</a>
                 </h2>
 
-                <p>色々とthemeを変えてみて、いいのがないか探している。</p>
-<p>ただなかなかいいのが見当たらない。。。</p>
-<p>あと、previewとかがないのがあるから、どういった感じのthemeなのかわからないものが多い。</p>
-<p>微妙に機能が足りてないのとかもあるから、自分でカスタムするしかないかも。</p>
-<p><a class="reference external" href="https://github.com/getpelican/pelican-themes">https://github.com/getpelican/pelican-themes</a></p>
-<p>とりあえずforkしてmonospaceあたりを自分なりにカスタマイズするのがよさげって思った。</p>
+                <p>ただし、まだ未公開。</p>
+<p>今はテストがunittest.mockで確認してるんだけど、subprocessでstdoutを確認するほうがよさそう。</p>
+<p>理由は</p>
+<blockquote>
+<ul class="simple">
+<li>if __name__  で分岐しないとimport時に実行されてしまう。</li>
+<li>mockでbuiltins.printを入れ替えてるが、実装中のデバッグプリントをsys.stderr.writeとか
+別なのでやんないと出力されなくなってしまう。</li>
+</ul>
+</blockquote>
+<p>あたりかな。</p>
+<p>ただ、mockの使い方を学びたいからやってみたって面が多いので、とりあえずよしとしよう。</p>
+<p>テストスクリプトの作成はJinja2をつかってやってます。</p>
+<p>依存するのはそれくらいかな。</p>
+<p>もうちょっと手直しをしたらgithubに上げる予定。</p>
 
                 <div class="clear"></div>
 
                 <div class="info">
-                    <a href="http://float1251.github.io/blog/articles/2014/12/pelican_themes.html">posted at 00:00</a>
+                    <a href="http://float1251.github.io/blog/2015/01/03/codeforces_tools.html">posted at 00:00</a>
                     &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
                     &nbsp;&middot;
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/pelican.html" class="tags">pelican</a>
                     &nbsp;<a href="http://float1251.github.io/blog/tag/python.html" class="tags">python</a>
                 </div>
             </article>

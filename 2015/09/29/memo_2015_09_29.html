@@ -2,18 +2,18 @@
 <html lang="ja">
 <head>
         <meta charset="utf-8" />
-    <title>float's memo | codeforcesのテストコードを自動生成するツールつくった</title>
+    <title>float's memo | 雑記 2015-09-29</title>
     <link rel="shortcut icon" type="image/png" href="http://float1251.github.io/blog/favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="http://float1251.github.io/blog/favicon.ico">
     <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Full Atom Feed" />
     <link href="http://float1251.github.io/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="float's memo RSS Feed" />
-    <link href="http://float1251.github.io/blog/feeds/articles.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Categories Atom Feed" />
+    <link href="http://float1251.github.io/blog/feeds/memo.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Categories Atom Feed" />
     <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/screen.css" type="text/css" />
     <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/pygments.css" type="text/css" />
     <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/print.css" type="text/css" media="print" />
     <meta name="generator" content="Pelican" />
 
-    <meta name="keywords" content="python" />
+    <meta name="keywords" content="memo" />
 </head>
 <body>
     <header>
@@ -27,36 +27,30 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">1 03, 2015</h4>
+        <div id="content">            <h4 class="date">9 29, 2015</h4>
 
             <article class="post">
                 <h2 class="title">
-                    <a href="http://float1251.github.io/blog/articles/2015/01/codeforces_tools.html" rel="bookmark" title="Permanent Link to &quot;codeforcesのテストコードを自動生成するツールつくった&quot;">codeforcesのテストコードを自動生成するツールつくった</a>
+                    <a href="http://float1251.github.io/blog/2015/09/29/memo_2015_09_29.html" rel="bookmark" title="Permanent Link to &quot;雑記 2015-09-29&quot;">雑記 2015-09-29</a>
                 </h2>
 
-                <p>ただし、まだ未公開。</p>
-<p>今はテストがunittest.mockで確認してるんだけど、subprocessでstdoutを確認するほうがよさそう。</p>
-<p>理由は</p>
-<blockquote>
-<ul class="simple">
-<li>if __name__  で分岐しないとimport時に実行されてしまう。</li>
-<li>mockでbuiltins.printを入れ替えてるが、実装中のデバッグプリントをsys.stderr.writeとか
-別なのでやんないと出力されなくなってしまう。</li>
-</ul>
-</blockquote>
-<p>あたりかな。</p>
-<p>ただ、mockの使い方を学びたいからやってみたって面が多いので、とりあえずよしとしよう。</p>
-<p>テストスクリプトの作成はJinja2をつかってやってます。</p>
-<p>依存するのはそれくらいかな。</p>
-<p>もうちょっと手直しをしたらgithubに上げる予定。</p>
+                <p>なんとなくここ最近、もやもやしたものを抱えていて開発が滞っている。。。</p>
+<p>結局この開発しているゲームの出口、終わりがちょっと不明瞭なのが原因な気がしている。</p>
+<p>あとUnityで開発していると低レベルな部分が隠蔽されているから知識があまり身につかない、ただ実装しているだけって感じになっているのがよくないかも。</p>
+<p>試作だから何がしかのEditorとかつくるって感じでもないし。。。</p>
+<p>試作レベルで身につくUnityの知識はだいぶ身についたからちゃんとエフェクトとかUIとか作りこむ時間とお金が欲しいです。。。</p>
+<div class="section" id="id2">
+<h2><strong>出口を決めてから実装を始める</strong></h2>
+<p>これ大事。</p>
+</div>
 
                 <div class="clear"></div>
 
                 <div class="info">
-                    <a href="http://float1251.github.io/blog/articles/2015/01/codeforces_tools.html">posted at 00:00</a>
-                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles.html" rel="tag">articles</a>
+                    <a href="http://float1251.github.io/blog/2015/09/29/memo_2015_09_29.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/memo.html" rel="tag">memo</a>
                     &nbsp;&middot;
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/python.html" class="tags">python</a>
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/memo.html" class="tags">memo</a>
                 </div>
             </article>
             <div class="clear"></div>

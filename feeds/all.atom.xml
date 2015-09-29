@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>float's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2015-09-28T00:00:00+09:00</updated><entry><title>雑記 2015-09-28</title><link href="http://float1251.github.io/blog/memo/2015/09/memo_2015_09_29.html" rel="alternate"></link><updated>2015-09-28T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-09-28:blog/memo/2015/09/memo_2015_09_29.html</id><summary type="html">&lt;p&gt;なんとなくここ最近、もやもやしたものを抱えていて開発が滞っている。。。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>float's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2015-09-29T00:00:00+09:00</updated><entry><title>雑記 2015-09-29</title><link href="http://float1251.github.io/blog/2015/09/29/memo_2015_09_29.html" rel="alternate"></link><updated>2015-09-29T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-09-29:blog/2015/09/29/memo_2015_09_29.html</id><summary type="html">&lt;p&gt;なんとなくここ最近、もやもやしたものを抱えていて開発が滞っている。。。&lt;/p&gt;
 &lt;p&gt;結局この開発しているゲームの出口、終わりがちょっと不明瞭なのが原因な気がしている。&lt;/p&gt;
 &lt;p&gt;あとUnityで開発していると低レベルな部分が隠蔽されているから知識があまり身につかない、ただ実装しているだけって感じになっているのがよくないかも。&lt;/p&gt;
 &lt;p&gt;試作だから何がしかのEditorとかつくるって感じでもないし。。。&lt;/p&gt;
@@ -8,7 +8,7 @@
 &lt;h2&gt;&lt;strong&gt;出口を決めてから実装を始める&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;これ大事。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="memo"></category></entry><entry><title>やっと7000超えた</title><link href="http://float1251.github.io/blog/articles/2015/09/heroes_chages_1.html" rel="alternate"></link><updated>2015-09-15T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-09-15:blog/articles/2015/09/heroes_chages_1.html</id><summary type="html">&lt;p&gt;ヒロチャ、やっと7000突破した。&lt;/p&gt;
+</summary><category term="memo"></category></entry><entry><title>やっと7000超えた</title><link href="http://float1251.github.io/blog/2015/09/15/heroes_chages_1.html" rel="alternate"></link><updated>2015-09-15T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-09-15:blog/2015/09/15/heroes_chages_1.html</id><summary type="html">&lt;p&gt;ヒロチャ、やっと7000突破した。&lt;/p&gt;
 &lt;img alt="screen shot" src="http://float1251.github.io/blog/images/Screenshot_2015-09-15-10-02-33.png" /&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;この記事書いてて詰まったとこ&lt;/h2&gt;
@@ -17,7 +17,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;上記のような書き方でないとimageのpathがうまい具合に解決してくれない。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="Game"></category><category term="ヒロチャ"></category></entry><entry><title>心機一転、テーマを変えてみた</title><link href="http://float1251.github.io/blog/articles/2015/09/theme_change_2015.html" rel="alternate"></link><updated>2015-09-14T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-09-14:blog/articles/2015/09/theme_change_2015.html</id><summary type="html">&lt;p&gt;更新をサボっていたが再開しようかと思ったので、&lt;/p&gt;
+</summary><category term="Game"></category><category term="ヒロチャ"></category></entry><entry><title>心機一転、テーマを変えてみた</title><link href="http://float1251.github.io/blog/2015/09/14/theme_change_2015.html" rel="alternate"></link><updated>2015-09-14T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-09-14:blog/2015/09/14/theme_change_2015.html</id><summary type="html">&lt;p&gt;更新をサボっていたが再開しようかと思ったので、&lt;/p&gt;
 &lt;p&gt;心機一転、themeを変えてみた。&lt;/p&gt;
 &lt;p&gt;windowsだと&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;make serve
@@ -28,7 +28,7 @@
 &lt;p&gt;でlocalserverを起動して確認した。&lt;/p&gt;
 &lt;p&gt;テーマは &lt;a class="reference external" href="https://github.com/jody-frankowski/blue-penguin"&gt;blue-penguine&lt;/a&gt; にした。&lt;/p&gt;
 &lt;p&gt;久しぶりにrstで書くと細かい記法を忘れてて戸惑いを隠せない。&lt;/p&gt;
-</summary><category term="pelican"></category></entry><entry><title>libgdxでuniversal tween engine使ってみた</title><link href="http://float1251.github.io/blog/articles/2015/03/universal_tween_engine.html" rel="alternate"></link><updated>2015-03-03T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-03-03:blog/articles/2015/03/universal_tween_engine.html</id><summary type="html">&lt;p&gt;Tweenアニメーションの実装に、universal tween engineというライブラリを使ったみた。&lt;/p&gt;
+</summary><category term="pelican"></category></entry><entry><title>libgdxでuniversal tween engine使ってみた</title><link href="http://float1251.github.io/blog/2015/03/03/universal_tween_engine.html" rel="alternate"></link><updated>2015-03-03T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-03-03:blog/2015/03/03/universal_tween_engine.html</id><summary type="html">&lt;p&gt;Tweenアニメーションの実装に、universal tween engineというライブラリを使ったみた。&lt;/p&gt;
 &lt;p&gt;導入はlibgdxのwikiにあった。urlは以下の通り。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;a class="reference external" href="https://github.com/libgdx/libgdx/wiki/Universal-Tween-Engine"&gt;https://github.com/libgdx/libgdx/wiki/Universal-Tween-Engine&lt;/a&gt;&lt;/blockquote&gt;
@@ -44,7 +44,7 @@
 &lt;li&gt;renderでmanagerをupdateする&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;サンプルはなくしちゃった。。。(´；ω；｀)&lt;/p&gt;
-</summary><category term="java"></category><category term="libgdx"></category></entry><entry><title>codeforcesのテストコードを自動生成するツールつくった</title><link href="http://float1251.github.io/blog/articles/2015/01/codeforces_tools.html" rel="alternate"></link><updated>2015-01-03T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-01-03:blog/articles/2015/01/codeforces_tools.html</id><summary type="html">&lt;p&gt;ただし、まだ未公開。&lt;/p&gt;
+</summary><category term="java"></category><category term="libgdx"></category></entry><entry><title>codeforcesのテストコードを自動生成するツールつくった</title><link href="http://float1251.github.io/blog/2015/01/03/codeforces_tools.html" rel="alternate"></link><updated>2015-01-03T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-01-03:blog/2015/01/03/codeforces_tools.html</id><summary type="html">&lt;p&gt;ただし、まだ未公開。&lt;/p&gt;
 &lt;p&gt;今はテストがunittest.mockで確認してるんだけど、subprocessでstdoutを確認するほうがよさそう。&lt;/p&gt;
 &lt;p&gt;理由は&lt;/p&gt;
 &lt;blockquote&gt;
@@ -59,7 +59,7 @@
 &lt;p&gt;テストスクリプトの作成はJinja2をつかってやってます。&lt;/p&gt;
 &lt;p&gt;依存するのはそれくらいかな。&lt;/p&gt;
 &lt;p&gt;もうちょっと手直しをしたらgithubに上げる予定。&lt;/p&gt;
-</summary><category term="python"></category></entry><entry><title>pythonでsocketプログラミングをやってみる</title><link href="http://float1251.github.io/blog/articles/2014/12/python_socket_learning.html" rel="alternate"></link><updated>2014-12-15T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-12-15:blog/articles/2014/12/python_socket_learning.html</id><summary type="html">&lt;p&gt;pythonでsocketプログラミングをやってみる。&lt;/p&gt;
+</summary><category term="python"></category></entry><entry><title>pythonでsocketプログラミングをやってみる</title><link href="http://float1251.github.io/blog/2014/12/15/python_socket_learning.html" rel="alternate"></link><updated>2014-12-15T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-12-15:blog/2014/12/15/python_socket_learning.html</id><summary type="html">&lt;p&gt;pythonでsocketプログラミングをやってみる。&lt;/p&gt;
 &lt;p&gt;とりあえず簡単なTCPクライントとServerを作成する。&lt;/p&gt;
 &lt;p&gt;使用するのはpython3.3.5.&lt;/p&gt;
 &lt;p&gt;ここあたりはとりあえず読んでおく。&lt;/p&gt;
@@ -117,13 +117,13 @@
     &lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;serve_forever&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;これでサーバーを起動してからクライントを実行すればよい。&lt;/p&gt;
-</summary><category term="python"></category></entry><entry><title>pelicanのthemeについて</title><link href="http://float1251.github.io/blog/articles/2014/12/pelican_themes.html" rel="alternate"></link><updated>2014-12-09T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-12-09:blog/articles/2014/12/pelican_themes.html</id><summary type="html">&lt;p&gt;色々とthemeを変えてみて、いいのがないか探している。&lt;/p&gt;
+</summary><category term="python"></category></entry><entry><title>pelicanのthemeについて</title><link href="http://float1251.github.io/blog/2014/12/09/pelican_themes.html" rel="alternate"></link><updated>2014-12-09T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-12-09:blog/2014/12/09/pelican_themes.html</id><summary type="html">&lt;p&gt;色々とthemeを変えてみて、いいのがないか探している。&lt;/p&gt;
 &lt;p&gt;ただなかなかいいのが見当たらない。。。&lt;/p&gt;
 &lt;p&gt;あと、previewとかがないのがあるから、どういった感じのthemeなのかわからないものが多い。&lt;/p&gt;
 &lt;p&gt;微妙に機能が足りてないのとかもあるから、自分でカスタムするしかないかも。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/getpelican/pelican-themes"&gt;https://github.com/getpelican/pelican-themes&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;とりあえずforkしてmonospaceあたりを自分なりにカスタマイズするのがよさげって思った。&lt;/p&gt;
-</summary><category term="pelican"></category><category term="python"></category></entry><entry><title>TOEICを受けました</title><link href="http://float1251.github.io/blog/articles/2014/09/toeic_0929.html" rel="alternate"></link><updated>2014-09-29T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-09-29:blog/articles/2014/09/toeic_0929.html</id><summary type="html">&lt;p&gt;会社でTOEICを受けたので感想を残しておこうと思う。&lt;/p&gt;
+</summary><category term="pelican"></category><category term="python"></category></entry><entry><title>TOEICを受けました</title><link href="http://float1251.github.io/blog/2014/09/29/toeic_0929.html" rel="alternate"></link><updated>2014-09-29T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-09-29:blog/2014/09/29/toeic_0929.html</id><summary type="html">&lt;p&gt;会社でTOEICを受けたので感想を残しておこうと思う。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;リスニングが絶望的にできない。聞き取れないのもあるが単語がわからん。&lt;/li&gt;
@@ -134,14 +134,14 @@
 &lt;p&gt;とりあえず、CD聞きながら単語帳やっていこうと思いました。&lt;/p&gt;
 &lt;p&gt;また3ヶ月後くらいに受けないとあかんらしいです。&lt;/p&gt;
 &lt;p&gt;点数わかったら追記しようと思います。&lt;/p&gt;
-</summary></entry><entry><title>blogをpelicanに移行しました</title><link href="http://float1251.github.io/blog/articles/2014/09/move_to_pelican.html" rel="alternate"></link><updated>2014-09-22T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-09-22:blog/articles/2014/09/move_to_pelican.html</id><summary type="html">&lt;p&gt;blogをpelicanに移行しました。&lt;/p&gt;
+</summary></entry><entry><title>blogをpelicanに移行しました</title><link href="http://float1251.github.io/blog/2014/09/22/move_to_pelican.html" rel="alternate"></link><updated>2014-09-22T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-09-22:blog/2014/09/22/move_to_pelican.html</id><summary type="html">&lt;p&gt;blogをpelicanに移行しました。&lt;/p&gt;
 &lt;p&gt;bloggerだとなんとなく書く気にならなかったので。&lt;/p&gt;
 &lt;p&gt;github pageを使ってます。&lt;/p&gt;
 &lt;p&gt;ドキュメントはひたすらに読みました。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://docs.getpelican.com/en/3.4.0/"&gt;http://docs.getpelican.com/en/3.4.0/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;あとここは参考にしました。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/"&gt;http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/&lt;/a&gt;&lt;/p&gt;
-</summary><category term="python"></category><category term="pelican"></category></entry><entry><title>Googleの画像検索APIを使ってみる</title><link href="http://float1251.github.io/blog/articles/2014/06/google_image_search.html" rel="alternate"></link><updated>2014-06-02T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-06-02:blog/articles/2014/06/google_image_search.html</id><summary type="html">&lt;p&gt;現在はCustom Search APIを使用する。&lt;/p&gt;
+</summary><category term="python"></category><category term="pelican"></category></entry><entry><title>Googleの画像検索APIを使ってみる</title><link href="http://float1251.github.io/blog/2014/06/02/google_image_search.html" rel="alternate"></link><updated>2014-06-02T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-06-02:blog/2014/06/02/google_image_search.html</id><summary type="html">&lt;p&gt;現在はCustom Search APIを使用する。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/overview?hl=ja"&gt;https://developers.google.com/custom-search/json-api/v1/overview?hl=ja&lt;/a&gt;&lt;/p&gt;
 &lt;div class="section" id="id1"&gt;
 &lt;h2&gt;データ型&lt;/h2&gt;
@@ -224,7 +224,7 @@ https://www.googleapis.com/customsearch/v1?{parameters}
 &lt;p&gt;&lt;a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#response"&gt;https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#response&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;画像のリンクはitems.linkのURLを見ればいいらしい。&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Cordovaでandroidにアプリをinstallする</title><link href="http://float1251.github.io/blog/articles/2014/05/cordova_anroid.html" rel="alternate"></link><updated>2014-05-24T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-05-24:blog/articles/2014/05/cordova_anroid.html</id><summary type="html">&lt;div class="section" id="id1"&gt;
+</summary></entry><entry><title>Cordovaでandroidにアプリをinstallする</title><link href="http://float1251.github.io/blog/2014/05/24/cordova_anroid.html" rel="alternate"></link><updated>2014-05-24T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-05-24:blog/2014/05/24/cordova_anroid.html</id><summary type="html">&lt;div class="section" id="id1"&gt;
 &lt;h2&gt;環境設定&lt;/h2&gt;
 &lt;p&gt;手順はhttps://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/README.mdにある。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -293,7 +293,7 @@ cca run android&lt;/blockquote&gt;
 &lt;/pre&gt;
 &lt;p&gt;www以下がwebviewで使用されるファイル。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="chrome"></category><category term="android"></category><category term="cordova"></category></entry><entry><title>vimscriptについて</title><link href="http://float1251.github.io/blog/articles/2014/05/vimscript.html" rel="alternate"></link><updated>2014-05-11T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-05-11:blog/articles/2014/05/vimscript.html</id><summary type="html">&lt;p&gt;vim pluginを開発したいと考えているが、まずはvimscriptについて知らないといけない。&lt;/p&gt;
+</summary><category term="chrome"></category><category term="android"></category><category term="cordova"></category></entry><entry><title>vimscriptについて</title><link href="http://float1251.github.io/blog/2014/05/11/vimscript.html" rel="alternate"></link><updated>2014-05-11T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-05-11:blog/2014/05/11/vimscript.html</id><summary type="html">&lt;p&gt;vim pluginを開発したいと考えているが、まずはvimscriptについて知らないといけない。&lt;/p&gt;
 &lt;p&gt;ということでちょっと調べてみた。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://mattn.kaoriya.net/software/vim/20111202085236.htm"&gt;http://mattn.kaoriya.net/software/vim/20111202085236.htm&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;この記事が素晴らしすぎたので、こっちを読むとよいと思います。&lt;/p&gt;
@@ -397,7 +397,7 @@ EOM
 &lt;p&gt;ということで最後の方はだいぶ適当になったけど、これで最低限vimscriptが読めるようになった気がします。&lt;/p&gt;
 &lt;p&gt;あとは色々見たり作ったりしながら覚えていこうかと思います。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="vim"></category></entry><entry><title>vimscriptを書いてて、詰まったところ</title><link href="http://float1251.github.io/blog/articles/2014/05/vimscript_memo.html" rel="alternate"></link><updated>2014-05-11T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-05-11:blog/articles/2014/05/vimscript_memo.html</id><summary type="html">&lt;div class="section" id="pyfile"&gt;
+</summary><category term="vim"></category></entry><entry><title>vimscriptを書いてて、詰まったところ</title><link href="http://float1251.github.io/blog/2014/05/11/vimscript_memo.html" rel="alternate"></link><updated>2014-05-11T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2014-05-11:blog/2014/05/11/vimscript_memo.html</id><summary type="html">&lt;div class="section" id="pyfile"&gt;
 &lt;h2&gt;pyfileで引数を渡す方法&lt;/h2&gt;
 &lt;p&gt;pythonであれば&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;python sample.py &lt;span class="nb"&gt;test&lt;/span&gt;
