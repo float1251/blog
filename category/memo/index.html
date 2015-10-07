@@ -27,7 +27,72 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">9 29, 2015</h4>
+        <div id="content">            <h4 class="date">10 07, 2015</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/2015/10/07/2015_10_07.html" rel="bookmark" title="Permanent Link to &quot;2015-10-07&quot;">2015-10-07</a>
+                </h2>
+
+                <div class="section" id="id2">
+<h2>近況</h2>
+<p>とりあえず大きな出来事があって、ショックが大きかったがとりあえずは落ち着いてきた。。。ような気がする。</p>
+<p>やっと仕事にも集中できるようになったし、食事も義務的にだがちゃんと取れるようになってきた。</p>
+<p>とりあえず、行動しよう。いろんなとこにいって、いろんなことしよう。</p>
+<p>今はそれがいい。</p>
+</div>
+<div class="section" id="id3">
+<h2>自作ゲームエンジンについて</h2>
+<p>これに関しては、エンジン部分をc++で作ってwrapperをpythonで書くという手法で行くのがいい気がする。</p>
+<p>が、自分はc++全然やったことないから絶対つまるという問題点が。。。</p>
+<p>あと問題点として</p>
+<blockquote>
+<ul class="simple">
+<li>pythonを使用してandroidを動かす仕組み。python-for-androidでなんとかなるのか</li>
+<li>パフォーマンス的に大丈夫か</li>
+<li>OpenGL周りの知識</li>
+</ul>
+</blockquote>
+<p>あたりがネックになるはず。OpenGLは前よりかは大丈夫だけど、カメラまわりの行列計算が糞面倒なのがなぁ。。。</p>
+<p>今年中に目処は付けたいところ。</p>
+<p>あとC++でのビルド環境構築もメンドイなぁ。。。というかこれはやったことがないからか。</p>
+<p>cocos2d-xがcmakeだからcmakeでいくのがいい気がする。</p>
+<p>build環境はcocos-2d-xを参考に作ろう。</p>
+<p>実装はlibgdxを参考に作ろう。</p>
+<p>python &lt;--&gt; C++の連携を楽にするためにどうするかは後々検討。</p>
+<p>cythonもどこかでつかうかもしれんな。。。</p>
+<p>何か色々技術的なつまりどころが多すぎるな。</p>
+</div>
+<div class="section" id="id4">
+<h2>自作ゲームについて</h2>
+<p>タワーディフェンス系のゲームを作っていたが、試作で打ち切り予定。</p>
+<p>とりあえず出来ることはわかったというところと、仕様が不明瞭なため。</p>
+<p>何か作るにしても出口、目標をはっきりさせてからやらないと駄目だと非常に感じた。</p>
+<p>次は、ラインディフェンス系のゲームかな。</p>
+<p>ちゃんと仕様を固めて、あとUIの仕様を固めて実装するようにしよう。</p>
+<p>目標はまずは技術検証。面白かったら一旦バラして製作に移る。</p>
+<blockquote>
+<ul class="simple">
+<li>デッキ型のカードUI</li>
+<li>スペル、マナ、ユニットの組み合わせ</li>
+<li>スペルは全Unitへの攻撃と一定時間コインが早く溜まる、攻撃力2倍とかにする</li>
+<li>マナはコインの溜まる速度が上がる</li>
+<li>Unitは通常のUnit</li>
+<li>Title -&gt; Menu -&gt; Game -&gt; Clear画面くらいの一連のシーケンスを作る</li>
+</ul>
+</blockquote>
+<p>こんなんでやろう！</p>
+</div>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/2015/10/07/2015_10_07.html">posted at 09:54</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/memo/" rel="tag">memo</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/memo/" class="tags">memo</a>
+                </div>
+            </article>            <h4 class="date">9 29, 2015</h4>
 
             <article class="post">
                 <h2 class="title">
@@ -48,7 +113,7 @@
 <p>微妙にデザインが。。。という辺りを修正したい。自分でテーマを作るしかないのかな…</p>
 <p>ちょっとdribbbleとか他のサイトをみて、イメージを固めたいところ。</p>
 <p>あとrst用のtemplate作成スクリプトを作りたい。jinja2とpythonでやれればいいかな。</p>
-<p>requirementsにはあるからそれで</p>
+<p>requirementsにjinja2はあるからそれでやれればいいかな。</p>
 </div>
 </div>
 
