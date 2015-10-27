@@ -27,7 +27,40 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">9 15, 2015</h4>
+        <div id="content">            <h4 class="date">10 27, 2015</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/2015/10/27/cmake.html" rel="bookmark" title="Permanent Link to &quot;cmakeのメモ&quot;">cmakeのメモ</a>
+                </h2>
+
+                <p>make使っていたが、さすがに手間だと感じているので、cmakeにしてみる。</p>
+<p>build周りは出来るだけモダンな状態にしておきたいからね。</p>
+<p>とりあえず、<a class="reference external" href="http://www.wakayama-u.ac.jp/~chen/cmake/cmake.html">http://www.wakayama-u.ac.jp/~chen/cmake/cmake.html</a> をやって理解しようかと思う。</p>
+<div class="section" id="id1">
+<h2>ビルド方法</h2>
+<p>プロジェクトにCMakeLists.txtを作成する。</p>
+<p>prog1.cppというファイルをビルドするだけなら以下のような内容とする。</p>
+<div class="highlight"><pre>cmake_minimum_required <span class="o">(</span>VERSION 2.6<span class="o">)</span>
+project <span class="o">(</span>prog1<span class="o">)</span>
+add_executable <span class="o">(</span>prog1 prog1.cpp<span class="o">)</span>
+</pre></div>
+<p>その後以下のコマンドで実行ファイルが作成, 実行できる.</p>
+<div class="highlight"><pre>cmake . // Makefileを作成する
+make    // buildする
+./prog1 // 実行する
+</pre></div>
+</div>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/2015/10/27/cmake.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles/" rel="tag">articles</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/cpp/" class="tags">cpp</a>
+                </div>
+            </article>            <h4 class="date">9 15, 2015</h4>
 
             <article class="post">
                 <h2 class="title">
@@ -386,93 +419,6 @@ https://www.googleapis.com/customsearch/v1?{parameters}
                 <div class="info">
                     <a href="http://float1251.github.io/blog/2014/06/02/google_image_search.html">posted at 00:00</a>
                     &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles/" rel="tag">articles</a>
-                </div>
-            </article>            <h4 class="date">5 24, 2014</h4>
-
-            <article class="post">
-                <h2 class="title">
-                    <a href="http://float1251.github.io/blog/2014/05/24/cordova_anroid.html" rel="bookmark" title="Permanent Link to &quot;Cordovaでandroidにアプリをinstallする&quot;">Cordovaでandroidにアプリをinstallする</a>
-                </h2>
-
-                <div class="section" id="id1">
-<h2>環境設定</h2>
-<p>手順はhttps://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/README.mdにある。</p>
-<blockquote>
-<ul class="simple">
-<li>androidSDKをインストールする。</li>
-<li>.bash_profileにsdk/toolsとsdk/platform-toolsにpathを通す</li>
-<li>brew install antでantを入れる。入らなかったらbrew updateしてから再度行う</li>
-<li>npm install -g cca</li>
-<li>cca checkenvで怒られないことを確認</li>
-</ul>
-</blockquote>
-</div>
-<div class="section" id="project">
-<h2>Projectの作成</h2>
-<p>以下のコマンドを実行する</p>
-<blockquote>
-cca create APP_NAME</blockquote>
-<!-- Error: Cannot find module 'cordova/platforms'
-と怒られたが、- -androidとつけてcreateして解決。
-iosの設定はやってないからなんか足りんかったんだろう。 -->
-</div>
-<div class="section" id="id2">
-<h2>実行</h2>
-<p>作成したプロジェクトディレクトリで以下を実行</p>
-<blockquote>
-cca run android</blockquote>
-<p>これでアプリがdeviceにインストールされる。</p>
-</div>
-<div class="section" id="id3">
-<h2>プロジェクトの構造</h2>
-<p>以下のような形になっている。</p>
-<pre class="literal-block">
-.
-├── config.xml
-├── hooks
-│&nbsp;&nbsp; ├── README.md
-│&nbsp;&nbsp; ├── after_prepare
-│&nbsp;&nbsp; └── before_prepare
-├── merges
-│&nbsp;&nbsp; └── android
-├── platforms
-│&nbsp;&nbsp; └── android
-├── plugins
-│&nbsp;&nbsp; ├── android.json
-│&nbsp;&nbsp; ├── org.apache.cordova.file
-│&nbsp;&nbsp; ├── org.apache.cordova.inappbrowser
-│&nbsp;&nbsp; ├── org.apache.cordova.keyboard
-│&nbsp;&nbsp; ├── org.apache.cordova.network-information
-│&nbsp;&nbsp; ├── org.apache.cordova.statusbar
-│&nbsp;&nbsp; ├── org.chromium.bootstrap
-│&nbsp;&nbsp; ├── org.chromium.common
-│&nbsp;&nbsp; ├── org.chromium.i18n
-│&nbsp;&nbsp; ├── org.chromium.navigation
-│&nbsp;&nbsp; ├── org.chromium.polyfill.CustomEvent
-│&nbsp;&nbsp; ├── org.chromium.polyfill.blob_constructor
-│&nbsp;&nbsp; ├── org.chromium.polyfill.xhr_features
-│&nbsp;&nbsp; ├── org.chromium.runtime
-│&nbsp;&nbsp; └── org.chromium.storage
-└── www
-    ├── assets
-    ├── background.js
-    ├── index.css
-    ├── index.html
-    ├── manifest.json
-    └── manifest.mobile.json
-</pre>
-<p>www以下がwebviewで使用されるファイル。</p>
-</div>
-
-                <div class="clear"></div>
-
-                <div class="info">
-                    <a href="http://float1251.github.io/blog/2014/05/24/cordova_anroid.html">posted at 00:00</a>
-                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles/" rel="tag">articles</a>
-                    &nbsp;&middot;
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/chrome/" class="tags">chrome</a>
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/android/" class="tags">android</a>
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/cordova/" class="tags">cordova</a>
                 </div>
             </article>
 

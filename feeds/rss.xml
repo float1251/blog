@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 07 Oct 2015 09:54:00 +0900</lastBuildDate><item><title>2015-10-07</title><link>http://float1251.github.io/blog/2015/10/07/2015_10_07.html</link><description>&lt;div class="section" id="id2"&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 27 Oct 2015 00:00:00 +0900</lastBuildDate><item><title>cmakeのメモ</title><link>http://float1251.github.io/blog/2015/10/27/cmake.html</link><description>&lt;p&gt;make使っていたが、さすがに手間だと感じているので、cmakeにしてみる。&lt;/p&gt;
+&lt;p&gt;build周りは出来るだけモダンな状態にしておきたいからね。&lt;/p&gt;
+&lt;p&gt;とりあえず、&lt;a class="reference external" href="http://www.wakayama-u.ac.jp/~chen/cmake/cmake.html"&gt;http://www.wakayama-u.ac.jp/~chen/cmake/cmake.html&lt;/a&gt; をやって理解しようかと思う。&lt;/p&gt;
+&lt;div class="section" id="id1"&gt;
+&lt;h2&gt;ビルド方法&lt;/h2&gt;
+&lt;p&gt;プロジェクトにCMakeLists.txtを作成する。&lt;/p&gt;
+&lt;p&gt;prog1.cppというファイルをビルドするだけなら以下のような内容とする。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;cmake_minimum_required &lt;span class="o"&gt;(&lt;/span&gt;VERSION 2.6&lt;span class="o"&gt;)&lt;/span&gt;
+project &lt;span class="o"&gt;(&lt;/span&gt;prog1&lt;span class="o"&gt;)&lt;/span&gt;
+add_executable &lt;span class="o"&gt;(&lt;/span&gt;prog1 prog1.cpp&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;その後以下のコマンドで実行ファイルが作成, 実行できる.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;cmake . // Makefileを作成する
+make    // buildする
+./prog1 // 実行する
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Tue, 27 Oct 2015 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2015-10-27:blog/2015/10/27/cmake.html</guid><category>cpp</category></item><item><title>2015-10-07</title><link>http://float1251.github.io/blog/2015/10/07/2015_10_07.html</link><description>&lt;div class="section" id="id2"&gt;
 &lt;h2&gt;近況&lt;/h2&gt;
 &lt;p&gt;とりあえず大きな出来事があって、ショックが大きかったがとりあえずは落ち着いてきた。。。ような気がする。&lt;/p&gt;
 &lt;p&gt;やっと仕事にも集中できるようになったし、食事も義務的にだがちゃんと取れるようになってきた。&lt;/p&gt;
