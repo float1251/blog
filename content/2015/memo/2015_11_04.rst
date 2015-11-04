@@ -1,0 +1,50 @@
+=================================
+2015-11-04
+=================================
+:date: 2015-11-04 09:31
+:tags: memo
+
+ゲーム開発
+-------------
+とりあえず、3月までにゲームをリリースするということを目標にやってみる。
+
+つくるゲームは2dのアクションゲーム。素材はAsset Storeで買ったからなんとかなりそう。
+
+ただ、Unityでtiledを使うのpluginは高いから自作する予定。多分ここが一番のネックな気がする。。。
+
+あと買ったAssetがtiled向けになっていないのもきつい。。。
+
+ひとまず出来るだけ毎朝少しでも活動を行うってことを継続してみようかと思う。
+
+登山
+-----------
+日曜に御岳山に行ってきた。紅葉はまだあまりしていなかった。
+
+犬を連れて来ている人がかなり多く驚いたが、どうも神社がそういう人むけらしい。。。
+
+七代の滝までの下りがきつかったのか、ふくらはぎが筋肉痛。。。膝はそこまでひどくないからスクワットと同時に
+ふくらはぎの筋トレも少し取り入れていきたい。
+
+11月後半には高尾山か大山に登る予定。そこまでに筋トレをしておくようにする。
+
+ランニング
+------------
+登山で筋肉痛なので、11月入ってからできてない。。。
+
+10月は結構回数はやったが、距離はあまり走っていなかったので、月間65km程度だった。
+
+11月は80km程度、目標は100kmまで伸ばしていきたい。
+
+あと12月は大会に出よう。10km60分切りが目標。
+
+その他
+----------
+今、色々自分の生活とか行動とかを変えてきている。
+
+それがいいか悪いかはまだわからないが、運動や勉強を以前よりしているのでよくはなっていると感じている。
+
+何事も継続するのが大事というのはよくわかっているのでこれがどこまで続くのか記録をつけていきたいと思う。
+
+あと池袋二郎に行った来たので成果
+
+.. image:: https://lh3.googleusercontent.com/g0iyLy2IWdRM2MGcNaL2lxoJvXEWOzm3uONwODSy6ehgT6EhYX-vk_oBKMhVx4ErS9ZSnXiJDv79ftSDuS8cpoNx_VsePzpUmFahmmytNYL74lUiFCxNwbGZS3X0ynib7WEt23d81O7nHavq7GPmNCv_Hkp9pwjvf6j1rpUA6kFQU34RwpSdmg2e-xvfUDYSqlZ2j5DFKs1i5ocLF9KsNIssQI0zloAvBaKinrLBSKfo6L10m56JZ5vQAwHjohH9iwsUazUf504ckOQCWGF2T77uLLRnXN6I3rrj9JYlYjn1Uxn65_QWLe7zQfNqKFzkhatVKJhBEfDN2CAOWvPAzBdLCen1QpEz2cvdSDkVotaM74iktzhwRYD4LzUcRY8vTMSpZslLdmWAcpbSDPnuotcNcIW0roskCRi4C4-kTzkWvEWo-b74omzT4T8pRJyPNFO5el4MiglZc7oEx_xiEYbyaWyAxWF4oCYO8bJnPq4DWK6KSlwEJVPBNfm3QTbDE6OKSpt_ap6gRl5PxC3mWsUm9eFA6DzBW7mM8p2jdTg=w1224-h688-no
