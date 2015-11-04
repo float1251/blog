@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/float1251.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 27 Oct 2015 00:00:00 +0900</lastBuildDate><item><title>cmakeのメモ</title><link>http://float1251.github.io/blog/2015/10/27/cmake.html</link><description>&lt;p&gt;make使っていたが、さすがに手間だと感じているので、cmakeにしてみる。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/float1251.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 04 Nov 2015 09:31:00 +0900</lastBuildDate><item><title>2015-11-04</title><link>http://float1251.github.io/blog/2015/11/04/2015_11_04.html</link><description>&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;ゲーム開発&lt;/h2&gt;
+&lt;p&gt;とりあえず、3月までにゲームをリリースするということを目標にやってみる。&lt;/p&gt;
+&lt;p&gt;つくるゲームは2dのアクションゲーム。素材はAsset Storeで買ったからなんとかなりそう。&lt;/p&gt;
+&lt;p&gt;ただ、Unityでtiledを使うのpluginは高いから自作する予定。多分ここが一番のネックな気がする。。。&lt;/p&gt;
+&lt;p&gt;あと買ったAssetがtiled向けになっていないのもきつい。。。&lt;/p&gt;
+&lt;p&gt;ひとまず出来るだけ毎朝少しでも活動を行うってことを継続してみようかと思う。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id3"&gt;
+&lt;h2&gt;登山&lt;/h2&gt;
+&lt;p&gt;日曜に御岳山に行ってきた。紅葉はまだあまりしていなかった。&lt;/p&gt;
+&lt;p&gt;犬を連れて来ている人がかなり多く驚いたが、どうも神社がそういう人むけらしい。。。&lt;/p&gt;
+&lt;p&gt;七代の滝までの下りがきつかったのか、ふくらはぎが筋肉痛。。。膝はそこまでひどくないからスクワットと同時に
+ふくらはぎの筋トレも少し取り入れていきたい。&lt;/p&gt;
+&lt;p&gt;11月後半には高尾山か大山に登る予定。そこまでに筋トレをしておくようにする。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id4"&gt;
+&lt;h2&gt;ランニング&lt;/h2&gt;
+&lt;p&gt;登山で筋肉痛なので、11月入ってからできてない。。。&lt;/p&gt;
+&lt;p&gt;10月は結構回数はやったが、距離はあまり走っていなかったので、月間65km程度だった。&lt;/p&gt;
+&lt;p&gt;11月は80km程度、目標は100kmまで伸ばしていきたい。&lt;/p&gt;
+&lt;p&gt;あと12月は大会に出よう。10km60分切りが目標。&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="id5"&gt;
+&lt;h2&gt;その他&lt;/h2&gt;
+&lt;p&gt;今、色々自分の生活とか行動とかを変えてきている。&lt;/p&gt;
+&lt;p&gt;それがいいか悪いかはまだわからないが、運動や勉強を以前よりしているのでよくはなっていると感じている。&lt;/p&gt;
+&lt;p&gt;何事も継続するのが大事というのはよくわかっているのでこれがどこまで続くのか記録をつけていきたいと思う。&lt;/p&gt;
+&lt;p&gt;あと池袋二郎に行った来たので成果&lt;/p&gt;
+&lt;img alt="" src="https://lh3.googleusercontent.com/g0iyLy2IWdRM2MGcNaL2lxoJvXEWOzm3uONwODSy6ehgT6EhYX-vk_oBKMhVx4ErS9ZSnXiJDv79ftSDuS8cpoNx_VsePzpUmFahmmytNYL74lUiFCxNwbGZS3X0ynib7WEt23d81O7nHavq7GPmNCv_Hkp9pwjvf6j1rpUA6kFQU34RwpSdmg2e-xvfUDYSqlZ2j5DFKs1i5ocLF9KsNIssQI0zloAvBaKinrLBSKfo6L10m56JZ5vQAwHjohH9iwsUazUf504ckOQCWGF2T77uLLRnXN6I3rrj9JYlYjn1Uxn65_QWLe7zQfNqKFzkhatVKJhBEfDN2CAOWvPAzBdLCen1QpEz2cvdSDkVotaM74iktzhwRYD4LzUcRY8vTMSpZslLdmWAcpbSDPnuotcNcIW0roskCRi4C4-kTzkWvEWo-b74omzT4T8pRJyPNFO5el4MiglZc7oEx_xiEYbyaWyAxWF4oCYO8bJnPq4DWK6KSlwEJVPBNfm3QTbDE6OKSpt_ap6gRl5PxC3mWsUm9eFA6DzBW7mM8p2jdTg=w1224-h688-no" /&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Wed, 04 Nov 2015 09:31:00 +0900</pubDate><guid>tag:float1251.github.io,2015-11-04:blog/2015/11/04/2015_11_04.html</guid><category>memo</category></item><item><title>cmakeのメモ</title><link>http://float1251.github.io/blog/2015/10/27/cmake.html</link><description>&lt;p&gt;make使っていたが、さすがに手間だと感じているので、cmakeにしてみる。&lt;/p&gt;
 &lt;p&gt;build周りは出来るだけモダンな状態にしておきたいからね。&lt;/p&gt;
 &lt;p&gt;とりあえず、&lt;a class="reference external" href="http://www.wakayama-u.ac.jp/~chen/cmake/cmake.html"&gt;http://www.wakayama-u.ac.jp/~chen/cmake/cmake.html&lt;/a&gt; をやって理解しようかと思う。&lt;/p&gt;
 &lt;div class="section" id="id1"&gt;
