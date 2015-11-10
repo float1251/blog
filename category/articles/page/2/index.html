@@ -27,7 +27,104 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">5 24, 2014</h4>
+        <div id="content">            <h4 class="date">6 02, 2014</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/2014/06/02/google_image_search.html" rel="bookmark" title="Permanent Link to &quot;Googleの画像検索APIを使ってみる&quot;">Googleの画像検索APIを使ってみる</a>
+                </h2>
+
+                <p>現在はCustom Search APIを使用する。</p>
+<p><a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/overview?hl=ja">https://developers.google.com/custom-search/json-api/v1/overview?hl=ja</a></p>
+<div class="section" id="id1">
+<h2>データ型</h2>
+<p>JSONかAtomで返ってくる模様。</p>
+<p>Atomで取得する際はqueryにalt=atomとつける。</p>
+</div>
+<div class="section" id="id2">
+<h2>価格</h2>
+<p>Freeのやつと有料のやつがある。</p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt>Custom Search Engine</dt>
+<dd><p class="first last">100 requests/dayで無料。Cloud Consoleでbilingを有効化すれば、$5/1000 requestsで買える。制限は10kquery/dayらしい</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Google Site Search</dt>
+<dd><p class="first last">有料版。詳細はここで。
+<a class="reference external" href="http://www.google.com/enterprise/search/products/gss.html#pricing_content">http://www.google.com/enterprise/search/products/gss.html#pricing_content</a></p>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="api-key">
+<h2>API KEY</h2>
+<p>管理コンソールから取得してくる。</p>
+</div>
+<div class="section" id="custom-search-engine">
+<h2>Custom Search Engine</h2>
+<p>Custom Search Engine IDというものが必要らしい。</p>
+<p>最初に設定するとき、対象のURLを入力するとあって、
+全体を対象にするにはどうすればいいのかわからなかったが、</p>
+<p><a class="reference external" href="http://ryutamaki.hatenablog.com/entry/2014/01/18/171640">http://ryutamaki.hatenablog.com/entry/2014/01/18/171640</a></p>
+<p>これ見て設定したらうまくいった。</p>
+</div>
+<div class="section" id="custom-search-api">
+<h2>Custom Search apiの使い方</h2>
+<p>ここ見ればわかる。</p>
+<p><a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/using_rest?hl=ja">https://developers.google.com/custom-search/json-api/v1/using_rest?hl=ja</a></p>
+<p>URLフォーマットは以下:</p>
+<pre class="literal-block">
+https://www.googleapis.com/customsearch/v1?{parameters}
+</pre>
+<p>必須パラメータは以下3つ</p>
+<blockquote>
+<ul>
+<li><dl class="first docutils">
+<dt>API Key</dt>
+<dd><p class="first last">管理コンソールで取得したAPI Key</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Custom Search Engine ID</dt>
+<dd><p class="first last">Custom Search Engineで作成したEngine Id
+今回はcxで渡せば良い模様。</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Search Query</dt>
+<dd><p class="first last">検索ワードを渡せばおｋ．</p>
+</dd>
+</dl>
+</li>
+</ul>
+</blockquote>
+<p>その他のquery parameterはここ見ましょう。</p>
+<p><a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#request">https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#request</a>
+<a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/using_rest?hl=ja#api-specific_query_parameters">https://developers.google.com/custom-search/json-api/v1/using_rest?hl=ja#api-specific_query_parameters</a></p>
+<p>とりあえず今回は画像検索だからsearchTypeにimageを設定する必要があるらしい。</p>
+</div>
+<div class="section" id="response">
+<h2>response形式</h2>
+<p>以下を参照。</p>
+<p><a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#response">https://developers.google.com/custom-search/json-api/v1/reference/cse/list?hl=ja#response</a></p>
+<p>画像のリンクはitems.linkのURLを見ればいいらしい。</p>
+</div>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/2014/06/02/google_image_search.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles/" rel="tag">articles</a>
+                </div>
+            </article>            <h4 class="date">5 24, 2014</h4>
 
             <article class="post">
                 <h2 class="title">

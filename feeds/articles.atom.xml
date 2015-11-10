@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>float's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/articles.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2015-10-27T00:00:00+09:00</updated><entry><title>cmakeのメモ</title><link href="http://float1251.github.io/blog/2015/10/27/cmake.html" rel="alternate"></link><updated>2015-10-27T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-10-27:blog/2015/10/27/cmake.html</id><summary type="html">&lt;p&gt;make使っていたが、さすがに手間だと感じているので、cmakeにしてみる。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>float's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/articles.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2015-11-10T10:14:00+09:00</updated><entry><title>codingameを始めてみた</title><link href="http://float1251.github.io/blog/2015/11/10/codingame_2015_11_10.html" rel="alternate"></link><updated>2015-11-10T10:14:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-11-10:blog/2015/11/10/codingame_2015_11_10.html</id><summary type="html">&lt;p&gt;C++やhaskellを覚えたいけど、取っ掛かりが欲しいと思って、codingameを始めてみた。&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.codingame.com/home"&gt;https://www.codingame.com/home&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;tutorialとかは非常に簡単なので、全然触ったことない言語でも簡単に解ける。&lt;/p&gt;
+&lt;p&gt;だいたい解けないのはルールを読んでないからというね。。。&lt;/p&gt;
+&lt;p&gt;とりあえず、毎日か2日に1回くらいの割合で解いていきたい。&lt;/p&gt;
+&lt;p&gt;とりあえずやる予定の言語はC++, python3, javascript, C#, Java, Haskellの予定.&lt;/p&gt;
+&lt;p&gt;C#, C++, Javaと重い言語が並んでいるなぁ。。。&lt;/p&gt;
+&lt;p&gt;やったら、twitterかなんかで報告しよう。&lt;/p&gt;
+</summary><category term="programming"></category><category term="codingame"></category></entry><entry><title>cmakeのメモ</title><link href="http://float1251.github.io/blog/2015/10/27/cmake.html" rel="alternate"></link><updated>2015-10-27T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-10-27:blog/2015/10/27/cmake.html</id><summary type="html">&lt;p&gt;make使っていたが、さすがに手間だと感じているので、cmakeにしてみる。&lt;/p&gt;
 &lt;p&gt;build周りは出来るだけモダンな状態にしておきたいからね。&lt;/p&gt;
 &lt;p&gt;とりあえず、&lt;a class="reference external" href="http://www.wakayama-u.ac.jp/~chen/cmake/cmake.html"&gt;http://www.wakayama-u.ac.jp/~chen/cmake/cmake.html&lt;/a&gt; をやって理解しようかと思う。&lt;/p&gt;
 &lt;div class="section" id="id1"&gt;
