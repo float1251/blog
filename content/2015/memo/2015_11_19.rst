@@ -1,0 +1,44 @@
+=================================
+2015-11-19
+=================================
+:date: 2015-11-19 10:35
+:tags: memo
+
+codingame
+--------------
+とりあえず、codingameのeasyが全部終わった。
+
+javasriptでとりあえずやったので、あとでpython3, C#, C++あたりでやってみる予定。
+
+次はmediumになるのかな。まぁ肩の力ぬいてやっていこうと思う。
+
+ゲームつくりはじめました
+---------------------------
+以前、試作っぽいのを作ったのを本格的にやり始めることになった。
+
+企画、デザインは別の人がやるから基本的にプログラム専任。
+
+仕事に時間がとられるとこっちに時間使えないから効率的に仕事しないとね。
+
+Unityで作ってます。
+
+ラインディフェンス系のゲームになる予定。
+
+3ヶ月でどこまでやれるかって感じです。
+
+近況
+--------
+先週末くらいに博多に行ってきたけど、あまりよくなかった。
+
+別府の温泉は素晴らしかったけどね。
+
+田舎に住むのもいいかなって思った。都内は家賃高いし、食費も高いし。
+
+やはり都市圏の旅行はそこまで楽しくないので、温泉街とかリゾート地の方がいいね。
+
+進捗
+----------
+ご確認下さい。
+
+.. image:: https://lh3.googleusercontent.com/cW8Rz5JJXvyUnCWHOo27Fjt9xe3PuaUJtNaRn_A84-EgZPsVPIlgZ1PFez4nZeyopT8BC9bKUcbtJcTvgLu-MqB3L8Jpk0PVvaNBeweoMJIr_gbRc8kEJoJLj3adalmQE715GdIr8FwagK-a0PUOZsdZX7y-qRgQZQo2p83aOCuM42oViRgWx4265t9y8DHPybwmPNYxMTAAcMuoDcxxSaWe16_DHd4tqMuscnddSfiInwcPQxv6zQnXK3WbM9IBInanAC6XtjASrmVzY-nNjc0BgZmPGtyyQRsJEyHfNjpC8hsN2dPonDHsP8HVNcYg7gQ_916LDqAiJK9ZZ9xnpR1QdpIqkOmZhvQ5TPtGIPfhMrA3TLsk9KgIfJysToSk_EjOFSWncYuB9-KmEkTWSLPu2y0Eg_9fnP0wwRrFjeUsKx8Kd8Ux18V2ESajnFIc2dHdv0s2iKEfcnyeTPOK9wtVOSOm7wCve-zJctRmAjUhoxTjTOINVOhN99IUhz1FVHgtINynSSWbh3PQhaEwMGwA3EkK2UtNyijosuWkwVs=w1415-h796-no
+    :alt: ra-men
