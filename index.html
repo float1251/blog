@@ -24,7 +24,53 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">11 19, 2015</h4>
+        <div id="content">            <h4 class="date">12 02, 2015</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/2015/12/02/2015_12_02.html" rel="bookmark" title="Permanent Link to &quot;2015-12-02&quot;">2015-12-02</a>
+                </h2>
+
+                <div class="section" id="id2">
+<h2>ゲーム開発</h2>
+<p>ひとまず、TCG + ラインディフェンス的な感じで開発は進んでいる。</p>
+<p>なかなか面白いとは思うが、自分で作ったものだからどうしても客観的に判断がしづらいのが難点。</p>
+<p>また、エフェクト、SE等が入っていないのも臨場感に欠ける。</p>
+<p>最終形はひとまず見えてるからこのまま開発を続けていけたらと思う。</p>
+<p>ただし、仕事ではなくプライベートでの開発なので体調には気をつけること。</p>
+<p>どうしても作業中は緊張しっぱなしになってしまうことが多いので。</p>
+<p>一度体調崩すと治すのに時間がかかることを忘れないようにしよう。</p>
+<hr class="docutils" />
+<p>このゲームの開発をして、感じるのは自分にはレベルデザインとか、プランナーとしての知識がなさすぎて自作ゲーム作れてないのかなっていう気がする。</p>
+<p>プログラミングの能力はあっても、「ゲームを作る」っていう能力はまだまだなのかなと思うことが度々ある。</p>
+<p>パラメータとしての調整であったり、ゲーム仕様だったり。</p>
+<p>一度自分の力で作りきってみればここらへんの力が着く気がするので、この開発が終わった or 落ち着いたら違うゲームを作ってみたいと思う。</p>
+<p>次に作りたいのは動かしてて楽しいアクションゲームっていう予定。多分2D。</p>
+<hr class="docutils" />
+<p>12月に入り、今年の目標がどれだけ達成できているのかをちょいと眺めている。</p>
+<p>3D周りの知識とかTOEICとか、できてないものがちらほらある。</p>
+<p>あと目標が曖昧になってるやつがいくつかあった。</p>
+<p>来年の目標をぼちぼち作ってるけど、ちゃんと計測できる目標にすべき。</p>
+<p>特に英語。今年はよくできたほうだと思うが結局目標は達成できていないので来年は頑張る。</p>
+<hr class="docutils" />
+<p>TimeScaleなんてものがあるのか。。。独自で作ってたわ。。。</p>
+<p><a class="reference external" href="http://narudesign.com/devlog/unity-timescale-deltatime/">http://narudesign.com/devlog/unity-timescale-deltatime/</a></p>
+<p><a class="reference external" href="http://answers.unity3d.com/questions/36509/if-timescale-is-lowered-how-can-i-aviod-to-get-the.html">http://answers.unity3d.com/questions/36509/if-timescale-is-lowered-how-can-i-aviod-to-get-the.html</a></p>
+<p>あとこういうのがあるらしいから5.3にあげよう。</p>
+<p><a class="reference external" href="http://blogs.unity3d.com/jp/2015/12/01/custom-coroutines/">http://blogs.unity3d.com/jp/2015/12/01/custom-coroutines/</a></p>
+<hr class="docutils" />
+<p>あと、来年1月から埼玉県民です。</p>
+</div>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/2015/12/02/2015_12_02.html">posted at 14:35</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/memo/" rel="tag">memo</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/memo/" class="tags">memo</a>
+                </div>
+            </article>            <h4 class="date">11 19, 2015</h4>
 
             <article class="post">
                 <h2 class="title">
@@ -360,37 +406,6 @@ make    // buildする
                     &nbsp;&middot;
                     &nbsp;<a href="http://float1251.github.io/blog/tag/java/" class="tags">java</a>
                     &nbsp;<a href="http://float1251.github.io/blog/tag/libgdx/" class="tags">libgdx</a>
-                </div>
-            </article>            <h4 class="date">1 03, 2015</h4>
-
-            <article class="post">
-                <h2 class="title">
-                    <a href="http://float1251.github.io/blog/2015/01/03/codeforces_tools.html" rel="bookmark" title="Permanent Link to &quot;codeforcesのテストコードを自動生成するツールつくった&quot;">codeforcesのテストコードを自動生成するツールつくった</a>
-                </h2>
-
-                <p>ただし、まだ未公開。</p>
-<p>今はテストがunittest.mockで確認してるんだけど、subprocessでstdoutを確認するほうがよさそう。</p>
-<p>理由は</p>
-<blockquote>
-<ul class="simple">
-<li>if __name__  で分岐しないとimport時に実行されてしまう。</li>
-<li>mockでbuiltins.printを入れ替えてるが、実装中のデバッグプリントをsys.stderr.writeとか
-別なのでやんないと出力されなくなってしまう。</li>
-</ul>
-</blockquote>
-<p>あたりかな。</p>
-<p>ただ、mockの使い方を学びたいからやってみたって面が多いので、とりあえずよしとしよう。</p>
-<p>テストスクリプトの作成はJinja2をつかってやってます。</p>
-<p>依存するのはそれくらいかな。</p>
-<p>もうちょっと手直しをしたらgithubに上げる予定。</p>
-
-                <div class="clear"></div>
-
-                <div class="info">
-                    <a href="http://float1251.github.io/blog/2015/01/03/codeforces_tools.html">posted at 00:00</a>
-                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles/" rel="tag">articles</a>
-                    &nbsp;&middot;
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/python/" class="tags">python</a>
                 </div>
             </article>
 
