@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+        <meta charset="utf-8" />
+    <title>float's memo | Google apps script触ったのでまとめた</title>
+    <link rel="shortcut icon" type="image/png" href="http://float1251.github.io/blog/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="http://float1251.github.io/blog/favicon.ico">
+    <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Full Atom Feed" />
+    <link href="http://float1251.github.io/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="float's memo RSS Feed" />
+    <link href="http://float1251.github.io/blog/feeds/articles.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Categories Atom Feed" />
+    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/screen.css" type="text/css" />
+    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/print.css" type="text/css" media="print" />
+    <meta name="generator" content="Pelican" />
+
+    <meta name="keywords" content="google app script" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="http://float1251.github.io/blog">Home</a></li>
+            </ul>
+        </nav>
+        <div class="header_box">
+            <h1><a href="http://float1251.github.io/blog">float's memo</a></h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">            <h4 class="date">12 17, 2015</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/2015/12/17/google_apps_script.html" rel="bookmark" title="Permanent Link to &quot;Google apps script触ったのでまとめた&quot;">Google apps script触ったのでまとめた</a>
+                </h2>
+
+                <p>今作成しているゲームでは、データの入力をGoogle SpreadSheetで行っています。</p>
+<p>SpreadSheetに入力された情報から、sqliteにInsertするSQLを出力するスクリプトを書きました。</p>
+<p>その過程で調べたことをまとめようと思います。</p>
+<div class="section" id="id1">
+<h2>Google apps scriptとは</h2>
+<p>jsライクなscript言語。というかjs。実行はサーバー側(ブラウザではない。)で行われている模様。</p>
+<p>ツール &gt; スクリプトエディタ と選択すると、エディタ画面が立ち上がるので、ブラウザ上で開発が出来る。</p>
+<p>基本的な情報は以下のurlを見たほうがよいです。</p>
+<p><a class="reference external" href="http://qiita.com/soundTricker/items/4d04c97c499b22886dfd">http://qiita.com/soundTricker/items/4d04c97c499b22886dfd</a></p>
+<p>公式のリファレンス等は以下</p>
+<p><a class="reference external" href="https://developers.google.com/apps-script/">https://developers.google.com/apps-script/</a></p>
+</div>
+<div class="section" id="id2">
+<h2>ライブラリの導入方法</h2>
+<p>スクリプトエディター上から</p>
+<p>リソース &gt; ライブラリを選択。</p>
+<p>ライブラリのkeyを貼り付けすれば、導入できる。</p>
+<p>underscoreGSは入れておくと便利。</p>
+</div>
+<div class="section" id="id3">
+<h2>その他</h2>
+<ul>
+<li><dl class="first docutils">
+<dt>SpreadSheetを操作したい。</dt>
+<dd><ul class="first last simple">
+<li>SpreadSheetAppクラスからいじる</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Cellの値を取得したいんだが。</p>
+<blockquote>
+<div class="highlight"><pre><span class="nx">sheet</span><span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="nx">row</span><span class="p">,</span> <span class="nx">column</span><span class="p">).</span><span class="nx">getValue</span><span class="p">()</span> <span class="c1">// Rangeの左上端の値を取得する</span>
+</pre></div>
+</blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>ファイルを保存したいんだが.</dt>
+<dd><p class="first last">DriveAppクラスから作成する。</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">今操作しているSpreadSheetファイルと同じディレクトリにファイルを作成したいんだが。</p>
+<blockquote>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActiveSpreadsheet</span><span class="p">().</span><span class="nx">getId</span><span class="p">();</span> <span class="c1">// スプレッドシートのIDを取得</span>
+<span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="nx">DriveApp</span><span class="p">.</span><span class="nx">getFileById</span><span class="p">(</span><span class="nx">id</span><span class="p">).</span><span class="nx">getParents</span><span class="p">().</span><span class="nx">next</span><span class="p">();</span>  <span class="c1">// 親ディレクトリを取得</span>
+<span class="nx">DriveApp</span><span class="p">.</span><span class="nx">getFolderById</span><span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">getId</span><span class="p">()).</span><span class="nx">createFile</span><span class="p">(</span><span class="nx">file_name</span><span class="p">,</span> <span class="nx">text</span><span class="p">);</span> <span class="c1">// ファイルを作成</span>
+</pre></div>
+</blockquote>
+</li>
+<li><p class="first">A11みたいなセル名で値取得できないの</p>
+<blockquote>
+<div class="highlight"><pre><span class="nx">sheet</span><span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="s2">&quot;A11&quot;</span><span class="p">).</span><span class="nx">getValue</span><span class="p">()</span>
+</pre></div>
+</blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>printデバッグってどうやる？？</dt>
+<dd><p class="first last">使っていないCellにsetValueして表示する。</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">menuを追加したいんだけど。</p>
+<blockquote>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">ss</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActiveSpreadsheet</span><span class="p">();</span>
+<span class="kd">var</span> <span class="nx">menus</span> <span class="o">=</span> <span class="p">[{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;メニュー1&quot;</span><span class="p">,</span> <span class="nx">functionName</span><span class="o">:</span> <span class="s2">&quot;functionName&quot;</span><span class="p">}];</span>
+<span class="nx">ss</span><span class="p">.</span><span class="nx">addMenu</span><span class="p">(</span><span class="s1">&#39;メニュー名&#39;</span><span class="p">,</span> <span class="nx">menus</span><span class="p">);</span>
+</pre></div>
+</blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>Alert的なのってないの？？</dt>
+<dd><p class="first last">Browser.msgBosとかSpreadsheetApp.getUi().alertとか使うとよい。</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/2015/12/17/google_apps_script.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles/" rel="tag">articles</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/google-app-script/" class="tags">google app script</a>
+                </div>
+            </article>
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+                &middot;
+                <a href="http://float1251.github.io/blog/feeds/all.atom.xml" rel="alternate">Atom Feed</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>
