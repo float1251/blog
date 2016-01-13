@@ -26,7 +26,34 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">3 03, 2015</h4>
+        <div id="content">            <h4 class="date">9 14, 2015</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/2015/09/14/theme_change_2015.html" rel="bookmark" title="Permanent Link to &quot;心機一転、テーマを変えてみた&quot;">心機一転、テーマを変えてみた</a>
+                </h2>
+
+                <p>更新をサボっていたが再開しようかと思ったので、</p>
+<p>心機一転、themeを変えてみた。</p>
+<p>windowsだと</p>
+<div class="highlight"><pre>make serve
+</pre></div>
+<p>がErrorになる。なので、make htmlしてからoutputのディレクトリにcdして</p>
+<div class="highlight"><pre>python -m SimpleHTTPServer
+</pre></div>
+<p>でlocalserverを起動して確認した。</p>
+<p>テーマは <a class="reference external" href="https://github.com/jody-frankowski/blue-penguin">blue-penguine</a> にした。</p>
+<p>久しぶりにrstで書くと細かい記法を忘れてて戸惑いを隠せない。</p>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/2015/09/14/theme_change_2015.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles/" rel="tag">articles</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/pelican/" class="tags">pelican</a>
+                </div>
+            </article>            <h4 class="date">3 03, 2015</h4>
 
             <article class="post">
                 <h2 class="title">
@@ -541,76 +568,13 @@ EOM
                     &nbsp;<a href="http://float1251.github.io/blog/tag/vim/" class="tags">vim</a>
                 </div>
             </article>
-            <article class="post">
-                <h2 class="title">
-                    <a href="http://float1251.github.io/blog/2014/05/11/vimscript_memo.html" rel="bookmark" title="Permanent Link to &quot;vimscriptを書いてて、詰まったところ&quot;">vimscriptを書いてて、詰まったところ</a>
-                </h2>
-
-                <div class="section" id="pyfile">
-<h2>pyfileで引数を渡す方法</h2>
-<p>pythonであれば</p>
-<div class="highlight"><pre>python sample.py <span class="nb">test</span>
-</pre></div>
-<p>という形で実行するがvimではpyfileでpythonファイルを実行できるが、以下の様なやり方ではダメ。</p>
-<div class="highlight"><pre>pyfile sample.py <span class="nb">test</span>
-</pre></div>
-<p>こうではなく、以下の様にして引数を渡す</p>
-<div class="highlight"><pre><span class="p">:</span><span class="k">python</span> <span class="kn">import</span> <span class="nn">sys</span>
-<span class="c">&quot; pythonではsys.argvの0番目はスクリプトのファイル名</span>
-<span class="p">:</span><span class="k">python</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;sample.py&quot;</span><span class="p">,</span> <span class="s">&quot;test&quot;</span><span class="p">]</span>
-<span class="p">:</span><span class="k">pyfile</span> sample.<span class="k">py</span>
-</pre></div>
-<p>こうすると想定どおりに引数がpython側で受け取れる。</p>
-</div>
-<div class="section" id="pythonvim">
-<h2>python側でvimで定義した変数を受け取る</h2>
-<p>vimscriptの変数をpython側で受け取るにはvim.evalを使用する。</p>
-<div class="highlight"><pre><span class="k">let</span> tmp <span class="p">=</span> <span class="s2">&quot;Test&quot;</span>
-<span class="k">python</span> <span class="o">&lt;&lt;</span> EOM
-<span class="kn">import</span> <span class="nn">vim</span>
-<span class="k">print</span><span class="p">(</span><span class="n">vim</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="s">&quot;tmp&quot;</span><span class="p">))</span>
-EOM
-</pre></div>
-<p>こんな感じ</p>
-</div>
-<div class="section" id="vim">
-<h2>vimでの文字列連結</h2>
-<p>文字列連結でつい&quot;sample&quot;+&quot;test&quot;とか書きがちだが、.(ドット)でつなげる。</p>
-<div class="highlight"><pre><span class="k">let</span> <span class="k">a</span> <span class="p">=</span> <span class="s2">&quot;sample&quot;</span>
-<span class="k">let</span> <span class="k">b</span> <span class="p">=</span> <span class="s2">&quot;test&quot;</span>
-echo <span class="k">a</span>.<span class="k">b</span>
-</pre></div>
-</div>
-<div class="section" id="command">
-<h2>ユーザ定義commandの引数を関数に渡す</h2>
-<p>&lt;f-args&gt;を使う。</p>
-<p>詳細は:h &lt;f-args&gt;で。</p>
-</div>
-<div class="section" id="gvim">
-<h2>Gvimかどうかの判定</h2>
-<p>has(&quot;gui_running&quot;)でできる</p>
-<div class="highlight"><pre>echo has<span class="p">(</span><span class="s2">&quot;gui_running&quot;</span><span class="p">)</span>
-<span class="m">1</span>
-</pre></div>
-<p>こんな感じかな。
-vimpluginを書くときはまず、:h vim-scriptと:h write-pluginあたりを読むほうがその後が楽だなと思った。</p>
-</div>
-
-                <div class="clear"></div>
-
-                <div class="info">
-                    <a href="http://float1251.github.io/blog/2014/05/11/vimscript_memo.html">posted at 00:00</a>
-                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles/" rel="tag">articles</a>
-                    &nbsp;&middot;
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/vim/" class="tags">vim</a>
-                </div>
-            </article>
 
                 <div class="clear"></div>
                 <div class="pages">
 
                     <a href="http://float1251.github.io/blog/" class="prev_page">&larr;&nbsp;Previous</a>
-                    <span>Page 2 of 2</span>
+                    <a href="http://float1251.github.io/blog/page/3" class="next_page">Next&nbsp;&rarr;</a>
+                    <span>Page 2 of 3</span>
                 </div>
 
             <div class="clear"></div>
