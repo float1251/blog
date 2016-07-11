@@ -26,7 +26,33 @@
         </div>
     </header>
     <div id="wrapper">
-        <div id="content">            <h4 class="date">9 14, 2015</h4>
+        <div id="content">            <h4 class="date">9 15, 2015</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="http://float1251.github.io/blog/2015/09/15/heroes_chages_1.html" rel="bookmark" title="Permanent Link to &quot;やっと7000超えた&quot;">やっと7000超えた</a>
+                </h2>
+
+                <p>ヒロチャ、やっと7000突破した。</p>
+<img alt="screen shot" src="http://float1251.github.io/blog/images/Screenshot_2015-09-15-10-02-33.png" />
+<div class="section" id="id2">
+<h2>この記事書いてて詰まったとこ</h2>
+<p>rstでのimageの書き方.</p>
+<div class="highlight"><pre><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> {filename}../images/aaa.png
+</pre></div>
+<p>上記のような書き方でないとimageのpathがうまい具合に解決してくれない。</p>
+</div>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="http://float1251.github.io/blog/2015/09/15/heroes_chages_1.html">posted at 00:00</a>
+                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles/" rel="tag">articles</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/game/" class="tags">Game</a>
+                    &nbsp;<a href="http://float1251.github.io/blog/tag/hirochiya/" class="tags">ヒロチャ</a>
+                </div>
+            </article>            <h4 class="date">9 14, 2015</h4>
 
             <article class="post">
                 <h2 class="title">
@@ -446,126 +472,6 @@ cca run android</blockquote>
                     &nbsp;<a href="http://float1251.github.io/blog/tag/chrome/" class="tags">chrome</a>
                     &nbsp;<a href="http://float1251.github.io/blog/tag/android/" class="tags">android</a>
                     &nbsp;<a href="http://float1251.github.io/blog/tag/cordova/" class="tags">cordova</a>
-                </div>
-            </article>            <h4 class="date">5 11, 2014</h4>
-
-            <article class="post">
-                <h2 class="title">
-                    <a href="http://float1251.github.io/blog/2014/05/11/vimscript.html" rel="bookmark" title="Permanent Link to &quot;vimscriptについて&quot;">vimscriptについて</a>
-                </h2>
-
-                <p>vim pluginを開発したいと考えているが、まずはvimscriptについて知らないといけない。</p>
-<p>ということでちょっと調べてみた。</p>
-<p><a class="reference external" href="http://mattn.kaoriya.net/software/vim/20111202085236.htm">http://mattn.kaoriya.net/software/vim/20111202085236.htm</a></p>
-<p>この記事が素晴らしすぎたので、こっちを読むとよいと思います。</p>
-<p>あとこことか</p>
-<p><a class="reference external" href="http://vim-users.jp/2010/04/hack136/">http://vim-users.jp/2010/04/hack136/</a>
-<a class="reference external" href="http://vim-jp.org/tips/start_vimscript.html">http://vim-jp.org/tips/start_vimscript.html</a></p>
-<p>とりあえず、備忘録的にやったことを残しておこうと思います。</p>
-<div class="section" id="id1">
-<h2>変数宣言</h2>
-<p>こんな感じ。</p>
-<div class="highlight"><pre><span class="c">&quot; 数値</span>
-<span class="k">let</span> foo <span class="p">=</span> <span class="m">1</span>
-<span class="c">&quot; 文字列</span>
-<span class="k">let</span> foo <span class="p">=</span> <span class="s2">&quot;bar&quot;</span>
-<span class="c">&quot; リスト</span>
-<span class="k">let</span> foo <span class="p">=</span> [<span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span>]
-<span class="c">&quot; 辞書</span>
-<span class="k">let</span> foo <span class="p">=</span> {<span class="s2">&quot;bar&quot;</span>: <span class="s2">&quot;bar&quot;</span>}
-</pre></div>
-</div>
-<div class="section" id="id2">
-<h2>関数定義</h2>
-<p>こんな感じ。</p>
-<div class="highlight"><pre><span class="k">function</span> Foo<span class="p">()</span>
-    echo <span class="s2">&quot;foo&quot;</span>
-<span class="k">endfunction</span>
-</pre></div>
-<p>コマンドラインから実行すると以下のようになる。</p>
-<div class="highlight"><pre><span class="p">:</span><span class="k">call</span> Foo<span class="p">()</span>
-foo
-</pre></div>
-<p>同じ関数名を定義するにはfunction!を指定する</p>
-<div class="highlight"><pre><span class="k">function</span><span class="p">!</span> Foo<span class="p">()</span>
-    echo <span class="s2">&quot;foo&quot;</span>
-<span class="k">endfunction</span>
-</pre></div>
-</div>
-<div class="section" id="id3">
-<h2>スコープ</h2>
-<p>関数内で有効なローカルスコープ l:、スクリプトファイル内で有効なスコープ s:、グローバルで有効なスコープ、
-がよく使う。</p>
-<p>こんな感じ。</p>
-<div class="highlight"><pre><span class="k">function</span><span class="p">!</span> s:Foo<span class="p">()</span>
-    <span class="k">let</span> <span class="k">l</span>:foo <span class="p">=</span> <span class="s2">&quot;foo&quot;</span>
-    echo foo
-<span class="k">endfunction</span>
-<span class="k">call</span> s:Foo<span class="p">()</span>
-</pre></div>
-</div>
-<div class="section" id="python">
-<h2>Pythonインターフェース</h2>
-<p>vimscriptではPythonを使用することが出来ます。</p>
-<p>まずは使用できるかどうかの確認。</p>
-<div class="highlight"><pre>echo has<span class="p">(</span><span class="s2">&quot;python&quot;</span><span class="p">)</span>
-<span class="m">1</span>
-
-echo has<span class="p">(</span><span class="s2">&quot;python3&quot;</span><span class="p">)</span>
-<span class="m">1</span>
-</pre></div>
-<p>であればpython2もpython3も両方使えます。</p>
-<p>ではvimscriptで実際にpythonを使用してみます。</p>
-<div class="highlight"><pre><span class="k">function</span><span class="p">!</span> s:Foo<span class="p">()</span>
-    <span class="k">python3</span> <span class="p">&lt;&lt;</span> EOM
-print<span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">)</span>
-EOM
-<span class="k">endfunction</span>
-
-<span class="k">call</span> s:Foo<span class="p">()</span>
-</pre></div>
-<p>このような形で使用します。</p>
-<p>外部ファイルを実行する際は:pyfileコマンドを使用します。</p>
-</div>
-<div class="section" id="map">
-<h2>map</h2>
-<p>基本的なコマンドについては知っているので割愛。</p>
-<p>インサートモードにおいて、関数の評価結果から入力文字列を挿入させるためには&lt;expr&gt;を使用する。</p>
-<div class="highlight"><pre><span class="nb">inoremap</span> <span class="p">&lt;</span>expr<span class="p">&gt;</span> <span class="p">&lt;</span><span class="k">c</span><span class="p">-</span><span class="k">x</span><span class="p">&gt;</span> Foo<span class="p">()</span>
-</pre></div>
-</div>
-<div class="section" id="command">
-<h2>command</h2>
-<p>コマンドモードから実行できるコマンドを定義する。</p>
-<p>名前の戦闘は大文字である必要がある。</p>
-<div class="highlight"><pre>command<span class="p">!</span> Foo :<span class="k">call</span> Foo<span class="p">()</span>
-</pre></div>
-<p>詳しくは help :command-args を参照。</p>
-</div>
-<div class="section" id="autoloadautocmd">
-<h2>autoloadとautocmd</h2>
-<p><a class="reference external" href="http://mattn.kaoriya.net/software/vim/20111202085236.htm">http://mattn.kaoriya.net/software/vim/20111202085236.htm</a></p>
-<p>ここ見たほうがよいです。</p>
-</div>
-<div class="section" id="id4">
-<h2>vimscriptの組み込み関数</h2>
-<p>機能別に分類してあるヘルプは以下で見れる。</p>
-<div class="highlight"><pre><span class="p">:</span>help <span class="k">function</span><span class="p">-</span><span class="nb">list</span>
-</pre></div>
-<p>アルファベット順は以下</p>
-<div class="highlight"><pre><span class="p">:</span>help functions
-</pre></div>
-<p>ということで最後の方はだいぶ適当になったけど、これで最低限vimscriptが読めるようになった気がします。</p>
-<p>あとは色々見たり作ったりしながら覚えていこうかと思います。</p>
-</div>
-
-                <div class="clear"></div>
-
-                <div class="info">
-                    <a href="http://float1251.github.io/blog/2014/05/11/vimscript.html">posted at 00:00</a>
-                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles/" rel="tag">articles</a>
-                    &nbsp;&middot;
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/vim/" class="tags">vim</a>
                 </div>
             </article>
 

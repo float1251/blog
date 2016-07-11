@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>float's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2016-01-13T10:35:00+09:00</updated><entry><title>ラインディフェンスゲームのポストモーテム</title><link href="http://float1251.github.io/blog/2016/01/13/game_dev_2016_01_13.html" rel="alternate"></link><updated>2016-01-13T10:35:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2016-01-13:blog/2016/01/13/game_dev_2016_01_13.html</id><summary type="html">&lt;p&gt;開発が終盤に差し掛かってきたので思ったことを書いていこうと思う。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>float's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2016-07-11T13:10:00+09:00</updated><entry><title>ラインディフェンスゲームのポストモーテム</title><link href="http://float1251.github.io/blog/2016/07/11/game_dev_2016_07_11.html" rel="alternate"></link><updated>2016-07-11T13:10:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2016-07-11:blog/2016/07/11/game_dev_2016_07_11.html</id><summary type="html">&lt;p&gt;ちゃんとリリースしました。&lt;/p&gt;
+&lt;p&gt;4gamer様などに載せていただきました。
+&lt;a class="reference external" href="http://www.4gamer.net/games/348/G034889/20160705040/"&gt;http://www.4gamer.net/games/348/G034889/20160705040/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;思った以上に評価もよく個人的には非常にびっくりしております。。。&lt;/p&gt;
+&lt;p&gt;ひとまず感想&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;一定のタワーディフェンスゲームファンが存在することは明らか&lt;/li&gt;
+&lt;li&gt;面白いゲームを作るには時間がかかる。と同時にいかに早くする仕組み、検証の工程をつくるのかが課題&lt;/li&gt;
+&lt;li&gt;スマートフォンではストラテジー系のゲームがあっている&lt;/li&gt;
+&lt;li&gt;動画広告の仕組みは想定通り非常によかった。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr class="docutils" /&gt;
+&lt;div class="section" id="id2"&gt;
+&lt;h2&gt;今後について&lt;/h2&gt;
+&lt;p&gt;とりあえず開発は終了したので、アップデートをどうするか or 新作を作るかになると思う。
+新作の話とかも多少はしたので、少しづつ進めていけたら。&lt;/p&gt;
+&lt;p&gt;次回はサーバーを使うのはほぼ必須になりそう.またパフォーマンスも求められそうなので、
+golangを覚えようと思う。&lt;/p&gt;
+&lt;p&gt;golang自体の学習を進めつつ、今度は自分個人で何かゲーム一つを軽くつくりたいかな。&lt;/p&gt;
+&lt;/div&gt;
+</summary><category term="memo"></category><category term="gamedev"></category><category term="daily"></category></entry><entry><title>ラインディフェンスゲームのポストモーテム</title><link href="http://float1251.github.io/blog/2016/01/13/game_dev_2016_01_13.html" rel="alternate"></link><updated>2016-01-13T10:35:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2016-01-13:blog/2016/01/13/game_dev_2016_01_13.html</id><summary type="html">&lt;p&gt;開発が終盤に差し掛かってきたので思ったことを書いていこうと思う。&lt;/p&gt;
 &lt;p&gt;ポストモーテムと言っているが、まだ終わってません。&lt;/p&gt;
 &lt;p&gt;真のポストモーテムはまた気が向いたら書く。&lt;/p&gt;
 &lt;div class="section" id="id2"&gt;
