@@ -12,7 +12,7 @@ TIMEZONE = 'Asia/Tokyo'
 
 DEFAULT_LANG = 'ja'
 
-THEME = "themes/blue-penguin"
+THEME = "themes/Flex"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -59,3 +59,9 @@ PAGINATION_PATTERNS     = (
     (1, '{base_name}/',               '{base_name}/index.html'),
     (2, '{base_name}/page/{number}/', '{base_name}/page/{number}/index.html'),
 )
+
+# Flexの設定
+SITETITLE = "float's memo"
+SITEDESCRIPTION = 'game programmer, web developer.'
+MAIN_MENU = True
+SITELOGO = SITEURL + '/images/me.png'
