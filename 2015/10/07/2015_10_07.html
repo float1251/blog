@@ -1,40 +1,99 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-        <meta charset="utf-8" />
-    <title>float's memo | 2015-10-07</title>
-    <link rel="shortcut icon" type="image/png" href="http://float1251.github.io/blog/favicon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="http://float1251.github.io/blog/favicon.ico">
-    <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Full Atom Feed" />
-    <link href="http://float1251.github.io/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="float's memo RSS Feed" />
-    <link href="http://float1251.github.io/blog/feeds/memo.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Categories Atom Feed" />
-    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/screen.css" type="text/css" />
-    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/print.css" type="text/css" media="print" />
-    <meta name="generator" content="Pelican" />
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
-    <meta name="keywords" content="memo" />
+    <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Atom">
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+<meta name="author" content="float1251" />
+<meta name="description" content="近況 とりあえず大きな出来事があって、ショックが大きかったがとりあえずは落ち着いてきた。。。ような気がする。 やっと仕事にも集中できるようになったし、食事も義務的にだがちゃんと取れるようになってきた。 とりあえず、行動しよう。いろんなとこにいって、いろんなことしよう。 今はそれがいい。 自作ゲームエンジンについて これに関しては、エンジン部分をc++で作ってwrapperをpythonで書くという手法で行くのがいい気がする。 が、自分はc++全然やったことないから絶対つまるという問題点が。。。 あと問題点として pythonを使用してandroidを動かす仕組み。python-for-androidでなんとかなるのか パフォーマンス的に大丈夫か OpenGL周りの知識 あたりがネックになるはず。OpenGLは前よりかは大丈夫だけど、カメラまわりの行列計算が糞面倒なのがなぁ。。。 今年中に目処は付けたいところ。 あとC++でのビルド環境構築もメンドイなぁ。。。というかこれはやったことがないからか。 cocos2d-xがcmakeだからcmakeでいくのがいい気がする。 build環境はcocos-2d-xを参考に作ろう。 実装はlibgdxを参考に作ろう。 python <--> C++の連携を楽にするためにどうするかは後々検討。 cythonもどこかでつかうかもしれんな。。。 何か色々技術的なつまりどころが多すぎるな。 自作ゲームについて タワーディフェンス系のゲームを作っていたが、試作で打ち切り予定。 とりあえず出来ることはわかったというところと、仕様が不明瞭なため。 何か作るにしても出口、目標をはっきりさせてからやらないと駄目だと非常に感じた。 次は、ラインディフェンス系のゲームかな。 ちゃんと仕様を固めて、あとUIの仕様を固めて実装するようにしよう。 目標はまずは技術検証 ..." />
+<meta name="keywords" content="memo">
+<meta property="og:site_name" content="float's memo"/>
+<meta property="og:title" content="2015-10-07"/>
+<meta property="og:description" content="近況 とりあえず大きな出来事があって、ショックが大きかったがとりあえずは落ち着いてきた。。。ような気がする。 やっと仕事にも集中できるようになったし、食事も義務的にだがちゃんと取れるようになってきた。 とりあえず、行動しよう。いろんなとこにいって、いろんなことしよう。 今はそれがいい。 自作ゲームエンジンについて これに関しては、エンジン部分をc++で作ってwrapperをpythonで書くという手法で行くのがいい気がする。 が、自分はc++全然やったことないから絶対つまるという問題点が。。。 あと問題点として pythonを使用してandroidを動かす仕組み。python-for-androidでなんとかなるのか パフォーマンス的に大丈夫か OpenGL周りの知識 あたりがネックになるはず。OpenGLは前よりかは大丈夫だけど、カメラまわりの行列計算が糞面倒なのがなぁ。。。 今年中に目処は付けたいところ。 あとC++でのビルド環境構築もメンドイなぁ。。。というかこれはやったことがないからか。 cocos2d-xがcmakeだからcmakeでいくのがいい気がする。 build環境はcocos-2d-xを参考に作ろう。 実装はlibgdxを参考に作ろう。 python <--> C++の連携を楽にするためにどうするかは後々検討。 cythonもどこかでつかうかもしれんな。。。 何か色々技術的なつまりどころが多すぎるな。 自作ゲームについて タワーディフェンス系のゲームを作っていたが、試作で打ち切り予定。 とりあえず出来ることはわかったというところと、仕様が不明瞭なため。 何か作るにしても出口、目標をはっきりさせてからやらないと駄目だと非常に感じた。 次は、ラインディフェンス系のゲームかな。 ちゃんと仕様を固めて、あとUIの仕様を固めて実装するようにしよう。 目標はまずは技術検証 ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://float1251.github.io/blog/2015/10/07/2015_10_07.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2015-10-07 09:54:00+09:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://float1251.github.io/blog/author/float1251.html">
+<meta property="article:section" content="memo"/>
+<meta property="article:tag" content="memo"/>
+<meta property="og:image" content="./images/me.jpeg">
+
+  <title>float's memo &ndash; 2015-10-07</title>
+
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="http://float1251.github.io/blog">Home</a></li>
-            </ul>
-        </nav>
-        <div class="header_box">
-            <h1><a href="http://float1251.github.io/blog">float's memo</a></h1>
-        </div>
-    </header>
-    <div id="wrapper">
-        <div id="content">            <h4 class="date">10 07, 2015</h4>
+  <aside>
+    <div>
+      <a href="http://float1251.github.io/blog">
+        <img src="./images/me.jpeg" alt="float's memo" title="float's memo">
+      </a>
+      <h1><a href="http://float1251.github.io/blog">float's memo</a></h1>
 
-            <article class="post">
-                <h2 class="title">
-                    <a href="http://float1251.github.io/blog/2015/10/07/2015_10_07.html" rel="bookmark" title="Permanent Link to &quot;2015-10-07&quot;">2015-10-07</a>
-                </h2>
 
-                <div class="section" id="id2">
+      <nav>
+        <ul class="list">
+
+          <li><a href="/archives.html" target="_blank">Archives</a></li>
+          <li><a href="/categories.html" target="_blank">Categories</a></li>
+          <li><a href="/tags.html" target="_blank">Tags</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/float1251" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/float1251" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://float1251.github.io/blog">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="http://float1251.github.io/blog/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+    <h1 id="2015_10_07">2015-10-07</h1>
+    <p>
+          Posted on 2015年10月07日(水) in <a href="http://float1251.github.io/blog/category/memo/">memo</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <div class="section" id="id2">
 <h2>近況</h2>
 <p>とりあえず大きな出来事があって、ショックが大きかったがとりあえずは落ち着いてきた。。。ような気がする。</p>
 <p>やっと仕事にも集中できるようになったし、食事も義務的にだがちゃんと取れるようになってきた。</p>
@@ -84,26 +143,50 @@
 <p>こんなんでやろう！</p>
 </div>
 
-                <div class="clear"></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://float1251.github.io/blog/tag/memo/">memo</a>
+    </p>
+  </div>
 
-                <div class="info">
-                    <a href="http://float1251.github.io/blog/2015/10/07/2015_10_07.html">posted at 09:54</a>
-                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/memo/" rel="tag">memo</a>
-                    &nbsp;&middot;
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/memo/" class="tags">memo</a>
-                </div>
-            </article>
-            <div class="clear"></div>
-            <footer>
-                <p>
-                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
-                &middot;
-                Powered by <a href="http://getpelican.com">Pelican</a>
-                &middot;
-                <a href="http://float1251.github.io/blog/feeds/all.atom.xml" rel="alternate">Atom Feed</a>
-            </footer>
-        </div>
-        <div class="clear"></div>
-    </div>
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'floatsmemo';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+</article>
+
+    <footer>
+<p>&copy; float1251 </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " float's memo ",
+  "url" : "http://float1251.github.io/blog",
+  "image": "./images/me.jpeg",
+  "description": "game programmer, web developer."
+}
+</script>
 </body>
 </html>

@@ -1,40 +1,99 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-        <meta charset="utf-8" />
-    <title>float's memo | 雑記 2015-09-29</title>
-    <link rel="shortcut icon" type="image/png" href="http://float1251.github.io/blog/favicon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="http://float1251.github.io/blog/favicon.ico">
-    <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Full Atom Feed" />
-    <link href="http://float1251.github.io/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="float's memo RSS Feed" />
-    <link href="http://float1251.github.io/blog/feeds/memo.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Categories Atom Feed" />
-    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/screen.css" type="text/css" />
-    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/print.css" type="text/css" media="print" />
-    <meta name="generator" content="Pelican" />
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
-    <meta name="keywords" content="memo" />
+    <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Atom">
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+<meta name="author" content="float1251" />
+<meta name="description" content="なんとなくここ最近、もやもやしたものを抱えていて開発が滞っている。。。 結局この開発しているゲームの出口、終わりがちょっと不明瞭なのが原因な気がしている。 あとUnityで開発していると低レベルな部分が隠蔽されているから知識があまり身につかない、ただ実装しているだけって感じになっているのがよくないかも。 試作だから何がしかのEditorとかつくるって感じでもないし。。。 試作レベルで身につくUnityの知識はだいぶ身についたからちゃんとエフェクトとかUIとか作りこむ時間とお金が欲しいです。。。 出口を決めてから実装を始める これ大事。 追記 記事にコメント入れられるようにしようとしたらdisquis.htmlのtemplateがbluepenguinにない、pagenationの設定につまづく、 微妙にデザインが。。。という辺りを修正したい。自分でテーマを作るしかないのかな… ちょっとdribbbleとか他のサイトをみて、イメージを固めたいところ。 あとrst用のtemplate作成スクリプトを作りたい。jinja2とpythonでやれればいいかな。 requirementsにjinja2はあるからそれでやれればいいかな。" />
+<meta name="keywords" content="memo">
+<meta property="og:site_name" content="float's memo"/>
+<meta property="og:title" content="雑記 2015-09-29"/>
+<meta property="og:description" content="なんとなくここ最近、もやもやしたものを抱えていて開発が滞っている。。。 結局この開発しているゲームの出口、終わりがちょっと不明瞭なのが原因な気がしている。 あとUnityで開発していると低レベルな部分が隠蔽されているから知識があまり身につかない、ただ実装しているだけって感じになっているのがよくないかも。 試作だから何がしかのEditorとかつくるって感じでもないし。。。 試作レベルで身につくUnityの知識はだいぶ身についたからちゃんとエフェクトとかUIとか作りこむ時間とお金が欲しいです。。。 出口を決めてから実装を始める これ大事。 追記 記事にコメント入れられるようにしようとしたらdisquis.htmlのtemplateがbluepenguinにない、pagenationの設定につまづく、 微妙にデザインが。。。という辺りを修正したい。自分でテーマを作るしかないのかな… ちょっとdribbbleとか他のサイトをみて、イメージを固めたいところ。 あとrst用のtemplate作成スクリプトを作りたい。jinja2とpythonでやれればいいかな。 requirementsにjinja2はあるからそれでやれればいいかな。"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://float1251.github.io/blog/2015/09/29/memo_2015_09_29.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2015-09-29 00:00:00+09:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://float1251.github.io/blog/author/float1251.html">
+<meta property="article:section" content="memo"/>
+<meta property="article:tag" content="memo"/>
+<meta property="og:image" content="./images/me.jpeg">
+
+  <title>float's memo &ndash; 雑記 2015-09-29</title>
+
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="http://float1251.github.io/blog">Home</a></li>
-            </ul>
-        </nav>
-        <div class="header_box">
-            <h1><a href="http://float1251.github.io/blog">float's memo</a></h1>
-        </div>
-    </header>
-    <div id="wrapper">
-        <div id="content">            <h4 class="date">9 29, 2015</h4>
+  <aside>
+    <div>
+      <a href="http://float1251.github.io/blog">
+        <img src="./images/me.jpeg" alt="float's memo" title="float's memo">
+      </a>
+      <h1><a href="http://float1251.github.io/blog">float's memo</a></h1>
 
-            <article class="post">
-                <h2 class="title">
-                    <a href="http://float1251.github.io/blog/2015/09/29/memo_2015_09_29.html" rel="bookmark" title="Permanent Link to &quot;雑記 2015-09-29&quot;">雑記 2015-09-29</a>
-                </h2>
 
-                <p>なんとなくここ最近、もやもやしたものを抱えていて開発が滞っている。。。</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="/archives.html" target="_blank">Archives</a></li>
+          <li><a href="/categories.html" target="_blank">Categories</a></li>
+          <li><a href="/tags.html" target="_blank">Tags</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/float1251" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/float1251" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://float1251.github.io/blog">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="http://float1251.github.io/blog/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+    <h1 id="memo_2015_09_29">雑記 2015-09-29</h1>
+    <p>
+          Posted on 2015年09月29日(火) in <a href="http://float1251.github.io/blog/category/memo/">memo</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>なんとなくここ最近、もやもやしたものを抱えていて開発が滞っている。。。</p>
 <p>結局この開発しているゲームの出口、終わりがちょっと不明瞭なのが原因な気がしている。</p>
 <p>あとUnityで開発していると低レベルな部分が隠蔽されているから知識があまり身につかない、ただ実装しているだけって感じになっているのがよくないかも。</p>
 <p>試作だから何がしかのEditorとかつくるって感じでもないし。。。</p>
@@ -52,26 +111,50 @@
 </div>
 </div>
 
-                <div class="clear"></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://float1251.github.io/blog/tag/memo/">memo</a>
+    </p>
+  </div>
 
-                <div class="info">
-                    <a href="http://float1251.github.io/blog/2015/09/29/memo_2015_09_29.html">posted at 00:00</a>
-                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/memo/" rel="tag">memo</a>
-                    &nbsp;&middot;
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/memo/" class="tags">memo</a>
-                </div>
-            </article>
-            <div class="clear"></div>
-            <footer>
-                <p>
-                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
-                &middot;
-                Powered by <a href="http://getpelican.com">Pelican</a>
-                &middot;
-                <a href="http://float1251.github.io/blog/feeds/all.atom.xml" rel="alternate">Atom Feed</a>
-            </footer>
-        </div>
-        <div class="clear"></div>
-    </div>
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'floatsmemo';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+</article>
+
+    <footer>
+<p>&copy; float1251 </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " float's memo ",
+  "url" : "http://float1251.github.io/blog",
+  "image": "./images/me.jpeg",
+  "description": "game programmer, web developer."
+}
+</script>
 </body>
 </html>

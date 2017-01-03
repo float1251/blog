@@ -1,40 +1,101 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-        <meta charset="utf-8" />
-    <title>float's memo | Cordovaでandroidにアプリをinstallする</title>
-    <link rel="shortcut icon" type="image/png" href="http://float1251.github.io/blog/favicon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="http://float1251.github.io/blog/favicon.ico">
-    <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Full Atom Feed" />
-    <link href="http://float1251.github.io/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="float's memo RSS Feed" />
-    <link href="http://float1251.github.io/blog/feeds/articles.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Categories Atom Feed" />
-    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/screen.css" type="text/css" />
-    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/print.css" type="text/css" media="print" />
-    <meta name="generator" content="Pelican" />
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
-    <meta name="keywords" content="chrome,android,cordova" />
+    <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Atom">
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+<meta name="author" content="float1251" />
+<meta name="description" content="環境設定 手順はhttps://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/README.mdにある。 androidSDKをインストールする。 .bash_profileにsdk/toolsとsdk/platform-toolsにpathを通す brew install antでantを入れる。入らなかったらbrew updateしてから再度行う npm install -g cca cca checkenvで怒られないことを確認 Projectの作成 以下のコマンドを実行する cca create APP_NAME 実行 作成したプロジェクトディレクトリで以下を実行 cca run android これでアプリがdeviceにインストールされる。 プロジェクトの構造 以下のような形になっている。 . ├── config.xml ├── hooks ..." />
+<meta name="keywords" content="chrome, android, cordova">
+<meta property="og:site_name" content="float's memo"/>
+<meta property="og:title" content="Cordovaでandroidにアプリをinstallする"/>
+<meta property="og:description" content="環境設定 手順はhttps://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/README.mdにある。 androidSDKをインストールする。 .bash_profileにsdk/toolsとsdk/platform-toolsにpathを通す brew install antでantを入れる。入らなかったらbrew updateしてから再度行う npm install -g cca cca checkenvで怒られないことを確認 Projectの作成 以下のコマンドを実行する cca create APP_NAME 実行 作成したプロジェクトディレクトリで以下を実行 cca run android これでアプリがdeviceにインストールされる。 プロジェクトの構造 以下のような形になっている。 . ├── config.xml ├── hooks ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://float1251.github.io/blog/2014/05/24/cordova_anroid.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2014-05-24 00:00:00+09:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://float1251.github.io/blog/author/float1251.html">
+<meta property="article:section" content="articles"/>
+<meta property="article:tag" content="chrome"/>
+<meta property="article:tag" content="android"/>
+<meta property="article:tag" content="cordova"/>
+<meta property="og:image" content="./images/me.jpeg">
+
+  <title>float's memo &ndash; Cordovaでandroidにアプリをinstallする</title>
+
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="http://float1251.github.io/blog">Home</a></li>
-            </ul>
-        </nav>
-        <div class="header_box">
-            <h1><a href="http://float1251.github.io/blog">float's memo</a></h1>
-        </div>
-    </header>
-    <div id="wrapper">
-        <div id="content">            <h4 class="date">5 24, 2014</h4>
+  <aside>
+    <div>
+      <a href="http://float1251.github.io/blog">
+        <img src="./images/me.jpeg" alt="float's memo" title="float's memo">
+      </a>
+      <h1><a href="http://float1251.github.io/blog">float's memo</a></h1>
 
-            <article class="post">
-                <h2 class="title">
-                    <a href="http://float1251.github.io/blog/2014/05/24/cordova_anroid.html" rel="bookmark" title="Permanent Link to &quot;Cordovaでandroidにアプリをinstallする&quot;">Cordovaでandroidにアプリをinstallする</a>
-                </h2>
 
-                <div class="section" id="id1">
+      <nav>
+        <ul class="list">
+
+          <li><a href="/archives.html" target="_blank">Archives</a></li>
+          <li><a href="/categories.html" target="_blank">Categories</a></li>
+          <li><a href="/tags.html" target="_blank">Tags</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/float1251" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/float1251" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://float1251.github.io/blog">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="http://float1251.github.io/blog/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+    <h1 id="cordova_anroid">Cordovaでandroidにアプリをinstallする</h1>
+    <p>
+          Posted on 2014年05月24日(土) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <div class="section" id="id1">
 <h2>環境設定</h2>
 <p>手順はhttps://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/README.mdにある。</p>
 <blockquote>
@@ -104,28 +165,52 @@ cca run android</blockquote>
 <p>www以下がwebviewで使用されるファイル。</p>
 </div>
 
-                <div class="clear"></div>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://float1251.github.io/blog/tag/chrome/">chrome</a>
+      <a href="http://float1251.github.io/blog/tag/android/">android</a>
+      <a href="http://float1251.github.io/blog/tag/cordova/">cordova</a>
+    </p>
+  </div>
 
-                <div class="info">
-                    <a href="http://float1251.github.io/blog/2014/05/24/cordova_anroid.html">posted at 00:00</a>
-                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles/" rel="tag">articles</a>
-                    &nbsp;&middot;
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/chrome/" class="tags">chrome</a>
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/android/" class="tags">android</a>
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/cordova/" class="tags">cordova</a>
-                </div>
-            </article>
-            <div class="clear"></div>
-            <footer>
-                <p>
-                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
-                &middot;
-                Powered by <a href="http://getpelican.com">Pelican</a>
-                &middot;
-                <a href="http://float1251.github.io/blog/feeds/all.atom.xml" rel="alternate">Atom Feed</a>
-            </footer>
-        </div>
-        <div class="clear"></div>
-    </div>
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'floatsmemo';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+</article>
+
+    <footer>
+<p>&copy; float1251 </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " float's memo ",
+  "url" : "http://float1251.github.io/blog",
+  "image": "./images/me.jpeg",
+  "description": "game programmer, web developer."
+}
+</script>
 </body>
 </html>

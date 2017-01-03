@@ -1,38 +1,97 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="utf-8" />
-    <title>float's memo | articles tagged "google app script"</title>
-    <link rel="shortcut icon" type="image/png" href="http://float1251.github.io/blog/favicon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="http://float1251.github.io/blog/favicon.ico">
-    <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Full Atom Feed" />
-    <link href="http://float1251.github.io/blog/feeds/rss.xml" type="application/rss+xml" rel="alternate" title="float's memo RSS Feed" />
-    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/screen.css" type="text/css" />
-    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="http://float1251.github.io/blog/theme/css/print.css" type="text/css" media="print" />
-    <meta name="generator" content="Pelican" />
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Atom">
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+    <meta name="author" content="float1251" />
+    <meta name="description" content="game programmer, web developer." />
+<meta property="og:site_name" content="float's memo"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="float's memo"/>
+<meta property="og:description" content="game programmer, web developer."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://float1251.github.io/blog"/>
+<meta property="og:image" content="./images/me.jpeg">
+
+  <title>float's memo &ndash;     Tag google app script
+</title>
+
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li class="ephemeral selected"><a href="http://float1251.github.io/blog/tag/google-app-script/index.html">google app script</a></li>
-                <li><a href="http://float1251.github.io/blog">Home</a></li>
-            </ul>
-        </nav>
-        <div class="header_box">
-            <h1><a href="http://float1251.github.io/blog">float's memo</a></h1>
-        </div>
-    </header>
-    <div id="wrapper">
-        <div id="content">            <h4 class="date">12 17, 2015</h4>
+  <aside>
+    <div>
+      <a href="http://float1251.github.io/blog">
+        <img src="./images/me.jpeg" alt="float's memo" title="float's memo">
+      </a>
+      <h1><a href="http://float1251.github.io/blog">float's memo</a></h1>
 
-            <article class="post">
-                <h2 class="title">
-                    <a href="http://float1251.github.io/blog/2015/12/17/google_apps_script.html" rel="bookmark" title="Permanent Link to &quot;Google apps script触ったのでまとめた&quot;">Google apps script触ったのでまとめた</a>
-                </h2>
 
-                <p>今作成しているゲームでは、データの入力をGoogle SpreadSheetで行っています。</p>
+      <nav>
+        <ul class="list">
+
+          <li><a href="/archives.html" target="_blank">Archives</a></li>
+          <li><a href="/categories.html" target="_blank">Categories</a></li>
+          <li><a href="/tags.html" target="_blank">Tags</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/float1251" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/float1251" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://float1251.github.io/blog">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/categories.html">Categories</a>
+      <a href="/tags.html">Tags</a>
+
+      <a href="http://float1251.github.io/blog/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+
+
+<article>
+  <header>
+    <h2><a href="http://float1251.github.io/blog/2015/12/17/google_apps_script.html#google_apps_script">Google apps script触ったのでまとめた</a></h2>
+    <p>
+          Posted on 2015年12月17日(木) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/google-app-script/">google app script</a>
+    </p>
+  </header>
+  <div>
+      <p>今作成しているゲームでは、データの入力をGoogle SpreadSheetで行っています。</p>
 <p>SpreadSheetに入力された情報から、sqliteにInsertするSQLを出力するスクリプトを書きました。</p>
 <p>その過程で調べたことをまとめようと思います。</p>
 <div class="section" id="id1">
@@ -69,69 +128,38 @@
 </blockquote>
 </li>
 <li><dl class="first docutils">
-<dt>ファイルを保存したいんだが.</dt>
-<dd><p class="first last">DriveAppクラスから作成する。</p>
-</dd>
-</dl>
-</li>
-<li><p class="first">今操作しているSpreadSheetファイルと同じディレクトリにファイルを作成したいんだが。</p>
-<blockquote>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">id</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActiveSpreadsheet</span><span class="p">().</span><span class="nx">getId</span><span class="p">();</span> <span class="c1">// スプレッドシートのIDを取得</span>
-<span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="nx">DriveApp</span><span class="p">.</span><span class="nx">getFileById</span><span class="p">(</span><span class="nx">id</span><span class="p">).</span><span class="nx">getParents</span><span class="p">().</span><span class="nx">next</span><span class="p">();</span>  <span class="c1">// 親ディレクトリを取得</span>
-<span class="nx">DriveApp</span><span class="p">.</span><span class="nx">getFolderById</span><span class="p">(</span><span class="nx">f</span><span class="p">.</span><span class="nx">getId</span><span class="p">()).</span><span class="nx">createFile</span><span class="p">(</span><span class="nx">file_name</span><span class="p">,</span> <span class="nx">text</span><span class="p">);</span> <span class="c1">// ファイルを作成</span>
-</pre></div>
-</blockquote>
-</li>
-<li><p class="first">A11みたいなセル名で値取得できないの</p>
-<blockquote>
-<div class="highlight"><pre><span class="nx">sheet</span><span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="s2">&quot;A11&quot;</span><span class="p">).</span><span class="nx">getValue</span><span class="p">()</span>
-</pre></div>
-</blockquote>
-</li>
-<li><dl class="first docutils">
-<dt>printデバッグってどうやる？？</dt>
-<dd><p class="first last">使っていないCellにsetValueして表示する。</p>
-</dd>
-</dl>
-</li>
-<li><p class="first">menuを追加したいんだけど。</p>
-<blockquote>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">ss</span> <span class="o">=</span> <span class="nx">SpreadsheetApp</span><span class="p">.</span><span class="nx">getActiveSpreadsheet</span><span class="p">();</span>
-<span class="kd">var</span> <span class="nx">menus</span> <span class="o">=</span> <span class="p">[{</span><span class="nx">name</span><span class="o">:</span> <span class="s2">&quot;メニュー1&quot;</span><span class="p">,</span> <span class="nx">functionName</span><span class="o">:</span> <span class="s2">&quot;functionName&quot;</span><span class="p">}];</span>
-<span class="nx">ss</span><span class="p">.</span><span class="nx">addMenu</span><span class="p">(</span><span class="s1">&#39;メニュー名&#39;</span><span class="p">,</span> <span class="nx">menus</span><span class="p">);</span>
-</pre></div>
-</blockquote>
-</li>
-<li><dl class="first docutils">
-<dt>Alert的なのってないの？？</dt>
-<dd><p class="first last">Browser.msgBosとかSpreadsheetApp.getUi().alertとか使うとよい。</p>
-</dd>
-</dl>
-</li>
-</ul>
-</div>
+<dt>ファイルを保存したいんだが ...</dt></dl></li></ul></div>
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2015/12/17/google_apps_script.html#google_apps_script">    Continue reading
+</a>
+  </div>
+</article>
 
-                <div class="clear"></div>
+  <div class="pagination">
+  </div>
 
-                <div class="info">
-                    <a href="http://float1251.github.io/blog/2015/12/17/google_apps_script.html">posted at 00:00</a>
-                    &nbsp;&middot;&nbsp;<a href="http://float1251.github.io/blog/category/articles/" rel="tag">articles</a>
-                    &nbsp;&middot;
-                    &nbsp;<a href="http://float1251.github.io/blog/tag/google-app-script/" class="tags selected">google app script</a>
-                </div>
-            </article>
 
-            <div class="clear"></div>
-            <footer>
-                <p>
-                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
-                &middot;
-                Powered by <a href="http://getpelican.com">Pelican</a>
-                &middot;
-                <a href="http://float1251.github.io/blog/feeds/all.atom.xml" rel="alternate">Atom Feed</a>
-            </footer>
-        </div>
-        <div class="clear"></div>
-    </div>
+
+
+    <footer>
+<p>&copy; float1251 </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " float's memo ",
+  "url" : "http://float1251.github.io/blog",
+  "image": "./images/me.jpeg",
+  "description": "game programmer, web developer."
+}
+</script>
 </body>
 </html>
