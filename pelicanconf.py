@@ -61,16 +61,15 @@ PAGINATION_PATTERNS     = (
 )
 
 # Flexの設定
-SITETITLE = "float's memo"
+SITETITLE = "float1251's memo"
 SITEDESCRIPTION = 'game programmer, web developer.'
 MAIN_MENU = True
 SITELOGO = './images/me.jpeg'
 
-MENUITEMS = (('Archives', '/archives.html'),
-             ('Categories', '/categories.html'),
-             ('Tags', '/tags.html'),)
+MENUITEMS = (('Archives', SITEURL+'/archives.html'),
+             ('Categories', SITEURL+'/categories.html'),
+             ('Tags', SITEURL+'/tags.html'),)
 
-LINKS = (('Archives', '/archives.html'),
-             ('Categories', '/categories.html'),
-             ('Tags', '/tags.html'),)
-
+LINKS = (('Archives', SITEURL+'/archives.html'),
+             ('Categories', SITEURL+'/categories.html'),
+             ('Tags', SITEURL+'/tags.html'),)
