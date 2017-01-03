@@ -23,3 +23,13 @@ DELETE_OUTPUT_DIRECTORY = True
 
 DISQUS_SITENAME="floatsmemo"
 #GOOGLE_ANALYTICS = ""
+
+
+MAIN_MENU = True
+MENUITEMS = (('Archives', SITEURL+'/archives.html'),
+             ('Categories', SITEURL+'/categories.html'),
+             ('Tags', SITEURL+'/tags.html'),)
+
+LINKS = (('Archives', SITEURL+'/archives.html'),
+             ('Categories', SITEURL+'/categories.html'),
+             ('Tags', SITEURL+'/tags.html'),)
