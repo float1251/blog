@@ -12,7 +12,7 @@ TIMEZONE = 'Asia/Tokyo'
 
 DEFAULT_LANG = 'ja'
 
-THEME = "themes/Flex"
+THEME = "pelican-themes/Flex"
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -64,4 +64,13 @@ PAGINATION_PATTERNS     = (
 SITETITLE = "float's memo"
 SITEDESCRIPTION = 'game programmer, web developer.'
 MAIN_MENU = True
-SITELOGO = SITEURL + '/images/me.png'
+SITELOGO = './images/me.jpeg'
+
+MENUITEMS = (('Archives', '/archives.html'),
+             ('Categories', '/categories.html'),
+             ('Tags', '/tags.html'),)
+
+LINKS = (('Archives', '/archives.html'),
+             ('Categories', '/categories.html'),
+             ('Tags', '/tags.html'),)
+
