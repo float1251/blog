@@ -10,7 +10,7 @@
   <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/font-awesome/css/font-awesome.min.css">
 
 
-    <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float's memo Atom">
+    <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float1251's memo Atom">
 
 
 
@@ -24,7 +24,7 @@
 <meta name="author" content="float1251" />
 <meta name="description" content="pyfileで引数を渡す方法 pythonであれば python sample.py test という形で実行するがvimではpyfileでpythonファイルを実行できるが、以下の様なやり方ではダメ。 pyfile sample.py test こうではなく、以下の様にして引数を渡す :python import sys " pythonではsys.argvの0番目はスクリプトのファイル名 :python sys.argv = ["sample.py", "test"] :pyfile sample.py こうすると想定どおりに引数がpython側で受け取れる。 python側でvimで定義した変数を受け取る vimscriptの変数をpython側で受け取るにはvim.evalを使用する。 let tmp = "Test" python << EOM import vim print(vim.eval("tmp")) EOM こんな感じ vimでの文字列連結 文字列連結でつい"sample"+"test"とか書きがちだが ..." />
 <meta name="keywords" content="vim">
-<meta property="og:site_name" content="float's memo"/>
+<meta property="og:site_name" content="float1251's memo"/>
 <meta property="og:title" content="vimscriptを書いてて、詰まったところ"/>
 <meta property="og:description" content="pyfileで引数を渡す方法 pythonであれば python sample.py test という形で実行するがvimではpyfileでpythonファイルを実行できるが、以下の様なやり方ではダメ。 pyfile sample.py test こうではなく、以下の様にして引数を渡す :python import sys " pythonではsys.argvの0番目はスクリプトのファイル名 :python sys.argv = ["sample.py", "test"] :pyfile sample.py こうすると想定どおりに引数がpython側で受け取れる。 python側でvimで定義した変数を受け取る vimscriptの変数をpython側で受け取るにはvim.evalを使用する。 let tmp = "Test" python << EOM import vim print(vim.eval("tmp")) EOM こんな感じ vimでの文字列連結 文字列連結でつい"sample"+"test"とか書きがちだが ..."/>
 <meta property="og:locale" content="en_US"/>
@@ -37,7 +37,7 @@
 <meta property="article:tag" content="vim"/>
 <meta property="og:image" content="./images/me.jpeg">
 
-  <title>float's memo &ndash; vimscriptを書いてて、詰まったところ</title>
+  <title>float1251's memo &ndash; vimscriptを書いてて、詰まったところ</title>
 
 </head>
 <body>
@@ -182,7 +182,7 @@ vimpluginを書くときはまず、:h vim-scriptと:h write-pluginあたりを�
 {
   "@context" : "http://schema.org",
   "@type" : "Blog",
-  "name": " float's memo ",
+  "name": " float1251's memo ",
   "url" : "http://float1251.github.io/blog",
   "image": "./images/me.jpeg",
   "description": "game programmer, web developer."
