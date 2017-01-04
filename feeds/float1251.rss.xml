@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float1251's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/float1251.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 03 Jan 2017 09:33:00 +0900</lastBuildDate><item><title>今年の目標とか</title><link>http://float1251.github.io/blog/2017/01/03/2017_01_03.html</link><description>&lt;div class="section" id="id2"&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float1251's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/float1251.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 04 Jan 2017 12:17:00 +0900</lastBuildDate><item><title>年末年始にやったこと</title><link>http://float1251.github.io/blog/2017/01/04/2017_01_04.html</link><description>&lt;p&gt;年末年始休みにやったことを軽くまとめる。&lt;/p&gt;
+&lt;div class="section" id="recycledscrollview"&gt;
+&lt;h2&gt;RecycledScrollViewの作成&lt;/h2&gt;
+&lt;p&gt;UnityのScrollRectは中のアイテム全てGameObjectとして保持しているので、
+ソシャゲのScrollするListみたいなやつで10000件とかやると表示領域に5件くらいしかなくてもくっそ重くなります。
+また10000件とかだとInstantiateに時間がかかります。&lt;/p&gt;
+&lt;p&gt;なので、データは10000件でも表示領域分しかInstantiateしないScrollViewを作成しました。&lt;/p&gt;
+&lt;p&gt;ScrollRectのOnValueChangeでscroll位置を取得して、内部的に表示位置を計算しています。&lt;/p&gt;
+&lt;p&gt;次回のゲーム内で使用する予定.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="django-rest-frameworkapi"&gt;
+&lt;h2&gt;django-rest-frameworkでAPIの作成&lt;/h2&gt;
+&lt;p&gt;主にこっちばっかりやってました。&lt;/p&gt;
+&lt;p&gt;次回はサーバーを使用するのでpython/djangoでAPIを作る予定.
+プラス前からやりたかったrest frameworkを導入してみました。&lt;/p&gt;
+&lt;p&gt;rest_frameworkの概念を理解するのに戸惑ってしまい、かなりストレスが溜まりましたが、
+慣れれば簡単にapiが作れるし、testも書きやすいのでありがたい限り。&lt;/p&gt;
+&lt;p&gt;久しぶりのpythonでちょっとうれしいです。&lt;/p&gt;
+&lt;p&gt;やっぱりpythonは個人的に触ってて楽しい。ただLL言語の型がない感じはちょっとつらい。&lt;/p&gt;
+&lt;p&gt;とくにlibrary側のmethodのargumentsに関する情報がないと本当に困る。
+args: request  -&amp;gt; このrequestってどう扱うんだよ。。。というのが頻発しています。&lt;/p&gt;
+&lt;p&gt;mypyあたりが早く普及してくれえばええのに。。。&lt;/p&gt;
+&lt;p&gt;とりあえず、明日からはお仕事。&lt;/p&gt;
+&lt;p&gt;お仕事しながらちゃんと開発できるように頑張りたいです。&lt;/p&gt;
+&lt;/div&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Wed, 04 Jan 2017 12:17:00 +0900</pubDate><guid>tag:float1251.github.io,2017-01-04:blog/2017/01/04/2017_01_04.html</guid><category>daily</category></item><item><title>今年の目標とか</title><link>http://float1251.github.io/blog/2017/01/03/2017_01_03.html</link><description>&lt;div class="section" id="id2"&gt;
 &lt;h2&gt;年が明けました&lt;/h2&gt;
 &lt;p&gt;2017年になりました。
 ということで今年の目標ですが、以下の通りです。&lt;/p&gt;

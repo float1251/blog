@@ -79,6 +79,62 @@
 
 <article>
   <header>
+    <h2><a href="http://float1251.github.io/blog/2015/10/07/2015_10_07.html#2015_10_07">2015-10-07</a></h2>
+    <p>
+          Posted on 2015年10月07日(水) in <a href="http://float1251.github.io/blog/category/memo/">memo</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/memo/">memo</a>
+    </p>
+  </header>
+  <div>
+      <div class="section" id="id2">
+<h2>近況</h2>
+<p>とりあえず大きな出来事があって、ショックが大きかったがとりあえずは落ち着いてきた。。。ような気がする。</p>
+<p>やっと仕事にも集中できるようになったし、食事も義務的にだがちゃんと取れるようになってきた。</p>
+<p>とりあえず、行動しよう。いろんなとこにいって、いろんなことしよう。</p>
+<p>今はそれがいい。</p>
+</div>
+<div class="section" id="id3">
+<h2>自作ゲームエンジンについて</h2>
+<p>これに関しては、エンジン部分をc++で作ってwrapperをpythonで書くという手法で行くのがいい気がする。</p>
+<p>が、自分はc++全然やったことないから絶対つまるという問題点が。。。</p>
+<p>あと問題点として</p>
+<blockquote>
+<ul class="simple">
+<li>pythonを使用してandroidを動かす仕組み。python-for-androidでなんとかなるのか</li>
+<li>パフォーマンス的に大丈夫か</li>
+<li>OpenGL周りの知識</li>
+</ul>
+</blockquote>
+<p>あたりがネックになるはず。OpenGLは前よりかは大丈夫だけど、カメラまわりの行列計算が糞面倒なのがなぁ。。。</p>
+<p>今年中に目処は付けたいところ。</p>
+<p>あとC++でのビルド環境構築もメンドイなぁ。。。というかこれはやったことがないからか。</p>
+<p>cocos2d-xがcmakeだからcmakeでいくのがいい気がする。</p>
+<p>build環境はcocos-2d-xを参考に作ろう。</p>
+<p>実装はlibgdxを参考に作ろう。</p>
+<p>python &lt;--&gt; C++の連携を楽にするためにどうするかは後々検討。</p>
+<p>cythonもどこかでつかうかもしれんな。。。</p>
+<p>何か色々技術的なつまりどころが多すぎるな。</p>
+</div>
+<div class="section" id="id4">
+<h2>自作ゲームについて</h2>
+<p>タワーディフェンス系のゲームを作っていたが、試作で打ち切り予定。</p>
+<p>とりあえず出来ることはわかったというところと、仕様が不明瞭なため。</p>
+<p>何か作るにしても出口、目標をはっきりさせてからやらないと駄目だと非常に感じた。</p>
+<p>次は、ラインディフェンス系のゲームかな。</p>
+<p>ちゃんと仕様を固めて、あとUIの仕様を固めて実装するようにしよう。</p>
+<p>目標はまずは技術検証 ...</p></div>
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2015/10/07/2015_10_07.html#2015_10_07">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://float1251.github.io/blog/2015/09/29/memo_2015_09_29.html#memo_2015_09_29">雑記 2015-09-29</a></h2>
     <p>
           Posted on 2015年09月29日(火) in <a href="http://float1251.github.io/blog/category/memo/">memo</a>
@@ -364,54 +420,6 @@
 
       <br>
       <a class="btn" href="http://float1251.github.io/blog/2014/09/22/move_to_pelican.html#move_to_pelican">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://float1251.github.io/blog/2014/06/02/google_image_search.html#google_image_search">Googleの画像検索APIを使ってみる</a></h2>
-    <p>
-          Posted on 2014年06月02日(月) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
-
-
-
-    </p>
-  </header>
-  <div>
-      <p>現在はCustom Search APIを使用する。</p>
-<p><a class="reference external" href="https://developers.google.com/custom-search/json-api/v1/overview?hl=ja">https://developers.google.com/custom-search/json-api/v1/overview?hl=ja</a></p>
-<div class="section" id="id1">
-<h2>データ型</h2>
-<p>JSONかAtomで返ってくる模様。</p>
-<p>Atomで取得する際はqueryにalt=atomとつける。</p>
-</div>
-<div class="section" id="id2">
-<h2>価格</h2>
-<p>Freeのやつと有料のやつがある。</p>
-<blockquote>
-<ul>
-<li><dl class="first docutils">
-<dt>Custom Search Engine</dt>
-<dd><p class="first last">100 requests/dayで無料。Cloud Consoleでbilingを有効化すれば、$5/1000 requestsで買える。制限は10kquery/dayらしい</p>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>Google Site Search</dt>
-<dd><p class="first last">有料版。詳細はここで。
-<a class="reference external" href="http://www.google.com/enterprise/search/products/gss.html#pricing_content">http://www.google.com/enterprise/search/products/gss.html#pricing_content</a></p>
-</dd>
-</dl>
-</li>
-</ul>
-</blockquote>
-</div>
-<div class="section" id="api-key">
-<h2>API KEY</h2>
-<p>管理コンソールから取得してくる ...</p></div>
-      <br>
-      <a class="btn" href="http://float1251.github.io/blog/2014/06/02/google_image_search.html#google_image_search">    Continue reading
 </a>
   </div>
 </article>

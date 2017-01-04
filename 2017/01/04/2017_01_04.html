@@ -21,18 +21,23 @@
   <meta name="robots" content="" />
 
 
-    <meta name="author" content="float1251" />
-    <meta name="description" content="game programmer, web developer." />
+<meta name="author" content="float1251" />
+<meta name="description" content="年末年始休みにやったことを軽くまとめる。 RecycledScrollViewの作成 UnityのScrollRectは中のアイテム全てGameObjectとして保持しているので、 ソシャゲのScrollするListみたいなやつで10000件とかやると表示領域に5件くらいしかなくてもくっそ重くなります。 また10000件とかだとInstantiateに時間がかかります。 なので、データは10000件でも表示領域分しかInstantiateしないScrollViewを作成しました。 ScrollRectのOnValueChangeでscroll位置を取得して、内部的に表示位置を計算しています。 次回のゲーム内で使用する予定. django-rest-frameworkでAPIの作成 主にこっちばっかりやってました。 次回はサーバーを使用するのでpython/djangoでAPIを作る予定. プラス前からやりたかったrest frameworkを導入してみました。 rest_frameworkの概念を理解するのに戸惑ってしまい、かなりストレスが溜まりましたが、 慣れれば簡単にapiが作れるし、testも書きやすいのでありがたい限り。 久しぶりのpythonでちょっとうれしいです。 やっぱりpythonは個人的に触ってて楽しい。ただLL言語の型がない感じはちょっとつらい。 とくにlibrary側のmethodのargumentsに関する情報がないと本当に困る。 args: request -> このrequestってどう扱うんだよ。。。というのが頻発しています。 mypyあたりが早く普及してくれえばええのに。。。 とりあえず、明日からはお仕事。 お仕事しながらちゃんと開発できるように頑張りたいです。" />
+<meta name="keywords" content="daily">
 <meta property="og:site_name" content="float1251's memo"/>
-<meta property="og:type" content="blog"/>
-<meta property="og:title" content="float1251's memo"/>
-<meta property="og:description" content="game programmer, web developer."/>
+<meta property="og:title" content="年末年始にやったこと"/>
+<meta property="og:description" content="年末年始休みにやったことを軽くまとめる。 RecycledScrollViewの作成 UnityのScrollRectは中のアイテム全てGameObjectとして保持しているので、 ソシャゲのScrollするListみたいなやつで10000件とかやると表示領域に5件くらいしかなくてもくっそ重くなります。 また10000件とかだとInstantiateに時間がかかります。 なので、データは10000件でも表示領域分しかInstantiateしないScrollViewを作成しました。 ScrollRectのOnValueChangeでscroll位置を取得して、内部的に表示位置を計算しています。 次回のゲーム内で使用する予定. django-rest-frameworkでAPIの作成 主にこっちばっかりやってました。 次回はサーバーを使用するのでpython/djangoでAPIを作る予定. プラス前からやりたかったrest frameworkを導入してみました。 rest_frameworkの概念を理解するのに戸惑ってしまい、かなりストレスが溜まりましたが、 慣れれば簡単にapiが作れるし、testも書きやすいのでありがたい限り。 久しぶりのpythonでちょっとうれしいです。 やっぱりpythonは個人的に触ってて楽しい。ただLL言語の型がない感じはちょっとつらい。 とくにlibrary側のmethodのargumentsに関する情報がないと本当に困る。 args: request -> このrequestってどう扱うんだよ。。。というのが頻発しています。 mypyあたりが早く普及してくれえばええのに。。。 とりあえず、明日からはお仕事。 お仕事しながらちゃんと開発できるように頑張りたいです。"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="http://float1251.github.io/blog"/>
+<meta property="og:url" content="http://float1251.github.io/blog/2017/01/04/2017_01_04.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-01-04 12:17:00+09:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://float1251.github.io/blog/author/float1251.html">
+<meta property="article:section" content="2017"/>
+<meta property="article:tag" content="daily"/>
 <meta property="og:image" content="./images/me.jpeg">
 
-  <title>float1251's memo &ndash;     Category 2017
-</title>
+  <title>float1251's memo &ndash; 年末年始にやったこと</title>
 
 </head>
 <body>
@@ -76,22 +81,19 @@
 
     </nav>
 
-
-
-<article>
+<article class="single">
   <header>
-    <h2><a href="http://float1251.github.io/blog/2017/01/04/2017_01_04.html#2017_01_04">年末年始にやったこと</a></h2>
+    <h1 id="2017_01_04">年末年始にやったこと</h1>
     <p>
           Posted on 2017年01月04日(水) in <a href="http://float1251.github.io/blog/category/2017/">2017</a>
 
 
-          &#8226;     Tagged with
-
-              <a href="http://float1251.github.io/blog/tag/daily/">daily</a>
     </p>
   </header>
+
+
   <div>
-      <p>年末年始休みにやったことを軽くまとめる。</p>
+    <p>年末年始休みにやったことを軽くまとめる。</p>
 <div class="section" id="recycledscrollview">
 <h2>RecycledScrollViewの作成</h2>
 <p>UnityのScrollRectは中のアイテム全てGameObjectとして保持しているので、
@@ -117,58 +119,30 @@ args: request  -&gt; このrequestってどう扱うんだよ。。。という�
 <p>お仕事しながらちゃんと開発できるように頑張りたいです。</p>
 </div>
 
-      <br>
-      <a class="btn" href="http://float1251.github.io/blog/2017/01/04/2017_01_04.html#2017_01_04">    Continue reading
-</a>
   </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://float1251.github.io/blog/2017/01/03/2017_01_03.html#2017_01_03">今年の目標とか</a></h2>
+  <div class="tag-cloud">
     <p>
-          Posted on 2017年01月03日(火) in <a href="http://float1251.github.io/blog/category/2017/">2017</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://float1251.github.io/blog/tag/daily/">daily</a>
+      <a href="http://float1251.github.io/blog/tag/daily/">daily</a>
     </p>
-  </header>
-  <div>
-      <div class="section" id="id2">
-<h2>年が明けました</h2>
-<p>2017年になりました。
-ということで今年の目標ですが、以下の通りです。</p>
-<blockquote>
-<ul class="simple">
-<li>ゲーム、アプリを3本出す。</li>
-<li>育児休暇を取って、子育てをする</li>
-<li>週1回以上走る</li>
-</ul>
-</blockquote>
-<p>1つ目の目標は、できるだけ達成したい。</p>
-<p>去年は1つしか出せていないが、初のゲームアプリとして思った以上に評価していただいたので、
-評価はより多く、継続率を高めるのが目標.</p>
-<p>エンジニアとしてはサーバーの実装をするので、サーバー運営を滞りなくやるのが目標になりそうです。</p>
-<p>2つめの目標ですが、まぁ子供が産まれそうなのでちゃんと育児休暇とって子育てしますというだけです。</p>
-<p>3つ目は体力をつけるという決意です。</p>
-<p>最近は体力がなくて、開発が滞っている感が出ているのでそこを打ち破りたいという感じです。</p>
-<p>全体的に家庭を大事にしつつ、結果を出していきたい。そのために出来ることをひたすらやっていくのが大きな目標になっていくかと思います。</p>
-<p>今年は齢30になるので、個人的に勝負の年になりそうな感じがするので、頑張っていきたいです。</p>
-</div>
-
-      <br>
-      <a class="btn" href="http://float1251.github.io/blog/2017/01/03/2017_01_03.html#2017_01_03">    Continue reading
-</a>
   </div>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'floatsmemo';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
 </article>
-
-  <div class="pagination">
-  </div>
-
-
-
 
     <footer>
 <p>&copy; float1251 </p>

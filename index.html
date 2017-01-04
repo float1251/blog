@@ -79,6 +79,51 @@
 
 <article>
   <header>
+    <h2><a href="http://float1251.github.io/blog/2017/01/04/2017_01_04.html#2017_01_04">年末年始にやったこと</a></h2>
+    <p>
+          Posted on 2017年01月04日(水) in <a href="http://float1251.github.io/blog/category/2017/">2017</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/daily/">daily</a>
+    </p>
+  </header>
+  <div>
+      <p>年末年始休みにやったことを軽くまとめる。</p>
+<div class="section" id="recycledscrollview">
+<h2>RecycledScrollViewの作成</h2>
+<p>UnityのScrollRectは中のアイテム全てGameObjectとして保持しているので、
+ソシャゲのScrollするListみたいなやつで10000件とかやると表示領域に5件くらいしかなくてもくっそ重くなります。
+また10000件とかだとInstantiateに時間がかかります。</p>
+<p>なので、データは10000件でも表示領域分しかInstantiateしないScrollViewを作成しました。</p>
+<p>ScrollRectのOnValueChangeでscroll位置を取得して、内部的に表示位置を計算しています。</p>
+<p>次回のゲーム内で使用する予定.</p>
+</div>
+<div class="section" id="django-rest-frameworkapi">
+<h2>django-rest-frameworkでAPIの作成</h2>
+<p>主にこっちばっかりやってました。</p>
+<p>次回はサーバーを使用するのでpython/djangoでAPIを作る予定.
+プラス前からやりたかったrest frameworkを導入してみました。</p>
+<p>rest_frameworkの概念を理解するのに戸惑ってしまい、かなりストレスが溜まりましたが、
+慣れれば簡単にapiが作れるし、testも書きやすいのでありがたい限り。</p>
+<p>久しぶりのpythonでちょっとうれしいです。</p>
+<p>やっぱりpythonは個人的に触ってて楽しい。ただLL言語の型がない感じはちょっとつらい。</p>
+<p>とくにlibrary側のmethodのargumentsに関する情報がないと本当に困る。
+args: request  -&gt; このrequestってどう扱うんだよ。。。というのが頻発しています。</p>
+<p>mypyあたりが早く普及してくれえばええのに。。。</p>
+<p>とりあえず、明日からはお仕事。</p>
+<p>お仕事しながらちゃんと開発できるように頑張りたいです。</p>
+</div>
+
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2017/01/04/2017_01_04.html#2017_01_04">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://float1251.github.io/blog/2017/01/03/2017_01_03.html#2017_01_03">今年の目標とか</a></h2>
     <p>
           Posted on 2017年01月03日(火) in <a href="http://float1251.github.io/blog/category/2017/">2017</a>
@@ -476,62 +521,6 @@ make    // buildする
 
       <br>
       <a class="btn" href="http://float1251.github.io/blog/2015/10/27/cmake.html#cmake">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://float1251.github.io/blog/2015/10/07/2015_10_07.html#2015_10_07">2015-10-07</a></h2>
-    <p>
-          Posted on 2015年10月07日(水) in <a href="http://float1251.github.io/blog/category/memo/">memo</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://float1251.github.io/blog/tag/memo/">memo</a>
-    </p>
-  </header>
-  <div>
-      <div class="section" id="id2">
-<h2>近況</h2>
-<p>とりあえず大きな出来事があって、ショックが大きかったがとりあえずは落ち着いてきた。。。ような気がする。</p>
-<p>やっと仕事にも集中できるようになったし、食事も義務的にだがちゃんと取れるようになってきた。</p>
-<p>とりあえず、行動しよう。いろんなとこにいって、いろんなことしよう。</p>
-<p>今はそれがいい。</p>
-</div>
-<div class="section" id="id3">
-<h2>自作ゲームエンジンについて</h2>
-<p>これに関しては、エンジン部分をc++で作ってwrapperをpythonで書くという手法で行くのがいい気がする。</p>
-<p>が、自分はc++全然やったことないから絶対つまるという問題点が。。。</p>
-<p>あと問題点として</p>
-<blockquote>
-<ul class="simple">
-<li>pythonを使用してandroidを動かす仕組み。python-for-androidでなんとかなるのか</li>
-<li>パフォーマンス的に大丈夫か</li>
-<li>OpenGL周りの知識</li>
-</ul>
-</blockquote>
-<p>あたりがネックになるはず。OpenGLは前よりかは大丈夫だけど、カメラまわりの行列計算が糞面倒なのがなぁ。。。</p>
-<p>今年中に目処は付けたいところ。</p>
-<p>あとC++でのビルド環境構築もメンドイなぁ。。。というかこれはやったことがないからか。</p>
-<p>cocos2d-xがcmakeだからcmakeでいくのがいい気がする。</p>
-<p>build環境はcocos-2d-xを参考に作ろう。</p>
-<p>実装はlibgdxを参考に作ろう。</p>
-<p>python &lt;--&gt; C++の連携を楽にするためにどうするかは後々検討。</p>
-<p>cythonもどこかでつかうかもしれんな。。。</p>
-<p>何か色々技術的なつまりどころが多すぎるな。</p>
-</div>
-<div class="section" id="id4">
-<h2>自作ゲームについて</h2>
-<p>タワーディフェンス系のゲームを作っていたが、試作で打ち切り予定。</p>
-<p>とりあえず出来ることはわかったというところと、仕様が不明瞭なため。</p>
-<p>何か作るにしても出口、目標をはっきりさせてからやらないと駄目だと非常に感じた。</p>
-<p>次は、ラインディフェンス系のゲームかな。</p>
-<p>ちゃんと仕様を固めて、あとUIの仕様を固めて実装するようにしよう。</p>
-<p>目標はまずは技術検証 ...</p></div>
-      <br>
-      <a class="btn" href="http://float1251.github.io/blog/2015/10/07/2015_10_07.html#2015_10_07">    Continue reading
 </a>
   </div>
 </article>
