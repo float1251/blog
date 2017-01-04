@@ -31,7 +31,7 @@
 <meta property="og:url" content="http://float1251.github.io/blog"/>
 <meta property="og:image" content="./images/me.jpeg">
 
-  <title>float1251's memo &ndash;     Tag memo
+  <title>float1251's memo &ndash;     Tag Unity
 </title>
 
 </head>
@@ -80,51 +80,45 @@
 
 <article>
   <header>
-    <h2><a href="http://float1251.github.io/blog/2015/11/04/2015_11_04.html#2015_11_04">2015-11-04</a></h2>
+    <h2><a href="http://float1251.github.io/blog/2017/01/04/2017_01_04.html#2017_01_04">年末年始にやったこと</a></h2>
     <p>
-          Posted on 2015年11月04日(水) in <a href="http://float1251.github.io/blog/category/memo/">memo</a>
+          Posted on 2017年01月04日(水) in <a href="http://float1251.github.io/blog/category/2017/">2017</a>
 
 
           &#8226;     Tagged with
 
-              <a href="http://float1251.github.io/blog/tag/memo/">memo</a>
+              <a href="http://float1251.github.io/blog/tag/diary/">diary</a>,              <a href="http://float1251.github.io/blog/tag/python/">python</a>,              <a href="http://float1251.github.io/blog/tag/unity/">Unity</a>
     </p>
   </header>
   <div>
-      <div class="section" id="id2">
-<h2>ゲーム開発</h2>
-<p>とりあえず、3月までにゲームをリリースするということを目標にやってみる。</p>
-<p>つくるゲームは2dのアクションゲーム。素材はAsset Storeで買ったからなんとかなりそう。</p>
-<p>ただ、Unityでtiledを使うのpluginは高いから自作する予定。多分ここが一番のネックな気がする。。。</p>
-<p>あと買ったAssetがtiled向けになっていないのもきつい。。。</p>
-<p>ひとまず出来るだけ毎朝少しでも活動を行うってことを継続してみようかと思う。</p>
+      <p>年末年始休みにやったことを軽くまとめる。</p>
+<div class="section" id="recycledscrollview">
+<h2>RecycledScrollViewの作成</h2>
+<p>UnityのScrollRectは中のアイテム全てGameObjectとして保持しているので、
+ソシャゲのScrollするListみたいなやつで10000件とかやると表示領域に5件くらいしかなくてもくっそ重くなります。
+また10000件とかだとInstantiateに時間がかかります。</p>
+<p>なので、データは10000件でも表示領域分しかInstantiateしないScrollViewを作成しました。</p>
+<p>ScrollRectのOnValueChangeでscroll位置を取得して、内部的に表示位置を計算しています。</p>
+<p>次回のゲーム内で使用する予定.</p>
 </div>
-<div class="section" id="id3">
-<h2>登山</h2>
-<p>日曜に御岳山に行ってきた。紅葉はまだあまりしていなかった。</p>
-<p>犬を連れて来ている人がかなり多く驚いたが、どうも神社がそういう人むけらしい。。。</p>
-<p>七代の滝までの下りがきつかったのか、ふくらはぎが筋肉痛。。。膝はそこまでひどくないからスクワットと同時に
-ふくらはぎの筋トレも少し取り入れていきたい。</p>
-<p>11月後半には高尾山か大山に登る予定。そこまでに筋トレをしておくようにする。</p>
-</div>
-<div class="section" id="id4">
-<h2>ランニング</h2>
-<p>登山で筋肉痛なので、11月入ってからできてない。。。</p>
-<p>10月は結構回数はやったが、距離はあまり走っていなかったので、月間65km程度だった。</p>
-<p>11月は80km程度、目標は100kmまで伸ばしていきたい。</p>
-<p>あと12月は大会に出よう。10km60分切りが目標。</p>
-</div>
-<div class="section" id="id5">
-<h2>その他</h2>
-<p>今、色々自分の生活とか行動とかを変えてきている。</p>
-<p>それがいいか悪いかはまだわからないが、運動や勉強を以前よりしているのでよくはなっていると感じている。</p>
-<p>何事も継続するのが大事というのはよくわかっているのでこれがどこまで続くのか記録をつけていきたいと思う。</p>
-<p>あと池袋二郎に行った来たので成果</p>
-<img alt="screenshot" src="https://lh3.googleusercontent.com/g0iyLy2IWdRM2MGcNaL2lxoJvXEWOzm3uONwODSy6ehgT6EhYX-vk_oBKMhVx4ErS9ZSnXiJDv79ftSDuS8cpoNx_VsePzpUmFahmmytNYL74lUiFCxNwbGZS3X0ynib7WEt23d81O7nHavq7GPmNCv_Hkp9pwjvf6j1rpUA6kFQU34RwpSdmg2e-xvfUDYSqlZ2j5DFKs1i5ocLF9KsNIssQI0zloAvBaKinrLBSKfo6L10m56JZ5vQAwHjohH9iwsUazUf504ckOQCWGF2T77uLLRnXN6I3rrj9JYlYjn1Uxn65_QWLe7zQfNqKFzkhatVKJhBEfDN2CAOWvPAzBdLCen1QpEz2cvdSDkVotaM74iktzhwRYD4LzUcRY8vTMSpZslLdmWAcpbSDPnuotcNcIW0roskCRi4C4-kTzkWvEWo-b74omzT4T8pRJyPNFO5el4MiglZc7oEx_xiEYbyaWyAxWF4oCYO8bJnPq4DWK6KSlwEJVPBNfm3QTbDE6OKSpt_ap6gRl5PxC3mWsUm9eFA6DzBW7mM8p2jdTg=w1224-h688-no" />
+<div class="section" id="django-rest-frameworkapi">
+<h2>django-rest-frameworkでAPIの作成</h2>
+<p>主にこっちばっかりやってました。</p>
+<p>次回はサーバーを使用するのでpython/djangoでAPIを作る予定.
+プラス前からやりたかったrest frameworkを導入してみました。</p>
+<p>rest_frameworkの概念を理解するのに戸惑ってしまい、かなりストレスが溜まりましたが、
+慣れれば簡単にapiが作れるし、testも書きやすいのでありがたい限り。</p>
+<p>久しぶりのpythonでちょっとうれしいです。</p>
+<p>やっぱりpythonは個人的に触ってて楽しい。ただLL言語の型がない感じはちょっとつらい。</p>
+<p>とくにlibrary側のmethodのargumentsに関する情報がないと本当に困る。
+args: request  -&gt; このrequestってどう扱うんだよ。。。というのが頻発しています。</p>
+<p>mypyあたりが早く普及してくれえばええのに。。。</p>
+<p>とりあえず、明日からはお仕事。</p>
+<p>お仕事しながらちゃんと開発できるように頑張りたいです。</p>
 </div>
 
       <br>
-      <a class="btn" href="http://float1251.github.io/blog/2015/11/04/2015_11_04.html#2015_11_04">    Continue reading
+      <a class="btn" href="http://float1251.github.io/blog/2017/01/04/2017_01_04.html#2017_01_04">    Continue reading
 </a>
   </div>
 </article>

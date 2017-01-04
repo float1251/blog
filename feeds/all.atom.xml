@@ -24,7 +24,7 @@ args: request  -&amp;gt; このrequestってどう扱うんだよ。。。とい
 &lt;p&gt;とりあえず、明日からはお仕事。&lt;/p&gt;
 &lt;p&gt;お仕事しながらちゃんと開発できるように頑張りたいです。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="daily"></category></entry><entry><title>今年の目標とか</title><link href="http://float1251.github.io/blog/2017/01/03/2017_01_03.html" rel="alternate"></link><updated>2017-01-03T09:33:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2017-01-03:blog/2017/01/03/2017_01_03.html</id><summary type="html">&lt;div class="section" id="id2"&gt;
+</summary><category term="diary"></category><category term="python"></category><category term="Unity"></category></entry><entry><title>今年の目標とか</title><link href="http://float1251.github.io/blog/2017/01/03/2017_01_03.html" rel="alternate"></link><updated>2017-01-03T09:33:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2017-01-03:blog/2017/01/03/2017_01_03.html</id><summary type="html">&lt;div class="section" id="id2"&gt;
 &lt;h2&gt;年が明けました&lt;/h2&gt;
 &lt;p&gt;2017年になりました。
 ということで今年の目標ですが、以下の通りです。&lt;/p&gt;
@@ -45,7 +45,7 @@ args: request  -&amp;gt; このrequestってどう扱うんだよ。。。とい
 &lt;p&gt;全体的に家庭を大事にしつつ、結果を出していきたい。そのために出来ることをひたすらやっていくのが大きな目標になっていくかと思います。&lt;/p&gt;
 &lt;p&gt;今年は齢30になるので、個人的に勝負の年になりそうな感じがするので、頑張っていきたいです。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="daily"></category></entry><entry><title>ラインディフェンスゲームのポストモーテム</title><link href="http://float1251.github.io/blog/2016/07/11/game_dev_2016_07_11.html" rel="alternate"></link><updated>2016-07-11T13:10:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2016-07-11:blog/2016/07/11/game_dev_2016_07_11.html</id><summary type="html">&lt;p&gt;ちゃんとリリースしました。&lt;/p&gt;
+</summary><category term="diary"></category></entry><entry><title>ラインディフェンスゲームのポストモーテム</title><link href="http://float1251.github.io/blog/2016/07/11/game_dev_2016_07_11.html" rel="alternate"></link><updated>2016-07-11T13:10:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2016-07-11:blog/2016/07/11/game_dev_2016_07_11.html</id><summary type="html">&lt;p&gt;ちゃんとリリースしました。&lt;/p&gt;
 &lt;p&gt;4gamer様などに載せていただきました。
 &lt;a class="reference external" href="http://www.4gamer.net/games/348/G034889/20160705040/"&gt;http://www.4gamer.net/games/348/G034889/20160705040/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;思った以上に評価もよく個人的には非常にびっくりしております。。。&lt;/p&gt;
@@ -65,7 +65,7 @@ args: request  -&amp;gt; このrequestってどう扱うんだよ。。。とい
 golangを覚えようと思う。&lt;/p&gt;
 &lt;p&gt;golang自体の学習を進めつつ、今度は自分個人で何かゲーム一つを軽くつくりたいかな。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="memo"></category><category term="gamedev"></category><category term="daily"></category></entry><entry><title>ラインディフェンスゲームのポストモーテム</title><link href="http://float1251.github.io/blog/2016/01/13/game_dev_2016_01_13.html" rel="alternate"></link><updated>2016-01-13T10:35:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2016-01-13:blog/2016/01/13/game_dev_2016_01_13.html</id><summary type="html">&lt;p&gt;開発が終盤に差し掛かってきたので思ったことを書いていこうと思う。&lt;/p&gt;
+</summary><category term="gamedev"></category><category term="diary"></category></entry><entry><title>ラインディフェンスゲームのポストモーテム</title><link href="http://float1251.github.io/blog/2016/01/13/game_dev_2016_01_13.html" rel="alternate"></link><updated>2016-01-13T10:35:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2016-01-13:blog/2016/01/13/game_dev_2016_01_13.html</id><summary type="html">&lt;p&gt;開発が終盤に差し掛かってきたので思ったことを書いていこうと思う。&lt;/p&gt;
 &lt;p&gt;ポストモーテムと言っているが、まだ終わってません。&lt;/p&gt;
 &lt;p&gt;真のポストモーテムはまた気が向いたら書く。&lt;/p&gt;
 &lt;div class="section" id="id2"&gt;
@@ -203,7 +203,7 @@ golangを覚えようと思う。&lt;/p&gt;
 &lt;p&gt;ここはもうちょっと考えていきたい。&lt;/p&gt;
 &lt;p&gt;自分が読んだのはクリティカルチェーンってやつだから、もとのザ・ゴールを読んでみようかね。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="memo"></category><category term="gamedev"></category><category term="daily"></category></entry><entry><title>Google apps script触ったのでまとめた</title><link href="http://float1251.github.io/blog/2015/12/17/google_apps_script.html" rel="alternate"></link><updated>2015-12-17T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-12-17:blog/2015/12/17/google_apps_script.html</id><summary type="html">&lt;p&gt;今作成しているゲームでは、データの入力をGoogle SpreadSheetで行っています。&lt;/p&gt;
+</summary><category term="gamedev"></category><category term="diary"></category></entry><entry><title>Google apps script触ったのでまとめた</title><link href="http://float1251.github.io/blog/2015/12/17/google_apps_script.html" rel="alternate"></link><updated>2015-12-17T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-12-17:blog/2015/12/17/google_apps_script.html</id><summary type="html">&lt;p&gt;今作成しているゲームでは、データの入力をGoogle SpreadSheetで行っています。&lt;/p&gt;
 &lt;p&gt;SpreadSheetに入力された情報から、sqliteにInsertするSQLを出力するスクリプトを書きました。&lt;/p&gt;
 &lt;p&gt;その過程で調べたことをまとめようと思います。&lt;/p&gt;
 &lt;div class="section" id="id1"&gt;
@@ -311,7 +311,7 @@ golangを覚えようと思う。&lt;/p&gt;
 &lt;hr class="docutils" /&gt;
 &lt;p&gt;あと、来年1月から埼玉県民です。&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="memo"></category></entry><entry><title>2015-11-19</title><link href="http://float1251.github.io/blog/2015/11/19/2015_11_19.html" rel="alternate"></link><updated>2015-11-19T10:35:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-11-19:blog/2015/11/19/2015_11_19.html</id><summary type="html">&lt;div class="section" id="codingame"&gt;
+</summary><category term="diary"></category></entry><entry><title>2015-11-19</title><link href="http://float1251.github.io/blog/2015/11/19/2015_11_19.html" rel="alternate"></link><updated>2015-11-19T10:35:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-11-19:blog/2015/11/19/2015_11_19.html</id><summary type="html">&lt;div class="section" id="codingame"&gt;
 &lt;h2&gt;codingame&lt;/h2&gt;
 &lt;p&gt;とりあえず、codingameのeasyが全部終わった。&lt;/p&gt;
 &lt;p&gt;javasriptでとりあえずやったので、あとでpython3, C#, C++あたりでやってみる予定。&lt;/p&gt;
@@ -338,7 +338,7 @@ golangを覚えようと思う。&lt;/p&gt;
 &lt;p&gt;ご確認下さい。&lt;/p&gt;
 &lt;img alt="ra-men" src="https://lh3.googleusercontent.com/cW8Rz5JJXvyUnCWHOo27Fjt9xe3PuaUJtNaRn_A84-EgZPsVPIlgZ1PFez4nZeyopT8BC9bKUcbtJcTvgLu-MqB3L8Jpk0PVvaNBeweoMJIr_gbRc8kEJoJLj3adalmQE715GdIr8FwagK-a0PUOZsdZX7y-qRgQZQo2p83aOCuM42oViRgWx4265t9y8DHPybwmPNYxMTAAcMuoDcxxSaWe16_DHd4tqMuscnddSfiInwcPQxv6zQnXK3WbM9IBInanAC6XtjASrmVzY-nNjc0BgZmPGtyyQRsJEyHfNjpC8hsN2dPonDHsP8HVNcYg7gQ_916LDqAiJK9ZZ9xnpR1QdpIqkOmZhvQ5TPtGIPfhMrA3TLsk9KgIfJysToSk_EjOFSWncYuB9-KmEkTWSLPu2y0Eg_9fnP0wwRrFjeUsKx8Kd8Ux18V2ESajnFIc2dHdv0s2iKEfcnyeTPOK9wtVOSOm7wCve-zJctRmAjUhoxTjTOINVOhN99IUhz1FVHgtINynSSWbh3PQhaEwMGwA3EkK2UtNyijosuWkwVs=w1415-h796-no" /&gt;
 &lt;/div&gt;
-</summary><category term="memo"></category></entry><entry><title>codingameを始めてみた</title><link href="http://float1251.github.io/blog/2015/11/10/codingame_2015_11_10.html" rel="alternate"></link><updated>2015-11-10T10:14:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-11-10:blog/2015/11/10/codingame_2015_11_10.html</id><summary type="html">&lt;p&gt;C++やhaskellを覚えたいけど、取っ掛かりが欲しいと思って、codingameを始めてみた。&lt;/p&gt;
+</summary><category term="diary"></category></entry><entry><title>codingameを始めてみた</title><link href="http://float1251.github.io/blog/2015/11/10/codingame_2015_11_10.html" rel="alternate"></link><updated>2015-11-10T10:14:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-11-10:blog/2015/11/10/codingame_2015_11_10.html</id><summary type="html">&lt;p&gt;C++やhaskellを覚えたいけど、取っ掛かりが欲しいと思って、codingameを始めてみた。&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://www.codingame.com/home"&gt;https://www.codingame.com/home&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;tutorialとかは非常に簡単なので、全然触ったことない言語でも簡単に解ける。&lt;/p&gt;
 &lt;p&gt;だいたい解けないのはルールを読んでないからというね。。。&lt;/p&gt;
@@ -448,7 +448,7 @@ make    // buildする
 &lt;/blockquote&gt;
 &lt;p&gt;こんなんでやろう！&lt;/p&gt;
 &lt;/div&gt;
-</summary><category term="memo"></category></entry><entry><title>雑記 2015-09-29</title><link href="http://float1251.github.io/blog/2015/09/29/memo_2015_09_29.html" rel="alternate"></link><updated>2015-09-29T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-09-29:blog/2015/09/29/memo_2015_09_29.html</id><summary type="html">&lt;p&gt;なんとなくここ最近、もやもやしたものを抱えていて開発が滞っている。。。&lt;/p&gt;
+</summary><category term="diary"></category></entry><entry><title>雑記 2015-09-29</title><link href="http://float1251.github.io/blog/2015/09/29/memo_2015_09_29.html" rel="alternate"></link><updated>2015-09-29T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-09-29:blog/2015/09/29/memo_2015_09_29.html</id><summary type="html">&lt;p&gt;なんとなくここ最近、もやもやしたものを抱えていて開発が滞っている。。。&lt;/p&gt;
 &lt;p&gt;結局この開発しているゲームの出口、終わりがちょっと不明瞭なのが原因な気がしている。&lt;/p&gt;
 &lt;p&gt;あとUnityで開発していると低レベルな部分が隠蔽されているから知識があまり身につかない、ただ実装しているだけって感じになっているのがよくないかも。&lt;/p&gt;
 &lt;p&gt;試作だから何がしかのEditorとかつくるって感じでもないし。。。&lt;/p&gt;
@@ -465,7 +465,7 @@ make    // buildする
 &lt;p&gt;requirementsにjinja2はあるからそれでやれればいいかな。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary><category term="memo"></category></entry><entry><title>やっと7000超えた</title><link href="http://float1251.github.io/blog/2015/09/15/heroes_chages_1.html" rel="alternate"></link><updated>2015-09-15T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-09-15:blog/2015/09/15/heroes_chages_1.html</id><summary type="html">&lt;p&gt;ヒロチャ、やっと7000突破した。&lt;/p&gt;
+</summary><category term="diary"></category></entry><entry><title>やっと7000超えた</title><link href="http://float1251.github.io/blog/2015/09/15/heroes_chages_1.html" rel="alternate"></link><updated>2015-09-15T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2015-09-15:blog/2015/09/15/heroes_chages_1.html</id><summary type="html">&lt;p&gt;ヒロチャ、やっと7000突破した。&lt;/p&gt;
 &lt;img alt="screen shot" src="http://float1251.github.io/blog/images/Screenshot_2015-09-15-10-02-33.png" /&gt;
 &lt;div class="section" id="id2"&gt;
 &lt;h2&gt;この記事書いてて詰まったとこ&lt;/h2&gt;
