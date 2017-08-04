@@ -4,3 +4,6 @@ __pycahe__
 .python-version
 cache
 output/
+
+.DS_Store
+*.pid
