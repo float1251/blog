@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>float1251's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/float1251.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2017-01-04T12:17:00+09:00</updated><entry><title>年末年始にやったこと</title><link href="http://float1251.github.io/blog/2017/01/04/2017_01_04.html" rel="alternate"></link><updated>2017-01-04T12:17:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2017-01-04:blog/2017/01/04/2017_01_04.html</id><summary type="html">&lt;p&gt;年末年始休みにやったことを軽くまとめる。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>float1251's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/float1251.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2017-08-04T00:00:00+09:00</updated><entry><title>Error: Error while saving blame file, build will continue... というError対応</title><link href="http://float1251.github.io/blog/2017/08/04/unity_build_error_001.html" rel="alternate"></link><updated>2017-08-04T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2017-08-04:blog/2017/08/04/unity_build_error_001.html</id><summary type="html">&lt;p&gt;Unity5.6.1p3でFirebase-SDKを入れてビルドしようとしたとき以下のようなErrorに遭遇した&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Error: Error while saving blame file, build will continue
+Error: ???????????????&amp;quot;uses-sdk&amp;quot;????????????????????????????????????&amp;quot;tools:overrideLibrary&amp;quot;????????????&amp;quot;tools&amp;quot;???????????????????????????????????????
+&lt;/pre&gt;
+&lt;p&gt;Console上でも文字化けされていたので、貼り付けミスということではない&lt;/p&gt;
+&lt;p&gt;解決は以下のURLにある通り、mainのmanifestにxmlns:tools=&amp;quot;&lt;a class="reference external" href="http://schemas.android.com/tools"&gt;http://schemas.android.com/tools&lt;/a&gt;&amp;quot;を追加した.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://groups.google.com/forum/#!topic/android-group-japan/o5LeY0nIGjc"&gt;https://groups.google.com/forum/#!topic/android-group-japan/o5LeY0nIGjc&lt;/a&gt;&lt;/p&gt;
+</summary><category term="Unity"></category><category term="Android"></category></entry><entry><title>年末年始にやったこと</title><link href="http://float1251.github.io/blog/2017/01/04/2017_01_04.html" rel="alternate"></link><updated>2017-01-04T12:17:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2017-01-04:blog/2017/01/04/2017_01_04.html</id><summary type="html">&lt;p&gt;年末年始休みにやったことを軽くまとめる。&lt;/p&gt;
 &lt;div class="section" id="recycledscrollview"&gt;
 &lt;h2&gt;RecycledScrollViewの作成&lt;/h2&gt;
 &lt;p&gt;UnityのScrollRectは中のアイテム全てGameObjectとして保持しているので、

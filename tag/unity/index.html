@@ -80,6 +80,34 @@
 
 <article>
   <header>
+    <h2><a href="http://float1251.github.io/blog/2017/08/04/unity_build_error_001.html#unity_build_error_001">Error: Error while saving blame file, build will continue... というError対応</a></h2>
+    <p>
+          Posted on 2017年08月04日(金) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/unity/">Unity</a>,              <a href="http://float1251.github.io/blog/tag/android/">Android</a>
+    </p>
+  </header>
+  <div>
+      <p>Unity5.6.1p3でFirebase-SDKを入れてビルドしようとしたとき以下のようなErrorに遭遇した</p>
+<pre class="literal-block">
+Error: Error while saving blame file, build will continue
+Error: ???????????????&quot;uses-sdk&quot;????????????????????????????????????&quot;tools:overrideLibrary&quot;????????????&quot;tools&quot;???????????????????????????????????????
+</pre>
+<p>Console上でも文字化けされていたので、貼り付けミスということではない</p>
+<p>解決は以下のURLにある通り、mainのmanifestにxmlns:tools=&quot;<a class="reference external" href="http://schemas.android.com/tools">http://schemas.android.com/tools</a>&quot;を追加した.</p>
+<p><a class="reference external" href="https://groups.google.com/forum/#!topic/android-group-japan/o5LeY0nIGjc">https://groups.google.com/forum/#!topic/android-group-japan/o5LeY0nIGjc</a></p>
+
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2017/08/04/unity_build_error_001.html#unity_build_error_001">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://float1251.github.io/blog/2017/01/04/2017_01_04.html#2017_01_04">年末年始にやったこと</a></h2>
     <p>
           Posted on 2017年01月04日(水) in <a href="http://float1251.github.io/blog/category/2017/">2017</a>

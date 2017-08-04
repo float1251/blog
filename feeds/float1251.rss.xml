@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float1251's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/float1251.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 04 Jan 2017 12:17:00 +0900</lastBuildDate><item><title>年末年始にやったこと</title><link>http://float1251.github.io/blog/2017/01/04/2017_01_04.html</link><description>&lt;p&gt;年末年始休みにやったことを軽くまとめる。&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>float1251's memo</title><link>http://float1251.github.io/blog/</link><description></description><atom:link href="http://float1251.github.io/blog/feeds/float1251.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 04 Aug 2017 00:00:00 +0900</lastBuildDate><item><title>Error: Error while saving blame file, build will continue... というError対応</title><link>http://float1251.github.io/blog/2017/08/04/unity_build_error_001.html</link><description>&lt;p&gt;Unity5.6.1p3でFirebase-SDKを入れてビルドしようとしたとき以下のようなErrorに遭遇した&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+Error: Error while saving blame file, build will continue
+Error: ???????????????&amp;quot;uses-sdk&amp;quot;????????????????????????????????????&amp;quot;tools:overrideLibrary&amp;quot;????????????&amp;quot;tools&amp;quot;???????????????????????????????????????
+&lt;/pre&gt;
+&lt;p&gt;Console上でも文字化けされていたので、貼り付けミスということではない&lt;/p&gt;
+&lt;p&gt;解決は以下のURLにある通り、mainのmanifestにxmlns:tools=&amp;quot;&lt;a class="reference external" href="http://schemas.android.com/tools"&gt;http://schemas.android.com/tools&lt;/a&gt;&amp;quot;を追加した.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://groups.google.com/forum/#!topic/android-group-japan/o5LeY0nIGjc"&gt;https://groups.google.com/forum/#!topic/android-group-japan/o5LeY0nIGjc&lt;/a&gt;&lt;/p&gt;
+</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">float1251</dc:creator><pubDate>Fri, 04 Aug 2017 00:00:00 +0900</pubDate><guid>tag:float1251.github.io,2017-08-04:blog/2017/08/04/unity_build_error_001.html</guid><category>Unity</category><category>Android</category></item><item><title>年末年始にやったこと</title><link>http://float1251.github.io/blog/2017/01/04/2017_01_04.html</link><description>&lt;p&gt;年末年始休みにやったことを軽くまとめる。&lt;/p&gt;
 &lt;div class="section" id="recycledscrollview"&gt;
 &lt;h2&gt;RecycledScrollViewの作成&lt;/h2&gt;
 &lt;p&gt;UnityのScrollRectは中のアイテム全てGameObjectとして保持しているので、

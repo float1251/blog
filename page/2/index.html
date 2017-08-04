@@ -79,6 +79,43 @@
 
 <article>
   <header>
+    <h2><a href="http://float1251.github.io/blog/2015/10/27/cmake.html#cmake">cmakeのメモ</a></h2>
+    <p>
+          Posted on 2015年10月27日(火) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/cpp/">cpp</a>
+    </p>
+  </header>
+  <div>
+      <p>make使っていたが、さすがに手間だと感じているので、cmakeにしてみる。</p>
+<p>build周りは出来るだけモダンな状態にしておきたいからね。</p>
+<p>とりあえず、<a class="reference external" href="http://www.wakayama-u.ac.jp/~chen/cmake/cmake.html">http://www.wakayama-u.ac.jp/~chen/cmake/cmake.html</a> をやって理解しようかと思う。</p>
+<div class="section" id="id1">
+<h2>ビルド方法</h2>
+<p>プロジェクトにCMakeLists.txtを作成する。</p>
+<p>prog1.cppというファイルをビルドするだけなら以下のような内容とする。</p>
+<div class="highlight"><pre>cmake_minimum_required <span class="o">(</span>VERSION 2.6<span class="o">)</span>
+project <span class="o">(</span>prog1<span class="o">)</span>
+add_executable <span class="o">(</span>prog1 prog1.cpp<span class="o">)</span>
+</pre></div>
+<p>その後以下のコマンドで実行ファイルが作成, 実行できる.</p>
+<div class="highlight"><pre>cmake . // Makefileを作成する
+make    // buildする
+./prog1 // 実行する
+</pre></div>
+</div>
+
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2015/10/27/cmake.html#cmake">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://float1251.github.io/blog/2015/10/07/2015_10_07.html#2015_10_07">2015-10-07</a></h2>
     <p>
           Posted on 2015年10月07日(水) in <a href="http://float1251.github.io/blog/category/memo/">memo</a>
@@ -393,33 +430,6 @@
 
       <br>
       <a class="btn" href="http://float1251.github.io/blog/2014/09/29/toeic_0929.html#toeic_0929">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://float1251.github.io/blog/2014/09/22/move_to_pelican.html#move_to_pelican">blogをpelicanに移行しました</a></h2>
-    <p>
-          Posted on 2014年09月22日(月) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://float1251.github.io/blog/tag/python/">python</a>,              <a href="http://float1251.github.io/blog/tag/pelican/">pelican</a>
-    </p>
-  </header>
-  <div>
-      <p>blogをpelicanに移行しました。</p>
-<p>bloggerだとなんとなく書く気にならなかったので。</p>
-<p>github pageを使ってます。</p>
-<p>ドキュメントはひたすらに読みました。</p>
-<p><a class="reference external" href="http://docs.getpelican.com/en/3.4.0/">http://docs.getpelican.com/en/3.4.0/</a></p>
-<p>あとここは参考にしました。</p>
-<p><a class="reference external" href="http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/">http://openjerseycity.org/blog/technical/2014/06/20/Pelican-On-GitHub-Pages/</a></p>
-
-      <br>
-      <a class="btn" href="http://float1251.github.io/blog/2014/09/22/move_to_pelican.html#move_to_pelican">    Continue reading
 </a>
   </div>
 </article>

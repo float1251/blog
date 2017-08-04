@@ -80,6 +80,34 @@
 
 <article>
   <header>
+    <h2><a href="http://float1251.github.io/blog/2017/08/04/unity_build_error_001.html#unity_build_error_001">Error: Error while saving blame file, build will continue... というError対応</a></h2>
+    <p>
+          Posted on 2017年08月04日(金) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/unity/">Unity</a>,              <a href="http://float1251.github.io/blog/tag/android/">Android</a>
+    </p>
+  </header>
+  <div>
+      <p>Unity5.6.1p3でFirebase-SDKを入れてビルドしようとしたとき以下のようなErrorに遭遇した</p>
+<pre class="literal-block">
+Error: Error while saving blame file, build will continue
+Error: ???????????????&quot;uses-sdk&quot;????????????????????????????????????&quot;tools:overrideLibrary&quot;????????????&quot;tools&quot;???????????????????????????????????????
+</pre>
+<p>Console上でも文字化けされていたので、貼り付けミスということではない</p>
+<p>解決は以下のURLにある通り、mainのmanifestにxmlns:tools=&quot;<a class="reference external" href="http://schemas.android.com/tools">http://schemas.android.com/tools</a>&quot;を追加した.</p>
+<p><a class="reference external" href="https://groups.google.com/forum/#!topic/android-group-japan/o5LeY0nIGjc">https://groups.google.com/forum/#!topic/android-group-japan/o5LeY0nIGjc</a></p>
+
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2017/08/04/unity_build_error_001.html#unity_build_error_001">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://float1251.github.io/blog/2017/01/04/2017_01_04.html#2017_01_04">年末年始にやったこと</a></h2>
     <p>
           Posted on 2017年01月04日(水) in <a href="http://float1251.github.io/blog/category/2017/">2017</a>
@@ -485,43 +513,6 @@ golangを覚えようと思う。</p>
 
       <br>
       <a class="btn" href="http://float1251.github.io/blog/2015/11/04/2015_11_04.html#2015_11_04">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://float1251.github.io/blog/2015/10/27/cmake.html#cmake">cmakeのメモ</a></h2>
-    <p>
-          Posted on 2015年10月27日(火) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://float1251.github.io/blog/tag/cpp/">cpp</a>
-    </p>
-  </header>
-  <div>
-      <p>make使っていたが、さすがに手間だと感じているので、cmakeにしてみる。</p>
-<p>build周りは出来るだけモダンな状態にしておきたいからね。</p>
-<p>とりあえず、<a class="reference external" href="http://www.wakayama-u.ac.jp/~chen/cmake/cmake.html">http://www.wakayama-u.ac.jp/~chen/cmake/cmake.html</a> をやって理解しようかと思う。</p>
-<div class="section" id="id1">
-<h2>ビルド方法</h2>
-<p>プロジェクトにCMakeLists.txtを作成する。</p>
-<p>prog1.cppというファイルをビルドするだけなら以下のような内容とする。</p>
-<div class="highlight"><pre>cmake_minimum_required <span class="o">(</span>VERSION 2.6<span class="o">)</span>
-project <span class="o">(</span>prog1<span class="o">)</span>
-add_executable <span class="o">(</span>prog1 prog1.cpp<span class="o">)</span>
-</pre></div>
-<p>その後以下のコマンドで実行ファイルが作成, 実行できる.</p>
-<div class="highlight"><pre>cmake . // Makefileを作成する
-make    // buildする
-./prog1 // 実行する
-</pre></div>
-</div>
-
-      <br>
-      <a class="btn" href="http://float1251.github.io/blog/2015/10/27/cmake.html#cmake">    Continue reading
 </a>
   </div>
 </article>
