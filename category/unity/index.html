@@ -31,7 +31,7 @@
 <meta property="og:url" content="http://float1251.github.io/blog"/>
 <meta property="og:image" content="./images/me.jpeg">
 
-  <title>float1251's memo &ndash;     Tag Android
+  <title>float1251's memo &ndash;     Category unity
 </title>
 
 </head>
@@ -98,89 +98,6 @@
 
       <br>
       <a class="btn" href="http://float1251.github.io/blog/2017/08/05/codestage_anticheating_read_phone_state.html#codestage_anticheating_read_phone_state">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://float1251.github.io/blog/2017/08/04/unity_build_error_001.html#unity_build_error_001">Error: Error while saving blame file, build will continue... というError対応</a></h2>
-    <p>
-          Posted on 2017年08月04日(金) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://float1251.github.io/blog/tag/unity/">Unity</a>,              <a href="http://float1251.github.io/blog/tag/android/">Android</a>
-    </p>
-  </header>
-  <div>
-      <p>Unity5.6.1p3でFirebase-SDKを入れてビルドしようとしたとき以下のようなErrorに遭遇した</p>
-<pre class="literal-block">
-Error: Error while saving blame file, build will continue
-Error: ???????????????&quot;uses-sdk&quot;????????????????????????????????????&quot;tools:overrideLibrary&quot;????????????&quot;tools&quot;???????????????????????????????????????
-</pre>
-<p>Console上でも文字化けされていたので、貼り付けミスということではない</p>
-<p>解決は以下のURLにある通り、mainのmanifestにxmlns:tools=&quot;<a class="reference external" href="http://schemas.android.com/tools">http://schemas.android.com/tools</a>&quot;を追加した.</p>
-<p><a class="reference external" href="https://groups.google.com/forum/#!topic/android-group-japan/o5LeY0nIGjc">https://groups.google.com/forum/#!topic/android-group-japan/o5LeY0nIGjc</a></p>
-
-      <br>
-      <a class="btn" href="http://float1251.github.io/blog/2017/08/04/unity_build_error_001.html#unity_build_error_001">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://float1251.github.io/blog/2014/05/24/cordova_anroid.html#cordova_anroid">Cordovaでandroidにアプリをinstallする</a></h2>
-    <p>
-          Posted on 2014年05月24日(土) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://float1251.github.io/blog/tag/chrome/">chrome</a>,              <a href="http://float1251.github.io/blog/tag/android/">android</a>,              <a href="http://float1251.github.io/blog/tag/cordova/">cordova</a>
-    </p>
-  </header>
-  <div>
-      <div class="section" id="id1">
-<h2>環境設定</h2>
-<p>手順はhttps://github.com/MobileChromeApps/mobile-chrome-apps/blob/master/README.mdにある。</p>
-<blockquote>
-<ul class="simple">
-<li>androidSDKをインストールする。</li>
-<li>.bash_profileにsdk/toolsとsdk/platform-toolsにpathを通す</li>
-<li>brew install antでantを入れる。入らなかったらbrew updateしてから再度行う</li>
-<li>npm install -g cca</li>
-<li>cca checkenvで怒られないことを確認</li>
-</ul>
-</blockquote>
-</div>
-<div class="section" id="project">
-<h2>Projectの作成</h2>
-<p>以下のコマンドを実行する</p>
-<blockquote>
-cca create APP_NAME</blockquote>
-<!-- Error: Cannot find module 'cordova/platforms'
-と怒られたが、- -androidとつけてcreateして解決。
-iosの設定はやってないからなんか足りんかったんだろう。 -->
-</div>
-<div class="section" id="id2">
-<h2>実行</h2>
-<p>作成したプロジェクトディレクトリで以下を実行</p>
-<blockquote>
-cca run android</blockquote>
-<p>これでアプリがdeviceにインストールされる。</p>
-</div>
-<div class="section" id="id3">
-<h2>プロジェクトの構造</h2>
-<p>以下のような形になっている。</p>
-<pre class="literal-block">
-.
-├── config.xml
-├── hooks ...</pre></div>
-      <br>
-      <a class="btn" href="http://float1251.github.io/blog/2014/05/24/cordova_anroid.html#cordova_anroid">    Continue reading
 </a>
   </div>
 </article>
