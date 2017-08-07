@@ -31,7 +31,7 @@
 <meta property="og:url" content="http://float1251.github.io/blog"/>
 <meta property="og:image" content="./images/me.jpeg">
 
-  <title>float1251's memo &ndash;     Categories
+  <title>float1251's memo &ndash;     Tag iOS
 </title>
 
 </head>
@@ -76,21 +76,68 @@
 
     </nav>
 
-<article class="single">
+
+
+<article>
   <header>
-    <h1>    Categories
-</h1>
+    <h2><a href="http://float1251.github.io/blog/2017/08/07/firebase_remote_config_ios_build.html#firebase_remote_config_ios_build">Unity Cloud BuildでFirebaseSDKを組み込んだアプリをビルドする</a></h2>
+    <p>
+          Posted on 2017年08月07日(月) in <a href="http://float1251.github.io/blog/category/unity/">unity</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/unity/">Unity</a>,              <a href="http://float1251.github.io/blog/tag/android/">Android</a>,              <a href="http://float1251.github.io/blog/tag/ios/">iOS</a>
+    </p>
   </header>
   <div>
-    <ul class="list">
-      <li><a href="http://float1251.github.io/blog/category/2016/">2016</a> (2)</li>
-      <li><a href="http://float1251.github.io/blog/category/2017/">2017</a> (2)</li>
-      <li><a href="http://float1251.github.io/blog/category/articles/">articles</a> (16)</li>
-      <li><a href="http://float1251.github.io/blog/category/memo/">memo</a> (5)</li>
-      <li><a href="http://float1251.github.io/blog/category/unity/">unity</a> (2)</li>
-    </ul>
+      <p>FirebaseのiOS版はcocoapodsを使用して各Framework等をインストールしている.</p>
+<p>ただ残念なことにUnity Cloud Buildはcocoapodsに対応していない(マジかよ...</p>
+<p>なので、自分で依存FrameworkをPlugins/iOS以下に入れる必要がある.</p>
+<p>以下のブログを参考にしたが、FirebaseのドキュメントにリンクされているSDKが3.16で、最新版が4.0.4だったので自分で対応することにした.</p>
+<p>以下の記事を参考にしながら対応していきました！</p>
+<p><a class="reference external" href="http://blog.livedoor.jp/abars/archives/52394874.html">http://blog.livedoor.jp/abars/archives/52394874.html</a></p>
+<div class="section" id="id1">
+<h2>環境</h2>
+<p>自分の環境は以下</p>
+<ul class="simple">
+<li>Unity5.6.1p3</li>
+<li>Xcode8.3.3</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>対応手順</h2>
+<ol class="arabic">
+<li><p class="first">自分のローカルPCにcocoapodsを入れる</p>
+</li>
+<li><p class="first">Unity Firebaseを入れたUnity Projectでiosをビルドする</p>
+</li>
+<li><p class="first">出力したProjectのPods以下をplugins/iosにコピーする.(自分はPlugins/iOS/FireaseDependenciesにコピーした)</p>
+<p>コピーするのは以下の画像の選択されているもの.</p>
+</li>
+</ol>
+<img alt="screenshot" src="http://float1251.github.io/blog/images/20170807.png" />
+<ol class="arabic simple" start="4">
+<li>配置したProtobuf以下のファイルのcompile flagsに以下を設定する</li>
+</ol>
+<!--  -->
+<blockquote>
+-fno-objc-arc -fobjc-exceptions</blockquote>
+<p>※ objc-exceptionsに関してはこれで正しいかはよくわかってないです。</p>
+<ol class="arabic" start="5">
+<li><p class="first">google/protobuf以下にあるimportのpathが解決できないみたいのなので以下のようにして置き換えます.</p>
+<p>pathは適宜書き換えて対応してください ...</p></li></ol></!--></div>
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2017/08/07/firebase_remote_config_ios_build.html#firebase_remote_config_ios_build">    Continue reading
+</a>
   </div>
 </article>
+
+  <div class="pagination">
+  </div>
+
+
+
 
     <footer>
 <p>&copy; float1251 </p>

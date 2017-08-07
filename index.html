@@ -79,6 +79,61 @@
 
 <article>
   <header>
+    <h2><a href="http://float1251.github.io/blog/2017/08/07/firebase_remote_config_ios_build.html#firebase_remote_config_ios_build">Unity Cloud BuildでFirebaseSDKを組み込んだアプリをビルドする</a></h2>
+    <p>
+          Posted on 2017年08月07日(月) in <a href="http://float1251.github.io/blog/category/unity/">unity</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/unity/">Unity</a>,              <a href="http://float1251.github.io/blog/tag/android/">Android</a>,              <a href="http://float1251.github.io/blog/tag/ios/">iOS</a>
+    </p>
+  </header>
+  <div>
+      <p>FirebaseのiOS版はcocoapodsを使用して各Framework等をインストールしている.</p>
+<p>ただ残念なことにUnity Cloud Buildはcocoapodsに対応していない(マジかよ...</p>
+<p>なので、自分で依存FrameworkをPlugins/iOS以下に入れる必要がある.</p>
+<p>以下のブログを参考にしたが、FirebaseのドキュメントにリンクされているSDKが3.16で、最新版が4.0.4だったので自分で対応することにした.</p>
+<p>以下の記事を参考にしながら対応していきました！</p>
+<p><a class="reference external" href="http://blog.livedoor.jp/abars/archives/52394874.html">http://blog.livedoor.jp/abars/archives/52394874.html</a></p>
+<div class="section" id="id1">
+<h2>環境</h2>
+<p>自分の環境は以下</p>
+<ul class="simple">
+<li>Unity5.6.1p3</li>
+<li>Xcode8.3.3</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>対応手順</h2>
+<ol class="arabic">
+<li><p class="first">自分のローカルPCにcocoapodsを入れる</p>
+</li>
+<li><p class="first">Unity Firebaseを入れたUnity Projectでiosをビルドする</p>
+</li>
+<li><p class="first">出力したProjectのPods以下をplugins/iosにコピーする.(自分はPlugins/iOS/FireaseDependenciesにコピーした)</p>
+<p>コピーするのは以下の画像の選択されているもの.</p>
+</li>
+</ol>
+<img alt="screenshot" src="http://float1251.github.io/blog/images/20170807.png" />
+<ol class="arabic simple" start="4">
+<li>配置したProtobuf以下のファイルのcompile flagsに以下を設定する</li>
+</ol>
+<!--  -->
+<blockquote>
+-fno-objc-arc -fobjc-exceptions</blockquote>
+<p>※ objc-exceptionsに関してはこれで正しいかはよくわかってないです。</p>
+<ol class="arabic" start="5">
+<li><p class="first">google/protobuf以下にあるimportのpathが解決できないみたいのなので以下のようにして置き換えます.</p>
+<p>pathは適宜書き換えて対応してください ...</p></li></ol></!--></div>
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2017/08/07/firebase_remote_config_ios_build.html#firebase_remote_config_ios_build">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://float1251.github.io/blog/2017/08/05/codestage_anticheating_read_phone_state.html#codestage_anticheating_read_phone_state">Anti-Cheat Toolkitを使ってるとREAD_PHONE_STATEが勝手につく</a></h2>
     <p>
           Posted on 2017年08月05日(土) in <a href="http://float1251.github.io/blog/category/unity/">unity</a>
@@ -452,39 +507,6 @@ golangを覚えようと思う。</p>
 
       <br>
       <a class="btn" href="http://float1251.github.io/blog/2015/11/19/2015_11_19.html#2015_11_19">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://float1251.github.io/blog/2015/11/10/codingame_2015_11_10.html#codingame_2015_11_10">codingameを始めてみた</a></h2>
-    <p>
-          Posted on 2015年11月10日(火) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://float1251.github.io/blog/tag/programming/">programming</a>,              <a href="http://float1251.github.io/blog/tag/codingame/">codingame</a>
-    </p>
-  </header>
-  <div>
-      <p>C++やhaskellを覚えたいけど、取っ掛かりが欲しいと思って、codingameを始めてみた。</p>
-<p><a class="reference external" href="https://www.codingame.com/home">https://www.codingame.com/home</a></p>
-<p>tutorialとかは非常に簡単なので、全然触ったことない言語でも簡単に解ける。</p>
-<p>だいたい解けないのはルールを読んでないからというね。。。</p>
-<p>とりあえず、毎日か2日に1回くらいの割合で解いていきたい。</p>
-<p>とりあえずやる予定の言語はC++, python3, javascript, C#, Java, Haskellの予定.</p>
-<p>C#, C++, Javaと重い言語が並んでいるなぁ。。。</p>
-<p>やったら、twitterかなんかで報告しよう。</p>
-<div class="section" id="id1">
-<h2>進捗</h2>
-<p>進捗です。</p>
-<img alt="nakamoto" src="https://lh3.googleusercontent.com/iXVXDhbi5gPQ3oB0CogHNoE-21p35200snwqMqMJ9ZBjvq8_v0gQuTYw7t8eBGrSSdqAMtTrkAeJUAlXwP49uKYuJZszUQiD1OcweXOB8GFie4JRITB0-QKj7ADKsGjMWCxKeTiJW1r6H0AAsoGMDkp3H2xYS2muCdiDbGvgmxN6PsGsWi7nN_Gxaw2JJ-CKlh4jtTXegmmAxynVb56hGWe04snCtN15HZdeF0CZ_jjG-un123PQDVG_mbNi-OIloPo7nV8z3CzEEhS9hHgmBXIx8ai-RTNAMuINIiJds_5UqhPxMlsIajComsS1Ss86CsSqkUiJsibgPKOWD8nOjlX8-VOGrGEEgUvTBs9_e2XoXSqOzrjXsaYnMl_A6qDsv9dxMisSZehCh_So1wV1lujV63L3Ze3zEzOBGVhjLveiES8zaKRKtWlLIli5I75mKDfZvAd7qNoFB384K7mFN8dlSyFNf6TmhpQ4fsmDC3ZNCRhMj4g1hRDWp8JgpJ8RxGP23yDFXBZKAs18l_WK6LNXgYAQE1slToYbU2RZqic=w1506-h848-no" />
-</div>
-
-      <br>
-      <a class="btn" href="http://float1251.github.io/blog/2015/11/10/codingame_2015_11_10.html#codingame_2015_11_10">    Continue reading
 </a>
   </div>
 </article>
