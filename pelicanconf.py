@@ -64,7 +64,8 @@ PAGINATION_PATTERNS     = (
 SITETITLE = "float1251's memo"
 SITEDESCRIPTION = 'game programmer, web developer.'
 MAIN_MENU = True
-SITELOGO = './images/me.jpeg'
+SITEURL = "http://float1251.github.io/blog/"
+SITELOGO = SITEURL + 'images/me.jpeg'
 
 MENUITEMS = (('Archives', SITEURL+'/archives.html'),
              ('Categories', SITEURL+'/categories.html'),
