@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float1251's memo Atom">
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+<meta name="author" content="float1251" />
+<meta name="description" content="何かEnumをSerializeするときにErrorが起きたので以下のように対応した. これが正しい対応かどうかはかなり怪しいが一旦はこれで対応していく. 以下を参照し、作成した. https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization enumにこれをつける [MsgPack.Serialization.MessagePackEnum] CustomSerializationを作る public class TargetTypeSerializer : MessagePackSerializer<TargetType> { protected TargetTypeSerializer (SerializationContext ownerContext) : base (ownerContext) { } #region implemented abstract members of MessagePackSerializer protected override void PackToCore (MsgPack.Packer packer, TargetType objectTree) { packer.Pack ((int)objectTree); } protected override TargetType UnpackFromCore ..." />
+<meta name="keywords" content="Unity, Android, iOS, msgpack">
+<meta property="og:site_name" content="float1251's memo"/>
+<meta property="og:title" content="msgpack-cliでcustom serializationをする"/>
+<meta property="og:description" content="何かEnumをSerializeするときにErrorが起きたので以下のように対応した. これが正しい対応かどうかはかなり怪しいが一旦はこれで対応していく. 以下を参照し、作成した. https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization enumにこれをつける [MsgPack.Serialization.MessagePackEnum] CustomSerializationを作る public class TargetTypeSerializer : MessagePackSerializer<TargetType> { protected TargetTypeSerializer (SerializationContext ownerContext) : base (ownerContext) { } #region implemented abstract members of MessagePackSerializer protected override void PackToCore (MsgPack.Packer packer, TargetType objectTree) { packer.Pack ((int)objectTree); } protected override TargetType UnpackFromCore ..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://float1251.github.io/blog/2017/09/13/msgpack-cli-custom-serialization.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-09-13 00:00:00+09:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://float1251.github.io/blog/author/float1251.html">
+<meta property="article:section" content="unity"/>
+<meta property="article:tag" content="Unity"/>
+<meta property="article:tag" content="Android"/>
+<meta property="article:tag" content="iOS"/>
+<meta property="article:tag" content="msgpack"/>
+<meta property="og:image" content="http://float1251.github.io/blog/images/me.jpeg">
+
+  <title>float1251's memo &ndash; msgpack-cliでcustom serializationをする</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://float1251.github.io/blog">
+        <img src="http://float1251.github.io/blog/images/me.jpeg" alt="float1251's memo" title="float1251's memo">
+      </a>
+      <h1><a href="http://float1251.github.io/blog">float1251's memo</a></h1>
+
+
+      <nav>
+        <ul class="list">
+
+          <li><a href="http://float1251.github.io/blog/archives.html" target="_blank">Archives</a></li>
+          <li><a href="http://float1251.github.io/blog/categories.html" target="_blank">Categories</a></li>
+          <li><a href="http://float1251.github.io/blog/tags.html" target="_blank">Tags</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/float1251" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/float1251" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://float1251.github.io/blog">    Home
+</a>
+
+      <a href="http://float1251.github.io/blog/archives.html">Archives</a>
+      <a href="http://float1251.github.io/blog/categories.html">Categories</a>
+      <a href="http://float1251.github.io/blog/tags.html">Tags</a>
+
+      <a href="http://float1251.github.io/blog/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+    <h1 id="msgpack-cli-custom-serialization">msgpack-cliでcustom serializationをする</h1>
+    <p>
+          Posted on 2017年09月13日(水) in <a href="http://float1251.github.io/blog/category/unity/">unity</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>何かEnumをSerializeするときにErrorが起きたので以下のように対応した.</p>
+<p>これが正しい対応かどうかはかなり怪しいが一旦はこれで対応していく.</p>
+<p>以下を参照し、作成した.</p>
+<p><a class="reference external" href="https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization">https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization</a></p>
+<ol class="arabic">
+<li><p class="first">enumにこれをつける</p>
+<pre class="literal-block">
+[MsgPack.Serialization.MessagePackEnum]
+</pre>
+</li>
+<li><p class="first">CustomSerializationを作る</p>
+</li>
+</ol>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">TargetTypeSerializer</span> <span class="p">:</span> <span class="n">MessagePackSerializer</span><span class="p">&lt;</span><span class="n">TargetType</span><span class="p">&gt;</span>
+<span class="p">{</span>
+
+    <span class="k">protected</span> <span class="nf">TargetTypeSerializer</span> <span class="p">(</span><span class="n">SerializationContext</span> <span class="n">ownerContext</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span> <span class="p">(</span><span class="n">ownerContext</span><span class="p">)</span>
+    <span class="p">{</span>
+    <span class="p">}</span>
+
+    <span class="cp">#region implemented abstract members of MessagePackSerializer</span>
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">PackToCore</span> <span class="p">(</span><span class="n">MsgPack</span><span class="p">.</span><span class="n">Packer</span> <span class="n">packer</span><span class="p">,</span> <span class="n">TargetType</span> <span class="n">objectTree</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">packer</span><span class="p">.</span><span class="n">Pack</span> <span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="n">objectTree</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="n">TargetType</span> <span class="nf">UnpackFromCore</span> <span class="p">(</span><span class="n">MsgPack</span><span class="p">.</span><span class="n">Unpacker</span> <span class="n">unpacker</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">data</span> <span class="p">=</span> <span class="n">unpacker</span><span class="p">.</span><span class="n">LastReadData</span><span class="p">;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">TargetType</span><span class="p">)</span><span class="n">data</span><span class="p">.</span><span class="n">AsInt16</span> <span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="cp">#endregion</span>
+
+<span class="p">}</span>
+</pre></div>
+<ol class="arabic simple" start="3">
+<li>どっかでResolveSerilizerを登録し、setSerializerをする</li>
+</ol>
+<div class="highlight"><pre><span class="n">SerializationContext</span><span class="p">.</span><span class="n">Default</span><span class="p">.</span><span class="n">ResolveSerializer</span> <span class="p">+=</span> <span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">ResolveSerializerEventArgs</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">TargetType</span> <span class="p">==</span> <span class="k">typeof</span><span class="p">(</span><span class="n">TargetType</span><span class="p">))</span>
+         <span class="n">e</span><span class="p">.</span><span class="n">SetSerializer</span> <span class="p">(</span><span class="k">new</span> <span class="n">TargetTypeSerializer</span> <span class="p">(</span><span class="n">e</span><span class="p">.</span><span class="n">Context</span><span class="p">));</span>
+ <span class="p">};</span>
+</pre></div>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://float1251.github.io/blog/tag/unity/">Unity</a>
+      <a href="http://float1251.github.io/blog/tag/android/">Android</a>
+      <a href="http://float1251.github.io/blog/tag/ios/">iOS</a>
+      <a href="http://float1251.github.io/blog/tag/msgpack/">msgpack</a>
+    </p>
+  </div>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'floatsmemo';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+</article>
+
+    <footer>
+<p>&copy; float1251 </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " float1251's memo ",
+  "url" : "http://float1251.github.io/blog",
+  "image": "http://float1251.github.io/blog/images/me.jpeg",
+  "description": "game programmer, web developer."
+}
+</script>
+</body>
+</html>

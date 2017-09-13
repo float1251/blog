@@ -31,7 +31,7 @@
 <meta property="og:url" content="http://float1251.github.io/blog"/>
 <meta property="og:image" content="http://float1251.github.io/blog/images/me.jpeg">
 
-  <title>float1251's memo &ndash;     Categories
+  <title>float1251's memo &ndash;     Tag msgpack
 </title>
 
 </head>
@@ -76,21 +76,60 @@
 
     </nav>
 
-<article class="single">
+
+
+<article>
   <header>
-    <h1>    Categories
-</h1>
+    <h2><a href="http://float1251.github.io/blog/2017/09/13/msgpack-cli-custom-serialization.html#msgpack-cli-custom-serialization">msgpack-cliでcustom serializationをする</a></h2>
+    <p>
+          Posted on 2017年09月13日(水) in <a href="http://float1251.github.io/blog/category/unity/">unity</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/unity/">Unity</a>,              <a href="http://float1251.github.io/blog/tag/android/">Android</a>,              <a href="http://float1251.github.io/blog/tag/ios/">iOS</a>,              <a href="http://float1251.github.io/blog/tag/msgpack/">msgpack</a>
+    </p>
   </header>
   <div>
-    <ul class="list">
-      <li><a href="http://float1251.github.io/blog/category/2016/">2016</a> (2)</li>
-      <li><a href="http://float1251.github.io/blog/category/2017/">2017</a> (2)</li>
-      <li><a href="http://float1251.github.io/blog/category/articles/">articles</a> (16)</li>
-      <li><a href="http://float1251.github.io/blog/category/memo/">memo</a> (5)</li>
-      <li><a href="http://float1251.github.io/blog/category/unity/">unity</a> (3)</li>
-    </ul>
+      <p>何かEnumをSerializeするときにErrorが起きたので以下のように対応した.</p>
+<p>これが正しい対応かどうかはかなり怪しいが一旦はこれで対応していく.</p>
+<p>以下を参照し、作成した.</p>
+<p><a class="reference external" href="https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization">https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization</a></p>
+<ol class="arabic">
+<li><p class="first">enumにこれをつける</p>
+<pre class="literal-block">
+[MsgPack.Serialization.MessagePackEnum]
+</pre>
+</li>
+<li><p class="first">CustomSerializationを作る</p>
+</li>
+</ol>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">TargetTypeSerializer</span> <span class="p">:</span> <span class="n">MessagePackSerializer</span><span class="p">&lt;</span><span class="n">TargetType</span><span class="p">&gt;</span>
+<span class="p">{</span>
+
+    <span class="k">protected</span> <span class="nf">TargetTypeSerializer</span> <span class="p">(</span><span class="n">SerializationContext</span> <span class="n">ownerContext</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span> <span class="p">(</span><span class="n">ownerContext</span><span class="p">)</span>
+    <span class="p">{</span>
+    <span class="p">}</span>
+
+    <span class="cp">#region implemented abstract members of MessagePackSerializer</span>
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">PackToCore</span> <span class="p">(</span><span class="n">MsgPack</span><span class="p">.</span><span class="n">Packer</span> <span class="n">packer</span><span class="p">,</span> <span class="n">TargetType</span> <span class="n">objectTree</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">packer</span><span class="p">.</span><span class="n">Pack</span> <span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="n">objectTree</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="n">TargetType</span> <span class="nf">UnpackFromCore ...</span></pre></div>
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2017/09/13/msgpack-cli-custom-serialization.html#msgpack-cli-custom-serialization">    Continue reading
+</a>
   </div>
 </article>
+
+  <div class="pagination">
+  </div>
+
+
+
 
     <footer>
 <p>&copy; float1251 </p>

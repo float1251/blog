@@ -79,6 +79,53 @@
 
 <article>
   <header>
+    <h2><a href="http://float1251.github.io/blog/2017/09/13/msgpack-cli-custom-serialization.html#msgpack-cli-custom-serialization">msgpack-cliでcustom serializationをする</a></h2>
+    <p>
+          Posted on 2017年09月13日(水) in <a href="http://float1251.github.io/blog/category/unity/">unity</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/unity/">Unity</a>,              <a href="http://float1251.github.io/blog/tag/android/">Android</a>,              <a href="http://float1251.github.io/blog/tag/ios/">iOS</a>,              <a href="http://float1251.github.io/blog/tag/msgpack/">msgpack</a>
+    </p>
+  </header>
+  <div>
+      <p>何かEnumをSerializeするときにErrorが起きたので以下のように対応した.</p>
+<p>これが正しい対応かどうかはかなり怪しいが一旦はこれで対応していく.</p>
+<p>以下を参照し、作成した.</p>
+<p><a class="reference external" href="https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization">https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization</a></p>
+<ol class="arabic">
+<li><p class="first">enumにこれをつける</p>
+<pre class="literal-block">
+[MsgPack.Serialization.MessagePackEnum]
+</pre>
+</li>
+<li><p class="first">CustomSerializationを作る</p>
+</li>
+</ol>
+<div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">TargetTypeSerializer</span> <span class="p">:</span> <span class="n">MessagePackSerializer</span><span class="p">&lt;</span><span class="n">TargetType</span><span class="p">&gt;</span>
+<span class="p">{</span>
+
+    <span class="k">protected</span> <span class="nf">TargetTypeSerializer</span> <span class="p">(</span><span class="n">SerializationContext</span> <span class="n">ownerContext</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span> <span class="p">(</span><span class="n">ownerContext</span><span class="p">)</span>
+    <span class="p">{</span>
+    <span class="p">}</span>
+
+    <span class="cp">#region implemented abstract members of MessagePackSerializer</span>
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">PackToCore</span> <span class="p">(</span><span class="n">MsgPack</span><span class="p">.</span><span class="n">Packer</span> <span class="n">packer</span><span class="p">,</span> <span class="n">TargetType</span> <span class="n">objectTree</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">packer</span><span class="p">.</span><span class="n">Pack</span> <span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="n">objectTree</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="n">TargetType</span> <span class="nf">UnpackFromCore ...</span></pre></div>
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2017/09/13/msgpack-cli-custom-serialization.html#msgpack-cli-custom-serialization">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://float1251.github.io/blog/2017/08/07/firebase_remote_config_ios_build.html#firebase_remote_config_ios_build">Unity Cloud BuildでFirebaseSDKを組み込んだアプリをビルドする</a></h2>
     <p>
           Posted on 2017年08月07日(月) in <a href="http://float1251.github.io/blog/category/unity/">unity</a>
@@ -460,53 +507,6 @@ golangを覚えようと思う。</p>
 <p><a class="reference external" href="http://answers.unity3d.com/questions/36509/if-timescale-is-lowered-how-can-i-aviod-to-get-the.html">http://answers.unity3d.com/questions/36509 ...</a></p></div>
       <br>
       <a class="btn" href="http://float1251.github.io/blog/2015/12/02/2015_12_02.html#2015_12_02">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://float1251.github.io/blog/2015/11/19/2015_11_19.html#2015_11_19">2015-11-19</a></h2>
-    <p>
-          Posted on 2015年11月19日(木) in <a href="http://float1251.github.io/blog/category/memo/">memo</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://float1251.github.io/blog/tag/diary/">diary</a>
-    </p>
-  </header>
-  <div>
-      <div class="section" id="codingame">
-<h2>codingame</h2>
-<p>とりあえず、codingameのeasyが全部終わった。</p>
-<p>javasriptでとりあえずやったので、あとでpython3, C#, C++あたりでやってみる予定。</p>
-<p>次はmediumになるのかな。まぁ肩の力ぬいてやっていこうと思う。</p>
-</div>
-<div class="section" id="id2">
-<h2>ゲームつくりはじめました</h2>
-<p>以前、試作っぽいのを作ったのを本格的にやり始めることになった。</p>
-<p>企画、デザインは別の人がやるから基本的にプログラム専任。</p>
-<p>仕事に時間がとられるとこっちに時間使えないから効率的に仕事しないとね。</p>
-<p>Unityで作ってます。</p>
-<p>ラインディフェンス系のゲームになる予定。</p>
-<p>3ヶ月でどこまでやれるかって感じです。</p>
-</div>
-<div class="section" id="id3">
-<h2>近況</h2>
-<p>先週末くらいに博多に行ってきたけど、あまりよくなかった。</p>
-<p>別府の温泉は素晴らしかったけどね。</p>
-<p>田舎に住むのもいいかなって思った。都内は家賃高いし、食費も高いし。</p>
-<p>やはり都市圏の旅行はそこまで楽しくないので、温泉街とかリゾート地の方がいいね。</p>
-</div>
-<div class="section" id="id4">
-<h2>進捗</h2>
-<p>ご確認下さい。</p>
-<img alt="ra-men" src="https://lh3.googleusercontent.com/cW8Rz5JJXvyUnCWHOo27Fjt9xe3PuaUJtNaRn_A84-EgZPsVPIlgZ1PFez4nZeyopT8BC9bKUcbtJcTvgLu-MqB3L8Jpk0PVvaNBeweoMJIr_gbRc8kEJoJLj3adalmQE715GdIr8FwagK-a0PUOZsdZX7y-qRgQZQo2p83aOCuM42oViRgWx4265t9y8DHPybwmPNYxMTAAcMuoDcxxSaWe16_DHd4tqMuscnddSfiInwcPQxv6zQnXK3WbM9IBInanAC6XtjASrmVzY-nNjc0BgZmPGtyyQRsJEyHfNjpC8hsN2dPonDHsP8HVNcYg7gQ_916LDqAiJK9ZZ9xnpR1QdpIqkOmZhvQ5TPtGIPfhMrA3TLsk9KgIfJysToSk_EjOFSWncYuB9-KmEkTWSLPu2y0Eg_9fnP0wwRrFjeUsKx8Kd8Ux18V2ESajnFIc2dHdv0s2iKEfcnyeTPOK9wtVOSOm7wCve-zJctRmAjUhoxTjTOINVOhN99IUhz1FVHgtINynSSWbh3PQhaEwMGwA3EkK2UtNyijosuWkwVs=w1415-h796-no" />
-</div>
-
-      <br>
-      <a class="btn" href="http://float1251.github.io/blog/2015/11/19/2015_11_19.html#2015_11_19">    Continue reading
 </a>
   </div>
 </article>

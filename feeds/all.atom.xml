@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>float1251's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2017-08-07T00:00:00+09:00</updated><entry><title>Unity Cloud BuildでFirebaseSDKを組み込んだアプリをビルドする</title><link href="http://float1251.github.io/blog/2017/08/07/firebase_remote_config_ios_build.html" rel="alternate"></link><updated>2017-08-07T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2017-08-07:blog/2017/08/07/firebase_remote_config_ios_build.html</id><summary type="html">&lt;p&gt;FirebaseのiOS版はcocoapodsを使用して各Framework等をインストールしている.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>float1251's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2017-09-13T00:00:00+09:00</updated><entry><title>msgpack-cliでcustom serializationをする</title><link href="http://float1251.github.io/blog/2017/09/13/msgpack-cli-custom-serialization.html" rel="alternate"></link><updated>2017-09-13T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2017-09-13:blog/2017/09/13/msgpack-cli-custom-serialization.html</id><summary type="html">&lt;p&gt;何かEnumをSerializeするときにErrorが起きたので以下のように対応した.&lt;/p&gt;
+&lt;p&gt;これが正しい対応かどうかはかなり怪しいが一旦はこれで対応していく.&lt;/p&gt;
+&lt;p&gt;以下を参照し、作成した.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization"&gt;https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization&lt;/a&gt;&lt;/p&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;enumにこれをつける&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+[MsgPack.Serialization.MessagePackEnum]
+&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;CustomSerializationを作る&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;TargetTypeSerializer&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;MessagePackSerializer&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;TargetType&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+
+    &lt;span class="k"&gt;protected&lt;/span&gt; &lt;span class="nf"&gt;TargetTypeSerializer&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;SerializationContext&lt;/span&gt; &lt;span class="n"&gt;ownerContext&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;base&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ownerContext&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="cp"&gt;#region implemented abstract members of MessagePackSerializer&lt;/span&gt;
+
+    &lt;span class="k"&gt;protected&lt;/span&gt; &lt;span class="k"&gt;override&lt;/span&gt; &lt;span class="k"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;PackToCore&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;MsgPack&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Packer&lt;/span&gt; &lt;span class="n"&gt;packer&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;TargetType&lt;/span&gt; &lt;span class="n"&gt;objectTree&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;packer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Pack&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;objectTree&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="k"&gt;protected&lt;/span&gt; &lt;span class="k"&gt;override&lt;/span&gt; &lt;span class="n"&gt;TargetType&lt;/span&gt; &lt;span class="nf"&gt;UnpackFromCore&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;MsgPack&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Unpacker&lt;/span&gt; &lt;span class="n"&gt;unpacker&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="kt"&gt;var&lt;/span&gt; &lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="n"&gt;unpacker&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;LastReadData&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TargetType&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AsInt16&lt;/span&gt; &lt;span class="p"&gt;();&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="cp"&gt;#endregion&lt;/span&gt;
+
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ol class="arabic simple" start="3"&gt;
+&lt;li&gt;どっかでResolveSerilizerを登録し、setSerializerをする&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;SerializationContext&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Default&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ResolveSerializer&lt;/span&gt; &lt;span class="p"&gt;+=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;object&lt;/span&gt; &lt;span class="n"&gt;sender&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ResolveSerializerEventArgs&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+     &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;TargetType&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="k"&gt;typeof&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TargetType&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+         &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SetSerializer&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;TargetTypeSerializer&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Context&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+ &lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+</summary><category term="Unity"></category><category term="Android"></category><category term="iOS"></category><category term="msgpack"></category></entry><entry><title>Unity Cloud BuildでFirebaseSDKを組み込んだアプリをビルドする</title><link href="http://float1251.github.io/blog/2017/08/07/firebase_remote_config_ios_build.html" rel="alternate"></link><updated>2017-08-07T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2017-08-07:blog/2017/08/07/firebase_remote_config_ios_build.html</id><summary type="html">&lt;p&gt;FirebaseのiOS版はcocoapodsを使用して各Framework等をインストールしている.&lt;/p&gt;
 &lt;p&gt;ただ残念なことにUnity Cloud Buildはcocoapodsに対応していない(マジかよ...&lt;/p&gt;
 &lt;p&gt;なので、自分で依存FrameworkをPlugins/iOS以下に入れる必要がある.&lt;/p&gt;
 &lt;p&gt;以下のブログを参考にしたが、FirebaseのドキュメントにリンクされているSDKが3.16で、最新版が4.0.4だったので自分で対応することにした.&lt;/p&gt;
