@@ -12,11 +12,7 @@ msgpack-cliでcustom serializationをする
 
 https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization       
 
-1. enumにこれをつける :: 
-
-    [MsgPack.Serialization.MessagePackEnum]
-
-2. CustomSerializationを作る
+1. CustomSerializationを作る
 
 .. code-block:: c#
 
@@ -44,7 +40,7 @@ https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization
         
     }
 
-3. どっかでResolveSerilizerを登録し、setSerializerをする
+2. どっかでResolveSerilizerを登録し、setSerializerをする
 
 .. code-block:: c#
     
