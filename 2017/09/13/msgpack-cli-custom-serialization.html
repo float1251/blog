@@ -22,11 +22,11 @@
 
 
 <meta name="author" content="float1251" />
-<meta name="description" content="何かEnumをSerializeするときにErrorが起きたので以下のように対応した. これが正しい対応かどうかはかなり怪しいが一旦はこれで対応していく. 以下を参照し、作成した. https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization enumにこれをつける [MsgPack.Serialization.MessagePackEnum] CustomSerializationを作る public class TargetTypeSerializer : MessagePackSerializer<TargetType> { protected TargetTypeSerializer (SerializationContext ownerContext) : base (ownerContext) { } #region implemented abstract members of MessagePackSerializer protected override void PackToCore (MsgPack.Packer packer, TargetType objectTree) { packer.Pack ((int)objectTree); } protected override TargetType UnpackFromCore ..." />
+<meta name="description" content="何かEnumをSerializeするときにErrorが起きたので以下のように対応した. これが正しい対応かどうかはかなり怪しいが一旦はこれで対応していく. 以下を参照し、作成した. https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization CustomSerializationを作る public class TargetTypeSerializer : MessagePackSerializer<TargetType> { protected TargetTypeSerializer (SerializationContext ownerContext) : base (ownerContext) { } #region implemented abstract members of MessagePackSerializer protected override void PackToCore (MsgPack.Packer packer, TargetType objectTree) { packer.Pack ((int)objectTree); } protected override TargetType UnpackFromCore (MsgPack.Unpacker unpacker) { var ..." />
 <meta name="keywords" content="Unity, Android, iOS, msgpack">
 <meta property="og:site_name" content="float1251's memo"/>
 <meta property="og:title" content="msgpack-cliでcustom serializationをする"/>
-<meta property="og:description" content="何かEnumをSerializeするときにErrorが起きたので以下のように対応した. これが正しい対応かどうかはかなり怪しいが一旦はこれで対応していく. 以下を参照し、作成した. https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization enumにこれをつける [MsgPack.Serialization.MessagePackEnum] CustomSerializationを作る public class TargetTypeSerializer : MessagePackSerializer<TargetType> { protected TargetTypeSerializer (SerializationContext ownerContext) : base (ownerContext) { } #region implemented abstract members of MessagePackSerializer protected override void PackToCore (MsgPack.Packer packer, TargetType objectTree) { packer.Pack ((int)objectTree); } protected override TargetType UnpackFromCore ..."/>
+<meta property="og:description" content="何かEnumをSerializeするときにErrorが起きたので以下のように対応した. これが正しい対応かどうかはかなり怪しいが一旦はこれで対応していく. 以下を参照し、作成した. https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization CustomSerializationを作る public class TargetTypeSerializer : MessagePackSerializer<TargetType> { protected TargetTypeSerializer (SerializationContext ownerContext) : base (ownerContext) { } #region implemented abstract members of MessagePackSerializer protected override void PackToCore (MsgPack.Packer packer, TargetType objectTree) { packer.Pack ((int)objectTree); } protected override TargetType UnpackFromCore (MsgPack.Unpacker unpacker) { var ..."/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="http://float1251.github.io/blog/2017/09/13/msgpack-cli-custom-serialization.html"/>
 <meta property="og:type" content="article"/>
@@ -100,14 +100,8 @@
 <p>これが正しい対応かどうかはかなり怪しいが一旦はこれで対応していく.</p>
 <p>以下を参照し、作成した.</p>
 <p><a class="reference external" href="https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization">https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization</a></p>
-<ol class="arabic">
-<li><p class="first">enumにこれをつける</p>
-<pre class="literal-block">
-[MsgPack.Serialization.MessagePackEnum]
-</pre>
-</li>
-<li><p class="first">CustomSerializationを作る</p>
-</li>
+<ol class="arabic simple">
+<li>CustomSerializationを作る</li>
 </ol>
 <div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">TargetTypeSerializer</span> <span class="p">:</span> <span class="n">MessagePackSerializer</span><span class="p">&lt;</span><span class="n">TargetType</span><span class="p">&gt;</span>
 <span class="p">{</span>
@@ -133,7 +127,7 @@
 
 <span class="p">}</span>
 </pre></div>
-<ol class="arabic simple" start="3">
+<ol class="arabic simple" start="2">
 <li>どっかでResolveSerilizerを登録し、setSerializerをする</li>
 </ol>
 <div class="highlight"><pre><span class="n">SerializationContext</span><span class="p">.</span><span class="n">Default</span><span class="p">.</span><span class="n">ResolveSerializer</span> <span class="p">+=</span> <span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">ResolveSerializerEventArgs</span> <span class="n">e</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>

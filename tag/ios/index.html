@@ -95,14 +95,8 @@
 <p>これが正しい対応かどうかはかなり怪しいが一旦はこれで対応していく.</p>
 <p>以下を参照し、作成した.</p>
 <p><a class="reference external" href="https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization">https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization</a></p>
-<ol class="arabic">
-<li><p class="first">enumにこれをつける</p>
-<pre class="literal-block">
-[MsgPack.Serialization.MessagePackEnum]
-</pre>
-</li>
-<li><p class="first">CustomSerializationを作る</p>
-</li>
+<ol class="arabic simple">
+<li>CustomSerializationを作る</li>
 </ol>
 <div class="highlight"><pre><span class="k">public</span> <span class="k">class</span> <span class="nc">TargetTypeSerializer</span> <span class="p">:</span> <span class="n">MessagePackSerializer</span><span class="p">&lt;</span><span class="n">TargetType</span><span class="p">&gt;</span>
 <span class="p">{</span>
@@ -118,7 +112,9 @@
         <span class="n">packer</span><span class="p">.</span><span class="n">Pack</span> <span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="n">objectTree</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="k">protected</span> <span class="k">override</span> <span class="n">TargetType</span> <span class="nf">UnpackFromCore ...</span></pre></div>
+    <span class="k">protected</span> <span class="k">override</span> <span class="n">TargetType</span> <span class="nf">UnpackFromCore</span> <span class="p">(</span><span class="n">MsgPack</span><span class="p">.</span><span class="n">Unpacker</span> <span class="n">unpacker</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">var ...</span></pre></div>
       <br>
       <a class="btn" href="http://float1251.github.io/blog/2017/09/13/msgpack-cli-custom-serialization.html#msgpack-cli-custom-serialization">    Continue reading
 </a>

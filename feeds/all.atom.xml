@@ -3,14 +3,8 @@
 &lt;p&gt;これが正しい対応かどうかはかなり怪しいが一旦はこれで対応していく.&lt;/p&gt;
 &lt;p&gt;以下を参照し、作成した.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization"&gt;https://github.com/msgpack/msgpack-cli/wiki/Custom-serialization&lt;/a&gt;&lt;/p&gt;
-&lt;ol class="arabic"&gt;
-&lt;li&gt;&lt;p class="first"&gt;enumにこれをつける&lt;/p&gt;
-&lt;pre class="literal-block"&gt;
-[MsgPack.Serialization.MessagePackEnum]
-&lt;/pre&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p class="first"&gt;CustomSerializationを作る&lt;/p&gt;
-&lt;/li&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;CustomSerializationを作る&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;public&lt;/span&gt; &lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;TargetTypeSerializer&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;MessagePackSerializer&lt;/span&gt;&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;TargetType&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;{&lt;/span&gt;
@@ -36,7 +30,7 @@
 
 &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;ol class="arabic simple" start="3"&gt;
+&lt;ol class="arabic simple" start="2"&gt;
 &lt;li&gt;どっかでResolveSerilizerを登録し、setSerializerをする&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;SerializationContext&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Default&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ResolveSerializer&lt;/span&gt; &lt;span class="p"&gt;+=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;object&lt;/span&gt; &lt;span class="n"&gt;sender&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ResolveSerializerEventArgs&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;=&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
