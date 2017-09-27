@@ -80,6 +80,41 @@
 
 <article>
   <header>
+    <h2><a href="http://float1251.github.io/blog/2015/01/03/codeforces_tools.html#codeforces_tools">codeforcesのテストコードを自動生成するツールつくった</a></h2>
+    <p>
+          Posted on 2015年01月03日(土) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/python/">python</a>
+    </p>
+  </header>
+  <div>
+      <p>ただし、まだ未公開。</p>
+<p>今はテストがunittest.mockで確認してるんだけど、subprocessでstdoutを確認するほうがよさそう。</p>
+<p>理由は</p>
+<blockquote>
+<ul class="simple">
+<li>if __name__  で分岐しないとimport時に実行されてしまう。</li>
+<li>mockでbuiltins.printを入れ替えてるが、実装中のデバッグプリントをsys.stderr.writeとか
+別なのでやんないと出力されなくなってしまう。</li>
+</ul>
+</blockquote>
+<p>あたりかな。</p>
+<p>ただ、mockの使い方を学びたいからやってみたって面が多いので、とりあえずよしとしよう。</p>
+<p>テストスクリプトの作成はJinja2をつかってやってます。</p>
+<p>依存するのはそれくらいかな。</p>
+<p>もうちょっと手直しをしたらgithubに上げる予定。</p>
+
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2015/01/03/codeforces_tools.html#codeforces_tools">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://float1251.github.io/blog/2014/12/15/python_socket_learning.html#python_socket_learning">pythonでsocketプログラミングをやってみる</a></h2>
     <p>
           Posted on 2014年12月15日(月) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
