@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>float1251's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2017-09-27T00:00:00+09:00</updated><entry><title>Anti-Cheat ToolkitのTimecheatingDetectorがIPV6で動作しない</title><link href="http://float1251.github.io/blog/2017/09/27/anti-cheat-toolkit-ipv6.html" rel="alternate"></link><updated>2017-09-27T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2017-09-27:blog/2017/09/27/anti-cheat-toolkit-ipv6.html</id><summary type="html">&lt;p&gt;versionは1.5.6.1.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>float1251's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2017-10-19T00:00:00+09:00</updated><entry><title>Very Simple Ads Monetization &amp; Mediationに細かな修正を加える</title><link href="http://float1251.github.io/blog/2017/10/19/very_simple_ads_modified.html" rel="alternate"></link><updated>2017-10-19T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2017-10-19:blog/2017/10/19/very_simple_ads_modified.html</id><summary type="html">&lt;p&gt;動画広告を表示するのにVery Simple AdsというAssetを購入し、使用している.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.assetstore.unity3d.com/jp/#!/content/57517"&gt;https://www.assetstore.unity3d.com/jp/#!/content/57517&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;基本的にこれを入れてやればいいが、以下の2点の対応のために修正を加えた.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;adcolonyの動画広告視聴前後に、ダイアログが表示される&lt;/li&gt;
+&lt;li&gt;admobの動画広告視聴完了時に、エラーが頻発する&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;ので、以下の対応を行った。&lt;/p&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;AAAdcolonyの200行目くらいの箇所を以下のように修正する&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;AdColony&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AdOptions&lt;/span&gt; &lt;span class="n"&gt;adOptions&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;AdColony&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AdOptions&lt;/span&gt; &lt;span class="p"&gt;();&lt;/span&gt;
+&lt;span class="c1"&gt;// 以下2つをfalseに変更&lt;/span&gt;
+&lt;span class="n"&gt;adOptions&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ShowPrePopup&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;adOptions&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ShowPostPopup&lt;/span&gt; &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="k"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ol class="arabic simple" start="2"&gt;
+&lt;li&gt;Admobのエラー回避&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://github.com/googleads/googleads-mobile-unity/issues/509"&gt;https://github.com/googleads/googleads-mobile-unity/issues/509&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;↑のissueと同様に、OnAdRewardが呼ばれた直後にOnAdCloseが呼ばれていた.&lt;/p&gt;
+&lt;p&gt;そのため、OnAdRewardが呼ばれたらflagを立てて、OnAdCloseが呼ばれても大丈夫なように対応した.&lt;/p&gt;
+</summary><category term="Unity"></category><category term="Android"></category><category term="iOS"></category><category term="admob"></category><category term="adcolony"></category></entry><entry><title>Anti-Cheat ToolkitのTimecheatingDetectorがIPV6で動作しない</title><link href="http://float1251.github.io/blog/2017/09/27/anti-cheat-toolkit-ipv6.html" rel="alternate"></link><updated>2017-09-27T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2017-09-27:blog/2017/09/27/anti-cheat-toolkit-ipv6.html</id><summary type="html">&lt;p&gt;versionは1.5.6.1.&lt;/p&gt;
 &lt;p&gt;ipv6環境ではErrorダイアログが出続ける.
 TimeCheatingDetector.csの以下の部分を変更する.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;// 元々&lt;/span&gt;

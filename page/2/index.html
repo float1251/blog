@@ -79,6 +79,63 @@
 
 <article>
   <header>
+    <h2><a href="http://float1251.github.io/blog/2015/12/17/google_apps_script.html#google_apps_script">Google apps script触ったのでまとめた</a></h2>
+    <p>
+          Posted on 2015年12月17日(木) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/google-app-script/">google app script</a>
+    </p>
+  </header>
+  <div>
+      <p>今作成しているゲームでは、データの入力をGoogle SpreadSheetで行っています。</p>
+<p>SpreadSheetに入力された情報から、sqliteにInsertするSQLを出力するスクリプトを書きました。</p>
+<p>その過程で調べたことをまとめようと思います。</p>
+<div class="section" id="id1">
+<h2>Google apps scriptとは</h2>
+<p>jsライクなscript言語。というかjs。実行はサーバー側(ブラウザではない。)で行われている模様。</p>
+<p>ツール &gt; スクリプトエディタ と選択すると、エディタ画面が立ち上がるので、ブラウザ上で開発が出来る。</p>
+<p>基本的な情報は以下のurlを見たほうがよいです。</p>
+<p><a class="reference external" href="http://qiita.com/soundTricker/items/4d04c97c499b22886dfd">http://qiita.com/soundTricker/items/4d04c97c499b22886dfd</a></p>
+<p>公式のリファレンス等は以下</p>
+<p><a class="reference external" href="https://developers.google.com/apps-script/">https://developers.google.com/apps-script/</a></p>
+</div>
+<div class="section" id="id2">
+<h2>ライブラリの導入方法</h2>
+<p>スクリプトエディター上から</p>
+<p>リソース &gt; ライブラリを選択。</p>
+<p>ライブラリのkeyを貼り付けすれば、導入できる。</p>
+<p>underscoreGSは入れておくと便利。</p>
+</div>
+<div class="section" id="id3">
+<h2>その他</h2>
+<ul>
+<li><dl class="first docutils">
+<dt>SpreadSheetを操作したい。</dt>
+<dd><ul class="first last simple">
+<li>SpreadSheetAppクラスからいじる</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">Cellの値を取得したいんだが。</p>
+<blockquote>
+<div class="highlight"><pre><span class="nx">sheet</span><span class="p">.</span><span class="nx">getRange</span><span class="p">(</span><span class="nx">row</span><span class="p">,</span> <span class="nx">column</span><span class="p">).</span><span class="nx">getValue</span><span class="p">()</span> <span class="c1">// Rangeの左上端の値を取得する</span>
+</pre></div>
+</blockquote>
+</li>
+<li><dl class="first docutils">
+<dt>ファイルを保存したいんだが ...</dt></dl></li></ul></div>
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2015/12/17/google_apps_script.html#google_apps_script">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://float1251.github.io/blog/2015/12/02/2015_12_02.html#2015_12_02">2015-12-02</a></h2>
     <p>
           Posted on 2015年12月02日(水) in <a href="http://float1251.github.io/blog/category/memo/">memo</a>
@@ -438,42 +495,6 @@ make    // buildする
 
       <br>
       <a class="btn" href="http://float1251.github.io/blog/2015/09/14/theme_change_2015.html#theme_change_2015">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://float1251.github.io/blog/2015/03/03/universal_tween_engine.html#universal_tween_engine">libgdxでuniversal tween engine使ってみた</a></h2>
-    <p>
-          Posted on 2015年03月03日(火) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://float1251.github.io/blog/tag/java/">java</a>,              <a href="http://float1251.github.io/blog/tag/libgdx/">libgdx</a>
-    </p>
-  </header>
-  <div>
-      <p>Tweenアニメーションの実装に、universal tween engineというライブラリを使ったみた。</p>
-<p>導入はlibgdxのwikiにあった。urlは以下の通り。</p>
-<blockquote>
-<a class="reference external" href="https://github.com/libgdx/libgdx/wiki/Universal-Tween-Engine">https://github.com/libgdx/libgdx/wiki/Universal-Tween-Engine</a></blockquote>
-<ol class="arabic simple">
-<li>jarをtween engineの公式から落とす</li>
-<li>projectのrootにlibsディレクトリを作成して、そこにjarを入れる</li>
-<li>gradleの設定を変更する</li>
-</ol>
-<p>実装は以下のような感じでやった。</p>
-<ol class="arabic simple">
-<li>Accessorを定義する。</li>
-<li>アニメーションを定義する</li>
-<li>renderでmanagerをupdateする</li>
-</ol>
-<p>サンプルはなくしちゃった。。。(´；ω；｀)</p>
-
-      <br>
-      <a class="btn" href="http://float1251.github.io/blog/2015/03/03/universal_tween_engine.html#universal_tween_engine">    Continue reading
 </a>
   </div>
 </article>

@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float1251's memo Atom">
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+<meta name="author" content="float1251" />
+<meta name="description" content="動画広告を表示するのにVery Simple AdsというAssetを購入し、使用している. https://www.assetstore.unity3d.com/jp/#!/content/57517 基本的にこれを入れてやればいいが、以下の2点の対応のために修正を加えた. adcolonyの動画広告視聴前後に、ダイアログが表示される admobの動画広告視聴完了時に、エラーが頻発する ので、以下の対応を行った。 AAAdcolonyの200行目くらいの箇所を以下のように修正する AdColony.AdOptions adOptions = new AdColony.AdOptions (); // 以下2つをfalseに変更 adOptions.ShowPrePopup = false; adOptions.ShowPostPopup = false; Admobのエラー回避 https://github.com/googleads/googleads-mobile-unity/issues/509 ↑のissueと同様に、OnAdRewardが呼ばれた直後にOnAdCloseが呼ばれていた. そのため、OnAdRewardが呼ばれたらflagを立てて、OnAdCloseが呼ばれても大丈夫なように対応した." />
+<meta name="keywords" content="Unity, Android, iOS, admob, adcolony">
+<meta property="og:site_name" content="float1251's memo"/>
+<meta property="og:title" content="Very Simple Ads Monetization & Mediationに細かな修正を加える"/>
+<meta property="og:description" content="動画広告を表示するのにVery Simple AdsというAssetを購入し、使用している. https://www.assetstore.unity3d.com/jp/#!/content/57517 基本的にこれを入れてやればいいが、以下の2点の対応のために修正を加えた. adcolonyの動画広告視聴前後に、ダイアログが表示される admobの動画広告視聴完了時に、エラーが頻発する ので、以下の対応を行った。 AAAdcolonyの200行目くらいの箇所を以下のように修正する AdColony.AdOptions adOptions = new AdColony.AdOptions (); // 以下2つをfalseに変更 adOptions.ShowPrePopup = false; adOptions.ShowPostPopup = false; Admobのエラー回避 https://github.com/googleads/googleads-mobile-unity/issues/509 ↑のissueと同様に、OnAdRewardが呼ばれた直後にOnAdCloseが呼ばれていた. そのため、OnAdRewardが呼ばれたらflagを立てて、OnAdCloseが呼ばれても大丈夫なように対応した."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://float1251.github.io/blog/2017/10/19/very_simple_ads_modified.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-10-19 00:00:00+09:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://float1251.github.io/blog/author/float1251.html">
+<meta property="article:section" content="unity"/>
+<meta property="article:tag" content="Unity"/>
+<meta property="article:tag" content="Android"/>
+<meta property="article:tag" content="iOS"/>
+<meta property="article:tag" content="admob"/>
+<meta property="article:tag" content="adcolony"/>
+<meta property="og:image" content="http://float1251.github.io/blog/images/me.jpeg">
+
+  <title>float1251's memo &ndash; Very Simple Ads Monetization & Mediationに細かな修正を加える</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://float1251.github.io/blog">
+        <img src="http://float1251.github.io/blog/images/me.jpeg" alt="float1251's memo" title="float1251's memo">
+      </a>
+      <h1><a href="http://float1251.github.io/blog">float1251's memo</a></h1>
+
+
+      <nav>
+        <ul class="list">
+
+          <li><a href="http://float1251.github.io/blog/archives.html" target="_blank">Archives</a></li>
+          <li><a href="http://float1251.github.io/blog/categories.html" target="_blank">Categories</a></li>
+          <li><a href="http://float1251.github.io/blog/tags.html" target="_blank">Tags</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/float1251" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/float1251" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://float1251.github.io/blog">    Home
+</a>
+
+      <a href="http://float1251.github.io/blog/archives.html">Archives</a>
+      <a href="http://float1251.github.io/blog/categories.html">Categories</a>
+      <a href="http://float1251.github.io/blog/tags.html">Tags</a>
+
+      <a href="http://float1251.github.io/blog/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+    <h1 id="very_simple_ads_modified">Very Simple Ads Monetization &amp; Mediationに細かな修正を加える</h1>
+    <p>
+          Posted on 2017年10月19日(木) in <a href="http://float1251.github.io/blog/category/unity/">unity</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>動画広告を表示するのにVery Simple AdsというAssetを購入し、使用している.</p>
+<p><a class="reference external" href="https://www.assetstore.unity3d.com/jp/#!/content/57517">https://www.assetstore.unity3d.com/jp/#!/content/57517</a></p>
+<p>基本的にこれを入れてやればいいが、以下の2点の対応のために修正を加えた.</p>
+<blockquote>
+<ol class="arabic simple">
+<li>adcolonyの動画広告視聴前後に、ダイアログが表示される</li>
+<li>admobの動画広告視聴完了時に、エラーが頻発する</li>
+</ol>
+</blockquote>
+<p>ので、以下の対応を行った。</p>
+<ol class="arabic simple">
+<li>AAAdcolonyの200行目くらいの箇所を以下のように修正する</li>
+</ol>
+<div class="highlight"><pre><span class="n">AdColony</span><span class="p">.</span><span class="n">AdOptions</span> <span class="n">adOptions</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AdColony</span><span class="p">.</span><span class="n">AdOptions</span> <span class="p">();</span>
+<span class="c1">// 以下2つをfalseに変更</span>
+<span class="n">adOptions</span><span class="p">.</span><span class="n">ShowPrePopup</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+<span class="n">adOptions</span><span class="p">.</span><span class="n">ShowPostPopup</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+</pre></div>
+<ol class="arabic simple" start="2">
+<li>Admobのエラー回避</li>
+</ol>
+<p><a class="reference external" href="https://github.com/googleads/googleads-mobile-unity/issues/509">https://github.com/googleads/googleads-mobile-unity/issues/509</a></p>
+<p>↑のissueと同様に、OnAdRewardが呼ばれた直後にOnAdCloseが呼ばれていた.</p>
+<p>そのため、OnAdRewardが呼ばれたらflagを立てて、OnAdCloseが呼ばれても大丈夫なように対応した.</p>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://float1251.github.io/blog/tag/unity/">Unity</a>
+      <a href="http://float1251.github.io/blog/tag/android/">Android</a>
+      <a href="http://float1251.github.io/blog/tag/ios/">iOS</a>
+      <a href="http://float1251.github.io/blog/tag/admob/">admob</a>
+      <a href="http://float1251.github.io/blog/tag/adcolony/">adcolony</a>
+    </p>
+  </div>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'floatsmemo';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+</article>
+
+    <footer>
+<p>&copy; float1251 </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " float1251's memo ",
+  "url" : "http://float1251.github.io/blog",
+  "image": "http://float1251.github.io/blog/images/me.jpeg",
+  "description": "game programmer, web developer."
+}
+</script>
+</body>
+</html>

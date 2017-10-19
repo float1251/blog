@@ -80,6 +80,50 @@
 
 <article>
   <header>
+    <h2><a href="http://float1251.github.io/blog/2017/10/19/very_simple_ads_modified.html#very_simple_ads_modified">Very Simple Ads Monetization &amp; Mediationに細かな修正を加える</a></h2>
+    <p>
+          Posted on 2017年10月19日(木) in <a href="http://float1251.github.io/blog/category/unity/">unity</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/unity/">Unity</a>,              <a href="http://float1251.github.io/blog/tag/android/">Android</a>,              <a href="http://float1251.github.io/blog/tag/ios/">iOS</a>,              <a href="http://float1251.github.io/blog/tag/admob/">admob</a>,              <a href="http://float1251.github.io/blog/tag/adcolony/">adcolony</a>
+    </p>
+  </header>
+  <div>
+      <p>動画広告を表示するのにVery Simple AdsというAssetを購入し、使用している.</p>
+<p><a class="reference external" href="https://www.assetstore.unity3d.com/jp/#!/content/57517">https://www.assetstore.unity3d.com/jp/#!/content/57517</a></p>
+<p>基本的にこれを入れてやればいいが、以下の2点の対応のために修正を加えた.</p>
+<blockquote>
+<ol class="arabic simple">
+<li>adcolonyの動画広告視聴前後に、ダイアログが表示される</li>
+<li>admobの動画広告視聴完了時に、エラーが頻発する</li>
+</ol>
+</blockquote>
+<p>ので、以下の対応を行った。</p>
+<ol class="arabic simple">
+<li>AAAdcolonyの200行目くらいの箇所を以下のように修正する</li>
+</ol>
+<div class="highlight"><pre><span class="n">AdColony</span><span class="p">.</span><span class="n">AdOptions</span> <span class="n">adOptions</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AdColony</span><span class="p">.</span><span class="n">AdOptions</span> <span class="p">();</span>
+<span class="c1">// 以下2つをfalseに変更</span>
+<span class="n">adOptions</span><span class="p">.</span><span class="n">ShowPrePopup</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+<span class="n">adOptions</span><span class="p">.</span><span class="n">ShowPostPopup</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+</pre></div>
+<ol class="arabic simple" start="2">
+<li>Admobのエラー回避</li>
+</ol>
+<p><a class="reference external" href="https://github.com/googleads/googleads-mobile-unity/issues/509">https://github.com/googleads/googleads-mobile-unity/issues/509</a></p>
+<p>↑のissueと同様に、OnAdRewardが呼ばれた直後にOnAdCloseが呼ばれていた.</p>
+<p>そのため、OnAdRewardが呼ばれたらflagを立てて、OnAdCloseが呼ばれても大丈夫なように対応した.</p>
+
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2017/10/19/very_simple_ads_modified.html#very_simple_ads_modified">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://float1251.github.io/blog/2017/09/27/anti-cheat-toolkit-ipv6.html#anti-cheat-toolkit-ipv6">Anti-Cheat ToolkitのTimecheatingDetectorがIPV6で動作しない</a></h2>
     <p>
           Posted on 2017年09月27日(水) in <a href="http://float1251.github.io/blog/category/unity/">unity</a>
