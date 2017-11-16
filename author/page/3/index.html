@@ -80,6 +80,37 @@
 
 <article>
   <header>
+    <h2><a href="http://float1251.github.io/blog/2015/09/14/theme_change_2015.html#theme_change_2015">心機一転、テーマを変えてみた</a></h2>
+    <p>
+          Posted on 2015年09月14日(月) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/pelican/">pelican</a>
+    </p>
+  </header>
+  <div>
+      <p>更新をサボっていたが再開しようかと思ったので、</p>
+<p>心機一転、themeを変えてみた。</p>
+<p>windowsだと</p>
+<div class="highlight"><pre>make serve
+</pre></div>
+<p>がErrorになる。なので、make htmlしてからoutputのディレクトリにcdして</p>
+<div class="highlight"><pre>python -m SimpleHTTPServer
+</pre></div>
+<p>でlocalserverを起動して確認した。</p>
+<p>テーマは <a class="reference external" href="https://github.com/jody-frankowski/blue-penguin">blue-penguine</a> にした。</p>
+<p>久しぶりにrstで書くと細かい記法を忘れてて戸惑いを隠せない。</p>
+
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2015/09/14/theme_change_2015.html#theme_change_2015">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://float1251.github.io/blog/2015/03/03/universal_tween_engine.html#universal_tween_engine">libgdxでuniversal tween engine使ってみた</a></h2>
     <p>
           Posted on 2015年03月03日(火) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
@@ -415,58 +446,13 @@ cca run android</blockquote>
       <a class="btn" href="http://float1251.github.io/blog/2014/05/11/vimscript.html#vimscript">    Continue reading
 </a>
   </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://float1251.github.io/blog/2014/05/11/vimscript_memo.html#vimscript_memo">vimscriptを書いてて、詰まったところ</a></h2>
-    <p>
-          Posted on 2014年05月11日(日) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://float1251.github.io/blog/tag/vim/">vim</a>
-    </p>
-  </header>
-  <div>
-      <div class="section" id="pyfile">
-<h2>pyfileで引数を渡す方法</h2>
-<p>pythonであれば</p>
-<div class="highlight"><pre>python sample.py <span class="nb">test</span>
-</pre></div>
-<p>という形で実行するがvimではpyfileでpythonファイルを実行できるが、以下の様なやり方ではダメ。</p>
-<div class="highlight"><pre>pyfile sample.py <span class="nb">test</span>
-</pre></div>
-<p>こうではなく、以下の様にして引数を渡す</p>
-<div class="highlight"><pre><span class="p">:</span><span class="k">python</span> <span class="kn">import</span> <span class="nn">sys</span>
-<span class="c">&quot; pythonではsys.argvの0番目はスクリプトのファイル名</span>
-<span class="p">:</span><span class="k">python</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;sample.py&quot;</span><span class="p">,</span> <span class="s">&quot;test&quot;</span><span class="p">]</span>
-<span class="p">:</span><span class="k">pyfile</span> sample.<span class="k">py</span>
-</pre></div>
-<p>こうすると想定どおりに引数がpython側で受け取れる。</p>
-</div>
-<div class="section" id="pythonvim">
-<h2>python側でvimで定義した変数を受け取る</h2>
-<p>vimscriptの変数をpython側で受け取るにはvim.evalを使用する。</p>
-<div class="highlight"><pre><span class="k">let</span> tmp <span class="p">=</span> <span class="s2">&quot;Test&quot;</span>
-<span class="k">python</span> <span class="o">&lt;&lt;</span> EOM
-<span class="kn">import</span> <span class="nn">vim</span>
-<span class="k">print</span><span class="p">(</span><span class="n">vim</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="s">&quot;tmp&quot;</span><span class="p">))</span>
-EOM
-</pre></div>
-<p>こんな感じ</p>
-</div>
-<div class="section" id="vim">
-<h2>vimでの文字列連結</h2>
-<p>文字列連結でつい&quot;sample&quot;+&quot;test&quot;とか書きがちだが ...</p></div>
-      <br>
-      <a class="btn" href="http://float1251.github.io/blog/2014/05/11/vimscript_memo.html#vimscript_memo">    Continue reading
-</a>
-  </div>
 </article>
 
   <div class="pagination">
+    <a class="btn" href="http://float1251.github.io/blog/author/page/4/">
+      <i class="fa fa-angle-left"></i>     Older Posts
+
+    </a>
     <a class="btn float-right" href="http://float1251.github.io/blog/author/page/2/">
           Newer Posts
  <i class="fa fa-angle-right"></i>

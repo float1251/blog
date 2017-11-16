@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/stylesheet/style.min.css">
+
+  <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="http://float1251.github.io/blog/theme/font-awesome/css/font-awesome.min.css">
+
+
+    <link href="http://float1251.github.io/blog/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="float1251's memo Atom">
+
+
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+
+<meta name="author" content="float1251" />
+<meta name="description" content="Unitynのアプリの自動操作はC#のスクリプトを書いていたが、appiumを試してみる. 個人での開発においては自動テストによる信頼性の担保がなければ規模の大きいゲームは作れないと確信したので... クライアントはpythonを想定. python-clientをインストールする pip install Appium-Python-Client // だめだった場合は以下 sudo -H pip3 install Appium-Python-Client node.jsのインストール. nodeはこれでしか現状使わないので公式から落とす appiumのインストール npm install -g appium Androidで使う場合は以下も忘れずに. Android-SDKのインストール ANDROID_HOMEを設定する." />
+<meta name="keywords" content="android, ios, appium">
+<meta property="og:site_name" content="float1251's memo"/>
+<meta property="og:title" content="appiumの環境構築"/>
+<meta property="og:description" content="Unitynのアプリの自動操作はC#のスクリプトを書いていたが、appiumを試してみる. 個人での開発においては自動テストによる信頼性の担保がなければ規模の大きいゲームは作れないと確信したので... クライアントはpythonを想定. python-clientをインストールする pip install Appium-Python-Client // だめだった場合は以下 sudo -H pip3 install Appium-Python-Client node.jsのインストール. nodeはこれでしか現状使わないので公式から落とす appiumのインストール npm install -g appium Androidで使う場合は以下も忘れずに. Android-SDKのインストール ANDROID_HOMEを設定する."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="http://float1251.github.io/blog/2017/11/16/setup_appium.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2017-11-16 00:00:00+09:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="http://float1251.github.io/blog/author/float1251.html">
+<meta property="article:section" content="appium"/>
+<meta property="article:tag" content="android"/>
+<meta property="article:tag" content="ios"/>
+<meta property="article:tag" content="appium"/>
+<meta property="og:image" content="http://float1251.github.io/blog/images/me.jpeg">
+
+  <title>float1251's memo &ndash; appiumの環境構築</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="http://float1251.github.io/blog">
+        <img src="http://float1251.github.io/blog/images/me.jpeg" alt="float1251's memo" title="float1251's memo">
+      </a>
+      <h1><a href="http://float1251.github.io/blog">float1251's memo</a></h1>
+
+
+      <nav>
+        <ul class="list">
+
+          <li><a href="http://float1251.github.io/blog/archives.html" target="_blank">Archives</a></li>
+          <li><a href="http://float1251.github.io/blog/categories.html" target="_blank">Categories</a></li>
+          <li><a href="http://float1251.github.io/blog/tags.html" target="_blank">Tags</a></li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-twitter" href="https://twitter.com/float1251" target="_blank"><i class="fa fa-twitter"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/float1251" target="_blank"><i class="fa fa-github"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+    <nav>
+      <a href="http://float1251.github.io/blog">    Home
+</a>
+
+      <a href="http://float1251.github.io/blog/archives.html">Archives</a>
+      <a href="http://float1251.github.io/blog/categories.html">Categories</a>
+      <a href="http://float1251.github.io/blog/tags.html">Tags</a>
+
+      <a href="http://float1251.github.io/blog/feeds/all.atom.xml">    Atom
+</a>
+
+    </nav>
+
+<article class="single">
+  <header>
+    <h1 id="setup_appium">appiumの環境構築</h1>
+    <p>
+          Posted on 2017年11月16日(木) in <a href="http://float1251.github.io/blog/category/appium/">appium</a>
+
+
+    </p>
+  </header>
+
+
+  <div>
+    <p>Unitynのアプリの自動操作はC#のスクリプトを書いていたが、appiumを試してみる.</p>
+<p>個人での開発においては自動テストによる信頼性の担保がなければ規模の大きいゲームは作れないと確信したので...</p>
+<p>クライアントはpythonを想定.</p>
+<blockquote>
+<ol class="arabic">
+<li><p class="first">python-clientをインストールする</p>
+<blockquote>
+<div class="highlight"><pre>pip install Appium-Python-Client
+// だめだった場合は以下
+sudo -H pip3 install Appium-Python-Client
+</pre></div>
+</blockquote>
+</li>
+<li><p class="first">node.jsのインストール. nodeはこれでしか現状使わないので公式から落とす</p>
+</li>
+<li><p class="first">appiumのインストール</p>
+<blockquote>
+<div class="highlight"><pre>npm install -g appium
+</pre></div>
+</blockquote>
+</li>
+</ol>
+</blockquote>
+<p>Androidで使う場合は以下も忘れずに.</p>
+<blockquote>
+<ol class="arabic simple">
+<li>Android-SDKのインストール</li>
+<li>ANDROID_HOMEを設定する.</li>
+</ol>
+</blockquote>
+
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="http://float1251.github.io/blog/tag/android/">android</a>
+      <a href="http://float1251.github.io/blog/tag/ios/">ios</a>
+      <a href="http://float1251.github.io/blog/tag/appium/">appium</a>
+    </p>
+  </div>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'floatsmemo';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>
+        Please enable JavaScript to view comments.
+
+</noscript>
+</article>
+
+    <footer>
+<p>&copy; float1251 </p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " float1251's memo ",
+  "url" : "http://float1251.github.io/blog",
+  "image": "http://float1251.github.io/blog/images/me.jpeg",
+  "description": "game programmer, web developer."
+}
+</script>
+</body>
+</html>

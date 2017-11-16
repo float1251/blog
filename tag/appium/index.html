@@ -31,7 +31,7 @@
 <meta property="og:url" content="http://float1251.github.io/blog"/>
 <meta property="og:image" content="http://float1251.github.io/blog/images/me.jpeg">
 
-  <title>float1251's memo &ndash;     Tags
+  <title>float1251's memo &ndash;     Tag appium
 </title>
 
 </head>
@@ -76,38 +76,63 @@
 
     </nav>
 
-<article class="single">
+
+
+<article>
   <header>
-    <h1>    Tags
-</h1>
+    <h2><a href="http://float1251.github.io/blog/2017/11/16/setup_appium.html#setup_appium">appiumの環境構築</a></h2>
+    <p>
+          Posted on 2017年11月16日(木) in <a href="http://float1251.github.io/blog/category/appium/">appium</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/android/">android</a>,              <a href="http://float1251.github.io/blog/tag/ios/">ios</a>,              <a href="http://float1251.github.io/blog/tag/appium/">appium</a>
+    </p>
   </header>
   <div>
-    <ul class="list">          <li><a href="http://float1251.github.io/blog/tag/adcolony/">adcolony</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/admob/">admob</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/android/">Android</a> (7)</li>
-          <li><a href="http://float1251.github.io/blog/tag/appium/">appium</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/chrome/">chrome</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/codingame/">codingame</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/cordova/">cordova</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/cpp/">cpp</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/diary/">diary</a> (8)</li>
-          <li><a href="http://float1251.github.io/blog/tag/game/">Game</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/gamedev/">gamedev</a> (2)</li>
-          <li><a href="http://float1251.github.io/blog/tag/google-app-script/">google app script</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/hirochiya/">ヒロチャ</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/ios/">iOS</a> (5)</li>
-          <li><a href="http://float1251.github.io/blog/tag/java/">java</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/libgdx/">libgdx</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/memo/">memo</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/msgpack/">msgpack</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/pelican/">pelican</a> (3)</li>
-          <li><a href="http://float1251.github.io/blog/tag/programming/">programming</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/python/">python</a> (5)</li>
-          <li><a href="http://float1251.github.io/blog/tag/unity/">Unity</a> (7)</li>
-          <li><a href="http://float1251.github.io/blog/tag/vim/">vim</a> (2)</li>
-    </ul>
+      <p>Unitynのアプリの自動操作はC#のスクリプトを書いていたが、appiumを試してみる.</p>
+<p>個人での開発においては自動テストによる信頼性の担保がなければ規模の大きいゲームは作れないと確信したので...</p>
+<p>クライアントはpythonを想定.</p>
+<blockquote>
+<ol class="arabic">
+<li><p class="first">python-clientをインストールする</p>
+<blockquote>
+<div class="highlight"><pre>pip install Appium-Python-Client
+// だめだった場合は以下
+sudo -H pip3 install Appium-Python-Client
+</pre></div>
+</blockquote>
+</li>
+<li><p class="first">node.jsのインストール. nodeはこれでしか現状使わないので公式から落とす</p>
+</li>
+<li><p class="first">appiumのインストール</p>
+<blockquote>
+<div class="highlight"><pre>npm install -g appium
+</pre></div>
+</blockquote>
+</li>
+</ol>
+</blockquote>
+<p>Androidで使う場合は以下も忘れずに.</p>
+<blockquote>
+<ol class="arabic simple">
+<li>Android-SDKのインストール</li>
+<li>ANDROID_HOMEを設定する.</li>
+</ol>
+</blockquote>
+
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2017/11/16/setup_appium.html#setup_appium">    Continue reading
+</a>
   </div>
 </article>
+
+  <div class="pagination">
+  </div>
+
+
+
 
     <footer>
 <p>&copy; float1251 </p>

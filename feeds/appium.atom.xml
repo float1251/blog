@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>float1251's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/appium.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2017-11-16T00:00:00+09:00</updated><entry><title>appiumの環境構築</title><link href="http://float1251.github.io/blog/2017/11/16/setup_appium.html" rel="alternate"></link><updated>2017-11-16T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2017-11-16:blog/2017/11/16/setup_appium.html</id><summary type="html">&lt;p&gt;Unitynのアプリの自動操作はC#のスクリプトを書いていたが、appiumを試してみる.&lt;/p&gt;
+&lt;p&gt;個人での開発においては自動テストによる信頼性の担保がなければ規模の大きいゲームは作れないと確信したので...&lt;/p&gt;
+&lt;p&gt;クライアントはpythonを想定.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic"&gt;
+&lt;li&gt;&lt;p class="first"&gt;python-clientをインストールする&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;pip install Appium-Python-Client
+// だめだった場合は以下
+sudo -H pip3 install Appium-Python-Client
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;node.jsのインストール. nodeはこれでしか現状使わないので公式から落とす&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p class="first"&gt;appiumのインストール&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;npm install -g appium
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Androidで使う場合は以下も忘れずに.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol class="arabic simple"&gt;
+&lt;li&gt;Android-SDKのインストール&lt;/li&gt;
+&lt;li&gt;ANDROID_HOMEを設定する.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+</summary><category term="android"></category><category term="ios"></category><category term="appium"></category></entry></feed>

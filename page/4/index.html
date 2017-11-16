@@ -31,8 +31,7 @@
 <meta property="og:url" content="http://float1251.github.io/blog"/>
 <meta property="og:image" content="http://float1251.github.io/blog/images/me.jpeg">
 
-  <title>float1251's memo &ndash;     Tags
-</title>
+  <title>float1251's memo</title>
 
 </head>
 <body>
@@ -76,38 +75,66 @@
 
     </nav>
 
-<article class="single">
+
+
+<article>
   <header>
-    <h1>    Tags
-</h1>
+    <h2><a href="http://float1251.github.io/blog/2014/05/11/vimscript_memo.html#vimscript_memo">vimscriptを書いてて、詰まったところ</a></h2>
+    <p>
+          Posted on 2014年05月11日(日) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/vim/">vim</a>
+    </p>
   </header>
   <div>
-    <ul class="list">          <li><a href="http://float1251.github.io/blog/tag/adcolony/">adcolony</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/admob/">admob</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/android/">Android</a> (7)</li>
-          <li><a href="http://float1251.github.io/blog/tag/appium/">appium</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/chrome/">chrome</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/codingame/">codingame</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/cordova/">cordova</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/cpp/">cpp</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/diary/">diary</a> (8)</li>
-          <li><a href="http://float1251.github.io/blog/tag/game/">Game</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/gamedev/">gamedev</a> (2)</li>
-          <li><a href="http://float1251.github.io/blog/tag/google-app-script/">google app script</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/hirochiya/">ヒロチャ</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/ios/">iOS</a> (5)</li>
-          <li><a href="http://float1251.github.io/blog/tag/java/">java</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/libgdx/">libgdx</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/memo/">memo</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/msgpack/">msgpack</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/pelican/">pelican</a> (3)</li>
-          <li><a href="http://float1251.github.io/blog/tag/programming/">programming</a> (1)</li>
-          <li><a href="http://float1251.github.io/blog/tag/python/">python</a> (5)</li>
-          <li><a href="http://float1251.github.io/blog/tag/unity/">Unity</a> (7)</li>
-          <li><a href="http://float1251.github.io/blog/tag/vim/">vim</a> (2)</li>
-    </ul>
+      <div class="section" id="pyfile">
+<h2>pyfileで引数を渡す方法</h2>
+<p>pythonであれば</p>
+<div class="highlight"><pre>python sample.py <span class="nb">test</span>
+</pre></div>
+<p>という形で実行するがvimではpyfileでpythonファイルを実行できるが、以下の様なやり方ではダメ。</p>
+<div class="highlight"><pre>pyfile sample.py <span class="nb">test</span>
+</pre></div>
+<p>こうではなく、以下の様にして引数を渡す</p>
+<div class="highlight"><pre><span class="p">:</span><span class="k">python</span> <span class="kn">import</span> <span class="nn">sys</span>
+<span class="c">&quot; pythonではsys.argvの0番目はスクリプトのファイル名</span>
+<span class="p">:</span><span class="k">python</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span> <span class="o">=</span> <span class="p">[</span><span class="s">&quot;sample.py&quot;</span><span class="p">,</span> <span class="s">&quot;test&quot;</span><span class="p">]</span>
+<span class="p">:</span><span class="k">pyfile</span> sample.<span class="k">py</span>
+</pre></div>
+<p>こうすると想定どおりに引数がpython側で受け取れる。</p>
+</div>
+<div class="section" id="pythonvim">
+<h2>python側でvimで定義した変数を受け取る</h2>
+<p>vimscriptの変数をpython側で受け取るにはvim.evalを使用する。</p>
+<div class="highlight"><pre><span class="k">let</span> tmp <span class="p">=</span> <span class="s2">&quot;Test&quot;</span>
+<span class="k">python</span> <span class="o">&lt;&lt;</span> EOM
+<span class="kn">import</span> <span class="nn">vim</span>
+<span class="k">print</span><span class="p">(</span><span class="n">vim</span><span class="o">.</span><span class="n">eval</span><span class="p">(</span><span class="s">&quot;tmp&quot;</span><span class="p">))</span>
+EOM
+</pre></div>
+<p>こんな感じ</p>
+</div>
+<div class="section" id="vim">
+<h2>vimでの文字列連結</h2>
+<p>文字列連結でつい&quot;sample&quot;+&quot;test&quot;とか書きがちだが ...</p></div>
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2014/05/11/vimscript_memo.html#vimscript_memo">    Continue reading
+</a>
   </div>
 </article>
+
+  <div class="pagination">
+    <a class="btn float-right" href="http://float1251.github.io/blog/page/3/">
+          Newer Posts
+ <i class="fa fa-angle-right"></i>
+    </a>
+  </div>
+
+
+
 
     <footer>
 <p>&copy; float1251 </p>
