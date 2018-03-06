@@ -80,6 +80,54 @@
 
 <article>
   <header>
+    <h2><a href="http://float1251.github.io/blog/2018/03/06/astyle.html#astyle">C#のコードフォーマットをastyleでやったときのメモ</a></h2>
+    <p>
+          Posted on 2018年03月06日(火) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/unity/">Unity</a>,              <a href="http://float1251.github.io/blog/tag/c/">C#</a>
+    </p>
+  </header>
+  <div>
+      <p>astyleを使用してcodeformatを行う.
+<a class="reference external" href="http://astyle.sourceforge.net/">http://astyle.sourceforge.net/</a></p>
+<p>インストールはHomebrew経由でできた</p>
+<div class="highlight"><pre>brew install astyle
+</pre></div>
+<p>以下のようにすれば指定したディレクトリ以下のcsファイルに対してフォーマットがかけられる.</p>
+<div class="highlight"><pre><span class="c"># findとgrepでフォーマットかけたいファイルを抽出.</span>
+<span class="c"># xargsで引数としてastyleを実行.</span>
+find Assets -type f <span class="p">|</span> grep  <span class="se">\.</span>cs<span class="nv">$ </span><span class="p">|</span> xargs -I@ astyle --options<span class="o">=</span>.astyleoption @
+</pre></div>
+<p>オプションファイルの中身は以下の通り.:</p>
+<pre class="literal-block">
+# c#のファイルとして認識する
+mode=cs
+# allmanスタイルにする
+style=allman
+# インデントにタブを使う
+indent=tab=4
+# 継続行のインデントにもタブを使う(但し偶数個のタブでないときはwhite spaceで埋められる)
+indent=force-tab=4
+# namespace文の中をインデントする
+indent-namespaces
+# switch文の中をインデントする
+indent-switches
+# case文の中をインデントする
+indent-cases
+# 1行ブロックを許可する
+keep-one-line-blocks
+# 1行文を許可する ...</pre>
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2018/03/06/astyle.html#astyle">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://float1251.github.io/blog/2017/08/04/unity_build_error_001.html#unity_build_error_001">Error: Error while saving blame file, build will continue... というError対応</a></h2>
     <p>
           Posted on 2017年08月04日(金) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
@@ -401,32 +449,6 @@ make    // buildする
 <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">4096 ...</span></pre></div>
       <br>
       <a class="btn" href="http://float1251.github.io/blog/2014/12/15/python_socket_learning.html#python_socket_learning">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://float1251.github.io/blog/2014/12/09/pelican_themes.html#pelican_themes">pelicanのthemeについて</a></h2>
-    <p>
-          Posted on 2014年12月09日(火) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://float1251.github.io/blog/tag/pelican/">pelican</a>,              <a href="http://float1251.github.io/blog/tag/python/">python</a>
-    </p>
-  </header>
-  <div>
-      <p>色々とthemeを変えてみて、いいのがないか探している。</p>
-<p>ただなかなかいいのが見当たらない。。。</p>
-<p>あと、previewとかがないのがあるから、どういった感じのthemeなのかわからないものが多い。</p>
-<p>微妙に機能が足りてないのとかもあるから、自分でカスタムするしかないかも。</p>
-<p><a class="reference external" href="https://github.com/getpelican/pelican-themes">https://github.com/getpelican/pelican-themes</a></p>
-<p>とりあえずforkしてmonospaceあたりを自分なりにカスタマイズするのがよさげって思った。</p>
-
-      <br>
-      <a class="btn" href="http://float1251.github.io/blog/2014/12/09/pelican_themes.html#pelican_themes">    Continue reading
 </a>
   </div>
 </article>

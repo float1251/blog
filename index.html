@@ -79,6 +79,54 @@
 
 <article>
   <header>
+    <h2><a href="http://float1251.github.io/blog/2018/03/06/astyle.html#astyle">C#のコードフォーマットをastyleでやったときのメモ</a></h2>
+    <p>
+          Posted on 2018年03月06日(火) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/unity/">Unity</a>,              <a href="http://float1251.github.io/blog/tag/c/">C#</a>
+    </p>
+  </header>
+  <div>
+      <p>astyleを使用してcodeformatを行う.
+<a class="reference external" href="http://astyle.sourceforge.net/">http://astyle.sourceforge.net/</a></p>
+<p>インストールはHomebrew経由でできた</p>
+<div class="highlight"><pre>brew install astyle
+</pre></div>
+<p>以下のようにすれば指定したディレクトリ以下のcsファイルに対してフォーマットがかけられる.</p>
+<div class="highlight"><pre><span class="c"># findとgrepでフォーマットかけたいファイルを抽出.</span>
+<span class="c"># xargsで引数としてastyleを実行.</span>
+find Assets -type f <span class="p">|</span> grep  <span class="se">\.</span>cs<span class="nv">$ </span><span class="p">|</span> xargs -I@ astyle --options<span class="o">=</span>.astyleoption @
+</pre></div>
+<p>オプションファイルの中身は以下の通り.:</p>
+<pre class="literal-block">
+# c#のファイルとして認識する
+mode=cs
+# allmanスタイルにする
+style=allman
+# インデントにタブを使う
+indent=tab=4
+# 継続行のインデントにもタブを使う(但し偶数個のタブでないときはwhite spaceで埋められる)
+indent=force-tab=4
+# namespace文の中をインデントする
+indent-namespaces
+# switch文の中をインデントする
+indent-switches
+# case文の中をインデントする
+indent-cases
+# 1行ブロックを許可する
+keep-one-line-blocks
+# 1行文を許可する ...</pre>
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2018/03/06/astyle.html#astyle">    Continue reading
+</a>
+  </div>
+  <hr />
+</article>
+<article>
+  <header>
     <h2><a href="http://float1251.github.io/blog/2017/11/16/setup_appium.html#setup_appium">appiumの環境構築</a></h2>
     <p>
           Posted on 2017年11月16日(木) in <a href="http://float1251.github.io/blog/category/appium/">appium</a>
@@ -433,46 +481,6 @@ args: request  -&gt; このrequestってどう扱うんだよ。。。という�
 
       <br>
       <a class="btn" href="http://float1251.github.io/blog/2017/01/03/2017_01_03.html#2017_01_03">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="http://float1251.github.io/blog/2016/07/11/game_dev_2016_07_11.html#game_dev_2016_07_11">ラインディフェンスゲームのポストモーテム</a></h2>
-    <p>
-          Posted on 2016年07月11日(月) in <a href="http://float1251.github.io/blog/category/2016/">2016</a>
-
-
-          &#8226;     Tagged with
-
-              <a href="http://float1251.github.io/blog/tag/gamedev/">gamedev</a>,              <a href="http://float1251.github.io/blog/tag/diary/">diary</a>
-    </p>
-  </header>
-  <div>
-      <p>ちゃんとリリースしました。</p>
-<p>4gamer様などに載せていただきました。
-<a class="reference external" href="http://www.4gamer.net/games/348/G034889/20160705040/">http://www.4gamer.net/games/348/G034889/20160705040/</a></p>
-<p>思った以上に評価もよく個人的には非常にびっくりしております。。。</p>
-<p>ひとまず感想</p>
-<ul class="simple">
-<li>一定のタワーディフェンスゲームファンが存在することは明らか</li>
-<li>面白いゲームを作るには時間がかかる。と同時にいかに早くする仕組み、検証の工程をつくるのかが課題</li>
-<li>スマートフォンではストラテジー系のゲームがあっている</li>
-<li>動画広告の仕組みは想定通り非常によかった。</li>
-</ul>
-<hr class="docutils" />
-<div class="section" id="id2">
-<h2>今後について</h2>
-<p>とりあえず開発は終了したので、アップデートをどうするか or 新作を作るかになると思う。
-新作の話とかも多少はしたので、少しづつ進めていけたら。</p>
-<p>次回はサーバーを使うのはほぼ必須になりそう.またパフォーマンスも求められそうなので、
-golangを覚えようと思う。</p>
-<p>golang自体の学習を進めつつ、今度は自分個人で何かゲーム一つを軽くつくりたいかな。</p>
-</div>
-
-      <br>
-      <a class="btn" href="http://float1251.github.io/blog/2016/07/11/game_dev_2016_07_11.html#game_dev_2016_07_11">    Continue reading
 </a>
   </div>
 </article>

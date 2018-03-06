@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>float1251's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2017-11-16T00:00:00+09:00</updated><entry><title>appiumの環境構築</title><link href="http://float1251.github.io/blog/2017/11/16/setup_appium.html" rel="alternate"></link><updated>2017-11-16T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2017-11-16:blog/2017/11/16/setup_appium.html</id><summary type="html">&lt;p&gt;Unitynのアプリの自動操作はC#のスクリプトを書いていたが、appiumを試してみる.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>float1251's memo</title><link href="http://float1251.github.io/blog/" rel="alternate"></link><link href="http://float1251.github.io/blog/feeds/all.atom.xml" rel="self"></link><id>http://float1251.github.io/blog/</id><updated>2018-03-06T00:00:00+09:00</updated><entry><title>C#のコードフォーマットをastyleでやったときのメモ</title><link href="http://float1251.github.io/blog/2018/03/06/astyle.html" rel="alternate"></link><updated>2018-03-06T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2018-03-06:blog/2018/03/06/astyle.html</id><summary type="html">&lt;p&gt;astyleを使用してcodeformatを行う.
+&lt;a class="reference external" href="http://astyle.sourceforge.net/"&gt;http://astyle.sourceforge.net/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;インストールはHomebrew経由でできた&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;brew install astyle
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;以下のようにすれば指定したディレクトリ以下のcsファイルに対してフォーマットがかけられる.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# findとgrepでフォーマットかけたいファイルを抽出.&lt;/span&gt;
+&lt;span class="c"&gt;# xargsで引数としてastyleを実行.&lt;/span&gt;
+find Assets -type f &lt;span class="p"&gt;|&lt;/span&gt; grep  &lt;span class="se"&gt;\.&lt;/span&gt;cs&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="p"&gt;|&lt;/span&gt; xargs -I@ astyle --options&lt;span class="o"&gt;=&lt;/span&gt;.astyleoption @
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;オプションファイルの中身は以下の通り.:&lt;/p&gt;
+&lt;pre class="literal-block"&gt;
+# c#のファイルとして認識する
+mode=cs
+# allmanスタイルにする
+style=allman
+# インデントにタブを使う
+indent=tab=4
+# 継続行のインデントにもタブを使う(但し偶数個のタブでないときはwhite spaceで埋められる)
+indent=force-tab=4
+# namespace文の中をインデントする
+indent-namespaces
+# switch文の中をインデントする
+indent-switches
+# case文の中をインデントする
+indent-cases
+# 1行ブロックを許可する
+keep-one-line-blocks
+# 1行文を許可する
+keep-one-line-statements
+# プリプロセッサをソースコード内のインデントと合わせる
+indent-preproc-cond
+# if, while, switchの後にpaddingを入れる
+pad-header
+# 演算子の前後にpaddingを入れる
+pad-oper
+# originalファイルを生成しない
+suffix=none
+# if, for, while文の前後に空行を入れる
+break-blocks
+# コメントもインデントする
+indent-col1-comments
+&lt;/pre&gt;
+</summary><category term="Unity"></category><category term="C#"></category></entry><entry><title>appiumの環境構築</title><link href="http://float1251.github.io/blog/2017/11/16/setup_appium.html" rel="alternate"></link><updated>2017-11-16T00:00:00+09:00</updated><author><name>float1251</name></author><id>tag:float1251.github.io,2017-11-16:blog/2017/11/16/setup_appium.html</id><summary type="html">&lt;p&gt;Unitynのアプリの自動操作はC#のスクリプトを書いていたが、appiumを試してみる.&lt;/p&gt;
 &lt;p&gt;個人での開発においては自動テストによる信頼性の担保がなければ規模の大きいゲームは作れないと確信したので...&lt;/p&gt;
 &lt;p&gt;クライアントはpythonを想定.&lt;/p&gt;
 &lt;blockquote&gt;

@@ -31,7 +31,7 @@
 <meta property="og:url" content="http://float1251.github.io/blog"/>
 <meta property="og:image" content="http://float1251.github.io/blog/images/me.jpeg">
 
-  <title>float1251's memo &ndash;     Categories
+  <title>float1251's memo &ndash;     Tag C#
 </title>
 
 </head>
@@ -76,22 +76,61 @@
 
     </nav>
 
-<article class="single">
+
+
+<article>
   <header>
-    <h1>    Categories
-</h1>
+    <h2><a href="http://float1251.github.io/blog/2018/03/06/astyle.html#astyle">C#のコードフォーマットをastyleでやったときのメモ</a></h2>
+    <p>
+          Posted on 2018年03月06日(火) in <a href="http://float1251.github.io/blog/category/articles/">articles</a>
+
+
+          &#8226;     Tagged with
+
+              <a href="http://float1251.github.io/blog/tag/unity/">Unity</a>,              <a href="http://float1251.github.io/blog/tag/c/">C#</a>
+    </p>
   </header>
   <div>
-    <ul class="list">
-      <li><a href="http://float1251.github.io/blog/category/2016/">2016</a> (2)</li>
-      <li><a href="http://float1251.github.io/blog/category/2017/">2017</a> (2)</li>
-      <li><a href="http://float1251.github.io/blog/category/appium/">appium</a> (1)</li>
-      <li><a href="http://float1251.github.io/blog/category/articles/">articles</a> (17)</li>
-      <li><a href="http://float1251.github.io/blog/category/memo/">memo</a> (5)</li>
-      <li><a href="http://float1251.github.io/blog/category/unity/">unity</a> (5)</li>
-    </ul>
+      <p>astyleを使用してcodeformatを行う.
+<a class="reference external" href="http://astyle.sourceforge.net/">http://astyle.sourceforge.net/</a></p>
+<p>インストールはHomebrew経由でできた</p>
+<div class="highlight"><pre>brew install astyle
+</pre></div>
+<p>以下のようにすれば指定したディレクトリ以下のcsファイルに対してフォーマットがかけられる.</p>
+<div class="highlight"><pre><span class="c"># findとgrepでフォーマットかけたいファイルを抽出.</span>
+<span class="c"># xargsで引数としてastyleを実行.</span>
+find Assets -type f <span class="p">|</span> grep  <span class="se">\.</span>cs<span class="nv">$ </span><span class="p">|</span> xargs -I@ astyle --options<span class="o">=</span>.astyleoption @
+</pre></div>
+<p>オプションファイルの中身は以下の通り.:</p>
+<pre class="literal-block">
+# c#のファイルとして認識する
+mode=cs
+# allmanスタイルにする
+style=allman
+# インデントにタブを使う
+indent=tab=4
+# 継続行のインデントにもタブを使う(但し偶数個のタブでないときはwhite spaceで埋められる)
+indent=force-tab=4
+# namespace文の中をインデントする
+indent-namespaces
+# switch文の中をインデントする
+indent-switches
+# case文の中をインデントする
+indent-cases
+# 1行ブロックを許可する
+keep-one-line-blocks
+# 1行文を許可する ...</pre>
+      <br>
+      <a class="btn" href="http://float1251.github.io/blog/2018/03/06/astyle.html#astyle">    Continue reading
+</a>
   </div>
 </article>
+
+  <div class="pagination">
+  </div>
+
+
+
 
     <footer>
 <p>&copy; float1251 </p>
